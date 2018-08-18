@@ -1,0 +1,19 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "Admin Panel",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kaushil Rakhasiya",
+  "license": "UNLICENCED",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}

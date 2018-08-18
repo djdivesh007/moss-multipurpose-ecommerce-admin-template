@@ -1,0 +1,113 @@
+::selection{
+	background-color: $blue;
+	color: #fff;
+}
+html,body{
+	height: 100%;
+}
+body{
+	background-color: #fff;
+}
+
+//sections
+
+.main-wrapper{
+	height: 100%;
+	width: 100%;
+}
+.sidebar {
+	position: fixed;
+	height: 100%;
+	width: 240px;
+	background-color:#fff;
+	//box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+	.navbar{
+		/* border-right: 1px solid darken($primary, 10%); */
+		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+	.navigation {
+		padding-right: 14px;
+		/* border-right: 1px solid $gray-300; */
+		height: 100%;
+		ul{
+			padding-left: 0px;
+			li{
+				list-style: none;
+				height: 40px;
+				a{
+					font-size: 14px;
+					color: $gray-700;
+					display: block;
+					text-decoration: none;
+					font-weight: bold;
+					border-radius: 0 66px 66px 0;
+					line-height: 40px;
+
+					span{
+						display: inline-block;
+						vertical-align: middle;
+						margin-left: 20px;
+						&.icon{
+							margin-left: 25px;
+						}
+						&.badge{
+							float: right;
+							margin-top: 15px;
+							margin-right: 25px;
+						}
+					}
+					&:hover{
+						background-color: $gray-100;
+					}
+					&.active{
+						background-color: lighten($primary, 53%);
+						color: $primary;
+					}
+				}
+				&.seperator{
+					margin-top: 18px;
+					margin-bottom: 18px;
+					height: 1px;
+					background-color: $gray-200;
+					span{
+			            user-select: none;
+					    vertical-align: middle;
+					    font-size: 13px;
+					    margin-top: -26px;
+					    display: inline-block;
+					    margin-left: 20px;
+					    background-color: white;
+					    padding-left: 8px;
+					    padding-right: 8px;
+					    color: $gray-600;
+					}
+				}
+			}
+		}
+	}
+}
+.right-area{
+	margin-left: 240px;
+	header{
+		position: sticky;
+		top:0;
+		background-color: $primary;
+		color: #fff;
+		height: 54px;
+		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+	}
+	.main-content{
+		padding: 15px;
+		.card{
+			margin-top: 15px;
+		}
+	}
+}
+.btn-xs{
+	padding: 0.15rem 0.5rem;
+    font-size: 0.675rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
