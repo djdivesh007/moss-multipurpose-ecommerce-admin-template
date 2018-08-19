@@ -1,12 +1,9 @@
-::selection{
-	background-color: $blue;
-	color: #fff;
-}
 html,body{
 	height: 100%;
 }
 body{
 	background-color: #fff;
+	color: $gray-800;
 }
 
 //sections
@@ -14,97 +11,250 @@ body{
 .main-wrapper{
 	height: 100%;
 	width: 100%;
-}
-.sidebar {
-	position: fixed;
-	height: 100%;
-	width: 240px;
-	background-color:#fff;
-	//box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
-	.navbar{
-		/* border-right: 1px solid darken($primary, 10%); */
-		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
-		padding-top: 7px;
-		padding-bottom: 7px;
-	}
-	.navigation {
-		padding-right: 14px;
-		/* border-right: 1px solid $gray-300; */
-		height: 100%;
-		ul{
-			padding-left: 0px;
-			li{
-				list-style: none;
-				height: 40px;
-				a{
-					font-size: 14px;
-					color: $gray-700;
-					display: block;
-					text-decoration: none;
-					font-weight: bold;
-					border-radius: 0 66px 66px 0;
-					line-height: 40px;
-
-					span{
+	.sidebar {
+		position: fixed;
+		height: calc(100% - 54px);
+		width: 240px;
+		z-index: 10;
+		background-color:#fff;
+		transition: width 0.3s;
+		.navbar{
+			/* border-right: 1px solid darken($primary, 10%); */
+			box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+			padding-top: 7px;
+			padding-bottom: 7px;
+			position: sticky;
+			top:0;
+		}
+		.navigation {
+			height: 100%;
+			overflow: auto;
+			/* visibility: hidden;
+			&:hover{
+				visibility: visible;
+			} */
+			& > ul{
+				padding-top: 20px;
+				padding-left: 0px;
+				/* visibility: visible; */
+				&:hover{
+					/* padding-right: 0px;
+					height: 100%;
+					overflow: auto; */
+				}
+				li{
+					list-style: none;
+					a{
 						display: inline-block;
-						vertical-align: middle;
-						margin-left: 20px;
-						&.icon{
-							margin-left: 25px;
+						font-size: 14px;
+						color: $gray-700;
+						text-decoration: none;
+						font-weight: bold;
+						border-radius: 0 66px 66px 0;
+						line-height: 40px;
+						width: 100%;
+						span{
+							display: inline-block;
+							vertical-align: middle;
+							margin-left: 20px;
+							&.icon{
+								margin-left: 27px;
+							}
+							&.caret {
+								margin-left: 0px;
+								+ .icon{
+									margin-left: 0px;
+								}
+							}
+							&.badge{
+								float: right;
+								margin-top: 15px;
+								margin-right: 25px;
+							}
 						}
-						&.badge{
-							float: right;
-							margin-top: 15px;
-							margin-right: 25px;
+						&:hover{
+							background-color: $gray-100;
+						}
+						&.active{
+							background-color: lighten($primary, 53%);
+							color: $primary;
+							.caret{
+								color: #000;
+							}
 						}
 					}
-					&:hover{
-						background-color: $gray-100;
-					}
-					&.active{
-						background-color: lighten($primary, 53%);
-						color: $primary;
+					&.seperator{
+						margin-top: 18px;
+						margin-bottom: 18px;
+						height: 1px;
+						background-color: $gray-200;
+						span{
+				            user-select: none;
+						    vertical-align: middle;
+						    font-size: 13px;
+						    margin-top: -26px;
+						    display: inline-block;
+						    margin-left: 20px;
+						    background-color: white;
+						    padding-left: 8px;
+						    padding-right: 8px;
+						    color: $gray-600;
+						}
 					}
 				}
-				&.seperator{
-					margin-top: 18px;
-					margin-bottom: 18px;
-					height: 1px;
-					background-color: $gray-200;
-					span{
-			            user-select: none;
-					    vertical-align: middle;
-					    font-size: 13px;
-					    margin-top: -26px;
-					    display: inline-block;
-					    margin-left: 20px;
-					    background-color: white;
-					    padding-left: 8px;
-					    padding-right: 8px;
-					    color: $gray-600;
+				//Submenu
+				ul {
+					padding-left: 0px;
+					li{
+						a{
+							span{
+								margin-left: 8px;
+							}
+							padding-left: 15px;
+							line-height: 30px;
+						}
 					}
+				}
+			}
+			.bottom-bar{
+				position: fixed;
+				bottom: 0;
+				width: 240px;
+			}
+		}
+	}
+	.right-area{
+		margin-left: 240px;
+		transition: margin 0.3s;
+		header{
+			position: sticky;
+			z-index: 20000;
+			top:0;
+			background-color: $primary;
+			color: #fff;
+			height: 54px;
+			box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+			button.hamburger{
+				height: 54px;
+				padding-left: 20px;
+				padding-right: 20px;
+				background-color: transparent;
+				border:none;
+				color: #fff;
+				display: inline-flex;
+  				align-items: center;
+  				&:focus{
+  					outline: 0;
+  				}
+  				&:active{
+  					background-color: darken($primary, 5%);
+  				}
+			}
+		}
+		.main-content{
+			padding: 15px;
+			.card{
+				margin-top: 15px;
+			}
+		}
+	}
+	&.mini{
+		.sidebar{
+			width: 65px;
+			.navigation {
+				padding-right: 0;
+				border-right: 1px solid $gray-200;
+				& > ul{
+					padding-right: 0px;
+
+					li{
+						&:hover{
+							height: 40px;
+						}
+						a{
+							span{
+								display: none;
+								&.icon{
+									margin-left: 20px;
+									margin-right: 20px;
+									display: inline-block;
+								}
+							}
+							&:hover{
+								position: absolute;
+								z-index: 2000;
+								border-left-width: 0;
+								line-height: 40px;
+								box-shadow: 0px 0px 0px 1px $gray-400;
+								width: 240px;
+								height: 40px;								
+								vertical-align: middle;
+								span{
+									display: inline-block;
+									&.caret{
+										display: none;
+									}
+									&.icon{
+										margin-right: 0;
+									}
+								}
+							}
+							&.active{
+								border-radius: 0;
+								box-shadow: none;
+								&:hover{
+									box-shadow: 0px 0px 0px 1px $primary;
+									border-radius: 0 66px 66px 0;
+								}
+							}
+						}
+						&.seperator{
+							span{
+								display: none;
+							}
+						}
+					}
+					ul {
+						display: none;
+					}
+				}
+				.bottom-bar{
+					width: 65px;
+				}
+			}
+		}
+		.right-area{
+			margin-left: 65px;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		.sidebar{
+			margin-left: -240px;
+		}
+		.right-area{
+			margin-left: 0px;
+		}
+
+		&.mini{
+			.sidebar{
+				width: 240px;
+			}
+			.right-area{
+				margin-left: 0px;
+			}			
+		}
+
+		&.sidemenu-open{
+			.sidebar{
+				margin-left: 0;
+				.navigation{
+					padding-right: 0;
 				}
 			}
 		}
 	}
 }
-.right-area{
-	margin-left: 240px;
-	header{
-		position: sticky;
-		top:0;
-		background-color: $primary;
-		color: #fff;
-		height: 54px;
-		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
-	}
-	.main-content{
-		padding: 15px;
-		.card{
-			margin-top: 15px;
-		}
-	}
-}
+
 .btn-xs{
 	padding: 0.15rem 0.5rem;
     font-size: 0.675rem;

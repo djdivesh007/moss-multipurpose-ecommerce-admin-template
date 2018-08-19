@@ -4,12 +4,14 @@
 	<meta charset="UTF-8">
 	<title>Boiler Plate</title>
 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
-	
-	<div class="main-wrapper">
+	<div class="ovrelay-mask"></div>
+	<div class="main-wrapper mini">
 		<aside class="sidebar">
 			<nav class="navbar navbar-dark bg-primary">
 				<a class="navbar-brand brand-title" href="#">
@@ -18,22 +20,39 @@
             </nav>
             <nav class="navigation">
             	<ul>
-            		<li class="seperator">
-            			<span>Main Menu</span>
-            		</li>
             		<li>
-            			<a href="" class="active">
+            			<a href="#collapseSubmenu1" class=""  data-toggle="collapse">
+            				<span class="caret material-icons">arrow_right</span>
             				<span class="icon material-icons">dashboard</span>
             				<span class="text">Dashboard</span>
             			</a>
+            			<ul class="collapse" id="collapseSubmenu1">
+		            		<li>
+		            			<a href="" class="">
+		            				<span class="icon material-icons">remove</span>
+		            				<span class="text">Dashboard</span>
+		            			</a>
+		            		</li>
+		            		<li>
+		            			<a href="" class="">
+		            				<span class="icon material-icons">remove</span>
+		            				<span class="text">Inbox</span>
+		        					<span class="badge badge-danger">1</span>
+		            			</a>
+		            		</li>
+		            		<li>
+		            			<a href="">
+		            				<span class="icon material-icons">remove</span>
+		            				<span class="text">Graph</span>
+		            			</a>
+		            		</li>
+		            	</ul>
             		</li>
             		<li>
-            			<a href="" class="">
+            			<a href="" class="active">
             				<span class="icon material-icons">email</span>
-            				<span class="text">
-            					Inbox
-            				</span>
-        					<span class="badge badge-primary">1</span>
+            				<span class="text">Inbox</span>
+        					<span class="badge badge-danger">1</span>
             			</a>
             		</li>
             		<li>
@@ -57,12 +76,108 @@
             				<span class="text">Graph</span>
             			</a>
             		</li>
+            		<!-- <li class="seperator">
+            			<span>Elements</span>
+            		</li>
+            		<li>
+            			<a href="" class="">
+            				<span class="icon material-icons">email</span>
+            				<span class="text">Inbox</span>
+            			</a>
+            		</li>
+            		<li>
+            			<a href="">
+            				<span class="icon material-icons">bar_chart</span>
+            				<span class="text">Graph</span>
+            			</a>
+            		</li>
+            		<li class="seperator">
+            			<span>Elements</span>
+            		</li>
+            		<li>
+            			<a href="" class="">
+            				<span class="icon material-icons">email</span>
+            				<span class="text">Inbox</span>
+            			</a>
+            		</li>
+            		<li>
+            			<a href="">
+            				<span class="icon material-icons">bar_chart</span>
+            				<span class="text">Graph</span>
+            			</a>
+            		</li>
+            		<li class="seperator">
+            			<span>Elements</span>
+            		</li>
+            		<li>
+            			<a href="" class="">
+            				<span class="icon material-icons">email</span>
+            				<span class="text">Inbox</span>
+            			</a>
+            		</li>
+            		<li>
+            			<a href="">
+            				<span class="icon material-icons">bar_chart</span>
+            				<span class="text">Graph</span>
+            			</a>
+            		</li>
+            		<li class="seperator">
+            			<span>Elements</span>
+            		</li>
+            		<li>
+            			<a href="" class="">
+            				<span class="icon material-icons">email</span>
+            				<span class="text">Inbox</span>
+            			</a>
+            		</li>
+            		<li>
+            			<a href="">
+            				<span class="icon material-icons">bar_chart</span>
+            				<span class="text">Graph</span>
+            			</a>
+            		</li>
+            		<li class="seperator">
+            			<span>Elements</span>
+            		</li>
+            		<li>
+            			<a href="" class="">
+            				<span class="icon material-icons">email</span>
+            				<span class="text">Inbox</span>
+            			</a>
+            		</li>
+            		<li>
+            			<a href="">
+            				<span class="icon material-icons">bar_chart</span>
+            				<span class="text">Graph</span>
+            			</a>
+            		</li>
+            		<li class="seperator">
+            			<span>Elements</span>
+            		</li>
+            		<li>
+            			<a href="" class="">
+            				<span class="icon material-icons">email</span>
+            				<span class="text">Inbox</span>
+            			</a>
+            		</li>
+            		<li>
+            			<a href="">
+            				<span class="icon material-icons">bar_chart</span>
+            				<span class="text">Graph</span>
+            			</a>
+            		</li>
+            		<li class="seperator"></li> -->
             	</ul>
+            	<div class="bottom-bar">
+            		<button class="btn btn-block btn-dark toggle-sidebar">Toggle</button>
+            	</div>
             </nav>
 		</aside>
 		<div class="right-area">
 			<header>
-				
+				<button class="hamburger">
+					<span class="material-icons">menu</span>
+				</button>
 			</header>
 			<div class="main-content">
 				<div class="page-header">
@@ -129,7 +244,6 @@
 							<h6>H6</h6>						    
 						  </div>
 						</div>
-						
 					</div>
 					<div class="col-sm-6">
 						<div class="card">
@@ -150,6 +264,17 @@
 			</div>
 		</div>
 	</div>
-	
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".toggle-sidebar").click(function(){
+				$(".main-wrapper").toggleClass("mini");
+			});
+			$(".hamburger").click(function(){
+				$(".main-wrapper").removeClass("mini").toggleClass("sidemenu-open");
+			})
+		})
+	</script>
 </body>
 </html>
