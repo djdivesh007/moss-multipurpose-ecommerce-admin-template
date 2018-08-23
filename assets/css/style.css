@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu|Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro|Material+Icons");
 /* $blue:    #2196f3;
 $indigo:  #3f51b5;
 $purple:  #673ab7;
@@ -54,7 +54,7 @@ $cyan:    #0097a7;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Ubuntu", sans-serif;
+  --font-family-sans-serif: "Maven Pro", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -83,7 +83,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5215,7 +5215,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5328,7 +5328,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -8478,6 +8478,7 @@ body {
 }
 
 .main-wrapper .sidebar .navigation {
+  margin-top: 20px;
   height: 100%;
   overflow: auto;
   /* visibility: hidden;
@@ -8487,9 +8488,8 @@ body {
 }
 
 .main-wrapper .sidebar .navigation > ul {
-  padding-top: 20px;
   padding-left: 0px;
-  /* visibility: visible; */
+  padding-right: 10px;
 }
 
 .main-wrapper .sidebar .navigation > ul:hover {
@@ -8553,7 +8553,7 @@ body {
 .main-wrapper .sidebar .navigation > ul li.seperator {
   margin-top: 18px;
   margin-bottom: 18px;
-  height: 1px;
+  height: 1px !important;
   background-color: #e9ecef;
 }
 
@@ -8644,8 +8644,12 @@ body {
   padding-right: 0px;
 }
 
+.main-wrapper.mini .sidebar .navigation > ul li {
+  height: 42px;
+}
+
 .main-wrapper.mini .sidebar .navigation > ul li:hover {
-  height: 40px;
+  height: 42px;
 }
 
 .main-wrapper.mini .sidebar .navigation > ul li a span {
@@ -8664,8 +8668,8 @@ body {
   border-left-width: 0;
   line-height: 40px;
   box-shadow: 0px 0px 0px 1px #ced4da;
-  width: 240px;
-  height: 40px;
+  width: 224px;
+  height: 42px;
   vertical-align: middle;
 }
 

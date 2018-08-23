@@ -27,6 +27,7 @@ body{
 			top:0;
 		}
 		.navigation {
+			margin-top: 20px;
 			height: 100%;
 			overflow: auto;
 			/* visibility: hidden;
@@ -34,9 +35,8 @@ body{
 				visibility: visible;
 			} */
 			& > ul{
-				padding-top: 20px;
 				padding-left: 0px;
-				/* visibility: visible; */
+				padding-right: 10px;
 				&:hover{
 					/* padding-right: 0px;
 					height: 100%;
@@ -86,7 +86,7 @@ body{
 					&.seperator{
 						margin-top: 18px;
 						margin-bottom: 18px;
-						height: 1px;
+						height: 1px !important;
 						background-color: $gray-200;
 						span{
 				            user-select: none;
@@ -168,8 +168,9 @@ body{
 					padding-right: 0px;
 
 					li{
+						height: 42px;
 						&:hover{
-							height: 40px;
+							height: 42px;
 						}
 						a{
 							span{
@@ -186,8 +187,8 @@ body{
 								border-left-width: 0;
 								line-height: 40px;
 								box-shadow: 0px 0px 0px 1px $gray-400;
-								width: 240px;
-								height: 40px;								
+								width: 224px;
+								height: 42px;								
 								vertical-align: middle;
 								span{
 									display: inline-block;
