@@ -173,6 +173,7 @@ body{
 							height: 42px;
 						}
 						a{
+							transition: width .3s;
 							span{
 								display: none;
 								&.icon{
@@ -187,8 +188,9 @@ body{
 								border-left-width: 0;
 								line-height: 40px;
 								box-shadow: 0px 0px 0px 1px $gray-400;
-								width: 224px;
-								height: 42px;								
+								width: 216px;
+								overflow: hidden;
+								height: 42px;
 								vertical-align: middle;
 								span{
 									display: inline-block;
@@ -230,7 +232,13 @@ body{
 	}
 	@include media-breakpoint-down(md) {
 		.sidebar{
+			transition: margin-left 0.3s;
 			margin-left: -240px;
+			border-right: 1px solid $gray-400;
+			height: 100%;
+			.navbar{
+				visibility: hidden;
+			}
 		}
 		.right-area{
 			margin-left: 0px;

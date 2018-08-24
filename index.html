@@ -64,96 +64,6 @@
             		<li class="seperator">
             			<span>Elements</span>
             		</li>
-            		<li>
-            			<a href="" class="">
-            				<span class="icon material-icons">email</span>
-            				<span class="text">Inbox</span>
-            			</a>
-            		</li>
-            		<li>
-            			<a href="">
-            				<span class="icon material-icons">bar_chart</span>
-            				<span class="text">Graph</span>
-            			</a>
-            		</li>
-            		<li class="seperator">
-                              <span>Elements</span>
-                        </li>
-                        <li>
-                              <a href="" class="">
-                                    <span class="icon material-icons">email</span>
-                                    <span class="text">Inbox</span>
-                              </a>
-                        </li>
-                        <li>
-                              <a href="">
-                                    <span class="icon material-icons">bar_chart</span>
-                                    <span class="text">Graph</span>
-                              </a>
-                        </li>
-                        <li class="seperator">
-                              <span>Elements</span>
-                        </li>
-                        <li>
-                              <a href="" class="">
-                                    <span class="icon material-icons">email</span>
-                                    <span class="text">Inbox</span>
-                              </a>
-                        </li>
-                        <li>
-                              <a href="">
-                                    <span class="icon material-icons">bar_chart</span>
-                                    <span class="text">Graph</span>
-                              </a>
-                        </li>
-                        <li class="seperator">
-                              <span>Elements</span>
-                        </li>
-                        <li>
-                              <a href="" class="">
-                                    <span class="icon material-icons">email</span>
-                                    <span class="text">Inbox</span>
-                              </a>
-                        </li>
-                        <li>
-                              <a href="">
-                                    <span class="icon material-icons">bar_chart</span>
-                                    <span class="text">Graph</span>
-                              </a>
-                        </li>
-                        <li class="seperator">
-                              <span>Elements</span>
-                        </li>
-                        <li>
-                              <a href="" class="">
-                                    <span class="icon material-icons">email</span>
-                                    <span class="text">Inbox</span>
-                              </a>
-                        </li>
-                        <li>
-                              <a href="">
-                                    <span class="icon material-icons">bar_chart</span>
-                                    <span class="text">Graph</span>
-                              </a>
-                        </li>
-                        <li class="seperator">
-                              <span>Elements</span>
-                        </li>
-                        <li>
-                              <a href="" class="">
-                                    <span class="icon material-icons">email</span>
-                                    <span class="text">Inbox</span>
-                              </a>
-                        </li>
-                        <li>
-                              <a href="">
-                                    <span class="icon material-icons">bar_chart</span>
-                                    <span class="text">Graph</span>
-                              </a>
-                        </li>
-                        <li class="seperator">
-                              <span>Elements</span>
-                        </li>
                         <li>
                               <a href="" class="">
                                     <span class="icon material-icons">email</span>
@@ -168,9 +78,9 @@
                         </li>
                         <li class="seperator"></li>
             	</ul>
-            	<div class="bottom-bar">
-            		<button class="btn btn-block btn-dark toggle-sidebar">Toggle</button>
-            	</div>
+            	<!-- <div class="bottom-bar">
+                        <button class="btn btn-block btn-dark toggle-sidebar">Toggle</button>
+                  </div> -->
             </nav>
 		</aside>
 		<div class="right-area">
@@ -268,11 +178,11 @@
 	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".toggle-sidebar").click(function(){
+			/*$(".toggle-sidebar").click(function(){
 				$(".main-wrapper").toggleClass("mini");
-			});
+			});*/
 			$(".hamburger").click(function(){
-				$(".main-wrapper").removeClass("mini").toggleClass("sidemenu-open");
+				$(".main-wrapper").toggleClass("mini").toggleClass("sidemenu-open");
 			});
                   /*$(".navigation").scroll(function(){
                         console.log($(this).offset().top);
