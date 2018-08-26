@@ -8462,10 +8462,22 @@ a.text-dark:hover, a.text-dark:focus {
 .main-wrapper .sidebar .navbar {
   /* border-right: 1px solid darken($primary, 10%); */
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
-  padding-top: 7px;
-  padding-bottom: 7px;
   position: sticky;
+  line-height: 54px;
+  padding: 0;
   top: 0;
+}
+
+.main-wrapper .sidebar .navbar .navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.main-wrapper .sidebar .navbar .logo {
+  height: 50px;
+  padding: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .main-wrapper .sidebar .navigation {
@@ -8596,7 +8608,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-right: 15px;
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: inherit;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
