@@ -39,10 +39,12 @@
 					&:hover{
 						& > a{
 							background-color: $gray-100;
+							transition: background-color .2s;
 						}
 					}
 					a{
 						display: inline-block;
+						transition: background-color .2s;
 						font-size: 14px;
 						color: $gray-700;
 						text-decoration: none;
@@ -73,7 +75,7 @@
 						}
 					
 						&.active{
-							background-color: lighten($primary, 48%);
+							background-color: lighten($primary, 43%);
 							color: $primary;
 							.caret{
 								color: #000;
@@ -146,6 +148,7 @@
 				background-color: transparent;
 				border:none;
 				color: inherit;
+				transition: background-color 0.2s;
 				display: inline-flex;
   				align-items: center;
   				cursor: pointer;
@@ -153,6 +156,7 @@
   					outline: 0;
   				}
   				&:active,&:hover{
+					transition: background-color 0.2s;
   					background-color: darken($primary, 5%);
   				}
 			}
