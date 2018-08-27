@@ -61,6 +61,7 @@
 							}
 							&.caret {
 								margin-left: 0px;
+								transition: transform 0.2s;
 								+ .icon{
 									margin-left: 0px;
 								}
@@ -78,6 +79,11 @@
 							color: $primary;
 							.caret{
 								color: #000;
+							}
+						}
+						&[aria-expanded='true']{
+							span.caret{
+								transform: rotate(90deg);
 							}
 						}
 					}

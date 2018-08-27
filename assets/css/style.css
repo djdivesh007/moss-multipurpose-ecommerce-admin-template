@@ -8522,6 +8522,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .main-wrapper .sidebar .navigation > ul li a span.caret {
   margin-left: 0px;
+  transition: transform 0.2s;
 }
 
 .main-wrapper .sidebar .navigation > ul li a span.caret + .icon {
@@ -8542,6 +8543,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 .main-wrapper .sidebar .navigation > ul li a.active .caret {
   color: #000;
+}
+
+.main-wrapper .sidebar .navigation > ul li a[aria-expanded='true'] span.caret {
+  transform: rotate(90deg);
 }
 
 .main-wrapper .sidebar .navigation > ul li.seperator {
