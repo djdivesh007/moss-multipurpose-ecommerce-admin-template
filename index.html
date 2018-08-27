@@ -41,7 +41,7 @@
 		            			</a>
 		            		</li>
 		            		<li>
-		            			<a href="" class="">
+		            			<a href="" class="boxed-layout-btn">
 		            				<span class="icon material-icons">remove</span>
 		            				<span class="text">Boxed Layout</span>
 		            			</a>
@@ -356,22 +356,19 @@
 	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script-->
 	<script>
 		$(document).ready(function(){
-			/*$(".toggle-sidebar").click(function(){
-				$(".main-wrapper").toggleClass("mini");
-			});*/
+			
 			$(".hamburger").click(function(){
 				$(".main-wrapper").toggleClass("mini").toggleClass("sidemenu-open");
 			});
-                  /*$(".navigation").scroll(function(){
-                        console.log($(this).offset().top);
-                        console.log($(this).scrollTop());
-                        $(this).find("a:hover").css("top", $(this).scrollTop());
-                  });
-*/
-                  $(".navigation li").hover(function(){
-                        $(this).find("a").css("top",  this.getBoundingClientRect().top);
-                  });
 
+			$(".navigation li").hover(function(){
+			    $(this).find("a").css("top",  this.getBoundingClientRect().top);
+			});
+
+			$(".boxed-layout-btn").click(function(e){
+				e.preventDefault();
+				$(".main-wrapper").toggleClass("container");
+			});
 		})
 	</script>
 </body>

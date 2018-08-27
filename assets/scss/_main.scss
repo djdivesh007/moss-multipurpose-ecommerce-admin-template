@@ -6,6 +6,15 @@ body{
 	color: $gray-800;
 }
 
+.main-wrapper{
+	height: 100%;
+	width: 100%;
+	&.container{
+		border:1px solid $gray-200;
+		padding: 0;
+	}
+}
+
 .btn-xs{
 	padding: 0.15rem 0.5rem;
     font-size: 0.675rem;

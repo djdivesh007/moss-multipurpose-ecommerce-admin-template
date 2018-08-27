@@ -8445,11 +8445,6 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important;
 }
 
-.main-wrapper {
-  height: 100%;
-  width: 100%;
-}
-
 .main-wrapper .sidebar {
   position: fixed;
   height: calc(100% - 54px);
@@ -8792,6 +8787,16 @@ html, body {
 body {
   background-color: #fff;
   color: #343a40;
+}
+
+.main-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.main-wrapper.container {
+  border: 1px solid #e9ecef;
+  padding: 0;
 }
 
 .btn-xs {
