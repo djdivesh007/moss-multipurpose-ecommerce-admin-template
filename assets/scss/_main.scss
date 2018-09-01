@@ -18,9 +18,16 @@ body{
 	}
 }
 
-.btn-xs{
-	padding: 0.15rem 0.5rem;
-    font-size: 0.675rem;
-    line-height: 1.5;
-    border-radius: $border-radius-xs;
+code{
+	color: darken($primary, 10%);
+	border: 0.7px solid lighten($primary,50%);
+	border-radius: 2px;
+	padding: 1px 5px 1px 5px;
+}
+
+.btn-list{
+	.btn{
+	    margin-top: 15px;
+		margin-right: 10px;
+	}
 }
