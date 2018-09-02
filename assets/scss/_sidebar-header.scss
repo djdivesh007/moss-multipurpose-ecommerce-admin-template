@@ -325,14 +325,6 @@
 						}
 						&.seperator{
 							display: none;
-							margin-left: 18px;
-							margin-right: 18px;
-							height: 100% !important;
-							width: 1px;
-							background-color: $gray-200;
-							span{
-								display: none;
-							}
 						}
 						&:last-child{
 							& > a{
