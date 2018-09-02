@@ -8790,6 +8790,7 @@ a.text-dark:hover, a.text-dark:focus {
   border-right: 1px solid #e9ecef;
   display: inline-block;
   padding: 5px;
+  padding-top: 8px;
   width: 120px;
   text-align: center;
   border-radius: 2px;
@@ -8832,16 +8833,21 @@ a.text-dark:hover, a.text-dark:focus {
   display: block;
   position: fixed;
   background-color: #fff;
+  margin-left: -1px;
 }
 
-.main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul a {
-  border-left: 1px solid #e9ecef;
-  border-right: 1px solid #e9ecef;
-  border-bottom: 1px solid #e9ecef;
+.main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul li a {
+  border: 1px solid #e9ecef;
+  border-top: none;
+  width: 121px;
 }
 
-.main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul a span.icon {
+.main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul li a span.icon {
   display: none;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul li:first-child a {
+  border-top: 1px solid #e9ecef;
 }
 
 .main-wrapper.horizontal.without-icon .sidebar .navigation > ul > li > a {
