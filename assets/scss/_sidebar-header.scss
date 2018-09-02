@@ -341,12 +341,13 @@
 						}
 						&:hover{
 							a{
+
 							}
 							ul{
-								display: block;
-							    position: fixed;
-							    background-color: #fff;
-							    margin-left: -1px;
+								height: auto;
+								transform: scaleY(1);
+								transition: transform .2s;
+								overflow: auto;
 							    li{
 									a{
 										border: 1px solid $gray-200;
@@ -356,7 +357,6 @@
 											display: none;
 										}
 								    }
-
 									&:first-child{
 										a{
 											border-top: 1px solid $gray-200;
@@ -364,6 +364,17 @@
 									}
 								}
 							}
+						}
+						ul{
+						    position: fixed;
+							display: block;
+							height: 0;
+							overflow: hidden;
+						    background-color: #fff;
+						    margin-left: -1px;
+						    transform: scaleY(0);
+							transform-origin: top;
+						    transition: none;
 						}
 					}
 				}
@@ -423,5 +434,29 @@
 				}
 			}
 		}
+
+		&.horizontal{
+			.sidebar{
+				margin-left: 0;
+				transition: none;
+				.navigation{
+					margin-top: -100%;
+					transition: margin-top 0.2s;
+				}
+			}
+			.right-area{
+				.main-content{
+					margin-top: 0;
+				}
+			}
+		}
+		&.horizontal.sidemenu-open{
+			.sidebar{
+				.navigation{
+					margin-top: 0;
+				}
+			}
+		}
+
 	}
 }

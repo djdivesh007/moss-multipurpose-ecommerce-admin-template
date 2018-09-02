@@ -8830,10 +8830,10 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul {
-  display: block;
-  position: fixed;
-  background-color: #fff;
-  margin-left: -1px;
+  height: auto;
+  transform: scaleY(1);
+  transition: transform .2s;
+  overflow: auto;
 }
 
 .main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul li a {
@@ -8848,6 +8848,18 @@ a.text-dark:hover, a.text-dark:focus {
 
 .main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul li:first-child a {
   border-top: 1px solid #e9ecef;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li ul {
+  position: fixed;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  margin-left: -1px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: none;
 }
 
 .main-wrapper.horizontal.without-icon .sidebar .navigation > ul > li > a {
@@ -8890,6 +8902,20 @@ a.text-dark:hover, a.text-dark:focus {
   }
   .main-wrapper.sidemenu-open .sidebar .navigation {
     padding-right: 0;
+  }
+  .main-wrapper.horizontal .sidebar {
+    margin-left: 0;
+    transition: none;
+  }
+  .main-wrapper.horizontal .sidebar .navigation {
+    margin-top: -100%;
+    transition: margin-top 0.2s;
+  }
+  .main-wrapper.horizontal .right-area .main-content {
+    margin-top: 0;
+  }
+  .main-wrapper.horizontal.sidemenu-open .sidebar .navigation {
+    margin-top: 0;
   }
 }
 

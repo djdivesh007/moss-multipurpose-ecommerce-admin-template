@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="ovrelay-mask"></div>
-	<div class="main-wrapper mini horizontal">
+	<div class="main-wrapper horizontal">
 		<aside class="sidebar">
 			<nav class="navbar navbar-dark bg-primary">
 				<a class="navbar-brand brand-title" href="#">
@@ -613,11 +613,23 @@
 	<script src="node_modules/jquery/dist/jquery.js"></script>
 	<script src="node_modules/popper.js/dist/umd/popper.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+	<script src="assets/js/bs4-breakpoint-check.js"></script>
+
 	<script>
 		$(document).ready(function(){
-			
 			$(".hamburger").click(function(){
-				$(".main-wrapper").toggleClass("mini").toggleClass("sidemenu-open");
+				var mainWrapper = $(".main-wrapper");
+				if(xs || sm){
+					mainWrapper.toggleClass("sidemenu-open");
+				}
+				else{
+					if(mainWrapper.hasClass("horizontal"))
+						mainWrapper.toggleClass("without-icon");
+					else{
+						mainWrapper.toggleClass("mini");
+					}
+				}
 			});
 
 			$(".navigation li").hover(function(){
