@@ -8756,6 +8756,110 @@ a.text-dark:hover, a.text-dark:focus {
   margin-left: 65px;
 }
 
+.main-wrapper.horizontal .sidebar {
+  height: auto;
+}
+
+.main-wrapper.horizontal .sidebar .navigation {
+  position: fixed;
+  padding: 0;
+  top: 54px;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  background-color: #fff;
+  transition: width 0.2s;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li a {
+  border-right: 1px solid #e9ecef;
+  display: inline-block;
+  padding: 5px;
+  width: 120px;
+  text-align: center;
+  border-radius: 2px;
+  line-height: 28px;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li a span {
+  margin: 0;
+  padding: 0;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li a span.caret {
+  display: none !important;
+  float: right;
+  display: block;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li a span.icon {
+  display: block;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li.seperator {
+  display: none;
+  margin-left: 18px;
+  margin-right: 18px;
+  height: 100% !important;
+  width: 1px;
+  background-color: #e9ecef;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li.seperator span {
+  display: none;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li:last-child > a {
+  border: none;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul {
+  display: block;
+  position: fixed;
+  background-color: #fff;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul a {
+  border-left: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul a span.icon {
+  display: none;
+}
+
+.main-wrapper.horizontal.without-icon .sidebar .navigation > ul > li > a {
+  line-height: 40px;
+}
+
+.main-wrapper.horizontal.without-icon .sidebar .navigation > ul > li > a span.icon {
+  display: none;
+}
+
+.main-wrapper.horizontal .right-area {
+  margin-left: unset;
+}
+
+.main-wrapper.horizontal .right-area .main-content {
+  margin-top: 67px;
+}
+
 @media (max-width: 991.98px) {
   .main-wrapper .sidebar {
     transition: margin-left 0.2s;

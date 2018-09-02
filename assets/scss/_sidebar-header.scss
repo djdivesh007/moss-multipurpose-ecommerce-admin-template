@@ -278,6 +278,110 @@
 			margin-left: 65px;
 		}
 	}
+	&.horizontal{
+		.sidebar{
+			height: auto;
+			.navigation{
+				position: fixed;
+				padding: 0;
+				top: 54px;
+				width: 100%;
+				height: auto;
+				z-index: 10;
+				background-color:#fff;
+				transition: width 0.2s;
+				border-bottom: 1px solid $gray-200;
+				& > ul{
+					display: block;
+					overflow: hidden;
+					margin-bottom: 0;
+					padding: 0;
+					text-align: center;
+					font-size: 0; // To remove extra whitespace between li's
+					& > li{
+						display: inline-block;
+						font-size: 14px;   // To remove extra whitespace between li's
+						a{
+							border-right: 1px solid $gray-200;
+							display: inline-block;
+							padding: 5px;
+							width: 120px;
+							text-align: center;
+							border-radius: 2px;
+							line-height: 28px;
+							span{
+								margin: 0;
+								padding: 0;
+							}
+							span.caret{
+								display: none !important;
+								float: right;
+								display: block;
+							}
+							span.icon{
+								display: block;
+							}
+						}
+						&.seperator{
+							display: none;
+							margin-left: 18px;
+							margin-right: 18px;
+							height: 100% !important;
+							width: 1px;
+							background-color: $gray-200;
+							span{
+								display: none;
+							}
+						}
+						&:last-child{
+							& > a{
+								border: none;
+							}
+						}
+						&:hover{
+							a{
+							}
+							ul{
+								display: block;
+							    position: fixed;
+							    background-color: #fff;
+								a{
+									border-left: 1px solid $gray-200;
+									border-right: 1px solid $gray-200;
+									border-bottom: 1px solid $gray-200;
+									span.icon{
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.without-icon{
+			.sidebar{
+				.navigation{
+					& > ul {
+						& > li{
+							& > a {
+								line-height: 40px;
+								span.icon{
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.right-area{
+			margin-left: unset;
+			.main-content{
+				margin-top: 67px;
+			}
+		}
+	}
 	@include media-breakpoint-down(md) {
 		.sidebar{
 			transition: margin-left 0.2s;
