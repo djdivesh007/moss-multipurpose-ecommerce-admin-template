@@ -8454,7 +8454,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .main-wrapper .sidebar .navbar {
   /* border-right: 1px solid darken($primary, 10%); */
-  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
   position: sticky;
   line-height: 54px;
   padding: 0;
@@ -8599,7 +8598,6 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #1565c0;
   color: #fff;
   height: 54px;
-  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
 }
 
 .main-wrapper .right-area header button.hamburger {
@@ -8862,6 +8860,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 .main-wrapper.horizontal .right-area {
   margin-left: unset;
+}
+
+.main-wrapper.horizontal .right-area header {
+  margin-left: 240px;
 }
 
 .main-wrapper.horizontal .right-area .main-content {

@@ -9,7 +9,7 @@
 		transition: width 0.2s;
 		.navbar{
 			/* border-right: 1px solid darken($primary, 10%); */
-			box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+			//box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
 			position: sticky;
 			line-height: 54px;
 			padding: 0;
@@ -140,7 +140,7 @@
 			background-color: $primary;
 			color: #fff;
 			height: 54px;
-			box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+			//box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
 			button.hamburger{
 				height: 54px;
 				padding-left: 15px;
@@ -390,6 +390,9 @@
 		}
 		.right-area{
 			margin-left: unset;
+			header{
+				margin-left: 240px;
+			}
 			.main-content{
 				margin-top: 67px;
 			}

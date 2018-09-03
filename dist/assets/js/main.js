@@ -78,4 +78,8 @@ $(document).ready(function(){
 		e.preventDefault();
 		$(".right-area .main-content").toggleClass("container container-fluid");
 	});
+	$(".sidebar-layout-btn").click(function(e){
+		e.preventDefault();
+		$(".main-wrapper").removeClass("mini").toggleClass("horizontal");
+	});
 });
