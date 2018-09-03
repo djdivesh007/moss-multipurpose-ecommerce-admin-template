@@ -8903,6 +8903,9 @@ a.text-dark:hover, a.text-dark:focus {
     margin-top: -100%;
     transition: margin-top 0.2s;
   }
+  .main-wrapper.horizontal .right-area header {
+    margin-left: unset;
+  }
   .main-wrapper.horizontal .right-area .main-content {
     margin-top: 0;
   }
