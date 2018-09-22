@@ -1,8 +1,9 @@
-$enable-rounded: true;
+//Bootstrap Defaults
+
+$enable-rounded: false;
 $enable-print-styles: false;
 
-
-/* $blue:    #2196f3;
+$blue:    #2196f3;
 $indigo:  #3f51b5;
 $purple:  #673ab7;
 $pink:    #e91e63;
@@ -11,7 +12,7 @@ $orange:  #ff9800;
 $yellow:  #ffeb3b;
 $green:   #4caf50;
 $teal:    #009688;
-$cyan:    #00bcd4; */
+$cyan:    #00bcd4;
 /* $blue:    #1976d2;
 $indigo:  #303f9f;
 $purple:  #512da8;
@@ -21,8 +22,9 @@ $orange:  #f57c00;
 $yellow:  #fbc02d;
 $green:   #388e3c;
 $teal:    #00796b;
-$cyan:    #0097a7; */
-$blue:    #1565c0;
+$cyan:    #0097a7;
+ */
+ /* $blue:    #1565c0;
  $indigo:  #1a237e;
  $purple:  #311b92;
  $pink:    #880e4f;
@@ -31,11 +33,17 @@ $blue:    #1565c0;
  $yellow:  #f57f17;
  $green:   #1b5e20;
  $teal:    #004d40;
- $cyan:    #006064;
-
+ $cyan:    #006064;   */
 $grid-gutter-width: 15px;
 
 $border-radius:               .2rem !default;
 $border-radius-lg:            .25rem !default;
 $border-radius-sm:            .175rem !default;
 $border-radius-xs:            .15rem !default;
+
+$breadcrumb-divider: quote("›");
+//$breadcrumb-divider: quote("»");
+
+
+//Font-Awesome !
+$fa-font-path:        '../webfonts';

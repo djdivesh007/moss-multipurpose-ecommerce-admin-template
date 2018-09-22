@@ -1,4 +1,8 @@
 .btn{
+	&:focus{
+		//Boostrap by default add focus box-shadow. which is not required unless you care much about accessibility
+		box-shadow: none !important;
+	}
 	/* Extra small size */
 	&.btn-xs{
 		padding: 0.15rem 0.5rem;
@@ -16,9 +20,6 @@
 			color: inherit;
 			border-color: inherit;
 		}
-	}
-	&:focus{
-		box-shadow: none;
 	}
 	&.disabled, &[disabled]{
 		cursor: not-allowed;
@@ -149,6 +150,28 @@
 		    	font-size: 16px;
 			}
 		}
+	}
+	&.btn-transparent{
+		background-color: transparent;
+	}
+	&.btn-underline{
+		@each $color, $value in $theme-colors {
+			&.btn-#{$color} {
+				background-color: transparent;
+				border: none;
+				border-bottom: 3px solid $value;
+				color: $value;
+				&:focus{
+					box-shadow: none !important;
+				}
+				&.active, &:hover{
+					background-color: inherit;
+					border-color: darken($value, 5%) !important; 
+					color: $value !important;
+				}    
+			}
+		}
+		
 	}
 }
 .btn-group{

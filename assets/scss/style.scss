@@ -1,8 +1,10 @@
+@import 'variables';
 @import 'fonts';
-@import 'bootstrap-defaults';
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
 @import 'sidebar-header';
 @import 'button';
+@import 'panel';
+@import 'loading-bar';
 @import 'main';
 @import 'pseudo';

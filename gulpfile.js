@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 
 
 var imgSrcFiles = [ 'assets/images/**/*'],
+    fontSrcFiles = [ 'node_modules/@fortawesome/fontawesome-free/webfonts/*'],
 	distPath = 'dist'
 ;
 
@@ -50,14 +51,17 @@ gulp.task('watch', function() {
 
 gulp.task('copy-images', function() {
 	return gulp.src(imgSrcFiles,{base:"."}).pipe(gulp.dest(distPath));
-
-	/*return gulp
-	    .src(imgSrcFiles)
-	    .pipe(gulpCopy("assets/", {}))
-		.pipe(gulp.dest(distPath));*/
 });
 
-gulp.task('build', ['build-css','copy-images'], function() {
+gulp.task('copy-fonts', function() {
+	return gulp.src(fontSrcFiles,{base:"./node_modules/@fortawesome/fontawesome-free/"}).pipe(gulp.dest(distPath+"/assets"));
+});
+
+gulp.task('copy-fonts:dev', function() {
+	return gulp.src(fontSrcFiles,{base:"./node_modules/@fortawesome/fontawesome-free/"}).pipe(gulp.dest("./assets"));
+});
+
+gulp.task('build', ['build-css','copy-images','copy-fonts'], function() {
     return gulp.src('*.html')
         .pipe(useref())
         .pipe(gulp.dest(distPath));
