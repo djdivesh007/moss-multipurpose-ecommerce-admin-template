@@ -1,7 +1,15 @@
 var gulp = require('gulp'),
     webserver = require('gulp-webserver'),
 	sass = require('gulp-sass'),
-    useref = require('gulp-useref');
+    useref = require('gulp-useref'),
+    gulpCopy = require('gulp-copy');
+
+
+var imgSrcFiles = [ 'assets/images/**/*'],
+    fontSrcFiles = [ 'node_modules/@fortawesome/fontawesome-free/webfonts/*'],
+	distPath = 'dist'
+;
+
 
 var sassConfig = {
 	inputDirectory: 'assets/scss/**/*.scss',
@@ -11,20 +19,23 @@ var sassConfig = {
 	}
 };
 
-gulp.task('webserver', function() {
+gulp.task('webserver', ['watch'] , function() {
   gulp.src('./')
     .pipe(webserver({
-		livereload: true,
-		filter: function(fileName) {
-			if (fileName.match(/.scss$/)) { // exclude all scss from livereload
-				return false;
-			} else {
-				return true;
+		livereload: {
+			enable: true,
+			filter: function(fileName) {
+				if (fileName.match(/.scss$/)) { // exclude all scss from livereload
+					return false;
+				} else {
+					return true;
+				}
 			}
 		},
-		directoryListing: true,
+		directoryListing: false,
 		open: true
     }));
+
 });
 
 gulp.task('build-css', function() {
@@ -38,8 +49,20 @@ gulp.task('watch', function() {
 	gulp.watch('assets/scss/**/*.scss', ['build-css']);
 });
 
-gulp.task('build', ['build-css'], function() {
+gulp.task('copy-images', function() {
+	return gulp.src(imgSrcFiles,{base:"."}).pipe(gulp.dest(distPath));
+});
+
+gulp.task('copy-fonts', function() {
+	return gulp.src(fontSrcFiles,{base:"./node_modules/@fortawesome/fontawesome-free/"}).pipe(gulp.dest(distPath+"/assets"));
+});
+
+gulp.task('copy-fonts:dev', function() {
+	return gulp.src(fontSrcFiles,{base:"./node_modules/@fortawesome/fontawesome-free/"}).pipe(gulp.dest("./assets"));
+});
+
+gulp.task('build', ['build-css','copy-images','copy-fonts'], function() {
     return gulp.src('*.html')
         .pipe(useref())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest(distPath));
 });
