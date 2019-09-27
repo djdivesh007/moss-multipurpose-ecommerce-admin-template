@@ -32,6 +32,8 @@ gulp.task('webserver', ['watch'] , function() {
 				}
 			}
 		},
+		host: '127.0.0.1',
+		port: 9019,
 		directoryListing: false,
 		open: true
     }));
