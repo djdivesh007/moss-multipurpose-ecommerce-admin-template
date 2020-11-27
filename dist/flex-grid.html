@@ -272,172 +272,91 @@
 			<div class="main-content container">
 				<div class="page-header row">
 					<div class="col-sm-8">
-						<span class="h3">Panels</span>
-						<small>Let's wrap it up !</small>
+						<span class="h3">Grids</span>
+						<small>Flex Grid Box</small>
 					</div>
 					<div class="col-sm-4">
 						<nav aria-label="breadcrumb" class="float-right">
 						  	<ol class="breadcrumb">
 						    	<li class="breadcrumb-item"><a href="#"><span class="icon material-icons">home</span></a></li>
 							    <li class="breadcrumb-item"><a href="#">UI Components</a></li>
-							    <li class="breadcrumb-item active" aria-current="page">Panels</li>
+							    <li class="breadcrumb-item active" aria-current="page">Flex Grid</li>
 							</ol>
 						</nav>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-3">
-						<div class="card  text-white bg-primary only-header">
-						  <div class="card-header">Header</div>
-						  <div class="card-body">
-						    <h5 class="card-title">Primary card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="card text-white bg-secondary only-header">
-						  <div class="card-header">Header</div>
-						  <div class="card-body">
-						    <h5 class="card-title">Secondary card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						  </div>
-						</div>
-					
-					</div>
-					<div class="col-sm-3">
-						<div class="card text-white bg-success only-header">
-						  <div class="card-header">Header</div>
-						  <div class="card-body">
-						    <h5 class="card-title">Success card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="card text-white bg-danger only-header">
-						  <div class="card-header">Header</div>
-						  <div class="card-body">
-						    <h5 class="card-title">Danger card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="card text-white bg-warning">
-						  <div class="card-header">Header</div>
-						  <div class="card-body">
-						    <h5 class="card-title">Warning card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="card text-white bg-info">
-						  <div class="card-header">Header</div>
-						  <div class="card-body">
-						    <h5 class="card-title">Info card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="card bg-light only-header">
-						  <div class="card-header">Header</div>
-						  <div class="card-body">
-						    <h5 class="card-title">Light card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="card text-white bg-dark">
-						  <div class="card-header">Header</div>
-						  <div class="card-body">
-						    <h5 class="card-title">Dark card title</h5>
-						    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-12">
 						<div class="card">
 							<div class="card-header">
-								Basic Panel
+								Grid Layout
 							</div>
 							<div class="card-body">
-								<p class="card-text">This is an example of very basic panel (card) layout. Just use bootstrap's default structure to get this design.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="card">
-							<div class="card-header">
-								Header
-								<div class="tools">
-									<button class="btn btn-square " reload>
-										<i class="material-icons">refresh</i>
-									</button>
-									<button class="btn btn-square" fullscreen>
-										<i class="material-icons">fullscreen</i>
-										<i class="material-icons">fullscreen_exit</i>
-									</button>
-									<button class="btn btn-square" close>
-										<i class="material-icons">close</i>
-									</button>
+								<p class="muted">See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+								<div class="table-responsive mt-40">
+									<table class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<th></th>
+												<th> Extra small devices <small>Phones (&lt;768px)</small> </th>
+												<th> Small devices <small>Tablets (≥768px)</small> </th>
+												<th> Medium devices <small>Desktops (≥992px)</small> </th>
+												<th> Large devices <small>Desktops (≥1200px)</small> </th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>Grid behavior</th>
+												<td>Horizontal at all times</td>
+												<td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+											</tr>
+											<tr>
+												<th>Max container width</th>
+												<td>None (auto)</td>
+												<td>750px</td>
+												<td>970px</td>
+												<td>1170px</td>
+											</tr>
+											<tr>
+												<th>Class prefix</th>
+												<td><code>.col-xs-</code> </td>
+												<td><code>.col-sm-</code> </td>
+												<td><code>.col-md-</code> </td>
+												<td><code>.col-lg-</code> </td>
+											</tr>
+											<tr>
+												<th># of columns</th>
+												<td colspan="4">12</td>
+											</tr>
+											<tr>
+												<th>Max column width</th>
+												<td class="text-muted">Auto</td>
+												<td>60px</td>
+												<td>78px</td>
+												<td>95px</td>
+											</tr>
+											<tr>
+												<th>Gutter width</th>
+												<td colspan="4">
+													- Overridden in <code>variables.scss</code>: 15px (7.5px on each side of a column) <br>
+													- Original Bootstrap default: 30px (15px on each side of a column)</td>
+											</tr>
+											<tr>
+												<th>Nestable</th>
+												<td colspan="4">Yes</td>
+											</tr>
+											<tr>
+												<th>Offsets</th>
+												<td colspan="4">Yes</td>
+											</tr>
+											<tr>
+												<th>Column ordering</th>
+												<td colspan="4">Yes</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
-							</div>
-							<div class="card-body">
-								<p class="card-text">Use <code>.tools</code> inside <code>.card-header</code> with icons to have some actionable buttons. Make use of <code>fullscreen</code>, <code>close</code>, <code>reload</code> attribute for respecitve functionality</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="card text-white bg-success only-header">
-							<div class="card-header">
-								Header
-								<div class="tools">
-									<button class="btn btn-xs btn-icon" reload>
-										<i class="material-icons">refresh</i>
-										<span>Refresh</span>
-									</button>
-									<button class="btn btn-xs" fullscreen>
-										<span>Fullscreen</span>
-										<span>Exit</span>
-									</button>
-								</div>
-							</div>
-							<div class="card-body">
-								<p class="card-text">You can also txt buttons with or without icon</p>
-							</div>
-						</div>
-					</div>
-				
-					<div class="col-sm-4">
-						<div class="card tab-panel" id="tab-panel-parent-1">
-							<div class="card-header">
-								Tab Panel
-								<div class="tab-btns float-right">
-									<button class="btn btn-info btn-underline active" data-toggle="collapse" data-target="#tab-content-1">First</button>
-									<button class="btn btn-info btn-underline" data-toggle="collapse" data-target="#tab-content-2">Second</button>
-								</div>
-							</div>
-							<div class="card-body">
-								<div class="card-text">
-									<p class="collapse fade show" id="tab-content-1" data-parent="#tab-panel-parent-1">1. This is an example of very basic panel (card) layout. Just use bootstrap's default structure to get this design.</p>
-									<p class="collapse fade" id="tab-content-2" data-parent="#tab-panel-parent-1">2. This is an example of very basic panel (card) layout. Just use bootstrap's default structure to get this design.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="card">
-							<div class="card-header">
-								Basic Panel
-							</div>
-							<div class="card-body">
-								<p class="card-text">This is an example of very basic panel (card) layout. Just use bootstrap's default structure to get this design.</p>
+								<p class="muted mt-20">Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, applying any <code>.col-md-</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-</code> class is not present.</p>
 							</div>
 						</div>
 					</div>
