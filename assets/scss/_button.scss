@@ -1,189 +1,193 @@
-.btn{
-	&:focus{
-		//Boostrap by default add focus box-shadow. which is not required unless you care much about accessibility
-		box-shadow: none !important;
-	}
-	/* Extra small size */
-	&.btn-xs{
-		padding: 0.15rem 0.5rem;
-	    font-size: 0.775rem;
-	    line-height: 1.5;
-	    border-radius: $border-radius-xs;
-	}
-	&.btn-rounded{
-		border-radius: 65px;
-	}
-	&.btn-outline-light{
-		color: $gray-500; //Light text will not be visible otherwise
-		border-color: $gray-500;
-		&:hover{
-			color: inherit;
-			border-color: inherit;
-		}
-	}
-	&.disabled, &[disabled]{
-		cursor: not-allowed;
-	}
-	&.btn-square, &.btn-circle{
-		width: 42px;
-		height: 42px;
-		padding: 7px;
-		&.btn-lg{
-			width: 48px;
-			height: 48px;
-			i{
-				font-size: 32px;
-			}
-		}
-		&.btn-sm{
-			width: 31px;
-			height: 31px;
-    		padding: 4px;
-    		i{
-				font-size: 20px;
-    		}
-		}
-		&.btn-xs{
-			width: 24px;
-			height: 24px;
-    		padding: 2px;
-			i{
-				font-size: 16px;
-			}
-		}
-	}
-	&.btn-circle{
-		border-radius: 50%;
-	}
-	&.btn-icon{
-		i{
-			width: 24px;
-			vertical-align: middle;
-			font-size: 24px;
-			float: left;
-			margin-right: 10px;
-		}
-		&.icon-left{
-			i{
-				float: left;
-				margin-right: 10px;
-			}
-		}
-		&.icon-right{
-			i{
-				float: right;
-				margin-left: 10px;
-			}
-		}
-		&.btn-sm{
-			i{
-				font-size: 20px;
-			}
-		}
-		&.btn-lg{
-			i{
-				font-size: 28px;
-			}
-		}
-		&.btn-xs{
-			i{
-				font-size: 16px;
-			}
-			&.icon-right{
-				i{
-					margin-left: 5px;
-				}
-			}
-			&.icon-left{
-				i{
-					margin-right: 5px;
-				}
-			}
-		}
-	}
-	&.btn-animated{
-		position: relative;
-		overflow: hidden;
-		i{
-			position: absolute;
-			margin-top: -50%;
-			transition: all 0.2s;
-		    height: 100%;
-    		left: 0;
-		    width: 100%;
-		}
-		span{
-			position: relative;
-			top: 0;
-			transition: all 0.2s;
-		}
-		&.btn-sm{
-			i{
-				margin-top: -30%;
-			}
-		}
-		&.btn-xs{
-			i{
-				margin-top: -28%;
-			}
-		}
-		&:hover{
-			i{
-				margin-top: 0;
-			}
-			span{
-				top: 50px;
-			}
-		}
-		&.btn-lg{
-			i{
-		    	padding-top: 3px;
-			}
-		}
-		&.btn-sm{
-			i{
-		    	font-size: 20px;
-			}
-		}
-		&.btn-xs{
-			i{
-		    	font-size: 16px;
-			}
-		}
-	}
-	&.btn-transparent{
-		background-color: transparent;
-	}
-	&.btn-underline{
-		@each $color, $value in $theme-colors {
-			&.btn-#{$color} {
-				background-color: transparent;
-				border: none;
-				border-bottom: 3px solid $value;
-				color: $value;
-				&:focus{
-					box-shadow: none !important;
-				}
-				&.active, &:hover{
-					background-color: inherit;
-					border-color: darken($value, 5%) !important; 
-					color: $value !important;
-				}    
-			}
-		}
-		
-	}
+.btn {
+    &:focus {
+        //Boostrap by default add focus box-shadow. which is not required unless you care much about accessibility
+        box-shadow: none !important;
+    }
+    /* Extra small size */
+    &.btn-xs {
+        padding: 0.15rem 0.5rem;
+        font-size: 0.775rem;
+        line-height: 1.5;
+        border-radius: $border-radius-xs;
+    }
+    &.btn-rounded {
+        border-radius: 65px;
+    }
+    &.btn-outline-light {
+        color: $gray-500; //Light text will not be visible otherwise
+        border-color: $gray-500;
+        &:hover {
+            color: inherit;
+            border-color: inherit;
+        }
+    }
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+    }
+    &.btn-square,
+    &.btn-circle {
+        width: 42px;
+        height: 42px;
+        padding: 7px;
+        &.btn-lg {
+            width: 48px;
+            height: 48px;
+            i {
+                font-size: 32px;
+            }
+        }
+        &.btn-sm {
+            width: 31px;
+            height: 31px;
+            padding: 4px;
+            i {
+                font-size: 20px;
+            }
+        }
+        &.btn-xs {
+            width: 24px;
+            height: 24px;
+            padding: 2px;
+            i {
+                font-size: 16px;
+            }
+        }
+    }
+    &.btn-circle {
+        border-radius: 50%;
+    }
+    &.btn-icon {
+        i {
+            width: 24px;
+            vertical-align: middle;
+            font-size: 24px;
+            float: left;
+            margin-right: 10px;
+        }
+        &.icon-left {
+            i {
+                float: left;
+                margin-right: 10px;
+            }
+        }
+        &.icon-right {
+            i {
+                float: right;
+                margin-left: 10px;
+            }
+        }
+        &.btn-sm {
+            i {
+                font-size: 20px;
+            }
+        }
+        &.btn-lg {
+            i {
+                font-size: 28px;
+            }
+        }
+        &.btn-xs {
+            i {
+                font-size: 16px;
+            }
+            &.icon-right {
+                i {
+                    margin-left: 5px;
+                }
+            }
+            &.icon-left {
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    &.btn-animated {
+        position: relative;
+        overflow: hidden;
+        i {
+            position: absolute;
+            margin-top: -50%;
+            transition: all 0.2s;
+            height: 100%;
+            left: 0;
+            width: 100%;
+        }
+        span {
+            position: relative;
+            top: 0;
+            transition: all 0.2s;
+        }
+        &.btn-sm {
+            i {
+                margin-top: -30%;
+            }
+        }
+        &.btn-xs {
+            i {
+                margin-top: -28%;
+            }
+        }
+        &:hover {
+            i {
+                margin-top: 0;
+            }
+            span {
+                top: 50px;
+            }
+        }
+        &.btn-lg {
+            i {
+                padding-top: 3px;
+            }
+        }
+        &.btn-sm {
+            i {
+                font-size: 20px;
+            }
+        }
+        &.btn-xs {
+            i {
+                font-size: 16px;
+            }
+        }
+    }
+    &.btn-transparent {
+        background-color: transparent;
+    }
+    &.btn-underline {
+        @each $color,
+        $value in $theme-colors {
+            &.btn-#{$color} {
+                background-color: transparent;
+                border: none;
+                border-bottom: 3px solid $value;
+                color: $value;
+                &:focus {
+                    box-shadow: none !important;
+                }
+                &.active,
+                &:hover {
+                    background-color: inherit;
+                    border-color: darken($value, 5%) !important;
+                    color: $value !important;
+                }
+            }
+        }
+    }
 }
-.btn-group{
-	&.btn-group-justified{
-		display: table;
-	    width: 100%;
-	    table-layout: fixed;
-	    border-collapse: separate;
-	    .btn{
-    	    display: table-cell;
-    		float: none;
-    		width: 1%;
-	    }
-	}
+
+.btn-group {
+    &.btn-group-justified {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: separate;
+        .btn {
+            display: table-cell;
+            float: none;
+            width: 1%;
+        }
+    }
 }
