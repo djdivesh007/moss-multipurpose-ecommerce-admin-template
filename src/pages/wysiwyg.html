@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('../partials/head.html')
+</head>
+
+<body>
+  <div class="ovrelay-mask"></div>
+  <div class="main-wrapper">
+    @@include('../partials/menu.html')
+    <div class="right-area">
+      @@include('../partials/header.html')
+      <div class="main-content container">
+        <div class="page-header">
+          <div>
+            <span class="h3">WYSIWYG</span>
+            <small>What you see is what you get</small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div id="summernote"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('../partials/js.html')
+  <script>
+    $("#summernote").summernote({
+      height: 400
+    });
+  </script>
+</body>
+
+</html>

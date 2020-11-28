@@ -142,25 +142,88 @@
 			color: #fff;
 			height: 54px;
 			//box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
-			button.hamburger{
-				height: 54px;
-				padding-left: 15px;
-				padding-right: 15px;
-				background-color: transparent;
-				border:none;
-				color: inherit;
-				transition: background-color 0.2s;
-				display: inline-flex;
-  				align-items: center;
-  				cursor: pointer;
-  				&:focus{
-  					outline: 0;
-  				}
-  				&:active,&:hover{
-					transition: background-color 0.2s;
-  					background-color: darken($primary, 5%);
-  				}
+			.navbar-nav {
+				list-style: none;
+				margin: 0;
+				flex-direction: row;
+				color: #fff;
+
+				li.nav-item {
+					display: inline-block;
+					height: 54px;
+					margin: 0 7.5px 0 7.5px;
+					>* {
+						height: 54px;
+					}
+					>.dropdown-menu{
+						height: auto;
+					}
+
+					&.search-bar {
+						@include media-breakpoint-down(sm) {
+							position: fixed;
+							width: 100%;
+							z-index: 10000000;
+							background: $primary;
+
+						}
+					}
+
+					&.icon a,
+					&.icon button {
+						height: 54px;
+						padding-left: 15px;
+						padding-right: 15px;
+						background-color: transparent;
+						border: none;
+						color: inherit;
+						transition: background-color 0.2s;
+						display: inline-flex;
+						align-items: center;
+						cursor: pointer;
+
+						&:focus {
+							outline: 0;
+						}
+
+						&:active,
+						&:hover {
+							transition: background-color 0.2s;
+							background-color: darken($primary, 5%);
+						}
+					}
+
+					a.nav-link {
+						padding: 0 10px;
+						line-height: 54px;
+						text-align: center;
+						color: inherit;
+
+						.img-profile {
+							max-height: 34px;
+							margin-top: -2px;
+						}
+
+						&:hover {
+							transition: background-color 0.2s;
+							background-color: darken($primary, 5%);
+						}
+					}
+
+					&.dropdown {
+						.nav-link {
+							color: $light;
+						}
+
+						&.with-caret {
+							.nav-link {
+								@include caret;
+							}
+						}
+					}
+				}
 			}
+
 		}
 		.main-content{
 			padding: 15px;
@@ -314,6 +377,10 @@
 							span{
 								margin: 0;
 								padding: 0;
+								&.badge{
+									padding: inherit;
+									margin-top: 2px;
+								}
 							}
 							span.caret{
 								display: none !important;
