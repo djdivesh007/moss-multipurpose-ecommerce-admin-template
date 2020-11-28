@@ -1,11 +1,17 @@
+image: node:4.2.2
+
 pages:
-  stage: deploy
+  cache:
+    paths:
+    - node_modules/
+
   script:
-  - mkdir .public
-  - cp -r dist/* .public
-  - mv .public public
+  - npm install -g gulp
+  - npm install
+  - gulp build
+  - mv dist public
   artifacts:
     paths:
     - public
   only:
-  - master
+    - master
