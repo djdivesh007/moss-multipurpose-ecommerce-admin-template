@@ -24,7 +24,7 @@ $cyan:    #0097a7;
  * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro|Maven+Pro|Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Maven+Pro|Material+Icons");
 .fa,
 .fas,
 .far,
@@ -5882,7 +5882,7 @@ readers do not read off random characters that represent icons */
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Maven Pro", sans-serif;
+  --font-family-sans-serif: "Ubuntu", sans-serif;
   --font-family-monospace: "Anonymous+Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -5905,7 +5905,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -10508,7 +10508,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-right: 0.5rem;
   color: #6c757d;
-  content: "›";
+  content: "»";
 }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
@@ -11614,7 +11614,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -11727,7 +11727,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -15930,7 +15930,7 @@ a.text-dark:hover, a.text-dark:focus {
 .btn.btn-square, .btn.btn-circle {
   width: 42px;
   height: 42px;
-  padding: 14px;
+  padding: 7px;
 }
 
 .btn.btn-square.btn-lg, .btn-group-lg > .btn.btn-square, .btn.btn-circle.btn-lg, .btn-group-lg > .btn.btn-circle {
@@ -16383,12 +16383,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: all 0.15s;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  background-color: #fff;
+  background-color: #FAFAFA;
   color: #343a40;
 }
 

@@ -1,31 +1,28 @@
 {
-    "name": "admin",
-    "version": "1.0.0",
-    "description": "Admin Panel",
-    "main": "index.html",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Kaushil Rakhasiya",
-    "license": "UNLICENCED",
-    "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.3.1",
-        "bootstrap": "^4.5.3",
-        "jquery": "^3.5.1",
-        "nanobar": "^0.4.2",
-        "nprogress": "^0.2.0",
-        "popper.js": "^1.16.1",
-        "graceful-fs": {
-            "version": "4.2.2"
-        }
-    },
-    "devDependencies": {
-        "gulp": "^3.9.1",
-        "gulp-copy": "^1.1.0",
-        "gulp-sass": "^4.0.1",
-        "gulp-useref": "^3.1.5",
-        "gulp-watch": "^5.0.1",
-        "gulp-webserver": "^0.9.1",
-        "natives": "^1.1.6"
-    }
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "Admin Panel",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kaushil Rakhasiya",
+  "license": "UNLICENCED",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "nanobar": "^0.4.2",
+    "nprogress": "^0.2.0",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-copy": "^4.0.1",
+    "gulp-file-include": "^2.2.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-useref": "^5.0.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-webserver": "^0.9.1"
+  }
 }

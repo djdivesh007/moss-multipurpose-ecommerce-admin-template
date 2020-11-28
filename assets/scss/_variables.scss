@@ -1,5 +1,5 @@
 //Bootstrap Defaults
-$enable-rounded: false;
+$enable-rounded: true;
 $enable-print-styles: false;
 $blue: #0288D1;
 $indigo: #3f51b5;
@@ -41,7 +41,7 @@ $border-radius: .2rem !default;
 $border-radius-lg: .25rem !default;
 $border-radius-sm: .175rem !default;
 $border-radius-xs: .15rem !default;
-$breadcrumb-divider: quote("›");
+$breadcrumb-divider: quote("»");
 //$breadcrumb-divider: quote("»");
 //Font-Awesome !
 $fa-font-path: '../webfonts';
