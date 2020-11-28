@@ -1,4 +1,4 @@
-image: node:4.2.2
+image: donhenton/docker-gulp-sass-node:latest
 
 pages:
   cache:
