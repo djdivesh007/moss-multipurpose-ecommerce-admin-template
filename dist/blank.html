@@ -47,12 +47,6 @@
                             <span class="text">Boxed Layout</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="" class="">
-                            <span class="icon material-icons">remove</span>
-                            <span class="text">RTL Layout</span>
-                        </a>
-                    </li>
                 </ul>
             </li>
             <li class="seperator">
@@ -121,15 +115,15 @@
                 </a>
                 <ul class="collapse" id="errorPages">
                     <li>
-                        <a href="" class="">
+                        <a href="404.html" class="">
                             <span class="icon material-icons">remove</span>
                             <span class="text">404 Page</span>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="">
+                        <a href="503.html" class="">
                             <span class="icon material-icons">remove</span>
-                            <span class="text">500 Page</span>
+                            <span class="text">503 Page</span>
                         </a>
                     </li>
                 </ul>
@@ -157,6 +151,12 @@
                         </a>
                     </li>
                     <li>
+                        <a href="cards.html" class="">
+                            <span class="icon material-icons">remove</span>
+                            <span class="text">Cards</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="" class="">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Context menu</span>
@@ -181,7 +181,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="">
+                        <a href="flex-grid.html" class="">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Flexbox Grids</span>
                         </a>
@@ -220,7 +220,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="">
+                        <a href="wysiwyg.html" class="">
                             <span class="icon material-icons">remove</span>
                             <span class="text">WYSIWYG Editors</span>
                         </a>
@@ -241,7 +241,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="">
+                        <a href="data-tables.html" class="">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Data Tables</span>
                         </a>
@@ -265,11 +265,78 @@
     </nav>
 </aside>
     <div class="right-area">
-            <header>
-          <button class="hamburger">
-            <span class="material-icons">menu</span>
-          </button>
-        </header>
+      <header>
+    <div>
+        <ul class="navbar-nav">
+            <li class="nav-item icon">
+                <button class="hamburger">
+                  <span class="material-icons">menu</span>
+                </button>
+            </li>
+
+            <li class="nav-item d-sm-none d-none d-md-block">
+                <a href="" class="nav-link">Important Link</a>
+            </li>
+            <li class="nav-item d-sm-none d-none d-md-block">
+                <a href="" class="nav-link">Quick Link</a>
+            </li>
+            <li class="nav-item d-none d-md-block" id="search-bar">
+                <form class="form-inline" method="POST" onsubmit="return false;">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-navbar text-light d-md-none" onclick="$('#search-bar').toggleClass('d-none search-bar')">
+                        <span class="material-icons">arrow_back</span>
+                      </button>
+                        </div>
+                        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-info btn-navbar text-light" type="submit">
+                        <i class="fas fa-search"></i>
+                      </button>
+                        </div>
+                    </div>
+                </form>
+            </li>
+            <li class="flex-fill"></li>
+            <li class="nav-item icon">
+                <a href="" class="nav-link">
+                    <span class="material-icons">fullscreen</span> &nbsp; Full screen
+                </a>
+            </li>
+            <li class="nav-item icon d-block d-md-none">
+                <a class="nav-link" id="searchBtn" onclick="$('#search-bar').toggleClass('d-none search-bar'); return false;">
+                    <span class="material-icons">search</span>
+                </a>
+            </li>
+            <li class="nav-item icon">
+                <a href="" class="nav-link">
+                    <span class="material-icons">notifications</span>
+                </a>
+            </li>
+            <!-- Messages Dropdown Menu -->
+            <li class="nav-item dropdown with-caret">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <img src="http://placeimg.com/100/100/people" class="img-profile rounded-circle">
+                </a>
+                <div class="dropdown-menu p-1 dropdown-menu-right">
+                    <a class="dropdown-item">
+                    Welcome John
+                  </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="" class="dropdown-item">
+                    Logout
+                  </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item dropdown-footer">
+                        <small>
+                      Build Version: v1.0.1
+                    </small>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
       <div class="main-content container">
         <div class="page-header">
           <div>
@@ -280,10 +347,9 @@
       </div>
     </div>
   </div>
-    <script src="assets/js/vendor-bundle.js"></script>
+  <script src="assets/js/vendor-bundle.js"></script>
 
-  <script src="assets/js/main.js"></script>
-
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>
