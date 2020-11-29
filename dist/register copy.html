@@ -2,7 +2,13 @@
 <html lang="en">
 
 <head>
-    @@include('../partials/head.html')
+    <meta charset="UTF-8">
+  <title>Boiler Plate</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
 </head>
 
 <body>
@@ -19,19 +25,25 @@
                         <div class="form-group">
                             <input type="password" name="password" class="form-control" placeholder="Enter your password" required>
                         </div>
+                        <div class="form-group">
+                            <input type="password" name="confirm_password" class="form-control" placeholder="Re-Enter your password" required>
+                        </div>
                         <button class="btn btn-primary btn-block btn-rounded my-4">
-              Login
+              Register
             </button>
                         <a href="" class="d-block text-center">Forgot Password ?</a>
                         <hr>
-                        <a href="register.html" class="d-block text-center">Create new account ?</a>
+                        <a href="login.html" class="d-block text-center">Already have account ? Login instead.</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    @@include('../partials/js.html')
+      <script src="assets/js/vendor-bundle.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
 
 </body>
 
