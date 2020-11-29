@@ -1,18 +1,30 @@
 //Bootstrap Defaults
-
 $enable-rounded: true;
 $enable-print-styles: false;
 
-$blue:    #2196f3;
-$indigo:  #3f51b5;
-$purple:  #673ab7;
-$pink:    #e91e63;
-$red:     #f44336;
-$orange:  #ff9800;
-$yellow:  #ffeb3b;
-$green:   #4caf50;
-$teal:    #009688;
-$cyan:    #00bcd4;
+$blue: #4c66fb;
+$green: #00cc99;
+$yellow: #f7bc06;
+
+$red: #f2545b;
+
+$brand-primary: $blue;
+$brand-success: $green;
+$brand-info: #19b5fe;
+$brand-warning: $yellow;
+$brand-danger: $red;
+
+/* $blue: #0288D1;
+$indigo: #3f51b5;
+$purple: #6200ee;
+$pink: #ff0266;
+$red: #b00020;
+$orange: #ff9800;
+$yellow: #ffde03;
+$green: #009688;
+$teal: #009688;
+$cyan: #00bcd4; */
+
 /* $blue:    #1976d2;
 $indigo:  #303f9f;
 $purple:  #512da8;
@@ -24,7 +36,9 @@ $green:   #388e3c;
 $teal:    #00796b;
 $cyan:    #0097a7;
  */
- /* $blue:    #1565c0;
+
+
+/* $blue:    #1565c0;
  $indigo:  #1a237e;
  $purple:  #311b92;
  $pink:    #880e4f;
@@ -34,16 +48,13 @@ $cyan:    #0097a7;
  $green:   #1b5e20;
  $teal:    #004d40;
  $cyan:    #006064;   */
+
 $grid-gutter-width: 15px;
-
-$border-radius:               .2rem !default;
-$border-radius-lg:            .25rem !default;
-$border-radius-sm:            .175rem !default;
-$border-radius-xs:            .15rem !default;
-
-$breadcrumb-divider: quote("›");
+$border-radius: .2rem !default;
+$border-radius-lg: .25rem !default;
+$border-radius-sm: .175rem !default;
+$border-radius-xs: .15rem !default;
+$breadcrumb-divider: quote("»");
 //$breadcrumb-divider: quote("»");
-
-
 //Font-Awesome !
-$fa-font-path:        '../webfonts';
+$fa-font-path: '../webfonts';
