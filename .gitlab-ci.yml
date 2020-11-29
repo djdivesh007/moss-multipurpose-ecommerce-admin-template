@@ -6,7 +6,8 @@ pages:
     - node_modules/
 
   script:
-  - npm i gulp -g
+  - npm i gulp-cli -g
+  - npm i sass -g
   - npm install
   - gulp build
   - mv dist public
