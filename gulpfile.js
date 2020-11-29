@@ -1,3 +1,5 @@
+const devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() === 'development');
+
 const gulp = require('gulp'),
   webserver = require('gulp-webserver'),
   sass = require('gulp-sass'),
@@ -51,6 +53,7 @@ gulp.task('build', gulp.series('build-css', 'copy-images', 'copy-fonts', 'build-
 gulp.task('watch', gulp.series(function () {
   gulp.watch('assets/scss/**/*.scss', gulp.series('build-css', 'build-html'));
   gulp.watch('src/**/*.html', gulp.series('build-html'));
+  gulp.watch('assets/js/*.js', gulp.series('build-html'));
 }));
 
 

@@ -3,6 +3,11 @@
 
 <head>
   @@include('../partials/head.html')
+  <style>
+    .ck-editor__editable {
+      min-height: 400px;
+    }
+  </style>
 </head>
 
 <body>
@@ -20,7 +25,29 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <div id="summernote"></div>
+            <div class="card">
+              <div class="card-header">
+                Summernote Editor
+                <a href="https://summernote.org/" target="_blank" class="float-right"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+              <div class="card-body">
+                <div id="summernote"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                CKEditor
+                <a href="https://ckeditor.com/" target="_blank" class="float-right"><i
+                    class="fas fa-external-link-alt"></i></a>
+              </div>
+              <div class="card-body">
+                <div id="ck-editor">
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -31,6 +58,11 @@
     $("#summernote").summernote({
       height: 400
     });
+    ClassicEditor
+    .create( document.querySelector( '#ck-editor' ) )
+    .catch( error => {
+    console.error( error );
+    } );
   </script>
 </body>
 

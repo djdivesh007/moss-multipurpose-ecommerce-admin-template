@@ -1,7 +1,20 @@
 //Bootstrap Defaults
 $enable-rounded: true;
 $enable-print-styles: false;
-$blue: #0288D1;
+
+$blue: #4c66fb;
+$green: #00cc99;
+$yellow: #f7bc06;
+
+$red: #f2545b;
+
+$brand-primary: $blue;
+$brand-success: $green;
+$brand-info: #19b5fe;
+$brand-warning: $yellow;
+$brand-danger: $red;
+
+/* $blue: #0288D1;
 $indigo: #3f51b5;
 $purple: #6200ee;
 $pink: #ff0266;
@@ -10,7 +23,7 @@ $orange: #ff9800;
 $yellow: #ffde03;
 $green: #009688;
 $teal: #009688;
-$cyan: #00bcd4;
+$cyan: #00bcd4; */
 
 /* $blue:    #1976d2;
 $indigo:  #303f9f;
