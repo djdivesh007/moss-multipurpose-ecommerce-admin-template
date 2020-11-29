@@ -1,35 +1,35 @@
 {
-  "name": "admin",
-  "version": "1.0.0",
-  "description": "Admin Panel",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Kaushil Rakhasiya",
-  "license": "UNLICENCED",
-  "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^23.1.0",
-    "@fortawesome/fontawesome-free": "^5.3.1",
-    "bootstrap": "^4.5.3",
-    "datatables": "^1.10.18",
-    "datatables.net-bs4": "^1.10.22",
-    "jquery": "^3.5.1",
-    "nanobar": "^0.4.2",
-    "nprogress": "^0.2.0",
-    "popper.js": "^1.16.1",
-    "summernote": "^0.8.18"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-copy": "^4.0.1",
-    "gulp-file-include": "^2.2.2",
-    "gulp-if": "^3.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp-useref": "^5.0.0",
-    "gulp-watch": "^5.0.1",
-    "gulp-webserver": "^0.9.1"
-  }
+    "name": "admin",
+    "version": "1.0.0",
+    "description": "Admin Panel",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Kaushil Rakhasiya",
+    "license": "UNLICENCED",
+    "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^23.1.0",
+        "@fortawesome/fontawesome-free": "^5.3.1",
+        "bootstrap": "^4.5.3",
+        "datatables": "^1.10.18",
+        "datatables.net-bs4": "^1.10.22",
+        "jquery": "^3.5.1",
+        "nanobar": "^0.4.2",
+        "nprogress": "^0.2.0",
+        "popper.js": "^1.16.1",
+        "summernote": "^0.8.18"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-copy": "^4.0.1",
+        "gulp-file-include": "^2.2.2",
+        "gulp-if": "^3.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-uglify": "^3.0.2",
+        "gulp-useref": "^5.0.0",
+        "gulp-watch": "^5.0.1",
+        "gulp-webserver": "^0.9.1"
+    }
 }
