@@ -16722,6 +16722,14 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
   margin: 0 7.5px 0 7.5px;
 }
 
+.main-wrapper .right-area header .navbar-nav li.nav-item:first-child {
+  margin-left: 0;
+}
+
+.main-wrapper .right-area header .navbar-nav li.nav-item:last-child {
+  margin-right: 0;
+}
+
 .main-wrapper .right-area header .navbar-nav li.nav-item > * {
   height: 54px;
 }

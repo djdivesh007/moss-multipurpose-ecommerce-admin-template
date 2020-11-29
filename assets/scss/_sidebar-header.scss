@@ -152,6 +152,12 @@
 					display: inline-block;
 					height: 54px;
 					margin: 0 7.5px 0 7.5px;
+					&:first-child{
+						margin-left: 0;
+					}
+					&:last-child{
+						margin-right: 0;
+					}
 					>* {
 						height: 54px;
 					}
