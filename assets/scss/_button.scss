@@ -2,6 +2,7 @@
     &:focus {
         //Boostrap by default add focus box-shadow. which is not required unless you care much about accessibility
         box-shadow: none !important;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
     }
     /* Extra small size */
     &.btn-xs {

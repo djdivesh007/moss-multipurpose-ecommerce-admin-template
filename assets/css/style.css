@@ -10577,6 +10577,7 @@ input[type="button"].btn-block {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.2rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
 .card>hr {
@@ -16991,6 +16992,11 @@ div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-chil
     padding-right: 0;
 }
 
+.page-header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .main-wrapper .sidebar {
     position: fixed;
     height: calc(100% - 54px);
@@ -17555,6 +17561,7 @@ div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-chil
 
 .btn:focus {
     box-shadow: none !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
 .btn.btn-xs {
@@ -18149,8 +18156,4 @@ code {
 
 *::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.08);
-}
-
-.error-title {
-    font-size: 120px;
 }
