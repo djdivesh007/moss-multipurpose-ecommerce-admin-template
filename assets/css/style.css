@@ -16994,7 +16994,7 @@ div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-chil
 
 .page-header {
     margin-top: 30px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .main-wrapper .sidebar {
