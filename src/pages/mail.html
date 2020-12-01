@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="ovrelay-mask"></div>
+    <div class="main-wrapper">
+        @@include('../partials/menu.html')
+        <div class="right-area">
+            @@include('../partials/header.html')
+
+            <div class="main-content container">
+                <div class="page-header">
+                    <div class="col-md-8">
+                        <span class="h3">Email Inbox</span>
+                        <small>Stay Connected...!</small>
+                    </div>
+
+                </div>
+                <div class="row card  mt-3 shadow-sm">
+
+
+
+                    <div class="inbox-head bg-light">
+
+                        <ul class="list-group list-group-horizontal-md text-dark  float-left">
+                            <li class="list-group-item justify-content-between align-items-center">
+                                Inbox <span><small>(14)</small></span>
+
+                            </li>
+
+                            <li class="list-group-item justify-content-between align-items-center">
+
+                                Sent
+                                <span><small>(14)</small></span>
+                            </li>
+                            <li class="list-group-item  justify-content-between align-items-center">
+
+                                Important
+
+                            </li>
+                            <li class="list-group-item justify-content-between align-items-center">
+                                Draft
+                                <span><small>(1)</small></span>
+                            </li>
+                            <li class="list-group-item justify-content-between align-items-center">
+
+                                Trash
+                                <span> <small> (100)</small></span>
+                            </li>
+                        </ul>
+                        <form action="#" class="float-right position d-inline-block">
+                            <div class="input-append">
+                                <input type="text" class="sr-input border" placeholder="Search Mail">
+                                <button class="btn btn-primary sr-btn" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="inbox-body">
+                        <div class="mail-option">
+                            <div class="chk-all">
+                                <input type="checkbox">
+                                <div class="btn-group ">
+                                    <a data-toggle="dropdown" href="#" class="btn mini all ml-1" aria-expanded="false">
+                                        All
+                                        <i class="fa fa-angle-down ml-2"></i>
+                                    </a>
+
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item"> None</a>
+                                        <a href="#" class="dropdown-item"> Read</a>
+                                        <a href="#" class="dropdown-item"> Unread</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn-group">
+                                <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="#" class="btn mini tooltips">
+                                    <i class=" fa fa-sync"></i>
+                                </a>
+                            </div>
+                            <div class="btn-group hidden-phone">
+                                <a data-toggle="dropdown" href="#" class="btn mini blue" aria-expanded="false">
+                                    More
+                                    <i class="fa fa-angle-down "></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                                    <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <a data-toggle="dropdown" href="#" class="btn mini blue">
+                                    Move to
+                                    <i class="fa fa-angle-down "></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+                                    <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="d-inline-block float-right">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+
+                            <table class="table table-inbox table-hover">
+                                <tbody>
+                                    <tr class="unread">
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>PHPClass</td>
+                                        <td>
+                                            <p class="m-0">Added a new class: Login Class Fast Site</p>
+                                            <small class="text-secondary ">Hey..Php ! I have added a new class
+                                                here !
+                                            </small>
+                                        </td>
+                                        <td><i class="fa fa-paperclip"></i></td>
+                                        <td class="text-right">9:27 AM</td>
+                                    </tr>
+                                    <tr class="unread">
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>Google Webmaster </td>
+                                        <td>
+                                            <p class="m-0">Improve the search presence of WebSite</p>
+
+                                            <small class="text-secondary ">Hey..Php ! I have added a new class
+                                                here !
+                                            </small>
+                                        </td>
+                                        <td></td>
+                                        <td class=" text-right">March 15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>JW Player</td>
+                                        <td>
+                                            <p class="m-0">Last Chance: Upgrade to Pro for</p>
+                                            <small class="text-secondary ">Hey..Php ! I have added a new class
+                                                here !
+                                            </small>
+                                        </td>
+                                        <td></td>
+                                        <td class=" text-right">March 15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>Tim Reid, S P N</td>
+                                        <td>
+                                            <p class="m-0">Boost Your Website Traffic</p>
+                                            <small class="text-secondary ">Hey..Php ! I have added a new class
+                                                here !
+                                            </small>
+
+                                        </td>
+                                        <td></td>
+                                        <td class=" text-right">April 01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star inbox-started"></i></td>
+                                        <td>Freelancer.com <span class="label label-danger float-right">urgent</span>
+                                        </td>
+                                        <td>
+                                            <p class="m-0">Stop wasting your visitors </p>
+                                            <small class="text-secondary ">Hey..Php ! I have added a new class
+                                                here !
+                                            </small>
+
+                                        </td>
+                                        <td></td>
+                                        <td class=" text-right">May 23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star inbox-started"></i></td>
+                                        <td>WOW Slider </td>
+                                        <td>
+                                            <p class="m-0">New WOW Slider v7.8 - 67% off</p>
+                                            <small class="text-secondary ">Hey..Php ! I have added a new class
+                                                here !
+                                            </small>
+                                        </td>
+                                        <td><i class="fa fa-paperclip"></i></td>
+                                        <td class=" text-right">March 14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star inbox-started"></i></td>
+                                        <td>LinkedIn Pulse</td>
+                                        <td>The One Sign Your Co-Worker Will Stab</td>
+                                        <td><i class="fa fa-paperclip"></i></td>
+                                        <td class=" text-right">Feb 19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>Drupal Community<span class="label label-success float-right">megazine</span>
+                                        </td>
+                                        <td>Welcome to the Drupal Community</td>
+                                        <td></td>
+                                        <td class=" text-right">March 04</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>Facebook</td>
+                                        <td>Somebody requested a new password </td>
+                                        <td></td>
+                                        <td class=" text-right">June 13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>Skype <span class="label label-info float-right">family</span></td>
+                                        <td>Password successfully changed</td>
+                                        <td></td>
+                                        <td class=" text-right">March 24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star inbox-started"></i></td>
+                                        <td>Google+</td>
+                                        <td>alireza, do you know</td>
+                                        <td></td>
+                                        <td class=" text-right">March 09</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star inbox-started"></i></td>
+                                        <td>Zoosk </td>
+                                        <td>7 new singles we think you'll like</td>
+                                        <td><i class="fa fa-paperclip"></i></td>
+                                        <td class=" text-right">May 14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>LinkedIn </td>
+                                        <td>Alireza: Nokia Networks, System Group and </td>
+                                        <td><i class="fa fa-paperclip"></i></td>
+                                        <td class=" text-right">February 25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>Facebook</td>
+                                        <td>Your account was recently logged into</td>
+                                        <td></td>
+                                        <td class=" text-right">March 14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>Twitter</td>
+                                        <td>Your Twitter password has been changed</td>
+                                        <td></td>
+                                        <td class=" text-right">April 07</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>InternetSeer Website Monitoring</td>
+                                        <td>http://golddesigner.org/ Performance Report</td>
+                                        <td></td>
+                                        <td class=" text-right">July 14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star inbox-started"></i></td>
+                                        <td>AddMe.com</td>
+                                        <td>Submit Your Website to the AddMe Business Directory
+                                        </td>
+                                        <td></td>
+                                        <td class=" text-right">August 10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>Terri Rexer, S P N</td>
+                                        <td>Forget Google AdWords: Un-Limited Clicks fo
+                                        </td>
+                                        <td><i class="fa fa-paperclip"></i></td>
+                                        <td class=" text-right">April 14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>Bertina </td>
+                                        <td>IMPORTANT: Don't lose your domains!</td>
+                                        <td><i class="fa fa-paperclip"></i></td>
+                                        <td class=" text-right">June 16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star inbox-started"></i></td>
+                                        <td>Laura Gaffin, S P N </td>
+                                        <td>Your Website On Google (Higher Rankings Are Better)
+                                        </td>
+                                        <td></td>
+                                        <td class=" text-right">August 10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="mail-checkbox">
+                                        </td>
+                                        <td><i class="fa fa-star"></i></td>
+                                        <td>Facebook</td>
+                                        <td>Alireza Zare Login faild</td>
+                                        <td><i class="fa fa-paperclip"></i></td>
+                                        <td class=" text-right">feb 14</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('../partials/js.html')
+</body>
+
+</html>
