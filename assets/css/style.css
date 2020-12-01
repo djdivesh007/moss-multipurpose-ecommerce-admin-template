@@ -9378,7 +9378,7 @@ input[type="button"].btn-block {
   position: relative;
   z-index: 1;
   display: block;
-  min-height: 24;
+  min-height: 1.5rem;
   padding-left: 1.5rem;
   color-adjust: exact;
 }
@@ -9393,7 +9393,7 @@ input[type="button"].btn-block {
   left: 0;
   z-index: -1;
   width: 1rem;
-  height: 12.5rem;
+  height: 1.25rem;
   opacity: 0;
 }
 
@@ -9433,7 +9433,7 @@ input[type="button"].btn-block {
 
 .custom-control-label::before {
   position: absolute;
-  top: 11.5rem;
+  top: 0.25rem;
   left: -1.5rem;
   display: block;
   width: 1rem;
@@ -9446,7 +9446,7 @@ input[type="button"].btn-block {
 
 .custom-control-label::after {
   position: absolute;
-  top: 11.5rem;
+  top: 0.25rem;
   left: -1.5rem;
   display: block;
   width: 1rem;
@@ -9504,7 +9504,7 @@ input[type="button"].btn-block {
 }
 
 .custom-switch .custom-control-label::after {
-  top: calc(11.5rem + 2px);
+  top: calc(0.25rem + 2px);
   left: calc(-2.25rem + 2px);
   width: calc(1rem - 4px);
   height: calc(1rem - 4px);
@@ -9936,8 +9936,8 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: -2.5rem;
-  padding-bottom: -2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -10831,7 +10831,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .alert-dismissible {
-  padding-right: 26.5rem;
+  padding-right: 4rem;
 }
 
 .alert-dismissible .close {
@@ -17860,7 +17860,6 @@ ul.labels-info li a i {
 }
 
 .inbox-head .sr-btn {
-  background: none repeat scroll 0 0 #00a6b2;
   border: medium none;
   border-radius: 0 4px 4px 0;
   color: #fff;
