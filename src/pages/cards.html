@@ -12,20 +12,22 @@
         <div class="right-area">
             @@include('../partials/header.html')
             <div class="main-content container">
-                <div class="page-header row">
-                    <div class="col-sm-8">
-                        <span class="h3">Cards</span>
-                        <small>Let's wrap it up !</small>
-                    </div>
-                    <div class="col-sm-4">
-                        <nav aria-label="breadcrumb" class="float-right">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><span
-                                            class="icon material-icons">home</span></a></li>
-                                <li class="breadcrumb-item"><a href="#">UI Components</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Cards</li>
-                            </ol>
-                        </nav>
+                <div class="page-header ">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <span class="h3">Cards</span>
+                            <small>Let's wrap it up !</small>
+                        </div>
+                        <div class="col-sm-4">
+                            <nav aria-label="breadcrumb" class="float-right">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#"><span
+                                                class="icon material-icons">home</span></a></li>
+                                    <li class="breadcrumb-item"><a href="#">UI Components</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Cards</li>
+                                </ol>
+                            </nav>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -104,6 +106,10 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="page-header col-sm-12">
+                        <span class="h3">Panel Cards</span>
+
+                    </div>
                     <div class="col-sm-4">
                         <div class="card">
                             <div class="card-header">
@@ -187,9 +193,66 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
+                <div class="page-header">
+                    <span class="h3">Cards Variants</span>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img src="https://picsum.photos/200" class="card-img-top" alt="Image Cards">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-header">
+                    <span class="h3">Blockquote</span>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card bg-primary text-white text-center p-3">
+                            <blockquote class="blockquote mb-0">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                                <footer class="blockquote-footer text-white">
+                                    <small>
+                                        Someone famous in <cite title="Source Title">Source Title</cite>
+                                    </small>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-header">
+                    <span class="h3">Cards with Subtitle</span>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
+    </div>
     </div>
     @@include('../partials/js.html')
 </body>
