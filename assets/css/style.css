@@ -13,7 +13,7 @@ $cyan: #00bcd4; */
  * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro|Ubuntu|Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro|Ubuntu|Material+Icons|Work+Sans");
 .fa,
 .fas,
 .far,
@@ -5906,7 +5906,7 @@ readers do not read off random characters that represent icons */
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Ubuntu", sans-serif;
+  --font-family-sans-serif: "Work Sans", sans-serif;
   --font-family-monospace: "Anonymous+Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -5929,7 +5929,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -9378,7 +9378,7 @@ input[type="button"].btn-block {
   position: relative;
   z-index: 1;
   display: block;
-  min-height: 1.5rem;
+  min-height: 24;
   padding-left: 1.5rem;
   color-adjust: exact;
 }
@@ -9393,7 +9393,7 @@ input[type="button"].btn-block {
   left: 0;
   z-index: -1;
   width: 1rem;
-  height: 1.25rem;
+  height: 12.5rem;
   opacity: 0;
 }
 
@@ -9433,7 +9433,7 @@ input[type="button"].btn-block {
 
 .custom-control-label::before {
   position: absolute;
-  top: 0.25rem;
+  top: 11.5rem;
   left: -1.5rem;
   display: block;
   width: 1rem;
@@ -9446,7 +9446,7 @@ input[type="button"].btn-block {
 
 .custom-control-label::after {
   position: absolute;
-  top: 0.25rem;
+  top: 11.5rem;
   left: -1.5rem;
   display: block;
   width: 1rem;
@@ -9504,7 +9504,7 @@ input[type="button"].btn-block {
 }
 
 .custom-switch .custom-control-label::after {
-  top: calc(0.25rem + 2px);
+  top: calc(11.5rem + 2px);
   left: calc(-2.25rem + 2px);
   width: calc(1rem - 4px);
   height: calc(1rem - 4px);
@@ -9936,8 +9936,8 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: -2.5rem;
+  padding-bottom: -2.5rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -10831,7 +10831,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .alert-dismissible {
-  padding-right: 4rem;
+  padding-right: 26.5rem;
 }
 
 .alert-dismissible .close {
@@ -11638,7 +11638,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -11751,7 +11751,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -17596,6 +17596,30 @@ body {
   color: #343a40;
 }
 
+h1, .h1 {
+  font-size: 2rem;
+}
+
+h2, .h2 {
+  font-size: 1.5rem;
+}
+
+h3, .h3 {
+  font-size: 1.17rem;
+}
+
+h4, .h4 {
+  font-size: 1.12rem;
+}
+
+h5, .h5 {
+  font-size: 0.83rem;
+}
+
+h6, .h6 {
+  font-size: 0.75rem;
+}
+
 .main-wrapper {
   height: 100%;
   width: 100%;
@@ -18062,6 +18086,75 @@ ul.inbox-pagination li {
   .files .delete {
     width: 60px;
   }
+}
+
+/* Timeline Stylings */
+.timeline {
+  position: relative;
+}
+
+.timeline-one-side:before {
+  left: 1rem;
+}
+
+.timeline-one-side .timeline-step {
+  left: 1rem;
+}
+
+.timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+
+.timeline-block:first-child {
+  margin-top: 0;
+}
+
+@media (min-width: 992px) {
+  .timeline-step {
+    left: 50%;
+  }
+  .timeline:before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  height: 100%;
+  border-right: 2px solid #e9ecef;
+}
+
+.timeline-step {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.timeline-content {
+  position: relative;
+  margin-left: 60px;
+  padding-top: .5rem;
+  position: relative;
+  top: -6px;
+}
+
+[data-timeline-axis-style="dashed"]:before {
+  border-right-style: dashed !important;
 }
 
 ::selection {
