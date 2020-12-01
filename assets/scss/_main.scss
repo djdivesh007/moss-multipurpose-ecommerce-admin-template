@@ -90,6 +90,11 @@ code {
     }
 }
 
+.primary-gradient {
+    background: rgb(63, 81, 181);
+    background: linear-gradient(266deg, rgba(63, 81, 181, 1) 0%, rgba(63, 152, 181, 1) 100%);
+}
+
 
 /* MAIL BOX STYLESHEET */
 
@@ -577,4 +582,27 @@ ul.inbox-pagination li {
 
 [data-timeline-axis-style="dashed"]:before {
     border-right-style: dashed !important;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .avatar-xxl {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
