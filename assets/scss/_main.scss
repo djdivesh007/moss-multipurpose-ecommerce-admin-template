@@ -586,18 +586,61 @@ ul.inbox-pagination li {
 
 .avatar {
     vertical-align: middle;
-    width: 3em;
-    height: 3em;
     border-radius: 50%;
     position: relative;
     display: inline-block;
+    width: 3em;
+    height: 3em;
 }
 
-@media (min-width: 768px) {
-    .avatar-xxl {
-        width: 8rem;
-        height: 8rem;
-    }
+.avatar-title {
+    font-size: 18px;
+}
+
+.avatar-xs {
+    width: 1.625em;
+    height: 1.625em;
+}
+
+.avatar-xs .avatar-title {
+    font-size: 10px;
+}
+
+.avatar-sm {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.avatar-sm .avatar-title {
+    font-size: 13px;
+}
+
+.avatar-lg {
+    width: 4rem;
+    height: 4rem;
+}
+
+.avatar-lg .avatar-title {
+    font-size: 24px;
+}
+
+.avatar-xl {
+    width: 5.125rem;
+    height: 5.125rem;
+}
+
+.avatar-xl .avatar-title {
+    font-size: 30px;
+}
+
+.avatar-title {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #b1c2d9;
+    align-items: center;
+    justify-content: center;
 }
 
 .avatar-img {
