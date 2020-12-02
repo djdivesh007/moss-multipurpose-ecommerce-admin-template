@@ -163,7 +163,15 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-sm-6 col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-dark text-light">Sweet Alerts</div>
+                            <div class="card-body">
+                                <button class="btn btn-primary" onclick="basic()">Basic</button>
+                                <button class="btn btn-primary" onclick="successSwal()">Success Alert</button>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -171,6 +179,21 @@
         </div>
     </div>
     @@include('../partials/js.html')
+    <script>
+        $('.alert').alert();
+
+        function basic() {
+            Swal.fire('Hello world!');
+        }
+
+        function successSwal() {
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+            )
+        }
+    </script>
 </body>
 
 </html>
