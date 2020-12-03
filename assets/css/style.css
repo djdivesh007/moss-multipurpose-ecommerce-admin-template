@@ -18127,6 +18127,38 @@ h6, .h6 {
   font-size: 0.75rem;
 }
 
+.bg-pastel-red {
+  background: #f05454;
+}
+
+.bg-pastel-orange {
+  background: #f9813a;
+}
+
+.bg-pastel-yellow {
+  background: #f2d974;
+}
+
+.bg-pastel-ivory {
+  background: #f8d49d;
+}
+
+.bg-pastel-green {
+  background: #5aa469;
+}
+
+.bg-pastel-lightgreen {
+  background: #16a596;
+}
+
+.bg-pastel-brown {
+  background: #92817a;
+}
+
+.bg-pastel-coffee {
+  background: #825959;
+}
+
 .main-wrapper {
   height: 100%;
   width: 100%;
