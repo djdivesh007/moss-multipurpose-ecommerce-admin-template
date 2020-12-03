@@ -16,6 +16,7 @@
         "chart.js": "^2.9.4",
         "datatables": "^1.10.18",
         "datatables.net-bs4": "^1.10.22",
+        "dropify": "^0.2.2",
         "jquery": "^3.5.1",
         "nanobar": "^0.4.2",
         "nprogress": "^0.2.0",

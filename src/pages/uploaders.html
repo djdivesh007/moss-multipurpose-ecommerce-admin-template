@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="ovrelay-mask"></div>
+    <div class="main-wrapper">
+        @@include('../partials/menu.html')
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Uploaders</span>
+                    <small>Let's connect with cloud</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-primary text-light">
+                                Drop Zone
+                            </div>
+                            <div class="card-body">
+                                <input type="file" class="dropify" data-height="200" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-primary text-light">
+                                Size Limit (3M)
+                            </div>
+                            <div class="card-body">
+                                <input type="file" class="dropify" data-max-file-size="3M" data-height="200" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-primary text-light">
+                                Specific File Types (PDF / PNG / PSD)
+                            </div>
+                            <div class="card-body">
+                                <input type="file" class="dropify" data-allowed-file-extensions="pdf png psd" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-primary text-light">
+                                Default Image
+                            </div>
+                            <div class="card-body">
+                                <input type="file" class="dropify" data-default-file="assets/images/avatar/avatar-anim.jpg" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+    <script>
+        $(function() {
+            $('.dropify').dropify({
+                messages: {
+                    'default': 'Drag and drop a file here or click',
+                    'replace': 'Drag and drop or click to replace',
+                    'remove': 'Remove',
+                    'error': 'Ooops, something wrong happended.'
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
