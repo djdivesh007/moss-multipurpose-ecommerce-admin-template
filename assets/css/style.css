@@ -17199,7 +17199,7 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 
 .main-wrapper .right-area header {
   position: sticky;
-  z-index: 2;
+  z-index: 10;
   top: 0;
   background-color: #3f51b5;
   color: #fff;

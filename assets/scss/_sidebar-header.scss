@@ -133,7 +133,7 @@
         transition: margin 0.2s;
         header {
             position: sticky;
-            z-index: 2;
+            z-index: 10;
             top: 0;
             background-color: $primary;
             color: #fff;
