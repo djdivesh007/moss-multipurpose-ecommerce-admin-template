@@ -20,6 +20,7 @@
         "jquery": "^3.5.1",
         "nanobar": "^0.4.2",
         "nprogress": "^0.2.0",
+        "pickerjs": "^1.2.1",
         "popper.js": "^1.16.1",
         "summernote": "^0.8.18",
         "sweetalert2": "^10.11.0"

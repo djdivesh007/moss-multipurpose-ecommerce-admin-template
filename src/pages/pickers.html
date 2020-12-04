@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="ovrelay-mask"></div>
+    <div class="main-wrapper">
+        @@include('../partials/menu.html')
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Pickers</span>
+                    <small>Pick your favourite</small>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-primary text-light">
+                                Basic Date time Picker
+                            </div>
+                            <div class="card-body">
+                                <input type="date" class="form-control" id="basic_input">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-primary text-light">
+                                Date Picker
+                            </div>
+                            <div class="card-body">
+                                <input type="date" class="form-control" id="date_input">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-primary text-light">
+                                Time Picker
+                            </div>
+                            <div class="card-body">
+                                <input type="date" class="form-control" id="time_input">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+    <script>
+        var basic_input = document.getElementById('basic_input');
+        var basic_picker = new Picker(basic_input, {
+            format: 'YYYY/MM/DD HH:mm',
+        });
+        basic_picker.getDate(true);
+
+
+        var date_input = document.getElementById('date_input');
+        var date_picker = new Picker(date_input, {
+            format: 'YYYY/MM/DD',
+        });
+        date_picker.getDate(true);
+
+        var time_input = document.getElementById('time_input');
+        var time_picker = new Picker(time_input, {
+            format: 'HH:mm',
+        });
+        time_picker.getDate(true);
+    </script>
+</body>
+
+</html>
