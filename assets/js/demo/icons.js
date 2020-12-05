@@ -31,3 +31,8 @@ $("#filter-input").on("keyup", delay(function () {
   renderIcon($(this).val());
 }, 300));
 renderIcon();
+$(".icon-wrapper").on("click", function () {
+  const iconname = $(this).find("i").html();
+  copyToClipboard(iconname);
+  $.notify('<strong>'+iconname+'</strong> copied to clicpboard');
+});

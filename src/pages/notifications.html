@@ -2,64 +2,64 @@
 <html lang="en">
 
 <head>
-    @@include('../partials/head.html')
+  @@include('../partials/head.html')
 </head>
 
 <body>
-    <div class="ovrelay-mask"></div>
-    <div class="main-wrapper">
-        @@include('../partials/menu.html')
-        <div class="right-area">
-            @@include('../partials/header.html')
-            <div class="main-content container">
-                <div class="page-header">
-                    <span class="h2">Notifications</span>
-                    <small>Let's stay updated everytime...!</small>
-                </div>
-                <div class="row">
-                    <div class="col-6 col-sm-6">
-                        <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
-                                Notifications
-                            </div>
-                            <div class="card-body">
-                                <button class="btn btn-primary" onclick="basicNoti()">Basic</button>
-                                <button class="btn btn-primary" onclick="progress()">Progress Bar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="ovrelay-mask"></div>
+  <div class="main-wrapper">
+    @@include('../partials/menu.html')
+    <div class="right-area">
+      @@include('../partials/header.html')
+      <div class="main-content container">
+        <div class="page-header">
+          <span class="h2">Notifications</span>
+          <small>Let's stay updated everytime...!</small>
         </div>
+        <div class="row">
+          <div class="col-6 col-sm-6">
+            <div class="card shadow">
+              <div class="card-header bg-primary text-light">
+                Notifications
+              </div>
+              <div class="card-body">
+                <button class="btn btn-primary" onclick="basicNoti()">Basic</button>
+                <button class="btn btn-primary" onclick="progress()">Progress Bar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    @@include('../partials/js.html')
-    <script>
-        function basicNoti() {
-            var notify = $.notify('<strong>Saving</strong> Do not close this page...', {
-                allow_dismiss: true
-            });
+  </div>
+  @@include('../partials/js.html')
+  <script>
+    function basicNoti() {
+      var notify = $.notify('<strong>Saving</strong> Do not close this page...', {
+        allow_dismiss: true
+      });
 
-            notify.update({
-                type: 'danger',
-                message: '<strong>Oops</strong> Something happened. Correcting Now',
-                offset: {
-                    x: 30,
-                    y: 30
-                }
-
-            });
+      notify.update({
+        type: 'danger',
+        message: '<strong>Oops</strong> Something happened. Correcting Now',
+        offset: {
+          x: 30,
+          y: 30
         }
 
-        function progress() {
-            $.notify('I have a progress bar', {
-                showProgressbar: true,
-                offset: {
-                    x: 30,
-                    y: 30
-                }
-            });
+      });
+    }
+
+    function progress() {
+      $.notify('I have a progress bar', {
+        showProgressbar: true,
+        offset: {
+          x: 30,
+          y: 30
         }
-    </script>
+      });
+    }
+  </script>
 </body>
 
 </html>
