@@ -135,6 +135,15 @@ code {
 
 .card {
     box-shadow: 0 25px 50px rgba(8, 21, 66, .06);
+    transition: box-shadow ease .2s;
+}
+
+.shadow {
+    box-shadow: 0 .2rem .6rem rgba(0, 0, 0, .15)!important;
+}
+
+.shadow:hover {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
 }
 
 
