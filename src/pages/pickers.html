@@ -51,6 +51,36 @@
                         </div>
                     </div>
                 </div>
+                <div class="page-header mt-4">
+                    <span class="h2">Pickers</span>
+                    <small>Pick your favourite</small>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-primary text-light">
+                                Color Picker
+                            </div>
+                            <div class="card-body">
+                                <input type="color" class="form-control" value="green">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-primary text-light">
+                                Color Wheel Picker
+                            </div>
+                            <div class="card-body">
+                                <div class="wheel" id="colorWheelDemo"></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -74,6 +104,33 @@
             format: 'HH:mm',
         });
         time_picker.getDate(true);
+    </script>
+
+    <script>
+        var colorWheel = new iro.ColorPicker("#colorWheelDemo", {
+            width: 200,
+            layout: [{
+                component: iro.ui.Wheel,
+                options: {
+                    wheelLightness: true,
+                    wheelAngle: 0,
+                    wheelDirection: "anticlockwise"
+                }
+            }, {
+                component: iro.ui.Box,
+                options: {
+                    // see below
+                }
+            }, {
+                component: iro.ui.Slider,
+                options: {
+                    sliderType: 'hue', // can also be 'saturation', 'value', 'alpha' or 'kelvin',
+                    sliderShape: 'circle',
+                    activeIndex: 2,
+                }
+            }]
+
+        });
     </script>
 </body>
 
