@@ -53,7 +53,7 @@ gulp.task('build', gulp.series('build-css', 'copy-images', 'copy-fonts', 'build-
 gulp.task('watch', gulp.series(function() {
     gulp.watch('assets/scss/**/*.scss', gulp.series('build-css', 'build-html'));
     gulp.watch('src/**/*.html', gulp.series('build-html'));
-    gulp.watch('assets/js/*.js', gulp.series('build-html'));
+    gulp.watch('assets/js/**/*.js', gulp.series('build-html'));
 }));
 
 
