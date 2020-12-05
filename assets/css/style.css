@@ -17411,12 +17411,12 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 
 .main-wrapper .sidebar .navigation > ul li:hover > a {
   background-color: #f8f9fa;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 
 .main-wrapper .sidebar .navigation > ul li a {
   display: inline-block;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
   font-size: 14px;
   color: #495057;
   text-decoration: none;
@@ -17461,7 +17461,7 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
   color: #000;
 }
 
-.main-wrapper .sidebar .navigation > ul li a[aria-expanded='true'] span.caret {
+.main-wrapper .sidebar .navigation > ul li a[aria-expanded="true"] span.caret {
   transform: rotate(90deg);
 }
 
@@ -17648,7 +17648,7 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 }
 
 .main-wrapper.mini .sidebar .navigation > ul > li > a {
-  transition: width .2s;
+  transition: width 0.2s;
   height: 42px;
 }
 
@@ -17679,14 +17679,15 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 .main-wrapper.mini .sidebar .navigation > ul > li:hover ul {
   height: auto;
   transform: scaleY(1);
-  transition: transform .2s ease-in;
-  transition-delay: .13s;
+  transition: transform 0.2s ease-in;
+  transition-delay: 0.13s;
   position: absolute;
   width: calc(236px - 65px);
   background: transparent;
   border-radius: 25px;
   margin-top: 42px;
   margin-left: 64px;
+  overflow: auto;
 }
 
 .main-wrapper.mini .sidebar .navigation > ul > li:hover ul li a {
@@ -17711,6 +17712,12 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 .main-wrapper.mini .sidebar .navigation > ul > li:hover ul li a:active, .main-wrapper.mini .sidebar .navigation > ul > li:hover ul li a.active {
   color: #3f51b5;
   background-color: white;
+}
+
+.main-wrapper.mini .sidebar .navigation > ul > li:hover ul.reversed {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: -65px;
 }
 
 .main-wrapper.mini .sidebar .navigation > ul > li:hover > a {
@@ -17825,7 +17832,7 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 .main-wrapper.horizontal .sidebar .navigation > ul > li:hover ul {
   height: auto;
   transform: scaleY(1);
-  transition: transform .2s;
+  transition: transform 0.2s;
   overflow: auto;
 }
 
@@ -18412,6 +18419,7 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 html,
 body {
   height: 100%;
+  scrollbar-width: thin;
 }
 
 body {
