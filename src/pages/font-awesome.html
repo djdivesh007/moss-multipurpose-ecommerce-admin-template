@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('../partials/head.html')
+  <!-- build:css assets/css/demo/icons.css -->
+  <link rel="stylesheet" href="../../assets/css/demo/icons.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <div class="ovrelay-mask"></div>
+  <div class="main-wrapper">
+    @@include('../partials/menu.html')
+    <div class="right-area">
+      @@include('../partials/header.html')
+      <div class="main-content container">
+        <div class="page-header">
+          <span class="h2">Font Awesome</span>
+          <small>1000+ Icons from Google Material Icons</small>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-10 m-auto">
+            <input id="filter-input" autofocus type="search" class="form-control my-4" placeholder="Type here to filter... ">
+          </div>
+          <div class="col-12">
+            <div id="icons-list-container" class="mt-3 text-center">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('../partials/js.html')
+  <!-- build:js assets/js/demo/icons.js -->
+  <script src="../../assets/js/demo/icons.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>
