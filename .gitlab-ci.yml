@@ -1,4 +1,4 @@
-image: node:10
+image: donhenton/docker-gulp-sass-node
 
 pages:
   cache:
@@ -6,10 +6,7 @@ pages:
     - node_modules/
 
   script:
-  - npm i gulp-cli -g
-  - npm i sass -g
   - npm install
-  - npm rebuild node-sass
   - gulp build
   - mv dist public
   artifacts:
