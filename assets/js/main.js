@@ -54,5 +54,14 @@ $(function () {
       e.stopPropagation();
     }
   });
+  if(!screenfull.isEnabled) {
+    $("#go-fullscreen-link").parent("li").remove();
+  }
+  $("#go-fullscreen-link").on('click', function (e) {
+    e.preventDefault();
+    if (screenfull.isEnabled) {
+      screenfull.toggle();
+    }
+  })
 
 });
