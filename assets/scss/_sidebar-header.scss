@@ -89,7 +89,7 @@
             margin-top: 18px;
             margin-bottom: 18px;
             height: 1px !important;
-            background-color: $gray-200;
+            background-color: $gray-400;
             span {
               user-select: none;
               vertical-align: middle;
@@ -100,7 +100,7 @@
               background-color: white;
               padding-left: 8px;
               padding-right: 8px;
-              color: $gray-600;
+              color: $gray-700;
             }
           }
         }
@@ -516,5 +516,17 @@
         }
       }
     }
+  }
+}
+
+.overlay-mask.open{
+  @include media-breakpoint-down(md) {
+    background-color: rgba(0,0,0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
   }
 }

@@ -26,7 +26,8 @@
         "popper.js": "^1.16.1",
         "screenfull": "^5.0.2",
         "summernote": "^0.8.18",
-        "sweetalert2": "^10.11.0"
+        "sweetalert2": "^10.11.0",
+        "swiped-events": "^1.1.4"
     },
     "devDependencies": {
         "@babel/core": "^7.12.9",
