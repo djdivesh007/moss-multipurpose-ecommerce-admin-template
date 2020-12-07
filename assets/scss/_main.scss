@@ -138,7 +138,59 @@ code {
     box-shadow: 0 .2rem .6rem rgba(0, 0, 0, .15)!important;
 }
 
-.shadow:hover {
+
+/*  Accordians  */
+
+.accordion .card {
+    border-radius: 0px;
+}
+
+.accordion .card-header.active[aria-expanded=false]:after {
+    content: "\f078";
+}
+
+.accordion .card-header[aria-expanded=true]:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion .card-header:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
+    font-weight: bold;
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+    transition: all .15s cubic-bezier(.68, -.55, .265, 1.55);
+    transform: translateY(-50%);
+}
+
+.accordion .card-header .btn {
+    border: none;
+}
+
+.accordion .card-header .btn:not(:disabled):not(.disabled):active,
+.btn:not(:disabled):not(.disabled).active,
+.show>.btn.dropdown-toggle,
+.accordion .card-header .btn:hover {
+    background: none;
+}
+
+
+/* Alerts */
+
+.alert {
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .15)!important;
+    border: none;
+}
+
+
+/* Cards */
+
+.card {
+    border: none;
+}
+
+.card:hover {
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
 }
 
@@ -615,6 +667,53 @@ ul.mailbox-pagination li {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+.avatar-group .avatar {
+    position: relative;
+    // z-index: 2;
+}
+
+.avatar-group .avatar+.avatar {
+    margin-left: -1rem;
+}
+
+.avatar-group .avatar:hover {
+    z-index: 3;
+}
+
+.avatar-away::before,
+.avatar-dnd::before,
+.avatar-offline::before,
+.avatar-online::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 30%;
+    height: 30%;
+    content: '';
+    border: 3px solid #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.avatar-online::before {
+    background-color: #03c796;
+}
+
+.avatar-offline::before {
+    background-color: #b1c2d9;
+}
+
+.avatar-away::before {
+    background-color: #f7bc06;
+}
+
+.avatar-dnd::before {
+    background-color: #f2545b;
 }
 
 
