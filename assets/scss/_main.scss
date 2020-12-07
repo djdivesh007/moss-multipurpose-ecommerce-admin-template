@@ -197,6 +197,90 @@ code {
 }
 
 
+/* Checkboxes */
+
+.form-check .form-check-input~.form-check-label {
+    height: 1rem;
+    cursor: pointer;
+}
+
+.form-check .form-check-label::before {
+    border-radius: .25rem;
+}
+
+.form-check input.form-check-input[type="radio"]~.form-check-label::before {
+    border-radius: 50%;
+}
+
+.form-check-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    padding-left: 16px;
+}
+
+.form-check-input {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+}
+
+.form-check-label::before {
+    position: absolute;
+    top: .25rem;
+    left: -2.75rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: '';
+    pointer-events: none;
+    border: #dee2e6 solid 1px;
+    background-color: #fff;
+    box-shadow: 0 3px 2px rgba(233, 236, 239, .05);
+}
+
+.form-check-label::before {
+    top: .25rem;
+    left: -1rem;
+    transition: all .15s cubic-bezier(.68, -.55, .265, 1.55);
+    border: 1px solid #dee2e6;
+}
+
+.form-check-label::after {
+    top: .25rem;
+    left: -1.75rem;
+}
+
+.form-check-label::after {
+    position: absolute;
+    top: .25rem;
+    left: -1rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: '';
+    background: no-repeat 50%/50% 50%;
+}
+
+.form-check .form-check-input:checked~.form-check-label::before {
+    border-color: $primary;
+}
+
+.form-check .form-check-input:checked~.form-check-label::before {
+    border-color: $primary;
+}
+
+.form-check-input:checked~.form-check-label::before {
+    color: #fff;
+    border-color: $primary;
+    background-color: $primary;
+    box-shadow: 0 3px 2px rgba(233, 236, 239, .05);
+}
+
+
 /* MAIL BOX STYLESHEET */
 
 .mail-box {
