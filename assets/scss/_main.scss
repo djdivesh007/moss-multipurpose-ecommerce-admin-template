@@ -185,13 +185,6 @@ code {
     border: none;
 }
 
-.accordion .card-header .btn:not(:disabled):not(.disabled):active,
-.btn:not(:disabled):not(.disabled).active,
-.show>.btn.dropdown-toggle,
-.accordion .card-header .btn:hover {
-    background: none;
-}
-
 
 /* Alerts */
 
@@ -890,7 +883,7 @@ table tfoot th,
 
 .table tr,
 .table td {
-    padding: 20px;
+    padding: 14px;
 }
 
 .table.table-card {

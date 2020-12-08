@@ -2,277 +2,274 @@
 <html lang="en">
 
 <head>
-    @@include('../partials/head.html')
+  @@include('../partials/head.html')
 </head>
 
 <body>
-    <div class="overlay-mask"></div>
-    <div class="main-wrapper">
-        @@include('../partials/menu.html')
-        <div class="right-area">
-            @@include('../partials/header.html')
-            <div class="main-content container">
-                <div class="page-header">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <span class="h2">Cards</span>
-                            <small>Let's wrap it up !</small>
-                        </div>
-                        <div class="col-sm-4">
-                            <nav aria-label="breadcrumb" class="float-right">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#"><span
-                                                class="icon material-icons">home</span></a></li>
-                                    <li class="breadcrumb-item"><a href="#">UI Components</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Cards</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="card  text-white bg-primary  shadow">
-                            <div class="card-header bg-white">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Primary card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card text-white bg-secondary only-header shadow">
-                            <div class="card-header bg-white">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Secondary card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card text-white bg-success only-header shadow">
-                            <div class="card-header bg-white">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Success card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card text-white bg-danger only-header shadow">
-                            <div class="card-header bg-white">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Danger card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card text-dark bg-warning only-header shadow">
-                            <div class="card-header bg-white">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Warning card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card text-white bg-info shadow">
-                            <div class="card-header bg-white">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Info card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card bg-light only-header shadow">
-                            <div class="card-header bg-white">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Light card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card text-white bg-dark shadow">
-                            <div class="card-header bg-white">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Dark card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="page-header col-sm-12 mt-5 mb-1">
-                        <span class="h2">Panel Cards</span>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card shadow">
-                            <div class="card-header bg-white">
-                                Basic Panel
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">This is an example of very basic panel (card) layout. Just use
-                                    bootstrap's default structure to get this design.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card shadow">
-                            <div class="card-header bg-white">
-                                Header
-                                <div class="tools">
-                                    <button class="btn btn-square " reload simulate>
-                                        <i class="material-icons">refresh</i>
-                                    </button>
-                                    <button class="btn btn-square" fullscreen>
-                                        <i class="material-icons">fullscreen</i>
-                                        <i class="material-icons">fullscreen_exit</i>
-                                    </button>
-                                    <button class="btn btn-square" close>
-                                        <i class="material-icons">close</i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Use <code>.tools</code> inside <code>.card-header</code> with icons
-                                    to have some actionable buttons. Make use of <code>fullscreen</code>,
-                                    <code>close</code>, <code>reload</code> attribute for respecitve functionality</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card text-white bg-success only-header shadow">
-                            <div class="card-header bg-white">
-                                Header
-                                <div class="tools">
-                                    <button class="btn btn-xs btn-icon" reload simulate>
-                                        <i class="material-icons">refresh</i>
-                                        <span>Refresh</span>
-                                    </button>
-                                    <button class="btn btn-xs" fullscreen>
-                                        <span>Fullscreen</span>
-                                        <span>Exit</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">You can also txt buttons with or without icon</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="card tab-panel shadow" id="tab-panel-parent-1">
-                            <div class="card-header bg-white">
-                                Tab Panel
-                                <div class="tab-btns float-right">
-                                    <button class="btn btn-info btn-underline active" data-toggle="collapse"
-                                        data-target="#tab-content-1">First</button>
-                                    <button class="btn btn-info btn-underline" data-toggle="collapse"
-                                        data-target="#tab-content-2">Second</button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-text">
-                                    <p class="collapse fade show" id="tab-content-1" data-parent="#tab-panel-parent-1">
-                                        1. This is an example of very basic panel (card) layout. Just use bootstrap's
-                                        default structure to get this design.
-                                    </p>
-                                    <p class="collapse fade" id="tab-content-2" data-parent="#tab-panel-parent-1">2.
-                                        This is an example of very basic panel (card) layout. Just use bootstrap's
-                                        default structure to get this design.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card shadow">
-                            <div class="card-header bg-white">
-                                Basic Panel
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">This is an example of very basic panel (card) layout. Just use
-                                    bootstrap's default structure to get this design.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="page-header mt-5 mb-1">
-                    <span class="h2">Cards Variants</span>
-
-                </div>
-                <div class="row">
-
-                    <div class="col-sm-3">
-                        <div class="card shadow">
-                            <img src="https://picsum.photos/200" class="card-img-top" alt="Image Cards">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-header mt-5 mb-1">
-                    <span class="h2">Blockquote</span>
-
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card bg-primary text-white text-center p-3 shadow">
-                            <blockquote class="blockquote mb-0">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-                                <footer class="blockquote-footer text-white">
-                                    <small>
-                                        Someone famous in <cite title="Source Title">Source Title</cite>
-                                    </small>
-                                </footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-header mt-5 mb-1">
-                    <span class="h2">Cards with Subtitle</span>
-
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card shadow">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="card-link">Card link</a>
-                                <a href="#" class="card-link">Another link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+  <div class="overlay-mask"></div>
+  <div class="main-wrapper">
+    @@include('../partials/menu.html')
+    <div class="right-area">
+      @@include('../partials/header.html')
+      <div class="main-content container">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-sm-8">
+              <span class="h2">Cards</span>
+              <small>Let's wrap it up !</small>
             </div>
+            <div class="col-sm-4">
+              <nav aria-label="breadcrumb" class="float-right">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#"><span class="icon material-icons">home</span></a></li>
+                  <li class="breadcrumb-item"><a href="#">UI Components</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Cards</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card  text-white bg-primary  shadow">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card text-white bg-secondary only-header shadow">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Secondary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-3">
+            <div class="card text-white bg-success only-header shadow">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Success card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card text-white bg-danger only-header shadow">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Danger card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card text-dark bg-warning only-header shadow">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Warning card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card text-white bg-info shadow">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Info card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card bg-light only-header shadow">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Light card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card text-white bg-dark shadow">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Dark card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="page-header col-sm-12 mt-5 mb-1">
+            <span class="h2">Panel Cards</span>
+          </div>
+          <div class="col-sm-4">
+            <div class="card shadow">
+              <div class="card-header bg-primary text-light">
+                Basic Panel
+              </div>
+              <div class="card-body">
+                <p class="card-text">This is an example of very basic panel (card) layout. Just use bootstrap's default
+                  structure to get this design.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card shadow">
+              <div class="card-header">
+                Header
+                <div class="tools">
+                  <button class="btn btn-square " reload simulate>
+                    <i class="material-icons">refresh</i>
+                  </button>
+                  <button class="btn btn-square" fullscreen>
+                    <i class="material-icons">fullscreen</i>
+                    <i class="material-icons">fullscreen_exit</i>
+                  </button>
+                  <button class="btn btn-square" close>
+                    <i class="material-icons">close</i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Use <code>.tools</code> inside <code>.card-header</code> with icons to have some
+                  actionable buttons. Make use of <code>fullscreen</code>,
+                  <code>close</code>, <code>reload</code> attribute for respecitve functionality</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card text-white bg-success only-header shadow">
+              <div class="card-header">
+                Header
+                <div class="tools">
+                  <button class="btn btn-xs btn-icon" reload simulate>
+                    <i class="material-icons">refresh</i>
+                    <span>Refresh</span>
+                  </button>
+                  <button class="btn btn-xs" fullscreen>
+                    <span>Fullscreen</span>
+                    <span>Exit</span>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-text">You can also txt buttons with or without icon</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="card tab-panel shadow" id="tab-panel-parent-1">
+              <div class="card-header">
+                Tab Panel
+                <div class="tab-btns float-right">
+                  <button class="btn btn-info btn-underline active" data-toggle="collapse"
+                    data-target="#tab-content-1">First</button>
+                  <button class="btn btn-info btn-underline" data-toggle="collapse"
+                    data-target="#tab-content-2">Second</button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-text">
+                  <p class="collapse fade show" id="tab-content-1" data-parent="#tab-panel-parent-1">
+                    1. This is an example of very basic panel (card) layout. Just use bootstrap's default structure to
+                    get this design.
+                  </p>
+                  <p class="collapse fade" id="tab-content-2" data-parent="#tab-panel-parent-1">2. This is an example of
+                    very basic panel (card) layout. Just use bootstrap's default structure to get this design.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card shadow">
+              <div class="card-header">
+                Basic Panel
+              </div>
+              <div class="card-body">
+                <p class="card-text">This is an example of very basic panel (card) layout. Just use bootstrap's default
+                  structure to get this design.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="page-header mt-5 mb-1">
+          <span class="h2">Cards Variants</span>
+
+        </div>
+        <div class="row">
+
+          <div class="col-sm-3">
+            <div class="card shadow">
+              <img src="https://picsum.photos/200" class="card-img-top" alt="Image Cards">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header mt-5 mb-1">
+          <span class="h2">Blockquote</span>
+
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card bg-primary text-white text-center p-3 shadow">
+              <blockquote class="blockquote mb-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                <footer class="blockquote-footer text-white">
+                  <small>
+                    Someone famous in <cite title="Source Title">Source Title</cite>
+                  </small>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="page-header mt-5 mb-1">
+          <span class="h2">Cards with Subtitle</span>
+
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
     </div>
-    </div>
-    @@include('../partials/js.html')
+  </div>
+  </div>
+  @@include('../partials/js.html')
 </body>
 
 </html>
