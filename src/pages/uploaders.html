@@ -19,7 +19,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
+                            <div class="card-header bg-white">
                                 Drop Zone
                             </div>
                             <div class="card-body">
@@ -29,7 +29,7 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
+                            <div class="card-header bg-white">
                                 Size Limit (3M)
                             </div>
                             <div class="card-body">
@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
+                            <div class="card-header bg-white">
                                 Specific File Types (PDF / PNG / PSD)
                             </div>
                             <div class="card-body">
@@ -51,11 +51,12 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
+                            <div class="card-header bg-white">
                                 Default Image
                             </div>
                             <div class="card-body">
-                                <input type="file" class="dropify" data-default-file="assets/images/avatar/avatar-anim.jpg" />
+                                <input type="file" class="dropify"
+                                    data-default-file="assets/images/avatar/team-1.jpg" />
 
                             </div>
                         </div>
@@ -66,13 +67,16 @@
     </div>
     @@include('../partials/js.html')
     <script>
-        $(function() {
+        $(function () {
             $('.dropify').dropify({
                 messages: {
                     'default': 'Drag and drop a file here or click',
                     'replace': 'Drag and drop or click to replace',
                     'remove': 'Remove',
                     'error': 'Ooops, something wrong happended.'
+                },
+                tpl: {
+                    clearButton: '<button type="button" class="dropify-clear btn-primary">{{ remove }}</button>',
                 }
             });
         });

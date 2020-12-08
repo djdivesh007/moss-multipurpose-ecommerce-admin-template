@@ -18,10 +18,10 @@
                     <small>Let's get started</small>
 
                 </div>
-                <div class="row mt-3">
-                    <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
+                            <div class="card-header bg-white">
                                 Basic Form
                             </div>
                             <div class="card-body">
@@ -48,26 +48,58 @@
                         </div>
 
                     </div>
-
-                    <div class="col-sm-6">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
-                                Sizing
+                            <div class="card-header bg-white">
+                                Input Form with Icons
                             </div>
                             <div class="card-body">
-                                <input class="form-control form-control-lg mt-3" type="text"
-                                    placeholder=".form-control-lg">
-                                <input class="form-control mt-3" type="text" placeholder="Default input">
-                                <input class="form-control mt-3 form-control-sm" type="text"
-                                    placeholder=".form-control-sm">
+                                <form>
 
+                                    <div class="mb-3">
+                                        <label for="">Enter your email</label>
+                                        <div class="input-group is-invalid">
+
+                                            <div class="input-group-prepend ">
+
+                                                <span class="input-group-text bg-white">
+                                                    <i class="material-icons f-16">email</i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control border-left-0" required>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Invalid email address
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="">Enter your password</label>
+                                        <div class="input-group is-invalid">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text bg-white" id="validatedInputGroupPrepend">
+                                                    <i class="material-icons f-16">lock</i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control border-left-0"
+                                                aria-describedby="validatedInputGroupPrepend" required>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Password should be min 6 characters
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+                                </form>
                             </div>
                         </div>
 
                     </div>
-                    <div class="col-sm-6">
+
+
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
+                            <div class="card-header bg-white">
                                 Checkbox
                             </div>
                             <div class="card-body">
@@ -93,74 +125,84 @@
                         </div>
 
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
+                            <div class="card-header bg-white">
+                                Range Input
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="formControlRange">Example Range input</label>
+                                        <input type="range" class="form-control-range" id="formControlRange">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
                                 Toggle Switches
                             </div>
                             <div class="card-body">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                    <label class="custom-control-label" for="customSwitch1">Toggle this switch
-                                        element</label>
+                                    <label class="custom-control-label" for="customSwitch1">
+                                        Toggle this switch
+                                        element
+                                    </label>
                                 </div>
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
                                     <label class="custom-control-label" for="customSwitch2">Disabled switch
                                         element</label>
                                 </div>
+                                <div class="custom-control custom-switch custom-switch-sm">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                    <label class="custom-control-label" for="customSwitch3">SM switch
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-switch custom-switch-md">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                    <label class="custom-control-label" for="customSwitch4">MD switch
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-switch custom-switch-lg">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                                    <label class="custom-control-label" for="customSwitch5">
+                                        <span>LG Switch</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-switch custom-switch-xl">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch6">
+                                    <label class="custom-control-label" for="customSwitch6">XL Switch
+                                    </label>
+                                </div>
                             </div>
                         </div>
 
                     </div>
-                    <div class="col-sm-6">
+
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
-                                Radio Buttons
+                            <div class="card-header bg-white">
+                                Sizing
                             </div>
                             <div class="card-body">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
-                                        id="exampleRadios1" value="option1" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
-                                        Default radio
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
-                                        id="exampleRadios2" value="option2">
-                                    <label class="form-check-label" for="exampleRadios2">
-                                        Second default radio
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
-                                        id="exampleRadios3" value="option3" disabled>
-                                    <label class="form-check-label" for="exampleRadios3">
-                                        Disabled radio
-                                    </label>
-                                </div>
+                                <input class="form-control form-control-lg mt-3" type="text"
+                                    placeholder=".form-control-lg">
+                                <input class="form-control mt-3" type="text" placeholder="Default input">
+                                <input class="form-control mt-3 form-control-sm" type="text"
+                                    placeholder=".form-control-sm">
 
-
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" name="customRadio" id="customRadioDisabled1"
-                                        class="custom-control-input" value="customOption1">
-                                    <label class="custom-control-label">Toggle this custom
-                                        radio</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" name="customRadio" id="customRadioDisabled2"
-                                        class="custom-control-input" value="customOption2">
-                                    <label class="custom-control-label">Toggle this custom
-                                        radio</label>
-                                </div>
                             </div>
                         </div>
 
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
+                            <div class="card-header bg-white">
                                 Custom Select
                             </div>
                             <div class="card-body">
@@ -217,9 +259,9 @@
                         </div>
 
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
+                            <div class="card-header bg-white">
                                 Custom File Input
                             </div>
                             <div class="card-body">
@@ -272,9 +314,54 @@
                         </div>
 
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
-                            <div class="card-header bg-primary text-light">
+                            <div class="card-header bg-white">
+                                Radio Buttons
+                            </div>
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Default radio
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Second default radio
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios3" value="option3" disabled>
+                                    <label class="form-check-label" for="exampleRadios3">
+                                        Disabled radio
+                                    </label>
+                                </div>
+
+
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" name="customRadio" id="customRadioDisabled1"
+                                        class="custom-control-input" value="customOption1">
+                                    <label class="custom-control-label">Toggle this custom
+                                        radio</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" name="customRadio" id="customRadioDisabled2"
+                                        class="custom-control-input" value="customOption2">
+                                    <label class="custom-control-label">Toggle this custom
+                                        radio</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
                                 Form Controls
                             </div>
                             <div class="card-body">
@@ -314,6 +401,8 @@
                         </div>
 
                     </div>
+
+
                 </div>
             </div>
         </div>

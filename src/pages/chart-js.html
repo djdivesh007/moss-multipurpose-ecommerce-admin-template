@@ -2,73 +2,73 @@
 <html lang="en">
 
 <head>
-  @@include('../partials/head.html')
+	@@include('../partials/head.html')
 </head>
 
 <body>
-  <div class="overlay-mask"></div>
-  <div class="main-wrapper">
-    @@include('../partials/menu.html')
-    <div class="right-area">
-      @@include('../partials/header.html')
-      <div class="main-content container">
-        <div class="page-header">
-          <span class="h2">Chart.js</span>
-          <small>Chart.js external library</small>
-        </div>
-        <div class="row">
-          <div class="col-12 col-sm-6">
-            <div class="card shadow">
-              <div class="card-header bg-primary text-light">
-                Bar Chart
-              </div>
-              <div class="card-body">
-                <canvas id="chartjs-01" class="chart-canvas"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="card shadow">
-              <div class="card-header bg-primary text-light">
-                Line Chart
-              </div>
-              <div class="card-body">
-                <canvas id="chartjs-02" class="chart-canvas"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="card shadow">
-              <div class="card-header bg-primary text-light">
-                Radar
-              </div>
-              <div class="card-body">
-                <canvas id="chartjs-03" class="chart-canvas"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="card shadow">
-              <div class="card-header bg-primary text-light">
-                Bar Line Combo
-              </div>
-              <div class="card-body">
-                <canvas id="chartjs-04" class="chart-canvas"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  @@include('../partials/js.html')
-  <!-- build:js assets/js/Chart.bundle.js -->
-  <script src="../../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
-  <script src="../../assets/js/chartjs-utils.js"></script>
-  <!-- endbuild -->
-  <script>
+	<div class="overlay-mask"></div>
+	<div class="main-wrapper">
+		@@include('../partials/menu.html')
+		<div class="right-area">
+			@@include('../partials/header.html')
+			<div class="main-content container">
+				<div class="page-header">
+					<span class="h2">Chart.js</span>
+					<small>Chart.js external library</small>
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-6">
+						<div class="card shadow">
+							<div class="card-header bg-white">
+								Bar Chart
+							</div>
+							<div class="card-body">
+								<canvas id="chartjs-01" class="chart-canvas"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6">
+						<div class="card shadow">
+							<div class="card-header bg-white">
+								Line Chart
+							</div>
+							<div class="card-body">
+								<canvas id="chartjs-02" class="chart-canvas"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6">
+						<div class="card shadow">
+							<div class="card-header bg-white">
+								Radar
+							</div>
+							<div class="card-body">
+								<canvas id="chartjs-03" class="chart-canvas"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6">
+						<div class="card shadow">
+							<div class="card-header bg-white">
+								Bar Line Combo
+							</div>
+							<div class="card-body">
+								<canvas id="chartjs-04" class="chart-canvas"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('../partials/js.html')
+	<!-- build:js assets/js/Chart.bundle.js -->
+	<script src="../../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+	<script src="../../assets/js/chartjs-utils.js"></script>
+	<!-- endbuild -->
+	<script>
 		const color = Chart.helpers.color;
-    const presets = window.chartColors;  //Radar
+		const presets = window.chartColors; //Radar
 		const utils = Samples.utils; //Radar
 		const inputs = {
 			min: 8,
@@ -77,7 +77,7 @@
 			decimals: 2,
 			continuity: 1
 		};
-    const barChartData = {
+		const barChartData = {
 			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
 			datasets: [{
 				label: 'Dataset 1',
@@ -110,7 +110,7 @@
 			}]
 
 		};
-    const lineChartConfig = {
+		const lineChartConfig = {
 			type: 'line',
 			data: {
 				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -176,8 +176,8 @@
 				}
 			}
 		};
-    
-    function generateDataForRadar() {
+
+		function generateDataForRadar() {
 			// radar chart doesn't support stacked values, let's do it manually
 			var values = utils.numbers(inputs);
 			inputs.from = values;
@@ -185,9 +185,11 @@
 		}
 
 		function generateLabelsForRadar() {
-			return  utils.months({count: inputs.count});
+			return utils.months({
+				count: inputs.count
+			});
 		}
-    const radarOptions = {
+		const radarOptions = {
 			maintainAspectRatio: true,
 			spanGaps: false,
 			elements: {
@@ -196,7 +198,7 @@
 				}
 			}
 		}
-    const radarData = {
+		const radarData = {
 			labels: generateLabelsForRadar(),
 			datasets: [{
 				backgroundColor: utils.transparentize(presets.red),
@@ -237,7 +239,7 @@
 			}]
 		};
 
-    const barLineComboData =  {
+		const barLineComboData = {
 			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
 			datasets: [{
 				type: 'line',
@@ -285,8 +287,8 @@
 			}]
 
 		};
-    
-    window.onload = function() {
+
+		window.onload = function () {
 			const ctx1 = document.getElementById('chartjs-01').getContext('2d');
 			window.myBar = new Chart(ctx1, {
 				type: 'bar',
@@ -302,16 +304,16 @@
 					}
 				}
 			});
-      const ctx2 = document.getElementById('chartjs-02').getContext('2d'); 
-      window.myLine = new Chart(ctx2, lineChartConfig);
-      const ctx3 = document.getElementById('chartjs-03').getContext('2d'); 
-      window.myLine = new Chart(ctx3, {
-        type: 'radar',
-        data: radarData,
-			  options: radarOptions
-      });
-      const ctx4 = document.getElementById('chartjs-04').getContext('2d');
-      window.myBarLineChart = new Chart(ctx4, {
+			const ctx2 = document.getElementById('chartjs-02').getContext('2d');
+			window.myLine = new Chart(ctx2, lineChartConfig);
+			const ctx3 = document.getElementById('chartjs-03').getContext('2d');
+			window.myLine = new Chart(ctx3, {
+				type: 'radar',
+				data: radarData,
+				options: radarOptions
+			});
+			const ctx4 = document.getElementById('chartjs-04').getContext('2d');
+			window.myBarLineChart = new Chart(ctx4, {
 				type: 'bar',
 				data: barLineComboData,
 				options: {
@@ -326,8 +328,8 @@
 					}
 				}
 			});
-    };
-  </script>
+		};
+	</script>
 </body>
 
 </html>
