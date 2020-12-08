@@ -193,6 +193,27 @@ code {
     border: none;
 }
 
+.toast {
+    opacity: 1 !important;
+    box-shadow: 0 4px 12px grey !important;
+}
+
+.toast-success {
+    background-color: $teal;
+}
+
+.toast-error {
+    background-color: $red;
+}
+
+.toast-info {
+    background-color: $info;
+}
+
+.toast-warning {
+    background-color: $pastel-orange;
+}
+
 
 /* Cards */
 
