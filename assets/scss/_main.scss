@@ -906,10 +906,16 @@ table tfoot th,
     background-color: #f2f2f3;
 }
 
-.table td {
-    padding: 14px;
+.table td,
+.table th {
+    padding: 16px 20px;
 }
 
 .table tr {
-    padding: 14px 20px;
+    padding: 16px 20px;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0.85em;
+    padding-bottom: 0.85em;
 }
