@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper">
+        @@include('../partials/menu.html')
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+
+                <div class="page-header">
+                    <span class="h2">Apex Charts</span>
+                    <small>ApexCharts external library</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Line Chart
+                            </div>
+                            <div class="card-body">
+                                <div id="chart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Area Chart
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-area"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Bar Chart
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Radar
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-candlestick"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+    <!-- build:js assets/js/apexcharts.bundle.js -->
+    <script src="../../assets/js/apexcharts-demo.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>

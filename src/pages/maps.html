@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper">
+        @@include('../partials/menu.html')
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Maps</span>
+                    <small>Let's get started</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Vector Maps
+                            </div>
+                            <div class="card-body">
+                                <div class="container map-container" id="map-container">
+                                    <div class="map">Alternative content</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+
+</body>
+
+</html>
