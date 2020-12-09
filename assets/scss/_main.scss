@@ -814,6 +814,10 @@ ul.mailbox-pagination li {
     object-fit: cover;
 }
 
+.avatar-group {
+    display: inline-flex;
+}
+
 .avatar-group .avatar {
     position: relative;
     // z-index: 2;
@@ -897,29 +901,15 @@ table tfoot th,
     font-weight: 700;
     letter-spacing: .08em;
     text-transform: uppercase;
-    color: #95aac9;
+    color: #7e7e7e;
     border-bottom-width: 1px;
-    background-color: #f9fbfd;
+    background-color: #f2f2f3;
 }
 
-.table tr,
 .table td {
     padding: 14px;
 }
 
-.table.table-card {
-    border-spacing: 0 1em;
-    border-collapse: separate;
-}
-
-.table.table-card tbody tr {
-    transition: all ease .2s;
-    border: 1px solid #cfcfcf;
-    box-shadow: 0 .1rem .4em rgba(0, 0, 0, .15)!important;
-}
-
-.table.table-card td,
-.table.table-card th {
-    border: none;
-    vertical-align: middle;
+.table tr {
+    padding: 14px 20px;
 }
