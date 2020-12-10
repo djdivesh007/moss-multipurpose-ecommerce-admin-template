@@ -29,7 +29,7 @@ $(function() {
     var options = {
         chart: {
             type: 'line',
-            height: 350,
+            height: 280,
         },
         colors: colorPalette,
         series: [{
@@ -60,7 +60,7 @@ $(function() {
             data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
         }],
         chart: {
-            height: 350,
+            height: 280,
             type: 'line',
             stacked: false,
         },
@@ -123,7 +123,7 @@ $(function() {
     var optionsBar = {
         chart: {
             type: 'bar',
-            height: 350,
+            height: 280,
             width: '100%',
             stacked: true,
         },

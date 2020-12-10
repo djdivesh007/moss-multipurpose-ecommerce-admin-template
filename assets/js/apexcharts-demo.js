@@ -16,7 +16,7 @@ $(function() {
     var options = {
         chart: {
             type: 'line',
-            height: 350,
+            height: 280,
         },
         colors: colorPalette,
         series: [{
@@ -41,7 +41,7 @@ $(function() {
         chart: {
 
             type: "area",
-            height: 350,
+            height: 280,
             foreColor: "#000",
             toolbar: {
                 autoSelected: "pan",
@@ -100,7 +100,7 @@ $(function() {
     var options2 = {
         chart: {
 
-            height: 350,
+            height: 280,
             type: "bar",
             foreColor: "#3f51b5",
 
@@ -164,7 +164,7 @@ $(function() {
     var option3 = {
         chart: {
 
-            height: 350,
+            height: 280,
             type: "radar",
             foreColor: "#3f51b5",
 
@@ -217,7 +217,7 @@ $(function() {
             data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
         }],
         chart: {
-            height: 350,
+            height: 280,
             type: 'line',
             stacked: false,
         },
@@ -523,7 +523,7 @@ $(function() {
         }],
         chart: {
             type: 'candlestick',
-            height: 350
+            height: 280
         },
         title: {
             text: 'CandleStick Chart',
@@ -546,7 +546,7 @@ $(function() {
     var optionsBar = {
         chart: {
             type: 'bar',
-            height: 350,
+            height: 280,
             width: '100%',
             stacked: true,
         },
@@ -599,7 +599,7 @@ $(function() {
         chart: {
             type: 'donut',
             width: '100%',
-            height: 350
+            height: 280
         },
         dataLabels: {
             enabled: false,
