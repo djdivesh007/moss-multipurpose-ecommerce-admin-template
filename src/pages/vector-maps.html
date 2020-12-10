@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper">
+        @@include('../partials/menu.html')
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Vector Maps</span>
+                    <small>Let's get started</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Vector Maps
+                            </div>
+                            <div class="card-body">
+                                <div class="map-container">
+                                    <div class="map">Alternative content</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('../partials/js.html')
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery-mapael@2.2.0/js/jquery.mapael.min.js"></script>
+    <!-- build:js assets/js/demo/vector.bundle.js -->
+    <script src="../../assets/js/demo/india_states.js"></script>
+    <!-- endbuild -->
+
+    <script>
+        $(document).ready(function() {
+
+            $(".map-container").mapael({
+                map: {
+                    name: "india_states"
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

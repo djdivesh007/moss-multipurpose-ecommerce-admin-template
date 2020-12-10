@@ -14,10 +14,10 @@
             <div class="main-content container">
                 <div class="page-header">
                     <span class="h2">Pickers</span>
-                    <small>Pick your favourite</small>
+                    <small>Pick Date time</small>
                 </div>
                 <div class="row">
-                    <div class="col-6 col-sm-6">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
                             <div class="card-header bg-white">
                                 Basic Date time Picker
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
                             <div class="card-header bg-white">
                                 Date Picker
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
                             <div class="card-header bg-white">
                                 Time Picker
@@ -52,11 +52,11 @@
                     </div>
                 </div>
                 <div class="page-header mt-4">
-                    <span class="h2">Pickers</span>
-                    <small>Pick your favourite</small>
+                    <span class="h2">Color Pickers</span>
+                    <small>Pick your favourite color</small>
                 </div>
                 <div class="row">
-                    <div class="col-6 col-sm-6">
+                    <div class="col-12 col-sm-12  col-md-6">
                         <div class="card shadow">
                             <div class="card-header bg-white">
                                 Color Picker
@@ -67,15 +67,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6">
+                    <div class="col-12 col-sm-12 col-md-6">
                         <div class="card shadow">
                             <div class="card-header bg-white">
                                 Color Wheel Picker
                             </div>
                             <div class="card-body">
-                                <div class="wheel" id="colorWheelDemo"></div>
-
-
+                                <div class="wheel mx-auto" id="colorWheelDemo"></div>
+                                <label class="mt-3">Selected Color</label>
+                                <input type="text" class="form-control" name="color" id="selected_color" disabled>
                             </div>
                         </div>
                     </div>
@@ -116,20 +116,15 @@
                     wheelAngle: 0,
                     wheelDirection: "anticlockwise"
                 }
-            }, {
-                component: iro.ui.Box,
-                options: {
-                    // see below
-                }
-            }, {
-                component: iro.ui.Slider,
-                options: {
-                    sliderType: 'hue', // can also be 'saturation', 'value', 'alpha' or 'kelvin',
-                    sliderShape: 'circle',
-                    activeIndex: 2,
-                }
-            }]
+            }],
+            layoutDirection: 'horizontal',
 
+        });
+
+        colorWheel.on('color:change', function(color) {
+            // log the current color as a HEX string
+            $('#selected_color').val(color.hexString);
+            console.log(color.hexString);
         });
     </script>
 </body>
