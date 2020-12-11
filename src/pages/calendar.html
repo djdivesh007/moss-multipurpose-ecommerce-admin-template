@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper">
+        @@include('../partials/menu.html')
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Calendar</span>
+                    <small>Let's get started</small>
+                </div>
+                <div class="row">
+                    <div class="col-3 col-sm-3">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                <strong>Draggable Events</strong>
+
+                            </div>
+                            <div class="card-body">
+
+                                <div id='external-events'>
+                                    <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event mt-2'>
+                                        <div class='fc-event-main p-1'>Christmas Eve</div>
+                                    </div>
+                                    <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event mt-2'>
+                                        <div class='fc-event-main p-1'>Cricket Match</div>
+                                    </div>
+                                    <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event mt-2'>
+                                        <div class='fc-event-main p-1'>Fifa World Cup</div>
+                                    </div>
+                                    <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event mt-2'>
+                                        <div class='fc-event-main p-1'>Jim's Birthday</div>
+                                    </div>
+                                    <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event mt-2'>
+                                        <div class='fc-event-main p-1'>Joe's First Date with Marria</div>
+                                    </div>
+
+                                    <p class="mt-2">
+                                        <input type='checkbox' id='drop-remove' />
+                                        <label for='drop-remove'>remove after drop</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-9 col-sm-9">
+                        <div class="card shadow">
+                            <!-- <div class="card-header bg-white">
+                                Full Calendar
+                            </div> -->
+                            <div class="card-body">
+                                <div id='calendar'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+
+            var containerEl = document.getElementById('external-events');
+            var calendarEl = document.getElementById('calendar');
+            var checkbox = document.getElementById('drop-remove');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                initialDate: '2020-12-07',
+                themeSystem: 'bootstrap',
+                selectable: true,
+                editable: true,
+                droppable: true,
+                // eventColor: '#000',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+
+                dateClick: function(info) {
+                    console.log(info);
+                },
+                drop: function(info) {
+                    // is the "remove after drop" checkbox checked?
+                    if (checkbox.checked) {
+                        // if so, remove the element from the "Draggable Events" list
+                        info.draggedEl.parentNode.removeChild(info.draggedEl);
+                    }
+                },
+                events: [{
+                    title: 'All Day Event',
+                    start: '2020-12-01'
+                }, {
+                    title: 'Long Event',
+                    start: '2020-12-07',
+                    end: '2020-12-10'
+                }, {
+                    groupId: '999',
+                    title: 'Repeating Event',
+                    start: '2020-12-09T16:00:00'
+                }, {
+                    groupId: '999',
+                    title: 'Repeating Event',
+                    start: '2020-12-16T16:00:00'
+                }, {
+                    title: 'Conference',
+                    start: '2020-12-11',
+                    end: '2020-12-13'
+                }, {
+                    title: 'Meeting',
+                    start: '2020-12-12T10:30:00',
+                    end: '2020-12-12T12:30:00'
+                }, {
+                    title: 'Lunch',
+                    start: '2020-12-12T12:00:00'
+                }, {
+                    title: 'Meeting',
+                    start: '2020-12-12T14:30:00'
+                }, {
+                    title: 'Birthday Party',
+                    start: '2020-12-13T07:00:00'
+                }, {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2020-12-28'
+                }]
+            });
+
+            calendar.render();
+
+            var Draggable = FullCalendar.Draggable;
+
+            new Draggable(containerEl, {
+                itemSelector: '.fc-event',
+                eventData: function(eventEl) {
+                    return {
+                        title: eventEl.innerText
+                    };
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
