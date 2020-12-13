@@ -1,0 +1,11 @@
+@include media-breakpoint-down(sm) {
+    .fc .fc-toolbar {
+        display: flow-root;
+    }
+    .fc-toolbar-chunk {
+        margin: 5px auto;
+    }
+    .fc .fc-toolbar.fc-header-toolbar {
+        margin-bottom: 1em;
+    }
+}

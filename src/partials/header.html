@@ -6,16 +6,9 @@
           <span class="material-icons">menu</span>
         </button>
       </li>
-
-      <li class="nav-item d-sm-none d-none d-md-block">
-        <a href="" class="nav-link">Important Link</a>
-      </li>
-      <li class="nav-item d-sm-none d-none d-md-block">
-        <a href="" class="nav-link">Quick Link</a>
-      </li>
       <li class="nav-item d-none d-md-block" id="search-bar">
         <form class="form-inline" method="POST" onsubmit="return false;">
-          <div class="input-group">
+          <div class="input-group input-search-group">
             <div class="input-group-prepend">
               <button class="btn btn-navbar text-light d-md-none"
                 onclick="$('#search-bar').toggleClass('d-none search-bar')">
@@ -31,15 +24,22 @@
           </div>
         </form>
       </li>
-      <li class="flex-fill"></li>
-      <li class="nav-item icon">
-        <a href="" class="nav-link" id="fullscreen-btn">
-          <span class="material-icons">fullscreen</span>
-        </a>
+
+      <li class="nav-item d-sm-none d-none d-md-block">
+          <a href="" class="nav-link">Important Link</a>
       </li>
+      <li class="nav-item d-sm-none d-none d-md-block">
+          <a href="" class="nav-link">Quick Link</a>
+      </li>
+      <li class="flex-fill"></li>
       <li class="nav-item icon d-block d-md-none">
         <a class="nav-link" id="searchBtn" onclick="$('#search-bar').toggleClass('d-none search-bar'); return false;">
           <span class="material-icons">search</span>
+        </a>
+      </li>
+      <li class="nav-item icon">
+        <a href="" class="nav-link" id="fullscreen-btn">
+          <span class="material-icons">fullscreen</span>
         </a>
       </li>
       <li class="nav-item icon">

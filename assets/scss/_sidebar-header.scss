@@ -2,7 +2,7 @@
 .main-wrapper {
   .sidebar {
     position: fixed;
-    height: calc(100% - 54px);
+    height: 100%;
     width: 240px;
     z-index: 10;
     background-color: #fff;
@@ -161,11 +161,20 @@
             height: auto;
           }
           &.search-bar {
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
               position: fixed;
-              width: 100%;
+              width: calc(100% - 10px);
               z-index: 10000000;
               background: $primary;
+              margin: 0px;
+              .input-search-group,
+              .input-group-append {
+                height: 38px;
+              }
+
+              .form-inline, .form-inline .input-group {
+                width: 100%;
+              }
             }
           }
           &.icon a,
@@ -179,6 +188,7 @@
             transition: background-color 0.2s;
             display: inline-flex;
             align-items: center;
+            margin:0px;
             cursor: pointer;
             &:focus {
               outline: 0;
