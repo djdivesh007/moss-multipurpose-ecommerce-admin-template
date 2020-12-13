@@ -1,0 +1,38 @@
+.kanban-board-list {
+  max-width: 300px;
+  max-height: 100%;
+  padding: 5px;
+  .kanban-list-body{
+    padding: 5px;
+    border: 1px solid #aaa;
+    background-color: lighten($primary, 40%);
+    border-radius: 5px;
+  }
+  .kanban-list-title {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @each $color, $value in $theme-colors {
+    .theme-#{$color}{
+      border-left: 7.5px solid $value;
+    }
+  }
+  .card{
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .dropzone{
+    height: 0.25rem;
+  }
+  .draggable {
+    margin-bottom: 1rem;
+    cursor: grab;
+  }
+  .droppable {
+    background-color: $success;
+    min-height: 120px;
+    margin-bottom: 1rem;
+  }
+  
+}

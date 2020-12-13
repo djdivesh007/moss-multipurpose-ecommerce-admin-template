@@ -1,0 +1,46 @@
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-transform: uppercase;
+}
+
+table tfoot th,
+.table thead th {
+    font-size: .7875rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #7e7e7e;
+    border-bottom-width: 1px;
+    background-color: #fff;
+}
+
+.table td,
+.table th {
+    padding: 16px 20px;
+}
+
+.table tr {
+    padding: 16px 20px;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0.85em;
+    padding-bottom: 0.85em;
+}
+
+
+/* Pagination Stylings */
+
+a.page-link {
+    margin: 5px;
+    border-radius: $border-radius;
+}
+
+a.page-link .active {
+    background-color: $primary;
+    color: white;
+}

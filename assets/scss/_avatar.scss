@@ -1,0 +1,118 @@
+/* Avatar Stylings  */
+
+.avatar {
+  vertical-align: middle;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+}
+
+.avatar-title {
+  font-size: 18px;
+}
+
+.avatar-xs {
+  width: 1.625em;
+  height: 1.625em;
+}
+
+.avatar-xs .avatar-title {
+  font-size: 10px;
+}
+
+.avatar-sm {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.avatar-sm .avatar-title {
+  font-size: 13px;
+}
+
+.avatar-lg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.avatar-lg .avatar-title {
+  font-size: 24px;
+}
+
+.avatar-xl {
+  width: 5.125rem;
+  height: 5.125rem;
+}
+
+.avatar-xl .avatar-title {
+  font-size: 30px;
+}
+
+.avatar-title {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #b1c2d9;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.avatar-group {
+  display: inline-flex;
+}
+
+.avatar-group .avatar {
+  position: relative;
+  // z-index: 2;
+}
+
+.avatar-group .avatar + .avatar {
+  margin-left: -0.6rem;
+}
+
+.avatar-group .avatar:hover {
+  z-index: 3;
+}
+
+.avatar-away::before,
+.avatar-dnd::before,
+.avatar-offline::before,
+.avatar-online::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  width: 30%;
+  height: 30%;
+  content: "";
+  border: 3px solid #fff;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.avatar-online::before {
+  background-color: #03c796;
+}
+
+.avatar-offline::before {
+  background-color: #b1c2d9;
+}
+
+.avatar-away::before {
+  background-color: #f7bc06;
+}
+
+.avatar-dnd::before {
+  background-color: $red;
+}
