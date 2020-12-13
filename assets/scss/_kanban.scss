@@ -4,14 +4,17 @@
   }
 }
 .kb-board-list {
-  max-width: 300px;
+  min-width: 300px;
   max-height: 100%;
   padding: 5px;
   .kb-list-body{
     padding: 15px;
     // border: 1px solid #aaa;
-    background-color: lighten($primary, 45%);
+    background-color: #fff;
     border-radius: 5px;
+    .card {
+      background-color: $gray-300;
+    }
   }
   .kb-list-title {
     display: flex;
