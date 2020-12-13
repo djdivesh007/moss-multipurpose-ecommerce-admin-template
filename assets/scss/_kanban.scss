@@ -1,16 +1,25 @@
-.kanban-board-list {
+.kb-board-app {
+  .kb-container {
+    overflow: scroll;
+  }
+}
+.kb-board-list {
   max-width: 300px;
   max-height: 100%;
   padding: 5px;
-  .kanban-list-body{
-    padding: 5px;
-    border: 1px solid #aaa;
-    background-color: lighten($primary, 40%);
+  .kb-list-body{
+    padding: 15px;
+    // border: 1px solid #aaa;
+    background-color: lighten($primary, 45%);
     border-radius: 5px;
   }
-  .kanban-list-title {
+  .kb-list-title {
     display: flex;
     flex-direction: row;
+  }
+
+  .kb-item-content{
+    font-size: 0.85em;
   }
 
   @each $color, $value in $theme-colors {
