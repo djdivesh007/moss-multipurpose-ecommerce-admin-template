@@ -17,7 +17,7 @@
                     <small>Let's get started</small>
                 </div>
                 <div class="row">
-                    <div class="col-3 col-sm-3">
+                    <div class="col-12 col-sm-12 d-none">
                         <div class="card shadow">
                             <div class="card-header">
                                 <strong>Draggable Events</strong>
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-9 col-sm-9">
+                    <div class="col-12 col-sm-12">
                         <div class="card shadow">
                             <!-- <div class="card-header bg-white">
                                 Full Calendar
@@ -64,9 +64,69 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="eventModalLabel">Create Event</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="event-name" class="col-form-label">Event Title:</label>
+                            <input type="text" class="form-control" id="event-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="basic_input" class="col-form-label">Date:</label>
+                            <input type="date" class="form-control" id="basic_input">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="saveEvent();">Add Event</button>
+                </div>
+            </div>
+        </div>
+    </div>
     @@include('../partials/js.html')
-
     <script>
+        var basic_input = document.getElementById('basic_input');
+        var basic_picker = new Picker(basic_input, {
+            format: 'YYYY-MM-DD',
+        });
+        basic_picker.getDate(true);
+
+        function addEvent(dateStr) {
+            if (typeof dateStr !== 'undefined')
+                $('#basic_input').val(dateStr);
+            $('#eventModal').modal('show');
+        }
+
+        function saveEvent() {
+            console.log($('#event-name').val());
+            console.log($('#basic_input').val());
+            dateStr = $('#basic_input').val();
+            var date = new Date(dateStr + 'T00:00:00'); // will be in local time
+
+            if (!isNaN(date.valueOf())) { // valid?
+                calendar.addEvent({
+                    title: $('#event-name').val(),
+                    start: date,
+                    allDay: true
+                });
+                console.info('Great. Now, update your database...');
+                $('#eventModal').modal('hide');
+            } else {
+                console.log('Invalid date.');
+            }
+        }
+    </script>
+    <script>
+        var calendar;
         document.addEventListener('DOMContentLoaded', function() {
 
 
@@ -74,22 +134,32 @@
             var calendarEl = document.getElementById('calendar');
             var checkbox = document.getElementById('drop-remove');
 
-            var calendar = new FullCalendar.Calendar(calendarEl, {
+            calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 initialDate: '2020-12-07',
                 themeSystem: 'bootstrap',
                 selectable: true,
                 editable: true,
                 droppable: true,
-                // eventColor: '#000',
+                eventColor: '#3f51b5',
                 headerToolbar: {
                     left: 'prev,next today',
                     center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay addEventButton'
+                },
+                customButtons: {
+                    addEventButton: {
+                        text: 'add event',
+                        icon: 'fa-plus',
+                        click: function() {
+                            addEvent('');
+                        }
+                    }
                 },
 
                 dateClick: function(info) {
                     console.log(info);
+                    addEvent(info.dateStr);
                 },
                 drop: function(info) {
                     // is the "remove after drop" checkbox checked?
