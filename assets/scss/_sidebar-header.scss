@@ -147,7 +147,9 @@
         li.nav-item {
           display: inline-block;
           height: 54px;
-          margin: 0 7.5px 0 7.5px;
+          &:not(.icon) {
+            margin: 0 7.5px 0 7.5px;
+          }
           &:first-child {
             margin-left: 0;
           }
