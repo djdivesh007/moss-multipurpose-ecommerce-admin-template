@@ -13,7 +13,8 @@
     background-color: #fff;
     border-radius: 5px;
     .card {
-      background-color: $gray-300;
+      background-color: $gray-100;
+      box-shadow: 0 0.13rem 0.25rem rgba(0, 0, 0, 0.20) !important;
     }
   }
   .kb-list-title {
@@ -28,7 +29,7 @@
   }
 
   .kb-item-content{
-    font-size: 0.85em;
+    font-size: 1em;
   }
 
   @each $color, $value in $theme-colors {
