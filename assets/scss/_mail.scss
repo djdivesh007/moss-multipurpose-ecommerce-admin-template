@@ -29,15 +29,16 @@
 }
 
 .inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li {
-   
+
     display: flex;
     align-items: center;
     padding: .5rem 1rem;
     transition: 0.4s;
     position: relative;
 
-    i{
-         font-size: 22px;
+    i {
+        font-size: 18px;
+        color: #4e4e4e;
     }
 }
 
@@ -166,7 +167,7 @@
 
 
 .mail-list-items {
-    margin-top:15px;
+    margin-top: 15px;
 
     .mail-item {
         box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
@@ -177,7 +178,7 @@
     a {
         text-decoration: none;
     }
-   
+
     div.mail-action {
         width: 220px;
         color: $dark;
@@ -188,17 +189,22 @@
             padding-left: 5px;
             padding-right: 5px;
         }
+
+        p {
+            font-weight: 500;
+        }
     }
 
-    span.mail-buttons{
-        font-size:16px;
-        display:none;
+    span.mail-buttons {
+        font-size: 16px;
+        display: none;
     }
 
     .mail-body-preview {
-        max-width:450px;
+        max-width: 450px;
+
         p {
-            color: #394044;
+            color: $gray-600;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -209,33 +215,30 @@
     span.mail-time {
         margin-bottom: 0px;
         font-size: 12px;
-        color:grey;
+        color: grey;
         width: 55px;
         text-align: right;
     }
 
     @include media-breakpoint-down(md) {
- span.mail-time {
-    margin-left:auto
- }
+        span.mail-time {
+            margin-left: auto
+        }
     }
 
-    .mail-item~.active{
-        background:grey;
+    .mail-item~.active {
+        background: grey;
     }
 
-     .mail-item:hover {
-         box-shadow: 0 .5rem .6rem rgba(0, 0, 0, .15) !important;
-        background-color:#4052b507;
+    .mail-item:hover {
+        box-shadow: 0 .5rem .6rem rgba(0, 0, 0, .15) !important;
+        background-color: #4052b507;
+
         span.mail-buttons {
             font-size: 16px;
             display: flex;
-           
+
         }
-     }
+    }
 
 }
-
-
-
-
