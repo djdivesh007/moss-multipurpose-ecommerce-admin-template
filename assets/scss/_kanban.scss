@@ -3,24 +3,29 @@
     overflow: scroll;
   }
 }
+
 .kb-board-list {
   min-width: 300px;
   max-height: 100%;
   padding: 5px;
-  .kb-list-body{
+
+  .kb-list-body {
     padding: 15px;
     // border: 1px solid #aaa;
     background-color: #fff;
     border-radius: 5px;
+
     .card {
       background-color: $gray-100;
       box-shadow: 0 0.13rem 0.25rem rgba(0, 0, 0, 0.20) !important;
     }
   }
+
   .kb-list-title {
     display: flex;
     flex-direction: row;
-    h4:focus{
+
+    h4:focus {
       outline: 0;
       border-radius: 5px;
       background-color: $secondary;
@@ -28,30 +33,43 @@
     }
   }
 
-  .kb-item-content{
+  .kb-item-content {
     font-size: 1em;
   }
 
-  @each $color, $value in $theme-colors {
-    .theme-#{$color}{
+  @each $color,
+  $value in $theme-colors {
+    .theme-#{$color} {
       border-left: 7.5px solid $value;
     }
   }
-  .card{
+
+  .card {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
-  .dropzone{
+
+  .dropzone {
     height: 0.25rem;
   }
+
   .draggable {
     margin-bottom: 1rem;
     cursor: grab;
+
+    .actions {
+      i {
+        color: rgb(155, 155, 155);
+      }
+
+    }
+
   }
+
   .droppable {
     background-color: $success;
     min-height: 120px;
     margin-bottom: 1rem;
   }
-  
+
 }
