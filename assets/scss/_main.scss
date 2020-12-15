@@ -2,7 +2,7 @@
     transition: all 0.15s;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size:13px;
+    font-size:14px;
 }
 
 html,
@@ -285,10 +285,21 @@ code {
     top: -6px;
 }
 
-[data-timeline-axis-style="dashed"]:before {
+[data-timeline-axis-style="dotted"]:before {
     border-right-style: dashed !important;
 }
 
 
 /* Timeline Stylings Ends */
 
+// Notification Dropdown
+
+.notification-list{
+    width:300px;
+    height:250px;
+    background-color: #b5d3fd;
+
+    a:hover{
+        background-color: none !important; 
+    }
+}

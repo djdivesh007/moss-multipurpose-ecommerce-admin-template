@@ -190,4 +190,10 @@
             width: 1%;
         }
     }
+
+}
+
+.btn-group-vertical>.btn:not(:first-child),
+.btn-group-vertical>.btn-group:not(:first-child){
+ margin-left:0px;
 }
