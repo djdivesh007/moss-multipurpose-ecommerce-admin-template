@@ -304,9 +304,11 @@ $(function() {
             offsetX: 20,
             style: {
                 fontSize: '14px',
-                cssClass: 'apexcharts-yaxis-title'
+                cssClass: 'apexcharts-yaxis-title',
+               
             }
-        }
+        },
+        
     }
 
     var monthlyEarningsOpt = {
