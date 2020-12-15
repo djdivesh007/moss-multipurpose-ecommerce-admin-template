@@ -81,6 +81,9 @@
 
 .avatar-group .avatar:hover {
   z-index: 3;
+       box-shadow: 0 .2rem .6rem rgba(0, 0, 0, .15) !important;
+      border: 1px solid white;
+      transform: translate(0px, -2px);
 }
 
 .avatar-away::before,
@@ -102,7 +105,7 @@
 }
 
 .avatar-online::before {
-  background-color: #03c796;
+  background-color: $green;
 }
 
 .avatar-offline::before {
@@ -110,7 +113,7 @@
 }
 
 .avatar-away::before {
-  background-color: #f7bc06;
+  background-color: $yellow;
 }
 
 .avatar-dnd::before {
