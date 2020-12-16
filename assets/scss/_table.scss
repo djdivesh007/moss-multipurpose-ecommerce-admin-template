@@ -1,4 +1,3 @@
-
 table {
     border-collapse: collapse;
 }
@@ -25,6 +24,21 @@ table tfoot th,
 
 .table tr {
     padding: 16px 20px;
+}
+
+.table-borderless>thead.rounded>tr>th:last-child {
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.table-borderless>thead.rounded>tr>th:first-child {
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.table-borderless>thead.rounded>tr>th {
+    border: none;
+    vertical-align: middle;
 }
 
 div.dataTables_wrapper div.dataTables_info {

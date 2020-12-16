@@ -24,11 +24,12 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Sales</h5><span class="h2 font-weight-bold mb-0">50,897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">Sales</h5><span
+                                            class="h1 font-weight-bold mb-0">50,897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div class="text-dark">
-                                            <i class="material-icons">monetization_on</i>
+                                            <i class="material-icons f-32 text-primary">monetization_on</i>
                                         </div>
                                     </div>
                                 </div>
@@ -36,7 +37,7 @@
 
                                     <span class="text-nowrap">this month</span>
                                     <span class="text-success float-right ml-2"> <i class="fa fa-arrow-up"></i>
-                    8%</span>
+                                        8%</span>
                                 </p>
                             </div>
                         </div>
@@ -46,11 +47,12 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Leads</h5><span class="h2 font-weight-bold mb-0">550,897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">Leads</h5><span
+                                            class="h1 font-weight-bold mb-0">550,897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div class="text-dark">
-                                            <i class="material-icons">trending_up</i>
+                                            <i class="material-icons f-32 text-primary">trending_up</i>
                                         </div>
                                     </div>
                                 </div>
@@ -58,8 +60,8 @@
 
                                     <span class="text-nowrap ">since last month</span>
                                     <span class="text-success float-right ml-2">
-                    <i class="fa fa-arrow-up"></i>
-                    3.48%</span>
+                                        <i class="fa fa-arrow-up"></i>
+                                        3.48%</span>
                                 </p>
                             </div>
                         </div>
@@ -69,18 +71,19 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Traffic</h5><span class="h2 font-weight-bold mb-0">750,897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">Traffic</h5><span
+                                            class="h1 font-weight-bold mb-0">750,897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div class="text-dark">
-                                            <i class="material-icons">language</i>
+                                            <i class="material-icons f-32 text-primary">language</i>
                                         </div>
                                     </div>
                                 </div>
                                 <p class="mt-3 mb-0 text-sm">
                                     <span class="text-nowrap">since last month</span>
                                     <span class="text-danger float-right ml-2"> <i class="fa fa-arrow-down"></i>
-                    3.48%</span>
+                                        3.48%</span>
 
                                 </p>
                             </div>
@@ -91,30 +94,42 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Invoices</h5><span class="h2 font-weight-bold mb-0">897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">Invoices</h5><span
+                                            class="h1 font-weight-bold mb-0">897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div class="text-dark">
-                                            <i class="material-icons">receipt</i>
+                                            <i class="material-icons f-32 text-primary">receipt</i>
                                         </div>
                                     </div>
                                 </div>
                                 <p class="mt-3 mb-0 text-sm">
                                     <span class="text-nowrap">since last month</span>
                                     <span class="text-danger float-right ml-2"> <i class="fa fa-arrow-down"></i>
-                    3.48%</span>
+                                        3.48%</span>
 
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12">
+                    <div class="col-12 col-sm-12 col-md-8">
                         <div class="card shadow">
                             <div class="card-header bg-white">
                                 Mixed Charts
                             </div>
                             <div class="card-body">
                                 <div id="line-column-area-chart"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Mixed Charts
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-donut"></div>
                             </div>
                         </div>
 
@@ -140,7 +155,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6">
+                    <div class="col-12 col-md-8">
                         <div class="card shadow">
                             <div class="card-header bg-white">
                                 Product Sold
@@ -148,14 +163,14 @@
                             <div class="card-body p-0">
 
                                 <div class="table-responsive">
-                                    <table class="table table-borderless ">
+                                    <table class="table table-borderless">
                                         <thead class="thead-light">
                                             <tr>
 
                                                 <th scope="col">Product</th>
                                                 <th scope="col">Price</th>
                                                 <th scope="col">Quantity</th>
-                                                <th scope="col">Sold</th>
+                                                <th scope="col">In Stock</th>
                                                 <th scope="col">Agent</th>
 
                                             </tr>
@@ -163,44 +178,75 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <div class="avatar bg-primary mr-2">
-                                                        <img src="assets/images/avatar/team-1.jpg" class="avatar-img rounded-circle" alt="">
-                                                    </div>
-                                                    <b> Denim Jackets</b>
+
+                                                    Samsung Galaxy S20
 
                                                 </td>
 
                                                 <td class="align-middle">$32</td>
                                                 <td class="align-middle">24</td>
-                                                <td class="align-middle">Yes</td>
-                                                <td class="align-middle">Mark</td>
+                                                <td class="align-middle">
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitch1" checked>
+                                                        <label class="custom-control-label" for="customSwitch1">
+                                                        </label>
+                                                    </div>
 
+                                                </td>
+                                                <td class="align-middle">Mark</td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div class="avatar bg-primary mr-2">
-                                                        <img src="assets/images/avatar/team-2.jpg" class="avatar-img rounded-circle" alt="">
-                                                    </div>
-                                                    <b> Jeans</b>
+
+                                                    iPhone 12 Pro
                                                 </td>
 
                                                 <td class="align-middle">$52</td>
                                                 <td class="align-middle">58</td>
-                                                <td class="align-middle">Yes</td>
+                                                <td class="align-middle">
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                        <label class="custom-control-label" for="customSwitch1">
+                                                        </label>
+                                                    </div>
+                                                </td>
                                                 <td class="align-middle">John</td>
 
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <div class="avatar bg-primary mr-2">
-                                                        <img src="assets/images/avatar/team-3.jpg" class="avatar-img rounded-circle" alt="">
-                                                    </div>
-                                                    <b> Shirts</b>
+
+                                                    OnePlus 8
                                                 </td>
 
                                                 <td class="align-middle">$79</td>
                                                 <td class="align-middle">5</td>
-                                                <td class="align-middle">No</td>
+                                                <td class="align-middle">
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                                        <label class="custom-control-label" for="customSwitch1">
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle">John</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+                                                    Vivo F17 Pro
+                                                </td>
+
+                                                <td class="align-middle">$52</td>
+                                                <td class="align-middle">58</td>
+                                                <td class="align-middle">
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                        <label class="custom-control-label" for="customSwitch1">
+                                                        </label>
+                                                    </div>
+                                                </td>
                                                 <td class="align-middle">John</td>
 
                                             </tr>
@@ -210,25 +256,102 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card shadow">
+
+                            <div class="card-body p-0">
+                                <div class="card-header bg-white">
+                                    Product Demand
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="thead-light">
+                                            <th>Brand</th>
+                                            <th>Popularity</th>
+
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Samsung
+                                                </td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-primary" role="progressbar"
+                                                            style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Apple
+                                                </td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-danger" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Oppo
+                                                </td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-success" role="progressbar"
+                                                            style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Vivo
+                                                </td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-warning" role="progressbar"
+                                                            style="width: 57%" aria-valuenow="57" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title mb-4">Online Transaction</h4>
                                 <div class="table-responsive">
-                                    <table class="table table-centered table-nowrap mb-0">
-                                        <thead class="thead-light">
+                                    <table class="table table-borderless table-centered table-nowrap mb-0">
+                                        <thead class="thead-light rounded">
                                             <tr>
                                                 <th style="width: 20px;">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                        <label class="custom-control-label" for="customCheck1">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck1">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck1">&nbsp;</label>
                                                     </div>
                                                 </th>
                                                 <th>Order ID</th>
                                                 <th>Billing Name</th>
                                                 <th>Date</th>
                                                 <th>Total</th>
-                                                <th>Payment Status</th>
+                                                <th>Status</th>
                                                 <th>Payment Method</th>
                                                 <th>View Details</th>
                                             </tr>
@@ -237,11 +360,14 @@
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                        <label class="custom-control-label" for="customCheck2">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck2">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck2">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225510</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225510</a> </td>
                                                 <td>Harsh Pete</td>
                                                 <td>
                                                     10 Oct, 2019
@@ -250,27 +376,29 @@
                                                     $40
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-pill  font-size-12">Return</span>
+                                                    <span class="badge badge-danger badge-pill">Return</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-mastercard mr-1"></i> Mastercard
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded " data-toggle="modal" data-target=".exampleModal">
-                            View Details
-                          </button>
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="material-icons f-16">visibility</i>
+                                                </button>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                                        <label class="custom-control-label" for="customCheck3">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck3">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck3">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225511</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225511</a> </td>
                                                 <td>Meet Cook</td>
                                                 <td>
                                                     11 Oct, 2019
@@ -279,27 +407,30 @@
                                                     $38
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-pill badge-soft-danger font-size-12">Paid</span>
+                                                    <span class="badge badge-success badge-pill">Paid</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-visa mr-1"></i> Visa
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded " data-toggle="modal" data-target=".exampleModal">
-                            View Details
-                          </button>
+                                                   
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        <i class="material-icons f-16">visibility</i>
+                                                    </button>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                        <label class="custom-control-label" for="customCheck4">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck4">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck4">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225512</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225512</a> </td>
                                                 <td>Jam Mitche</td>
                                                 <td>
                                                     12 Oct, 2019
@@ -308,26 +439,28 @@
                                                     $38
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-pill  font-size-12">Chargeable</span>
+                                                    <span class="badge badge-warning badge-pill">Pending</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-paypal mr-1"></i> Paypal
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded " data-toggle="modal" data-target=".exampleModal">
-                            View Details
-                          </button>
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="material-icons f-16">visibility</i>
+                                                </button>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                                        <label class="custom-control-label" for="customCheck5">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck5">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck5">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225513</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225513</a> </td>
                                                 <td>Brain Dick</td>
                                                 <td>
                                                     13 Oct, 2019
@@ -336,26 +469,28 @@
                                                     $41
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-pill  font-size-12">Return</span>
+                                                    <span class="badge badge-danger badge-pill">Return</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-mastercard mr-1"></i> Mastercard
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded " data-toggle="modal" data-target=".exampleModal">
-                            View Details
-                          </button>
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        <i class="material-icons f-16">visibility</i>
+                                                    </button>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                                        <label class="custom-control-label" for="customCheck6">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck6">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck6">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225514</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225514</a> </td>
                                                 <td>Ronaldo teen</td>
                                                 <td>
                                                     14 Oct, 2019
@@ -364,26 +499,28 @@
                                                     $40
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-pill badge-soft-warning font-size-12">Paid</span>
+                                                    <span class="badge badge-success badge-pill">Return</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-visa mr-1"></i> Visa
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded " data-toggle="modal" data-target=".exampleModal">
-                            View Details
-                          </button>
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="material-icons f-16">visibility</i>
+                                                </button>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                                        <label class="custom-control-label" for="customCheck7">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck7">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck7">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225515</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225515</a> </td>
                                                 <td>Jac Brusli</td>
                                                 <td>
                                                     15 Oct, 2019
@@ -392,16 +529,15 @@
                                                     $392
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-pill  font-size-12">Refund</span>
+                                                    <span class="badge badge-dark badge-pill">Cancelled</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-paypal mr-1"></i> Paypal
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded " data-toggle="modal" data-target=".exampleModal">
-                            View Details
-                          </button>
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="material-icons f-16">visibility</i>
+                                                </button>
                                                 </td>
                                             </tr>
                                         </tbody>
