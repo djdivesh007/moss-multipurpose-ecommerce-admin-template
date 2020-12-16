@@ -170,7 +170,7 @@
                                                 <th scope="col">Product</th>
                                                 <th scope="col">Price</th>
                                                 <th scope="col">Quantity</th>
-                                                <th scope="col">Sold</th>
+                                                <th scope="col">In Stock</th>
                                                 <th scope="col">Agent</th>
 
                                             </tr>
@@ -185,9 +185,16 @@
 
                                                 <td class="align-middle">$32</td>
                                                 <td class="align-middle">24</td>
-                                                <td class="align-middle">Yes</td>
-                                                <td class="align-middle">Mark</td>
+                                                <td class="align-middle">
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitch1" checked>
+                                                        <label class="custom-control-label" for="customSwitch1">
+                                                        </label>
+                                                    </div>
 
+                                                </td>
+                                                <td class="align-middle">Mark</td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -197,7 +204,13 @@
 
                                                 <td class="align-middle">$52</td>
                                                 <td class="align-middle">58</td>
-                                                <td class="align-middle">Yes</td>
+                                                <td class="align-middle">
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                        <label class="custom-control-label" for="customSwitch1">
+                                                        </label>
+                                                    </div>
+                                                </td>
                                                 <td class="align-middle">John</td>
 
                                             </tr>
@@ -209,7 +222,13 @@
 
                                                 <td class="align-middle">$79</td>
                                                 <td class="align-middle">5</td>
-                                                <td class="align-middle">No</td>
+                                                <td class="align-middle">
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                                        <label class="custom-control-label" for="customSwitch1">
+                                                        </label>
+                                                    </div>
+                                                </td>
                                                 <td class="align-middle">John</td>
 
                                             </tr>
@@ -221,7 +240,13 @@
 
                                                 <td class="align-middle">$52</td>
                                                 <td class="align-middle">58</td>
-                                                <td class="align-middle">Yes</td>
+                                                <td class="align-middle">
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                        <label class="custom-control-label" for="customSwitch1">
+                                                        </label>
+                                                    </div>
+                                                </td>
                                                 <td class="align-middle">John</td>
 
                                             </tr>
@@ -326,7 +351,7 @@
                                                 <th>Billing Name</th>
                                                 <th>Date</th>
                                                 <th>Total</th>
-                                                <th>Payment Status</th>
+                                                <th>Status</th>
                                                 <th>Payment Method</th>
                                                 <th>View Details</th>
                                             </tr>
@@ -351,17 +376,15 @@
                                                     $40
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-pill  font-size-12">Return</span>
+                                                    <span class="badge badge-danger badge-pill">Return</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-mastercard mr-1"></i> Mastercard
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded  "
-                                                        data-toggle="modal" data-target=".exampleModal">
-                                                        <i class="material-icons f-16">visibility</i>
-                                                    </button>
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="material-icons f-16">visibility</i>
+                                                </button>
                                                 </td>
                                             </tr>
 
@@ -384,16 +407,14 @@
                                                     $38
                                                 </td>
                                                 <td>
-                                                    <span
-                                                        class="badge badge-pill badge-soft-danger font-size-12">Paid</span>
+                                                    <span class="badge badge-success badge-pill">Paid</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-visa mr-1"></i> Visa
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded  "
-                                                        data-toggle="modal" data-target=".exampleModal">
+                                                   
+                                                    <button type="button" class="btn btn-primary btn-sm">
                                                         <i class="material-icons f-16">visibility</i>
                                                     </button>
                                                 </td>
@@ -418,17 +439,15 @@
                                                     $38
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-pill  font-size-12">Chargeable</span>
+                                                    <span class="badge badge-warning badge-pill">Pending</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-paypal mr-1"></i> Paypal
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded  "
-                                                        data-toggle="modal" data-target=".exampleModal">
-                                                        <i class="material-icons f-16">visibility</i>
-                                                    </button>
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="material-icons f-16">visibility</i>
+                                                </button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -450,15 +469,13 @@
                                                     $41
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-pill  font-size-12">Return</span>
+                                                    <span class="badge badge-danger badge-pill">Return</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-mastercard mr-1"></i> Mastercard
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded  "
-                                                        data-toggle="modal" data-target=".exampleModal">
+                                                    <button type="button" class="btn btn-primary btn-sm">
                                                         <i class="material-icons f-16">visibility</i>
                                                     </button>
                                                 </td>
@@ -482,18 +499,15 @@
                                                     $40
                                                 </td>
                                                 <td>
-                                                    <span
-                                                        class="badge badge-pill badge-soft-warning font-size-12">Paid</span>
+                                                    <span class="badge badge-success badge-pill">Return</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-visa mr-1"></i> Visa
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded  "
-                                                        data-toggle="modal" data-target=".exampleModal">
-                                                        <i class="material-icons f-16">visibility</i>
-                                                    </button>
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="material-icons f-16">visibility</i>
+                                                </button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -515,17 +529,15 @@
                                                     $392
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-pill  font-size-12">Refund</span>
+                                                    <span class="badge badge-dark badge-pill">Cancelled</span>
                                                 </td>
                                                 <td>
                                                     <i class="fab fa-cc-paypal mr-1"></i> Paypal
                                                 </td>
                                                 <td>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded  "
-                                                        data-toggle="modal" data-target=".exampleModal">
-                                                        <i class="material-icons f-16">visibility</i>
-                                                    </button>
+                                                <button type="button" class="btn btn-primary btn-sm">
+                                                    <i class="material-icons f-16">visibility</i>
+                                                </button>
                                                 </td>
                                             </tr>
                                         </tbody>

@@ -154,7 +154,7 @@ $(function() {
     var optionDonut = {
         chart: {
             type: 'donut',
-            width: 380
+            width: 400
         },
         colors: ['#5c1ac3', '#e2a03f', '#e7515a', '#e2a03f'],
         dataLabels: {
@@ -176,7 +176,7 @@ $(function() {
         plotOptions: {
             pie: {
                 donut: {
-                    size: '65%',
+                   // size: '65%',
                     background: 'transparent',
                     labels: {
                         show: true,
@@ -185,14 +185,14 @@ $(function() {
                             fontSize: '29px',
                             fontFamily: 'Poppins, sans-serif',
                             color: undefined,
-                            offsetY: -10
+                            offsetY: 0
                         },
                         value: {
                             show: true,
                             fontSize: '26px',
                             fontFamily: 'Poppins, sans-serif',
                             color: '20',
-                            offsetY: 16,
+                            offsetY: 0,
                             formatter: function(val) {
                                 return val
                             }
@@ -223,7 +223,7 @@ $(function() {
             options: {
                 chart: {
                     width: '350px',
-                    height: '400px'
+                    height: '350px'
                 },
                 legend: {
                     position: 'bottom'
@@ -234,7 +234,7 @@ $(function() {
             options: {
                 chart: {
                     width: '250px',
-                    height: '390px'
+                    height: '350px'
                 },
                 legend: {
                     position: 'bottom'
@@ -242,7 +242,7 @@ $(function() {
                 plotOptions: {
                     pie: {
                         donut: {
-                            size: '65%',
+                            size: '60%',
                         }
                     }
                 }
