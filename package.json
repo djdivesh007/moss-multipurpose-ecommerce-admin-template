@@ -24,6 +24,8 @@
         "jquery": "^3.5.1",
         "jquery-mapael": "^2.2.0",
         "nanobar": "^0.4.2",
+        "node": "^15.4.0",
+        "node-sass": "^5.0.0",
         "nprogress": "^0.2.0",
         "pickerjs": "^1.2.1",
         "popper.js": "^1.16.1",
