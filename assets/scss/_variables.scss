@@ -4,12 +4,13 @@ $blue: #084B83;
 $indigo: #414288;
 $purple: #6200ee;
 $pink: #F06C9B;
-$red: #C3423F;
-$orange: #ff9800;
+$red: #E63946;
+$orange: #F06449;
 $yellow: #fdbb2d;
 $green: #5FB49C;
 $teal: #009688;
 $cyan: #00bcd4;
+$black: #011627;
 // Addon Pastel Colors
 $pastel-red: #f05454;
 $pastel-orange: #f9813a;
@@ -25,7 +26,7 @@ $brand-info: #19b5fe;
 $brand-warning: $yellow;
 $brand-danger: $red;
 $primary: $indigo;
-$theme-colors: ( "primary": $indigo);
+$theme-colors: ( "primary": $primary);
 
 /* $blue: #0288D1;
 $indigo: #3f51b5;
