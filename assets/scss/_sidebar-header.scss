@@ -168,7 +168,7 @@
               position: fixed;
               width: calc(100% - 10px);
               z-index: 10000000;
-              background: $primary;
+              // background: $primary;
               margin: 0px;
               .input-search-group,
               .input-group-append {
@@ -178,7 +178,30 @@
               .form-inline, .form-inline .input-group {
                 width: 100%;
               }
+
+             
             }
+
+             .big-search {
+               width: 100vw;
+               position: fixed;
+               left: 0;
+               height: 54px;
+               top: 0;
+               text-align: center;
+               font-size: 24px;
+               border-radius: 0px;
+               z-index: 13;
+               box-shadow: 0 0.2rem 0.2rem lightgrey;
+               transition: all 0.3s ease-in-out 0s;
+             }
+
+             #closeSearchBtn{
+               z-index: 15;
+                   position: fixed;
+                   left: 0;
+                  top:10px;
+             }
           }
           &.icon a,
           &.icon button {

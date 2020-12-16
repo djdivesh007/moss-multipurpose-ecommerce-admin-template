@@ -76,6 +76,23 @@ $(function() {
         if (screenfull.isEnabled) {
             screenfull.toggle();
         }
-    })
+    });
+
+    $('#searchBtn').on('click',function(e){
+        $('#search-bar').toggleClass('d-none big-search');
+        $('#closeSearchBtn').removeClass('d-none');
+        $('.search-bar').toggleClass('d-none');
+    });
+
+    $("#search-bar").on('blur',function(){
+        $('#search-bar').toggleClass('d-none big-search');
+        $('.search-bar').toggleClass('d-none');
+    });
+
+    $('#closeSearchBtn').on('click',function(){
+        $('#search-bar').toggleClass('d-none big-search');
+        $('#closeSearchBtn').addClass('d-none');
+        $('.search-bar').toggleClass('d-none');
+    });
 
 });

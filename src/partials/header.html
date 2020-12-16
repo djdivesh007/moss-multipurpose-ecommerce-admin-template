@@ -18,22 +18,20 @@
         <a href="" class="nav-link">Quick Link</a>
       </li>
       <li class="flex-fill"></li>
-      <li class="nav-item d-none d-md-block" id="search-bar">
+      <li class="nav-item d-none search-bar">
         <form class="form-inline" method="POST" onsubmit="return false;">
           <div class="">
             <div class="input-group-prepend">
-              <button class="btn btn-navbar text-light d-md-none"
-                onclick="$('#search-bar').toggleClass('d-none search-bar')">
+              <button class="btn btn-navbar d-none" id="closeSearchBtn">
                 <span class="material-icons">arrow_back</span>
               </button>
             </div>
-            <input class="form-control mr-sm-2" type="search" placeholder="Search.." aria-label="Search">
-
+            <input class="form-control d-none" id="search-bar" type="search" placeholder="Search.." aria-label="Search">
           </div>
         </form>
       </li>
-      <li class="nav-item icon d-block d-md-none">
-        <a class="nav-link" id="searchBtn" onclick="$('#search-bar').toggleClass('d-none search-bar'); return false;">
+      <li class="nav-item icon">
+        <a class="nav-link" id="searchBtn">
           <span class="material-icons">search</span>
         </a>
       </li>

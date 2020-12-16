@@ -9,6 +9,7 @@
     height: 6px !important;
     width: 6px !important;
     height: 6px !important;
+    
 }
 
 *::-webkit-scrollbar-thumb {
@@ -17,4 +18,7 @@
 
 *::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.08);
+}
+::-webkit-scrollbar {
+    display: none;
 }
