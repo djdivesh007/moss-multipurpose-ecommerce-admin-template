@@ -2,7 +2,7 @@
     transition: all 0.15s;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size:14px;
+    font-size: 14px;
 }
 
 html,
@@ -10,7 +10,6 @@ body {
     height: 100%;
     scrollbar-width: thin;
     scroll-behavior: smooth;
-    
 }
 
 body {
@@ -68,6 +67,18 @@ h6,
     font-size: 20px;
 }
 
+.f-32 {
+    font-size: 32px;
+}
+
+.f-34 {
+    font-size: 34px;
+}
+
+.f-36 {
+    font-size: 36px;
+}
+
 // Addon Colors 
 .bg-pastel-red {
     background: $pastel-red;
@@ -111,7 +122,7 @@ h6,
 }
 
 .page-header {
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .error-title {
@@ -191,9 +202,6 @@ code {
 .accordion .card-header .btn {
     border: none;
 }
-
-
-
 
 
 /* Cards */
@@ -293,13 +301,11 @@ code {
 /* Timeline Stylings Ends */
 
 // Notification Dropdown
-
-.notification-list{
-    width:300px;
-    height:250px;
+.notification-list {
+    width: 300px;
+    height: 250px;
     background-color: #b5d3fd;
-
-    a:hover{
-        background-color: none !important; 
+    a:hover {
+        background-color: none !important;
     }
 }
