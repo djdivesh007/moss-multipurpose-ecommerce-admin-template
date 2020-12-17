@@ -78,21 +78,22 @@ $(function() {
         }
     });
 
-    $('#searchBtn').on('click',function(e){
-        $('#search-bar').toggleClass('d-none big-search');
-        $('#closeSearchBtn').removeClass('d-none');
-        $('.search-bar').toggleClass('d-none');
+    $('#searchBtn, #closeSearchBtn').on('click',function(e){
+        $('#search-bar').toggleClass('open');
+        if (!$('#search-bar').hasClass('open')) {
+            setTimeout(() => {
+                $("#search-bar").find("input").trigger('focus');
+            },500);
+        }
     });
 
-    $("#search-bar").on('blur',function(){
-        $('#search-bar').toggleClass('d-none big-search');
-        $('.search-bar').toggleClass('d-none');
+    $("#search-bar").find("input").on('keyup', function (e){
+        // https://github.com/jquery/jquery/issues/4755#issuecomment-664501730
+        if (e.which === 27) 
+            $(this).trigger('blur');
     });
 
-    $('#closeSearchBtn').on('click',function(){
-        $('#search-bar').toggleClass('d-none big-search');
-        $('#closeSearchBtn').addClass('d-none');
-        $('.search-bar').toggleClass('d-none');
+    $("#search-bar").find("input").on('blur',function(){
+        $('#closeSearchBtn').trigger('click');
     });
-
 });
