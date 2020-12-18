@@ -188,7 +188,7 @@ $(function() {
             opacity: 1,
         },
         series: [{
-            name: 'Sales',
+            name: 'Live',
             data: randomizeArray(sparklineData)
         }],
         labels: [...Array(24).keys()].map(n => `2018-09-0${n+1}`),
@@ -200,7 +200,7 @@ $(function() {
         },
         colors: ['#3f51b5'],
         title: {
-            text: '$424,652',
+            text: 'Pulse Monitor',
             offsetX: 20,
             style: {
                 fontSize: '24px',
@@ -208,7 +208,7 @@ $(function() {
             }
         },
         subtitle: {
-            text: 'Sales',
+            text: 'Critical',
             offsetX: 20,
             style: {
                 fontSize: '14px',

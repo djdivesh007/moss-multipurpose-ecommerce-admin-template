@@ -163,39 +163,27 @@
                         height: auto;
                     }
                     &.search-bar {
-                        @include media-breakpoint-down(md) {
-                            position: fixed;
-                            width: calc(100% - 10px);
-                            z-index: 10000000;
-                            // background: $primary;
-                            margin: 0px;
-                            .input-search-group,
-                            .input-group-append {
-                                height: 38px;
-                            }
-                            .form-inline,
-                            .form-inline .input-group {
-                                width: 100%;
-                            }
-                        }
                         .big-search {
+                            position: fixed;
+                            left: 0;
+                            top: -100px;
                             width: 100vw;
-                            position: fixed;
-                            left: 0;
-                            height: 54px;
-                            top: 0;
-                            text-align: center;
-                            font-size: 24px;
-                            border-radius: 0px;
-                            z-index: 13;
-                            box-shadow: 0 0.2rem 0.2rem lightgrey;
                             transition: all 0.3s ease-in-out 0s;
+                            z-index: 13;
+                            input {
+                                width: 100%;
+                                height: 54px;
+                                text-align: center;
+                                font-size: 24px;
+                                border-radius: 0px;
+                                box-shadow: 0 0.2rem 0.2rem lightgrey;
+                            }
+                            #closeSearchBtn {
+                                position: absolute;
+                            }
                         }
-                        #closeSearchBtn {
-                            z-index: 15;
-                            position: fixed;
-                            left: 0;
-                            top: 10px;
+                        &.open .big-search {
+                            top: 0;
                         }
                     }
                     &.icon a,
@@ -553,7 +541,7 @@
 }
 
 .overlay-mask.open {
-    @include media-breakpoint-down(md) {
+    /* @include media-breakpoint-down(md) { */
         background-color: rgba(0, 0, 0, 0.4);
         position: fixed;
         top: 0;
@@ -561,5 +549,5 @@
         left: 0;
         right: 0;
         z-index: 10;
-    }
+    /* } */
 }

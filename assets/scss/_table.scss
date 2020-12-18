@@ -19,7 +19,9 @@ table tfoot th,
 
 .table td,
 .table th {
-    padding: 16px 20px;
+    padding: 14px 20px;
+    vertical-align: middle;
+    white-space: nowrap;
 }
 
 .table tr {
