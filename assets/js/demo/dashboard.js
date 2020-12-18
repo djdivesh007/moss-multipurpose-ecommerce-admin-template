@@ -163,196 +163,40 @@ $(function() {
 
 
     var optionDonut = {
+        series: [44, 55, 67, 83],
         chart: {
-            type: 'donut',
-            height: '100%',
-            width: '100%',
-
-        },
-        colors: ['#5c1ac3', '#e2a03f', '#e7515a', '#e2a03f'],
-        dataLabels: {
-            enabled: false
-        },
-        legend: {
-            position: 'bottom',
-            horizontalAlign: 'center',
-            fontSize: '14px',
-            markers: {
-                width: 10,
-                height: 10,
-            },
-            itemMargin: {
-                horizontal: 5,
-                vertical: 8
-            }
+            height: 330,
+            type: 'radialBar',
+            redrawOnParentResize: false
         },
         plotOptions: {
-            pie: {
-                donut: {
-                    size: '50%',
-                    background: 'transparent',
-                    labels: {
+            radialBar: {
+                dataLabels: {
+                    name: {
+                        fontSize: '22px',
+                    },
+                    value: {
+                        fontSize: '16px',
+                    },
+                    total: {
                         show: true,
-                        name: {
-                            show: true,
-                            fontSize: '29px',
-                            fontFamily: 'Poppins, sans-serif',
-                            color: undefined,
-                            offsetY: 0
-                        },
-                        value: {
-                            show: true,
-                            fontSize: '26px',
-                            fontFamily: 'Poppins, sans-serif',
-                            color: '20',
-                            offsetY: 0,
-                            formatter: function(val) {
-                                return val
-                            }
-                        },
-                        total: {
-                            show: true,
-                            showAlways: true,
-                            label: 'Total',
-                            color: '#888ea8',
-                            formatter: function(w) {
-                                return w.globals.seriesTotals.reduce(function(a, b) {
-                                    return a + b
-                                }, 0)
-                            }
+                        label: 'Total',
+                        formatter: function(w) {
+                            // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+                            return 249
                         }
                     }
                 }
             }
         },
-        stroke: {
-            show: true,
-            width: 8,
-        },
-        series: [985, 737, 270],
-        labels: ['Apparel', 'Electronic', 'Others'],
-        responsive: [{
-            breakpoint: 1599,
-            options: {
-                chart: {
-                    width: '300px',
-                    height: '300px'
-                },
-                legend: {
-                    position: 'bottom'
-                }
-            },
+        labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
+    };
 
-            breakpoint: 1439,
-            options: {
-                chart: {
-                    width: '250px',
-                    height: '350px'
-                },
-                legend: {
-                    position: 'bottom'
-                },
-                plotOptions: {
-                    pie: {
-                        donut: {
-                            size: '60%',
-                        }
-                    }
-                }
-            },
-        }]
-    }
     var donut = new ApexCharts(
         document.querySelector("#chart-donut"),
         optionDonut
     )
     donut.render();
 
-
-
-    var options = {
-        chart: {
-            height: 350,
-            type: "line",
-            stacked: false
-        },
-        dataLabels: {
-            enabled: false
-        },
-        colors: ['#99C2A2', '#C5EDAC', '#66C7F4'],
-        series: [
-
-            {
-                name: 'Column A',
-                type: 'column',
-                data: [21.1, 23, 33.1, 34, 44.1, 44.9, 56.5, 58.5]
-            },
-            {
-                name: "Column B",
-                type: 'column',
-                data: [10, 19, 27, 26, 34, 35, 40, 38]
-            },
-            {
-                name: "Line C",
-                type: 'line',
-                data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
-            },
-        ],
-        stroke: {
-            width: [4, 4, 4]
-        },
-        plotOptions: {
-            bar: {
-                columnWidth: "20%"
-            }
-        },
-        xaxis: {
-            categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016]
-        },
-        yaxis: [{
-                seriesName: 'Column A',
-                axisTicks: {
-                    show: true
-                },
-                axisBorder: {
-                    show: true,
-                },
-                title: {
-                    text: "Columns"
-                }
-            },
-            {
-                seriesName: 'Column A',
-                show: false
-            }, {
-                opposite: true,
-                seriesName: 'Line C',
-                axisTicks: {
-                    show: true
-                },
-                axisBorder: {
-                    show: true,
-                },
-                title: {
-                    text: "Line"
-                }
-            }
-        ],
-        tooltip: {
-            shared: false,
-            intersect: true,
-            x: {
-                show: false
-            }
-        },
-        legend: {
-            horizontalAlign: "left",
-            offsetX: 40
-        }
-    };
-
-    var chart = new ApexCharts(document.querySelector("#chart-multi-axis"), options);
-
-    chart.render();
 
 });

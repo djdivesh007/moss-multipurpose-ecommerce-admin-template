@@ -24,11 +24,11 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Average Sales</h5><span class="h1 font-weight-bold mb-0">50,897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">Average Sales</h5><span class="h2 font-weight-bold mb-0">50,897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div class="text-dark">
-                                            <i class="material-icons f-32 text-primary">monetization_on</i>
+                                            <i class="material-icons f-36 text-primary">monetization_on</i>
                                         </div>
                                     </div>
                                 </div>
@@ -46,11 +46,11 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Total Sales</h5><span class="h1 font-weight-bold mb-0">550,897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">Total Sales</h5><span class="h2 font-weight-bold mb-0">550,897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div class="text-dark">
-                                            <i class="material-icons f-32 text-primary">trending_up</i>
+                                            <i class="material-icons f-36 text-danger">trending_up</i>
                                         </div>
                                     </div>
                                 </div>
@@ -69,11 +69,11 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">INQUIRIES</h5><span class="h1 font-weight-bold mb-0">750,897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">INQUIRIES</h5><span class="h2 font-weight-bold mb-0">750,897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div class="text-dark">
-                                            <i class="material-icons f-32 text-primary">language</i>
+                                            <i class="material-icons f-36 text-warning">language</i>
                                         </div>
                                     </div>
                                 </div>
@@ -91,11 +91,11 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Invoices</h5><span class="h1 font-weight-bold mb-0">897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">Invoices</h5><span class="h2 font-weight-bold mb-0">897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div class="text-dark">
-                                            <i class="material-icons f-32 text-primary">receipt</i>
+                                            <i class="material-icons f-36 text-info">receipt</i>
                                         </div>
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@
                                 Prodct Wise Sales
                             </div>
                             <div class="card-body">
-                                <div id="chart-donut"></div>
+                                <div id="chart-area"></div>
                             </div>
                         </div>
 
@@ -529,6 +529,94 @@
     <!-- build:js assets/js/dashboard.bundle.js -->
     <script src="../../assets/js/demo/dashboard.js"></script>
     <!-- endbuild -->
+
+
+    <script>
+        var randomScalingFactor = function() {
+            return Math.round(Math.random() * 100);
+        };
+
+        var config = {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                    ],
+                    backgroundColor: [
+                        window.chartColors.red,
+                        window.chartColors.orange,
+                        window.chartColors.yellow,
+                        window.chartColors.green,
+                        window.chartColors.blue,
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    'Red',
+                    'Orange',
+                    'Yellow',
+                    'Green',
+                    'Blue'
+                ]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Chart.js Doughnut Chart'
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                }
+            }
+        };
+
+        window.onload = function() {
+            var ctx = document.getElementById('chart-area').getContext('2d');
+            window.myDoughnut = new Chart(ctx, config);
+        };
+
+
+
+        var colorNames = Object.keys(window.chartColors);
+
+        document.getElementById('removeDataset').addEventListener('click', function() {
+            config.data.datasets.splice(0, 1);
+            window.myDoughnut.update();
+        });
+
+        document.getElementById('removeData').addEventListener('click', function() {
+            config.data.labels.splice(-1, 1); // remove the label first
+
+            config.data.datasets.forEach(function(dataset) {
+                dataset.data.pop();
+                dataset.backgroundColor.pop();
+            });
+
+            window.myDoughnut.update();
+        });
+
+        document.getElementById('changeCircleSize').addEventListener('click', function() {
+            if (window.myDoughnut.options.circumference === Math.PI) {
+                window.myDoughnut.options.circumference = 2 * Math.PI;
+                window.myDoughnut.options.rotation = -Math.PI / 2;
+            } else {
+                window.myDoughnut.options.circumference = Math.PI;
+                window.myDoughnut.options.rotation = -Math.PI;
+            }
+
+            window.myDoughnut.update();
+        });
+    </script>
 </body>
 
 </html>
