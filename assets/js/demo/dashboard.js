@@ -3,7 +3,7 @@ $(function() {
     'use strict';
 
     // The Default colorPalette for this dashboard
-    var colorPalette = ['#3f51b5', '#008FFB', '#FEB019', '#FF4560', '#775DD0']
+    var colorPalette = ['#3f51b5', '#008FFB', '#FEB019', '#FF4560', '#775DD0'];
 
     var options = {
         chart: {
@@ -198,5 +198,59 @@ $(function() {
     )
     donut.render();
 
+
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var config = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+
+                ],
+                backgroundColor: colorPalette,
+                label: 'eCommerce Sales'
+            }],
+            labels: [
+                'Apple',
+                'Samsung',
+                'Vivo',
+                'Oppo',
+
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                boxWidth: 10,
+                position: 'bottom',
+            },
+
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            },
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 10
+                }
+            },
+            cutoutPercentage: 70
+        }
+    };
+
+    window.onload = function() {
+        var ctx = document.getElementById('chart-area').getContext('2d');
+        window.myDoughnut = new Chart(ctx, config);
+    };
 
 });

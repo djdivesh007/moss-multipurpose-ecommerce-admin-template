@@ -14,8 +14,8 @@
             <div class="main-content container">
                 <div class="page-header">
                     <div>
-                        <span class="h2">Dashboard</span>
-                        <small>Let's get started</small>
+                        <span class="h2">eCommerce</span>
+                        <small>Be a best seller...</small>
                     </div>
                 </div>
                 <div class="row">
@@ -125,7 +125,8 @@
                                 Prodct Wise Sales
                             </div>
                             <div class="card-body">
-                                <div id="chart-area"></div>
+                                <canvas id="chart-area" class="chart-canvas" height="290"></canvas>
+
                             </div>
                         </div>
 
@@ -324,202 +325,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-4">Online Transaction</h4>
-                                <div class="table-responsive">
-                                    <table class="table table-borderless table-centered table-nowrap mb-0">
-                                        <thead class="thead-light rounded">
-                                            <tr>
-                                                <th style="width: 20px;">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                        <label class="custom-control-label" for="customCheck1">&nbsp;</label>
-                                                    </div>
-                                                </th>
-                                                <th>Order ID</th>
-                                                <th>Buyer Name</th>
-                                                <th>Order Date</th>
-                                                <th>Total</th>
-                                                <th>Status</th>
-                                                <th>Paid By</th>
-                                                <th>Details</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                        <label class="custom-control-label" for="customCheck2">&nbsp;</label>
-                                                    </div>
-                                                </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225510</a> </td>
-                                                <td>Harsh Pete</td>
-                                                <td>
-                                                    10 Oct, 2019
-                                                </td>
-                                                <td>
-                                                    $40
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-danger badge-pill">Return</span>
-                                                </td>
-                                                <td>
-                                                    <i class="fab fa-cc-mastercard mr-1"></i> Mastercard
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-primary btn-sm">
-                                                    <i class="material-icons f-16">visibility</i>
-                                                </button>
-                                                </td>
-                                            </tr>
 
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                                        <label class="custom-control-label" for="customCheck3">&nbsp;</label>
-                                                    </div>
-                                                </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225511</a> </td>
-                                                <td>Meet Cook</td>
-                                                <td>
-                                                    11 Oct, 2019
-                                                </td>
-                                                <td>
-                                                    $38
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-success badge-pill">Paid</span>
-                                                </td>
-                                                <td>
-                                                    <i class="fab fa-cc-visa mr-1"></i> Visa
-                                                </td>
-                                                <td>
-
-                                                    <button type="button" class="btn btn-primary btn-sm">
-                                                        <i class="material-icons f-16">visibility</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                        <label class="custom-control-label" for="customCheck4">&nbsp;</label>
-                                                    </div>
-                                                </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225512</a> </td>
-                                                <td>Jam Mitche</td>
-                                                <td>
-                                                    12 Oct, 2019
-                                                </td>
-                                                <td>
-                                                    $38
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-warning badge-pill">Pending</span>
-                                                </td>
-                                                <td>
-                                                    <i class="fab fa-cc-paypal mr-1"></i> Paypal
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-primary btn-sm">
-                                                    <i class="material-icons f-16">visibility</i>
-                                                </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                                        <label class="custom-control-label" for="customCheck5">&nbsp;</label>
-                                                    </div>
-                                                </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225513</a> </td>
-                                                <td>Brain Dick</td>
-                                                <td>
-                                                    13 Oct, 2019
-                                                </td>
-                                                <td>
-                                                    $41
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-danger badge-pill">Return</span>
-                                                </td>
-                                                <td>
-                                                    <i class="fab fa-cc-mastercard mr-1"></i> Mastercard
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-primary btn-sm">
-                                                        <i class="material-icons f-16">visibility</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                                        <label class="custom-control-label" for="customCheck6">&nbsp;</label>
-                                                    </div>
-                                                </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225514</a> </td>
-                                                <td>Ronaldo teen</td>
-                                                <td>
-                                                    14 Oct, 2019
-                                                </td>
-                                                <td>
-                                                    $40
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-success badge-pill">Return</span>
-                                                </td>
-                                                <td>
-                                                    <i class="fab fa-cc-visa mr-1"></i> Visa
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-primary btn-sm">
-                                                    <i class="material-icons f-16">visibility</i>
-                                                </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                                        <label class="custom-control-label" for="customCheck7">&nbsp;</label>
-                                                    </div>
-                                                </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225515</a> </td>
-                                                <td>Jac Brusli</td>
-                                                <td>
-                                                    15 Oct, 2019
-                                                </td>
-                                                <td>
-                                                    $392
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-dark badge-pill">Cancelled</span>
-                                                </td>
-                                                <td>
-                                                    <i class="fab fa-cc-paypal mr-1"></i> Paypal
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-primary btn-sm">
-                                                    <i class="material-icons f-16">visibility</i>
-                                                </button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- end table-responsive -->
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-sm-12 col-md-6">
                         <div class="card">
                             <div class="card-header bg-white">
@@ -610,6 +416,202 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Online Transaction</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-borderless table-centered table-nowrap mb-0">
+                                        <thead class="thead-light rounded">
+                                            <tr>
+                                                <th style="width: 20px;">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                        <label class="custom-control-label" for="customCheck1">&nbsp;</label>
+                                                    </div>
+                                                </th>
+                                                <th>Order ID</th>
+                                                <th>Buyer Name</th>
+                                                <th>Order Date</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                                <th>Paid By</th>
+                                                <th>Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                        <label class="custom-control-label" for="customCheck2">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225510</a> </td>
+                                                <td>Harsh Pete</td>
+                                                <td>
+                                                    10 Oct, 2019
+                                                </td>
+                                                <td>
+                                                    $40
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-danger p-2 font-weight-bold">Return</span>
+                                                </td>
+                                                <td>
+                                                    <i class="fab fa-cc-mastercard mr-1"></i> Mastercard
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        <i class="material-icons f-16">visibility</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                        <label class="custom-control-label" for="customCheck3">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225511</a> </td>
+                                                <td>Meet Cook</td>
+                                                <td>
+                                                    11 Oct, 2019
+                                                </td>
+                                                <td>
+                                                    $38
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success p-2 font-weight-bold">Paid</span>
+                                                </td>
+                                                <td>
+                                                    <i class="fab fa-cc-visa mr-1"></i> Visa
+                                                </td>
+                                                <td>
+
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        <i class="material-icons f-16">visibility</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                        <label class="custom-control-label" for="customCheck4">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225512</a> </td>
+                                                <td>Jam Mitche</td>
+                                                <td>
+                                                    12 Oct, 2019
+                                                </td>
+                                                <td>
+                                                    $38
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-warning p-2 font-weight-bold">Pending</span>
+                                                </td>
+                                                <td>
+                                                    <i class="fab fa-cc-paypal mr-1"></i> Paypal
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        <i class="material-icons f-16">visibility</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                                        <label class="custom-control-label" for="customCheck5">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225513</a> </td>
+                                                <td>Brain Dick</td>
+                                                <td>
+                                                    13 Oct, 2019
+                                                </td>
+                                                <td>
+                                                    $41
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-danger p-2 font-weight-bold">Return</span>
+                                                </td>
+                                                <td>
+                                                    <i class="fab fa-cc-mastercard mr-1"></i> Mastercard
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        <i class="material-icons f-16">visibility</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                                        <label class="custom-control-label" for="customCheck6">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225514</a> </td>
+                                                <td>Ronaldo teen</td>
+                                                <td>
+                                                    14 Oct, 2019
+                                                </td>
+                                                <td>
+                                                    $40
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success p-2 font-weight-bold">Return</span>
+                                                </td>
+                                                <td>
+                                                    <i class="fab fa-cc-visa mr-1"></i> Visa
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        <i class="material-icons f-16">visibility</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                                        <label class="custom-control-label" for="customCheck7">&nbsp;</label>
+                                                    </div>
+                                                </td>
+                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225515</a> </td>
+                                                <td>Jac Brusli</td>
+                                                <td>
+                                                    15 Oct, 2019
+                                                </td>
+                                                <td>
+                                                    $392
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-dark p-2 font-weight-bold">Cancelled</span>
+                                                </td>
+                                                <td>
+                                                    <i class="fab fa-cc-paypal mr-1"></i> Paypal
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        <i class="material-icons f-16">visibility</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- end table-responsive -->
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -619,94 +621,12 @@
     <!-- build:js assets/js/dashboard.bundle.js -->
     <script src="../../assets/js/demo/dashboard.js"></script>
     <!-- endbuild -->
-
-
-    <script>
-        var randomScalingFactor = function() {
-            return Math.round(Math.random() * 100);
-        };
-
-        var config = {
-            type: 'doughnut',
-            data: {
-                datasets: [{
-                    data: [
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                        randomScalingFactor(),
-                    ],
-                    backgroundColor: [
-                        window.chartColors.red,
-                        window.chartColors.orange,
-                        window.chartColors.yellow,
-                        window.chartColors.green,
-                        window.chartColors.blue,
-                    ],
-                    label: 'Dataset 1'
-                }],
-                labels: [
-                    'Red',
-                    'Orange',
-                    'Yellow',
-                    'Green',
-                    'Blue'
-                ]
-            },
-            options: {
-                responsive: true,
-                legend: {
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: 'Chart.js Doughnut Chart'
-                },
-                animation: {
-                    animateScale: true,
-                    animateRotate: true
-                }
-            }
-        };
-
-        window.onload = function() {
-            var ctx = document.getElementById('chart-area').getContext('2d');
-            window.myDoughnut = new Chart(ctx, config);
-        };
-
-
-
-        var colorNames = Object.keys(window.chartColors);
-
-        document.getElementById('removeDataset').addEventListener('click', function() {
-            config.data.datasets.splice(0, 1);
-            window.myDoughnut.update();
-        });
-
-        document.getElementById('removeData').addEventListener('click', function() {
-            config.data.labels.splice(-1, 1); // remove the label first
-
-            config.data.datasets.forEach(function(dataset) {
-                dataset.data.pop();
-                dataset.backgroundColor.pop();
-            });
-
-            window.myDoughnut.update();
-        });
-
-        document.getElementById('changeCircleSize').addEventListener('click', function() {
-            if (window.myDoughnut.options.circumference === Math.PI) {
-                window.myDoughnut.options.circumference = 2 * Math.PI;
-                window.myDoughnut.options.rotation = -Math.PI / 2;
-            } else {
-                window.myDoughnut.options.circumference = Math.PI;
-                window.myDoughnut.options.rotation = -Math.PI;
-            }
-
-            window.myDoughnut.update();
-        });
-    </script>
+    <style>
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
 </body>
 
 </html>
