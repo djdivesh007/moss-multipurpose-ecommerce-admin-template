@@ -9,15 +9,26 @@ $(function() {
         chart: {
             type: 'line',
             height: 280,
+
         },
         colors: colorPalette,
         series: [{
-            name: 'sales',
-            data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+            name: 'Sales',
+            data: [30, 40, 35, 50, 15, 60, 40, 91, 10]
         }],
         xaxis: {
+            title: {
+                text: 'Year',
+            },
+
             categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+        },
+        yaxis: {
+            title: {
+                text: 'Sales Count',
+            },
         }
+
     }
 
     var chart = new ApexCharts(document.querySelector("#chart"), options);
@@ -114,12 +125,12 @@ $(function() {
         colors: colorPalette,
         series: [{
             name: "Clothing",
-            data: [42, 52, 16, 55, 59, 51, 45, 32, 26, 33, 44, 51, 42, 56],
+            data: [42, 52, 16, 55, 51, 45, 32, 26, 33, 44],
         }, {
             name: "Food Products",
-            data: [6, 12, 4, 7, 5, 3, 6, 4, 3, 3, 5, 6, 7, 4],
+            data: [6, 12, 4, 7, 3, 6, 4, 3, 3, 5],
         }],
-        labels: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+        labels: [10, 11, 12, 13, 15, 16, 17, 18, 19, 20],
         xaxis: {
             labels: {
                 show: false
@@ -154,7 +165,9 @@ $(function() {
     var optionDonut = {
         chart: {
             type: 'donut',
-            width: 400
+            height: '100%',
+            width: '100%',
+
         },
         colors: ['#5c1ac3', '#e2a03f', '#e7515a', '#e2a03f'],
         dataLabels: {
@@ -176,7 +189,7 @@ $(function() {
         plotOptions: {
             pie: {
                 donut: {
-                   // size: '65%',
+                    size: '50%',
                     background: 'transparent',
                     labels: {
                         show: true,
@@ -214,7 +227,7 @@ $(function() {
         },
         stroke: {
             show: true,
-            width: 10,
+            width: 8,
         },
         series: [985, 737, 270],
         labels: ['Apparel', 'Electronic', 'Others'],
@@ -222,8 +235,8 @@ $(function() {
             breakpoint: 1599,
             options: {
                 chart: {
-                    width: '350px',
-                    height: '350px'
+                    width: '300px',
+                    height: '300px'
                 },
                 legend: {
                     position: 'bottom'
@@ -254,4 +267,92 @@ $(function() {
         optionDonut
     )
     donut.render();
+
+
+
+    var options = {
+        chart: {
+            height: 350,
+            type: "line",
+            stacked: false
+        },
+        dataLabels: {
+            enabled: false
+        },
+        colors: ['#99C2A2', '#C5EDAC', '#66C7F4'],
+        series: [
+
+            {
+                name: 'Column A',
+                type: 'column',
+                data: [21.1, 23, 33.1, 34, 44.1, 44.9, 56.5, 58.5]
+            },
+            {
+                name: "Column B",
+                type: 'column',
+                data: [10, 19, 27, 26, 34, 35, 40, 38]
+            },
+            {
+                name: "Line C",
+                type: 'line',
+                data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
+            },
+        ],
+        stroke: {
+            width: [4, 4, 4]
+        },
+        plotOptions: {
+            bar: {
+                columnWidth: "20%"
+            }
+        },
+        xaxis: {
+            categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016]
+        },
+        yaxis: [{
+                seriesName: 'Column A',
+                axisTicks: {
+                    show: true
+                },
+                axisBorder: {
+                    show: true,
+                },
+                title: {
+                    text: "Columns"
+                }
+            },
+            {
+                seriesName: 'Column A',
+                show: false
+            }, {
+                opposite: true,
+                seriesName: 'Line C',
+                axisTicks: {
+                    show: true
+                },
+                axisBorder: {
+                    show: true,
+                },
+                title: {
+                    text: "Line"
+                }
+            }
+        ],
+        tooltip: {
+            shared: false,
+            intersect: true,
+            x: {
+                show: false
+            }
+        },
+        legend: {
+            horizontalAlign: "left",
+            offsetX: 40
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart-multi-axis"), options);
+
+    chart.render();
+
 });

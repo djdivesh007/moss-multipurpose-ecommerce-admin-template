@@ -182,7 +182,7 @@ $(function() {
             },
         },
         stroke: {
-            curve: 'straight'
+            curve: 'smooth'
         },
         fill: {
             opacity: 1,
@@ -228,7 +228,7 @@ $(function() {
             },
         },
         stroke: {
-            curve: 'straight'
+            curve: 'smooth'
         },
         fill: {
             opacity: 1,
@@ -250,7 +250,7 @@ $(function() {
             offsetX: 20,
             style: {
                 fontSize: '24px',
-                cssClass: 'apexcharts-yaxis-title'
+                cssClass: ''
             }
         },
         subtitle: {
@@ -258,7 +258,7 @@ $(function() {
             offsetX: 20,
             style: {
                 fontSize: '14px',
-                cssClass: 'apexcharts-yaxis-title'
+                cssClass: ''
             }
         }
     }
@@ -274,7 +274,7 @@ $(function() {
             },
         },
         stroke: {
-            curve: 'straight'
+            curve: 'smooth'
         },
         fill: {
             opacity: 1,
@@ -305,10 +305,10 @@ $(function() {
             style: {
                 fontSize: '14px',
                 cssClass: 'apexcharts-yaxis-title',
-               
+
             }
         },
-        
+
     }
 
     var monthlyEarningsOpt = {
