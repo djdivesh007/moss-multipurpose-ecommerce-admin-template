@@ -14,14 +14,14 @@ $(function() {
         colors: colorPalette,
         series: [{
             name: 'Sales',
-            data: [30, 40, 35, 50, 15, 60, 40, 91, 10]
+            data: [ 15, 60, 40, 91, 10,0]
         }],
         xaxis: {
             title: {
                 text: 'Year',
             },
 
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+            categories: [ 2015, 2016, 2017, 2018, 2019,2020]
         },
         yaxis: {
             title: {
@@ -39,15 +39,15 @@ $(function() {
         series: [{
             name: 'Sales',
             type: 'column',
-            data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+            data: [23, 11, 22, 27, 13, 22, 37, 21]
         }, {
             name: 'Purchases',
             type: 'area',
-            data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+            data: [44, 55, 41, 67, 22, 43, 21, 41]
         }, {
             name: 'Profit',
             type: 'line',
-            data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+            data: [30, 25, 36, 30, 45, 35, 64, 52]
         }],
         chart: {
             height: 280,
@@ -77,7 +77,7 @@ $(function() {
             }
         },
         labels: ['01/01/2003', '02/01/2003', '03/01/2003', '04/01/2003', '05/01/2003', '06/01/2003', '07/01/2003',
-            '08/01/2003', '09/01/2003', '10/01/2003', '11/01/2003'
+            '08/01/2003'
         ],
         markers: {
             size: 0
@@ -125,12 +125,12 @@ $(function() {
         colors: colorPalette,
         series: [{
             name: "Clothing",
-            data: [42, 52, 16, 55, 51, 45, 32, 26, 33, 44],
+            data: [42, 52, 16, 55, 51, 45],
         }, {
             name: "Food Products",
-            data: [6, 12, 4, 7, 3, 6, 4, 3, 3, 5],
+            data: [6, 12, 4, 7, 3, 6],
         }],
-        labels: [10, 11, 12, 13, 15, 16, 17, 18, 19, 20],
+        labels: [10, 11, 12, 13, 15, 16],
         xaxis: {
             labels: {
                 show: false
@@ -165,7 +165,7 @@ $(function() {
     var optionDonut = {
         chart: {
             type: 'donut',
-            height: '100%',
+            height: '330px',
             width: '100%',
 
         },

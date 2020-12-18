@@ -156,7 +156,7 @@
                         <div class="card shadow">
 
                             <div class="card-body">
-                                <h4 class="card-title mb-4">Online Transaction</h4>
+                                <h4 class="card-title mb-4">Product Stock</h4>
                                 <div class="table-responsive">
                                     <table class="table table-borderless">
                                         <thead class="thead-light rounded">
@@ -173,7 +173,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <img src="assets/images/product/a.png" class="avatar" alt="Samsung Galaxy S20"> Samsung Galaxy S20
+                                                    <img src="assets/images/product/a.png" class="avatar avatar-sm mr-2" alt="Samsung Galaxy S20"> Samsung Galaxy S20
 
                                                 </td>
 
@@ -191,7 +191,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <img src="assets/images/product/b.png" class="avatar" alt=""> iPhone 12 Pro
+                                                    <img src="assets/images/product/b.png" class="avatar avatar-sm mr-2" alt=""> iPhone 12 Pro
                                                 </td>
 
                                                 <td class="align-middle">$52</td>
@@ -208,7 +208,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <img src="assets/images/product/c.png" class="avatar" alt=""> OnePlus 8
+                                                    <img src="assets/images/product/c.png" class="avatar avatar-sm mr-2" alt=""> OnePlus 8
                                                 </td>
 
                                                 <td class="align-middle">$79</td>
@@ -225,7 +225,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <img src="assets/images/product/d.png" class="avatar" alt=""> Vivo F17 Pro
+                                                    <img src="assets/images/product/d.png" class="avatar avatar-sm mr-2" alt=""> Vivo F17 Pro
                                                 </td>
 
                                                 <td class="align-middle">$52</td>
@@ -339,12 +339,12 @@
                                                     </div>
                                                 </th>
                                                 <th>Order ID</th>
-                                                <th>Billing Name</th>
-                                                <th>Date</th>
+                                                <th>Buyer Name</th>
+                                                <th>Order Date</th>
                                                 <th>Total</th>
                                                 <th>Status</th>
-                                                <th>Payment Method</th>
-                                                <th>View Details</th>
+                                                <th>Paid By</th>
+                                                <th>Details</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -520,6 +520,97 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-white">
+                                Track Order
+                            </div>
+                            <div class="card-body">
+                                <div class="timeline timeline-one-side" data-timeline-axis-style="dashed" data-timeline-content="axis">
+                                    <div class="timeline-block">
+                                        <span class="timeline-step badge-success">
+                                            <i class="material-icons f-12">today</i>
+                                        </span>
+                                        <div class="timeline-content">
+                    
+                                            <h5 class="mb-0 font-weight-bold">Order has Dispatched</h5>
+                                            <small class="text-muted ">10:30
+                                                AM</small>
+                                            <p class="text-sm mt-1 mb-0">Product has dispatched from vendor.
+                                            </p>
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="timeline-block"><span class="timeline-step badge-danger"><i
+                                                class="material-icons f-12">alarm</i></span>
+                                        <div class="timeline-content">
+                                            <h5 class="mb-0 font-weight-bold">Order Picked Up</h5>
+                                            <small class="text-muted ">14:30
+                                                AM</small>
+                                            <p class="text-sm mt-1 mb-0">Order picked up from delivery partner
+                                            </p>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="timeline-block">
+                                        <span class="timeline-step badge-info"><i class="material-icons f-12">thumb_up</i></span>
+                                        <div class="timeline-content">
+                                            <h5 class="mb-0 font-weight-bold">Order received at nearest hub</h5>
+                                            <small class="text-muted">10:30
+                                                AM</small>
+                                            <p class="text-sm mt-1 mb-0">Order received at nearest hub in your city
+                                            </p>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="timeline-block"><span class="timeline-step badge-success"><i
+                                                class="material-icons f-12">bookmarks</i></span>
+                                        <div class="timeline-content">
+                                            <h5 class="mb-0 font-weight-bold">Out for delivery</h5>
+                                            <small class="text-muted">15:30
+                                                AM</small>
+                                            <p class="text-sm mt-1 mb-0">Order will be delivered around 5 PM.
+                                            </p>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="timeline-block"><span class="timeline-step badge-danger"><i
+                                                class="material-icons f-12">grade</i></span>
+                                        <div class="timeline-content">
+                                            <h5 class="mb-0 font-weight-bold">Order delivered</h5>
+                                            <small class="text-muted">16:55
+                                                AM</small>
+                                            <p class="text-sm mt-1 mb-0">Order delivered at 4:55 PM.
+                                            </p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Google Maps
+                                <div class="tools">
+                                   
+                                    <button class="btn btn-square" fullscreen>
+                                        <i class="material-icons">fullscreen</i>
+                                        <i class="material-icons">fullscreen_exit</i>
+                                    </button>
+                                   
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div style="margin:0px;padding:0px;overflow:hidden">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160991881!2d72.74109908908066!3d19.082197838926515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9409a609d75%3A0xd0a71c45e7557bfa!2sBasilica%20Of%20Our%20Lady%20of%20The%20Mount!5e0!3m2!1sen!2sin!4v1607597877463!5m2!1sen!2sin"
+                                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -529,6 +620,13 @@
     <!-- build:js assets/js/dashboard.bundle.js -->
     <script src="../../assets/js/demo/dashboard.js"></script>
     <!-- endbuild -->
+
+    <style>
+        iframe {
+            width: 100%;
+            height: 450px;
+        }
+    </style>
 </body>
 
 </html>
