@@ -18,6 +18,12 @@
     .card {
       background-color: $gray-100;
       box-shadow: 0 0.13rem 0.25rem rgba(0, 0, 0, 0.20) !important;
+      .actions {
+        opacity: 0;
+      }
+      &:hover .actions{
+        opacity: 1;
+      }
     }
   }
 

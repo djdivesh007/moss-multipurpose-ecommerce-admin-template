@@ -146,9 +146,9 @@
                 li.nav-item {
                     display: inline-block;
                     height: 54px;
-                    &:not(.icon) {
+                    /* &:not(.icon) {
                         margin: 0 7.5px 0 7.5px;
-                    }
+                    } */
                     &:first-child {
                         margin-left: 0;
                     }
@@ -208,7 +208,7 @@
                         }
                     }
                     a.nav-link {
-                        padding: 0 10px;
+                        padding: 0 17.5px;
                         line-height: 54px;
                         text-align: center;
                         color: inherit;
