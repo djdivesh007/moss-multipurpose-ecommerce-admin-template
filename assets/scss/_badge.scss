@@ -1,3 +1,16 @@
 .badge {
-    font-weight: 300;
+   line-height: 1.4;
+   padding-left: 0.8em;
+   padding-right: 0.8em;
 }
+
+
+@each $color,
+$value in $theme-colors {
+    .badge-transparent-#{$color} {
+        background-color: transparentize($value,0.9);
+        color: $value;
+    }
+}
+
+

@@ -8,8 +8,7 @@
         background-color: #fff;
         transition: width 0.2s;
         .navbar {
-            /* border-right: 1px solid darken($primary, 10%); */
-            //box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+           
             position: relative;
             width: 100%;
             line-height: 54px;
@@ -37,15 +36,16 @@
                     list-style: none;
                     &:hover {
                         &>a {
-                            background-color: $gray-200;
-                            transition: background-color 0.2s;
+                            background-color: transparentize($primary,0.9);
+                            transition: all 0.4s ease;
+                            color: $primary;
                         }
                     }
                     a {
                         display: inline-block;
                         transition: background-color 0.2s;
                         font-size: 14px;
-                        color: $gray-700;
+                        color: $gray-800;
                         text-decoration: none;
                         font-weight: 500;
                         border-radius: 0 66px 66px 0;
@@ -74,7 +74,7 @@
                             }
                         }
                         &.active {
-                            background-color: lighten($primary, 58%);
+                            background-color: transparentize($primary,0.8);
                             color: $primary;
                             .caret {
                                 color: #000;
@@ -137,13 +137,13 @@
             z-index: 12;
             top: 0;
             background-color: $primary;
-            color: #fff;
+            color: color-yiq($primary);
             height: 54px;
             .navbar-nav {
                 list-style: none;
                 margin: 0;
                 flex-direction: row;
-                color: #fff;
+                color: color-yiq($primary);
                 li.nav-item {
                     display: inline-block;
                     height: 54px;
@@ -224,7 +224,7 @@
                     }
                     &.dropdown {
                         .nav-link {
-                            color: $light;
+                            color: color-yiq($primary);
                         }
                         &.with-caret {
                             .nav-link {

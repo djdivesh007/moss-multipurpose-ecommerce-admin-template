@@ -196,3 +196,17 @@
 .btn-group-vertical>.btn-group:not(:first-child) {
     margin-left: 0px;
 }
+
+@each $color,
+$value in $theme-colors {
+    .btn-transparent-#{$color} {
+        background-color: transparentize($value, 0.85);
+        color: $value;
+        font-weight: 500;
+        border:1px solid transparentize($value,0.7);
+    }
+}
+
+.btn-transparent-light{
+    color: $black;
+}
