@@ -197,8 +197,7 @@
     margin-left: 0px;
 }
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .btn-transparent-#{$color} {
         background-color: transparentize($value, 0.85);
         color: $value;
@@ -210,3 +209,40 @@ $value in $theme-colors {
 .btn-transparent-light{
     color: $black;
 }
+
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+    transition: all ease-in-out .2s;
+
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 25%;
+        height: 100%;
+        width: 50%;
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+        transition: all ease-in-out 0.7s;
+        transform: scale(5, 5);
+    }
+
+    &:active::after {
+        padding: 0;
+        margin: 0;
+        opacity: .2;
+        transition: 0s;
+        transform: scale(0, 0);
+    }
+}
+@each $color, $value in $theme-colors {
+    .btn-#{$color}.btn-ripple {
+        &:after{
+           background-color: color-yiq($value);
+        }
+    }
+}
+
