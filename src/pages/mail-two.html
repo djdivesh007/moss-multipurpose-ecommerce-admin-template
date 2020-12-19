@@ -68,105 +68,53 @@
 
 
                             <div class="mail-wrapper w-100">
-                                <nav class="navbar navbar-expand-md navbar-light bg-white">
-                                    <button class="navbar-toggler btn-default mb-sm-1" type="button" data-toggle="collapse" data-target="#navbarText"
-                                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-
-                                    <div class="collapse navbar-collapse" id="navbarText">
-                                        <ul class="navbar-nav mr-auto">
-                                            <li class="nav-item d-flex mr-2">
-                                                <div class="custom-control custom-checkbox d-flex m-auto ">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                    <label class="custom-control-label" for="customCheck1">All</label>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item mr-2">
-                                           
-                                                <button class="btn btn-default" href="#"
-                                                    id="navbarDropdown" role="button" data-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                    Select
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="#">All</a>
-                                                    <a class="dropdown-item" href="#">Unread</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Read</a>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item">
-                                                <button class="btn btn-default">
-                                                    <i class="material-icons">sync</i>
-                                                </button>
-                                            </li>
-                                            <li class="flex-fill"></li>
-                                            <li class="nav-item">
-                                                <div class="btn-group">
-                                                    <button class="btn ">
-                                                        <i class="material-icons">arrow_back</i>
-                                                    </button>
-                                                    <button class="btn ">
-                                                        <i class="material-icons">arrow_forward</i>
-                                                    </button>
-                                            
-                                                </div>
-                                            </li>
-                                           
-                                            <!--
-                                            <li class="nav-item mr-1 d-flex d-md-none ">
-                                                <button class="btn pl-0">
-                                                    <i class="material-icons align-middle f-16 mr-2">mail_outline</i>
-                                                    <span class="text">Inbox</span> 
-                                                </button>
-                                            </li>
-                                            <li class="nav-item mr-1 d-flex d-md-none ">
-                                                <button class="btn pl-0">
-                                                    <i class="material-icons align-middle f-16 mr-2">drafts</i>
-                                                    <span class="text">Drafts</span> 
-                                                </button>
-                                            </li>
-                                            <li class="nav-item mr-1 d-flex d-md-none ">
-                                                <button class="btn pl-0">
-                                                    <i class="material-icons align-middle f-16 mr-2">send</i>
-                                                    <span class="text">Sent</span>
-                                                </button>
-                                            </li>
-                                            <li class="nav-item mr-1 d-flex d-md-none ">
-                                                <button class="btn pl-0">
-                                                    <i class="material-icons align-middle f-16 mr-2">star_outline</i>
-                                                    <span class="text">Important</span>
-                                                </button>
-                                            </li>
-                                            <li class="nav-item mr-1 d-flex d-md-none ">
-                                                <button class="btn pl-0">
-                                                    <i class="material-icons align-middle f-16 mr-2">error_outline</i>
-                                                    <span class="text">Spam</span>
-                                                </button>
-                                            </li>
-                                            <li class="nav-item mr-1 d-flex d-md-none ">
-                                                <button class="btn pl-0">
-                                                    <i class="material-icons align-middle f-16 mr-2">delete</i>
-                                                    <span class="text">Trash</span>
-                                                    
-                                                </button>
-                                            </li> -->
-
-
-
-
-                                        </ul>
-                                      
-
+                                <div class="bg-white d-flex px-3 py-3">
+                                    <div class="custom-control custom-checkbox d-inline-block">
+                                        <input type="checkbox" class="custom-control-input" id="customCheckAll">
+                                        <label class="custom-control-label " for="customCheckAll">
+                                            <span> All</span>
+                                        </label>
                                     </div>
-
-                                </nav>
+                                    <button class="btn btn-default dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Labels
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Social</a>
+                                        <a class="dropdown-item" href="#">Friends</a>
+                                        <a class="dropdown-item" href="#">Important</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Personal</a>
+                                    </div>
+                                    <button class="btn btn-default">
+                                        <i class="material-icons">sync</i>
+                                    </button>
+                                    <div class="flex-fill"></div>
+                                    <div class="">
+                                        <span>   1-100 of 40,019</span>
+                                        <button class="btn btn-default btn-sm">
+                                            <i class="material-icons">chevron_left</i>
+                                        </button>
+                                        <button class="btn btn-default btn-sm">
+                                            <i class="material-icons">chevron_right</i>
+                                        </button>
+                                    
+                                    </div>
+                                </div>
+                               
                                 <div class="mail-list-items">
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                    <label class="custom-control-label " for="customCheck1">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div>
+                                                
+                                                <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Wordpress
                                                 </p>
@@ -187,7 +135,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                    <label class="custom-control-label " for="customCheck2">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Locanto
                                                 </p>
@@ -209,7 +163,13 @@
                                         <div
                                             class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                    <label class="custom-control-label " for="customCheck3">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Facebook
                                                 </p>
@@ -231,7 +191,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                    <label class="custom-control-label " for="customCheck4">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Alex Xender
                                                 </p>
@@ -254,7 +220,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                                    <label class="custom-control-label " for="customCheck5">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Alisha Mastana
                                                 </p>
@@ -276,7 +248,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item active shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                                    <label class="custom-control-label " for="customCheck6">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Synergy Technology
                                                 </p>
@@ -299,7 +277,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                                    <label class="custom-control-label " for="customCheck7">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Robina Consultant
                                                 </p>
@@ -321,7 +305,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                                    <label class="custom-control-label " for="customCheck8">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> HCl Technologies
                                                 </p>
@@ -343,7 +333,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                                    <label class="custom-control-label " for="customCheck9">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Tata India
                                                 </p>
@@ -366,7 +362,13 @@
                                         <div
                                             class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value="">
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                                    <label class="custom-control-label " for="customCheck10">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div>
                                                 <i class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Jessica Jhons
                                                 </p>
@@ -387,7 +389,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck11">
+                                                    <label class="custom-control-label " for="customCheck11">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Anaxa Marvel
                                                 </p>
@@ -409,7 +417,13 @@
                                         <div
                                             class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck12">
+                                                    <label class="custom-control-label " for="customCheck12">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Maxwell Linga
                                                 </p>
@@ -430,7 +444,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck13">
+                                                    <label class="custom-control-label " for="customCheck13">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Cricket India
                                                 </p>
@@ -452,7 +472,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck14">
+                                                    <label class="custom-control-label " for="customCheck14">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Start Sports Australia
                                                 </p>
@@ -475,7 +501,13 @@
                                         <div
                                             class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck15">
+                                                    <label class="custom-control-label " for="customCheck15">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Diana Dating Services
                                                 </p>
@@ -497,7 +529,13 @@
                                         <div
                                             class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck16">
+                                                    <label class="custom-control-label " for="customCheck16">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Himalaya India
                                                 </p>
@@ -519,7 +557,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck17">
+                                                    <label class="custom-control-label " for="customCheck17">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> NASA USA
                                                 </p>
@@ -541,7 +585,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck18">
+                                                    <label class="custom-control-label " for="customCheck18">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Indeed Jobs
                                                 </p>
@@ -562,7 +612,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck19">
+                                                    <label class="custom-control-label " for="customCheck19">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Wordfence
                                                 </p>
@@ -584,7 +640,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck20">
+                                                    <label class="custom-control-label " for="customCheck20">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> DocsApp India
                                                 </p>
@@ -607,7 +669,13 @@
                                         <div
                                             class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck21">
+                                                    <label class="custom-control-label " for="customCheck21">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Alex ReliableSoft
                                                 </p>
@@ -630,7 +698,13 @@
                                         <div
                                             class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck22">
+                                                    <label class="custom-control-label " for="customCheck22">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Ryan Robinson
                                                 </p>
@@ -652,7 +726,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck23">
+                                                    <label class="custom-control-label " for="customCheck23">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> TechGig Job Alert
                                                 </p>
@@ -675,7 +755,13 @@
                                         <div
                                             class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck24">
+                                                    <label class="custom-control-label " for="customCheck24">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Paytm India
                                                 </p>
@@ -697,7 +783,13 @@
                                     <a href="#">
                                         <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
                                             <div class="d-flex align-items-center mail-action">
-                                                <input type="checkbox" value=""> <i
+                                                 
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck25">
+                                                    <label class="custom-control-label " for="customCheck25">
+                                                        <span class="sr-only"> All</span>
+                                                    </label>
+                                                </div> <i
                                                     class="far fa-star f-16 mx-2 mail-fav"></i>
                                                 <p class="mb-0 f-14"> Uber America
                                                 </p>
