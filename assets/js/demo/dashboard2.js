@@ -198,7 +198,7 @@ $(function() {
         xaxis: {
             type: 'datetime',
         },
-        colors: ['#3f51b5'],
+        colors: [themeColors.primary],
         title: {
             text: 'Pulse Monitor',
             offsetX: 20,

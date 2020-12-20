@@ -1,32 +1,7 @@
-//Bootstrap Defaults
+@import 'color-variables';
+
 $enable-print-styles: false;
-$blue: #084B83;
-$indigo: #414288;
-$purple: #6200ee;
-$pink: #F06C9B;
-$red: #E63946;
-$orange: #F06449;
-$yellow: #fdbb2d;
-$green: #5FB49C;
-$teal: #009688;
-$cyan: #00bcd4;
-$black: #011627;
-$white:#fff;
-// Addon Pastel Colors
-$pastel-red: #f05454;
-$pastel-orange: #f9813a;
-$pastel-yellow: #f2d974;
-$pastel-ivory: #f8d49d;
-$pastel-green: #5aa469;
-$pastel-lightgreen: #16a596;
-$pastel-brown: #92817a;
-$pastel-coffee: #825959;
-$brand-primary: $indigo;
-$brand-success: $green;
-$brand-info: #19b5fe;
-$brand-warning: $yellow;
-$brand-danger: $red;
-$primary: $red;
+
 $theme-colors: ( "primary": $primary);
 
 /* $blue: #0288D1;

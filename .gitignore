@@ -86,3 +86,4 @@ typings/
 
 .DS_Store
 dist/
+theme-colors.js

@@ -1,4 +1,0 @@
-let themeColors = {
-    'primary' : 
-}
-    

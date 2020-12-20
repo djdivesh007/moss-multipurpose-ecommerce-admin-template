@@ -11,7 +11,8 @@ const gulp = require('gulp'),
   babel = require('gulp-babel'),
   rev = require('gulp-rev'),
   revReplace = require('gulp-rev-replace'),
-  del = require('del');
+  del = require('del'),
+  run = require('gulp-run');
 
 
 
@@ -49,6 +50,12 @@ gulp.task('build-css', function () {
     .pipe(sass(sassConfig.options).on('error', sass.logError))
     .pipe(gulp.dest(sassConfig.outputDirectory));
 });
+function cb(data) {
+  console.log("Data", data);
+}
+gulp.task('generate-js-colors', function () {
+  return run('npm run exportScssColors').exec("assets/js/theme-colors.js");
+});
 
 gulp.task('build-html', gulp.series(function () {
   return gulp.src('./src/pages/*.html')
@@ -57,17 +64,18 @@ gulp.task('build-html', gulp.series(function () {
       basepath: '@file'
     }))
     .pipe(useref())
-    .pipe(gulpif("*.css" && isProduction, cleanCSS({specialComments: true})))
+    /* .pipe(gulpif("*.css" && isProduction, cleanCSS({specialComments: true})))
     .pipe(gulpif(["assets/js/main.js","assets/js/demo/*.js"] && isProduction, babel({presets: ["@babel/preset-env"]})))
     .pipe(gulpif(["assets/js/main.js","assets/js/demo/*.js"] && isProduction, uglify()))
     .pipe(gulpif(/\.css|\.js$/, rev()))
-    .pipe(revReplace())
+    .pipe(revReplace()) */
     .pipe(gulp.dest(distPath));
 }));
-gulp.task('build', gulp.series('clean','build-css', 'copy-images', 'copy-fonts', 'build-html'));
+gulp.task('build', gulp.series('clean','build-css', 'generate-js-colors', 'copy-images', 'copy-fonts', 'build-html'));
 
 gulp.task('watch', gulp.series(function () {
   gulp.watch('assets/scss/**/*.scss', gulp.series('build-css', 'build-html'));
+  gulp.watch('assets/scss/_color-variables.scss', gulp.series('generate-js-colors', 'build-html'));
   gulp.watch('src/**/*.html', gulp.series('build-html'));
   gulp.watch('assets/js/**/*.js', gulp.series('build-html'));
 }));
