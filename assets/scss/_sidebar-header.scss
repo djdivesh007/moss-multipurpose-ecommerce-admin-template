@@ -28,6 +28,7 @@
             padding-top: 20px;
             height: 100%;
             overflow: auto;
+            padding-bottom: 50px;
             &>ul {
                 padding-left: 0px;
                 padding-right: 10px;
@@ -35,7 +36,7 @@
                     list-style: none;
                     &:hover {
                         &>a {
-                            background-color: transparentize($primary,0.9);
+                            background-color: transparentize($primary, 0.9);
                             transition: all 0.4s ease;
                             color: $primary;
                         }
@@ -73,7 +74,7 @@
                             }
                         }
                         &.active {
-                            background-color: transparentize($primary,0.8);
+                            background-color: transparentize($primary, 0.8);
                             color: $primary;
                             .caret {
                                 color: #000;
@@ -541,12 +542,12 @@
 
 .overlay-mask.open {
     /* @include media-breakpoint-down(md) { */
-        background-color: rgba(0, 0, 0, 0.4);
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
     /* } */
 }
