@@ -1,22 +1,22 @@
 .inbox-app {
     display: flex;
+    @include media-breakpoint-down(lg) {
+        flex-direction: column;
+    }
 }
 
 .inbox-app .inbox-toolbars-wrapper {
-    // width: 20%;
     margin-right: 1rem;
     border-radius: 4px;
     min-width: 80px;
-    height: 510px;
 }
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-header {
-    padding: 1rem;
-    flex-flow: row;
-    display: flex;
-    align-items: center;
+.inbox-app .inbox-toolbars-wrapper .toolbar-body {
+    position: sticky;
+    top: 100px;
+    @include media-breakpoint-down(lg) {
+        position: static;
+    }
 }
-
 .inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-title {
     color: #727686;
     padding: 0 1rem .5rem 1rem;
@@ -27,9 +27,14 @@
     margin-bottom: 1rem;
     height: auto;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-down(lg) {
+        flex-direction: row;
+    }
 }
 
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li {
+.inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li a {
     align-items: center;
     padding: .5rem 1rem;
     transition: 0.4s;
@@ -37,10 +42,6 @@
     border-top: 1px solid lightgray;
     text-align: center;
     height: 75px;
-    i {
-        font-size: 22px;
-        color: #757575;
-    }
 }
 
 .inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li:hover {

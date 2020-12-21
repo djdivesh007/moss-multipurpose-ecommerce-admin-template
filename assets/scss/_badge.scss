@@ -8,9 +8,12 @@
 @each $color,
 $value in $theme-colors {
     .badge-transparent-#{$color} {
-        background-color: transparentize($value,0.9);
+        background-color: transparentize($value,0.7);
         color: $value;
     }
 }
 
+.badge-transparent-light {
+    color: color-yiq($light);
+}
 

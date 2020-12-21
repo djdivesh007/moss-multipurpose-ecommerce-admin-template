@@ -37,7 +37,7 @@
                     &:hover {
                         &>a {
                             background-color: transparentize($primary, 0.9);
-                            transition: all 0.4s ease;
+                            transition: all 0.1s ease-in-out;
                             color: $primary;
                         }
                     }
