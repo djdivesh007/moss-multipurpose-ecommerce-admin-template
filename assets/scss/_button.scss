@@ -25,37 +25,65 @@
     &[disabled] {
         cursor: not-allowed;
     }
-    &.btn-square,
-    &.btn-circle {
+    &.btn-square {
         width: 42px;
         height: 42px;
         padding: 7px;
         &.btn-lg {
-            width: 48px;
-            height: 48px;
+            width: 3rem;
+            height: 3rem;
             i {
-                font-size: 28px;
+                font-size: 1.5rem;
             }
         }
         &.btn-sm {
-            width: 31px;
-            height: 31px;
+            width: 2rem;
+            height: 2rem;
             padding: 4px;
             i {
-                font-size: 14px;
+                font-size: 1rem;
             }
         }
         &.btn-xs {
-            width: 24px;
-            height: 24px;
+            width: 1.84rem;
+            height: 1.84rem;
             padding: 2px;
             i {
-                font-size: 12px;
+                font-size: 1rem;
             }
         }
     }
     &.btn-circle {
+        width: 3rem;
+        height: 3rem;
+        padding: 0;
         border-radius: 50%;
+        font-weight: 500;
+        i {
+            vertical-align: middle;
+            font-size: 1.2rem;
+        }
+        &.btn-lg {
+            width: 3rem;
+            height: 3rem;
+            i {
+                font-size: 1.2rem;
+            }
+        }
+        &.btn-sm {
+            width: 2rem;
+            height: 2rem;
+            i {
+                font-size: 0.8rem;
+            }
+        }
+        &.btn-xs {
+            width: 1.84rem;
+            height: 1.84rem;
+            i {
+                font-size: 0.6rem;
+            }
+        }
     }
     &.btn-icon {
         i {
@@ -197,16 +225,17 @@
     margin-left: 0px;
 }
 
-@each $color, $value in $theme-colors {
+@each $color,
+$value in $theme-colors {
     .btn-transparent-#{$color} {
         background-color: transparentize($value, 0.85);
         color: $value;
         font-weight: 500;
-        border:1px solid transparentize($value,0.7);
+        border: 1px solid transparentize($value, 0.7);
     }
 }
 
-.btn-transparent-light{
+.btn-transparent-light {
     color: $black;
 }
 
@@ -214,8 +243,7 @@
     position: relative;
     overflow: hidden;
     transition: all ease-in-out .2s;
-
-    &:after{
+    &:after {
         content: '';
         display: block;
         position: absolute;
@@ -229,7 +257,6 @@
         transition: all ease-in-out 0.7s;
         transform: scale(5, 5);
     }
-
     &:active::after {
         padding: 0;
         margin: 0;
@@ -238,11 +265,12 @@
         transform: scale(0, 0);
     }
 }
-@each $color, $value in $theme-colors {
+
+@each $color,
+$value in $theme-colors {
     .btn-#{$color}.btn-ripple {
-        &:after{
-           background-color: color-yiq($value);
+        &:after {
+            background-color: color-yiq($value);
         }
     }
 }
-
