@@ -11,7 +11,7 @@ $(function() {
             height: 280,
 
         },
-        colors: themeColors,
+        colors: colorPalette,
         series: [{
             name: 'Sales',
             data: [15, 60, 40, 91, 10, 0]
