@@ -3,7 +3,7 @@ $(function() {
     'use strict';
 
     // The Default colorPalette for this dashboard
-    var colorPalette = ['#3f51b5', '#008FFB', '#FEB019', '#FF4560', '#775DD0'];
+    var colorPalette = [themeColors.primary, '#008FFB', '#FEB019', '#FF4560', '#775DD0'];
 
     var options = {
         chart: {
@@ -11,7 +11,7 @@ $(function() {
             height: 280,
 
         },
-        colors: colorPalette,
+        colors: themeColors,
         series: [{
             name: 'Sales',
             data: [15, 60, 40, 91, 10, 0]
