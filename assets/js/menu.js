@@ -1,6 +1,7 @@
 $(function () {
+  const mainWrapper = $(".main-wrapper");
+
   $(".navigation li").on('mouseenter', function () {
-    const mainWrapper = $(".main-wrapper");
 
     if ((lg || xl) && mainWrapper.hasClass("mini")) {
       const currentPos = this.getBoundingClientRect().top;
@@ -21,19 +22,33 @@ $(function () {
     $(this).find("ul").removeClass("reversed").css("marginTop", "").css("height", "");
     $(this).find("ul").css("top", "");
   });
+
+  $("#hamburger-btn").on("click", function () {
+    if (mainWrapper.hasClass("horizontal") || mainWrapper.hasClass("hidden-sidebar")) {
+      mainWrapper.toggleClass("sidemenu-open");
+      $(".overlay-mask").toggleClass("open");
+    }
+    else {
+      mainWrapper.toggleClass("mini");
+    }
+  });
+  $(".overlay-mask").on("click", function () {
+    $("#hamburger-btn").trigger("click");
+  });
 });
+
 function checkSpaceAvaibility(currentPos, that) {
   /* check if there is available space at bottom and top*/
   // since element would be hidden determine expected height;
-  const requiredSpace = $(that).find("ul").find("li").length * 32.5;
-  totalHeight = $(window).height();
-  const availableBottomPosition = totalHeight - currentPos - 42;
+  const requiredSpace = $(that).find("ul").find("li").length * 31;
+  const totalHeight = $(window).height();
+  const availableBottomPosition = totalHeight - currentPos - 40;
   const availableTopPosition = currentPos;
   let below = above = false;
   if (availableBottomPosition >= requiredSpace) {
     below = true;
   }
-  if(availableTopPosition >= requiredSpace) {
+  if (availableTopPosition >= requiredSpace) {
     above = true;
   }
   a = {

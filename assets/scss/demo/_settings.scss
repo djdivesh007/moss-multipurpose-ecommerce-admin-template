@@ -1,0 +1,27 @@
+.settings-panel{
+    background: #fff;
+    position: fixed;
+    height: calc(100vh - 100px);
+    width: 280px;
+    top: 70px;
+    right: -280px;
+    z-index: 100;
+    border: 1px solid transparentize($primary, 0.4);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transition: 0.3s ease-in;
+    .settings-btn{
+        padding: 10px;
+        background-color: $primary;
+        color: color-yiq($primary);
+        position: absolute;
+        top: 40%;
+        left: -35px;
+        width: 35px;
+        border-radius: 50px 0 0 50px;
+        cursor: pointer;
+    }
+    &.open{
+        right: 0;
+    }
+}

@@ -1,0 +1,104 @@
+.main-wrapper.mini{
+    .sidebar {
+        width: $mini-sidebar-width;
+        .navigation {
+            border-right: 1px solid $gray-200;
+            & > ul{
+                padding-right: 0;
+                & > li {
+                    height: $individual-menu-height;
+                    & > a {
+                        border-radius: 0;
+                        span {
+                            opacity: 0;
+                            &.icon {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    ul {
+                        display: block;
+                        height: 0;
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        transition: none;
+                    }
+                    &:hover {
+                        & > a{ 
+                            background-color: lighten($primary, 50%);
+                            color: $primary;
+                        }
+                        ul {
+                            height: auto;
+                            transform: scaleY(1);
+                            transition: transform 0.2s ease-in;
+                            transition-delay: 0.13s;
+                            position: absolute;
+                            width: calc(236px - #{$mini-sidebar-width});
+                            background: transparent;
+                            margin-top: $individual-menu-height;
+                            margin-left: $mini-sidebar-width - 1;
+                            overflow: auto;
+                            li {
+                                a {
+                                    border: 1px solid $gray-400;
+                                    border-top: 0;
+                                    padding-left: 0;
+                                    background-color: #fff;
+                                    span {
+                                        &.icon {
+                                            margin-left: 5px;
+                                        } 
+                                    }
+                                    &:hover {
+                                        background-color: $gray-100;
+                                    }
+                                    &:active,
+                                    &.active {
+                                        color: $primary;
+                                        background-color: lighten($primary, 53%);
+                                    }
+                                }
+                            }
+                            &.reversed {
+                                display: flex;
+                                flex-direction: column-reverse;
+                            }
+                        }
+                        & > a {
+                            position: absolute;
+                            z-index: 2000;
+                            border-left-width: 0;
+                            /* line-height: $individual-menu-height - 2; */
+                            box-shadow: 0px 0px 0px 1px $gray-400;
+                            overflow: hidden;
+                            width: $full-sidebar-width - 4;
+                            /* height: $individual-menu-height; */
+                            
+                            border-radius: 0 #{$individual-menu-height / 2} #{$individual-menu-height / 2} 0;
+                            box-sizing: border-box;
+                            span {
+                                display: inline-block;
+                                &.caret {
+                                    opacity: 0;
+                                }
+                                &.icon {
+                                    margin-right: 0;
+                                }
+                                &.text{
+                                    opacity: 1;
+                                    margin-left: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .separator {
+            span{
+                display: none;
+            }
+        }
+    }
+}

@@ -12,3 +12,16 @@
     transition: all 0.4s ease;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
 }
+
+.spin{
+    animation: spin-animation 1s infinite linear;
+    display: inline-block;
+}
+@keyframes spin-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+}
