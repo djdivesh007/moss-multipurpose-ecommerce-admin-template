@@ -7,8 +7,4 @@
 .btn-outline-light {
     color: $gray-500; //Light text will not be visible otherwise
     border-color: $gray-500;
-    &:hover {
-        color: inherit;
-        border-color: inherit;
-    }
 }

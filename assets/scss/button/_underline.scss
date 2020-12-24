@@ -1,0 +1,10 @@
+@each $color, $value in $theme-colors {
+    .btn-underline-#{$color}{
+        background-color: transparent;
+        border-bottom: 3px solid $value;
+        border-radius: 0;
+        &:active, &.active{
+            border-bottom-color: darken($value, 20%);
+        }
+    }
+}

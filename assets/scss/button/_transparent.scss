@@ -9,5 +9,9 @@
             color: darken(if($color != 'light', $value, $gray-500), 20%);
             background-color: transparentize(darken(if($color != 'light', $value, $gray-500), 20%), 0.85);
         }
+        &:active, &.active {
+            color: darken(if($color != 'light', $value, $gray-500), 25%);
+            background-color: transparentize(darken(if($color != 'light', $value, $gray-500), 25%), 0.85);
+        }
     }
 }
