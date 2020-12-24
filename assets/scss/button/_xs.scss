@@ -1,0 +1,6 @@
+$btn-line-height-xs: 1.15;
+
+.btn-xs {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-xs, $border-radius-xs);
+}
+.btn-group-xs > .btn { @extend .btn-xs; }

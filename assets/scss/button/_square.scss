@@ -1,0 +1,19 @@
+.btn-square {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    &.btn-lg {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    &.btn-sm {
+        width: 2rem;
+        height: 2rem;
+    }
+    &.btn-xs {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
