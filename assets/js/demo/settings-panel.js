@@ -9,7 +9,7 @@ $(function () {
                 $(".main-wrapper").removeClass("mini hidden-sidebar open-sidemenu horizontal");
                 break;
             case 'horizontal': 
-                $(".main-wrapper").removeClass("mini hidden-sidebar open-sidemenu").addClass("horizontal");
+                $(".main-wrapper").removeClass("mini hidden-sidebar open-sidemenu without-icon").addClass("horizontal");
                 break;
             case 'horizontal-no-icon': 
                 $(".main-wrapper").removeClass("mini hidden-sidebar open-sidemenu").addClass("horizontal without-icon");
@@ -23,7 +23,6 @@ $(function () {
         }
     });
     $("input[type=radio][name=layout-switch]").on('change', function () {
-        $(".right-area .main-content").toggleClass("container container-fluid");
         switch(this.value) {
             case 'box':
                 $(".right-area .main-content").removeClass("container-fluid").addClass("container");

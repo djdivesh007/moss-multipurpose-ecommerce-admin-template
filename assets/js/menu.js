@@ -3,7 +3,7 @@ $(function () {
 
   $(".navigation li").on('mouseenter', function () {
 
-    if ((lg || xl) && mainWrapper.hasClass("mini")) {
+    if (mainWrapper.hasClass("mini")) {
       const currentPos = this.getBoundingClientRect().top;
       $(this).find("a").first().css("top", currentPos);
       $(this).find("ul").css("top", currentPos);
@@ -24,12 +24,13 @@ $(function () {
   });
 
   $("#hamburger-btn").on("click", function () {
-    if (mainWrapper.hasClass("horizontal") || mainWrapper.hasClass("hidden-sidebar")) {
+    if (mainWrapper.hasClass("horizontal") || (mainWrapper.hasClass("hidden-sidebar") && !mainWrapper.hasClass("mini-off"))) {
       mainWrapper.toggleClass("sidemenu-open");
       $(".overlay-mask").toggleClass("open");
     }
     else {
       mainWrapper.toggleClass("mini");
+      mainWrapper.toggleClass("hidden-sidebar mini-off");
     }
   });
   $(".overlay-mask").on("click", function () {
