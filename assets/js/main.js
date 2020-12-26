@@ -1,20 +1,6 @@
 $(function() {
     const mainWrapper = $(".main-wrapper");
-    $("#hamburger-btn").on("click", function() {
-        if (xs || sm || md) {
-            mainWrapper.toggleClass("sidemenu-open");
-            $(".overlay-mask").toggleClass("open");
-        } else {
-            if (mainWrapper.hasClass("horizontal"))
-                mainWrapper.toggleClass("without-icon");
-            else {
-                mainWrapper.toggleClass("mini");
-            }
-        }
-    });
-    $(".overlay-mask").on("click", function() {
-        $("#hamburger-btn").trigger("click");
-    });
+   
     $(document).on('swiped-right', function() {
         $("#hamburger-btn").trigger("click");
     })
@@ -91,5 +77,18 @@ $(function() {
 
     $("#search-bar").find("input").on('blur',function(){
         $('#closeSearchBtn').trigger('click');
+    });
+
+    $(window).on('resize', function () {
+        setTimeout(() => {
+            if(!xl) {
+                mainWrapper.removeClass().addClass("hidden-sidebar main-wrapper");
+            }
+        });
+    });
+    setTimeout(() => {
+        if(!xl) {
+            mainWrapper.removeClass().addClass("hidden-sidebar main-wrapper");
+        }
     });
 });

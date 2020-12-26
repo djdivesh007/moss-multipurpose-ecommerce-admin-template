@@ -1,0 +1,10 @@
+@each $color, $value in $theme-colors {
+    .btn-outline-#{$color}:active
+    {
+        background-color: darken($value, 25%);
+    }
+}
+.btn-outline-light {
+    color: $gray-500; //Light text will not be visible otherwise
+    border-color: $gray-500;
+}

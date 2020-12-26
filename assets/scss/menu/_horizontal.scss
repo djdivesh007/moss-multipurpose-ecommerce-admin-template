@@ -1,0 +1,137 @@
+.main-wrapper.horizontal{
+    .sidebar {
+        height: auto;
+        .navigation {
+            position: fixed;
+            padding: 0;
+            top: $header-height;
+            width: 100%;
+            height: auto;
+            z-index: 10;
+            background-color: $sidemenu-bg;
+            transition: width 0.2s;
+            border-bottom: 1px solid $gray-200;
+            & > ul {
+                display: block;
+                overflow: hidden;
+                margin-bottom: 0;
+                padding: 0;
+                text-align: center;
+                font-size: 0; // To remove extra whitespace between li's
+                & > li {
+                    display: inline-block;
+                    a {
+                        display: inline-block;
+                        padding: 5px;
+                        padding-top: 8px;
+                        border-right: 1px solid $gray-200;
+                        box-sizing: border-box;
+                        width: 120px;
+                        text-align: center;
+                        line-height: 28px;
+                        border-radius: 0;
+                        span{ margin: 0;}
+                        span.caret {
+                            display: none !important;
+                        }
+                        span.icon {
+                            display: block;
+                        }
+                    }
+                    
+                    &:last-child {
+                        & > a {
+                            border: none;
+                        }
+                    }
+                    ul {
+                        position: fixed;
+                        display: block;
+                        height: 0;
+                        overflow: hidden;
+                        background-color: $sidemenu-bg;
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        transition: none;
+                        margin-left: -1px;
+                        li {
+                            border: 0;
+                        }
+                    }
+                    &:hover {
+                        ul {
+                            height: auto;
+                            transform: scaleY(1);
+                            transition: all 0.2s;
+                            overflow: auto;
+                            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.075) !important;
+                            li {
+                                a {
+                                    border: 1px solid $gray-200;
+                                    border-top: none;
+                                    width: 121px;
+                                    span.icon {
+                                        display: none;
+                                    }
+                                }
+                                &:first-child {
+                                    a {
+                                        border-top: 1px solid $gray-200;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .separator {
+            display: none !important;
+        }
+    }
+    &.without-icon {
+        .sidebar {
+            .navigation {
+                &>ul {
+                    &>li {
+                        &>a {
+                            padding: 5px;
+                            line-height: 40px;
+                            span.icon {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right-area{
+        margin-left: 0;
+    }
+    @include media-breakpoint-down(md) {
+        .sidebar {
+            margin-left: 0;
+            transition: none;
+            .navigation {
+                margin-top: -100%;
+                transition: margin-top 0.2s;
+            }
+        }
+        .right-area {
+            header {
+                margin-left: unset;
+            }
+            .main-content {
+                margin-top: 0;
+            }
+        }
+        &.sidemenu-open {
+            .sidebar {
+                .navigation {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

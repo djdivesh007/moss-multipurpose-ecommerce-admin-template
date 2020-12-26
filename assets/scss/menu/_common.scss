@@ -1,0 +1,125 @@
+.main-wrapper{
+    .sidebar{
+        position: fixed;
+        height: 100%;
+        width: $full-sidebar-width;
+        z-index: 10;
+        background-color: $sidemenu-bg;
+        .navbar {
+            position: relative;
+            width: 100%;
+            line-height: 54px;
+            padding: 0;
+            top: 0;
+
+            .navbar-brand {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .logo {
+                height: 50px;
+                padding: 7px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+        .navigation {
+            height: 100%;
+            overflow: auto;
+            padding-bottom: $header-height;
+            padding-top: 20px;
+            & > ul { // First Level
+                padding-left: 0px;
+                li {
+                    list-style: none;
+
+                    /* TODO: Move to specific */
+                    &:hover {
+                        & > a {
+                            background-color: transparentize($primary, 0.9);
+                            transition: all 0.1s ease-in-out;
+                            color: $primary;
+                        }
+                    }
+                    
+                    .active{
+                        background-color: transparentize($primary, 0.8);
+                        color: $primary;
+                        .caret {
+                            color: #000;
+                        }
+                    }
+                    
+                    a {
+                        display: inline-block;
+                        line-height: $individual-menu-height;
+                        color: $gray-800;
+                        font-size: 14px;
+                        font-weight: 500;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        text-decoration: none;
+                        border-radius: 0 #{$individual-menu-height / 2} #{$individual-menu-height / 2} 0;
+                        span {
+                            margin-left: 12px;
+                            white-space: nowrap;
+                            &.icon {
+                                margin-left: 20px;
+                            }
+                            &.caret {
+                                margin-left: 3px;
+                                transition: transform 0.2s;
+                                +.icon {
+                                    margin-left: 0px;
+                                }
+                            }
+                            &.badge {
+                                margin-left: auto;
+                                margin-right: 10px;
+                            }
+                        }
+                        &[aria-expanded="true"] {
+                            span.caret {
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                    // Sub menu
+                    ul {
+                        padding-left: 0px;
+                        li {
+                            a {
+                                span {
+                                    margin-left: 8px;
+                                }
+                                padding-left: 15px;
+                                line-height: $individual-submenu-height;
+                            }
+                        }
+                    }
+                }
+            }
+            .separator {
+                margin-top: 18px;
+                margin-bottom: 18px;
+                height: 1px !important;
+                background-color: $gray-400;
+                span {
+                    user-select: none;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 0.85em;
+                    margin-top: -20px;
+                    margin-left: 20px;
+                    background-color: $sidemenu-bg;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    color: $gray-700;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

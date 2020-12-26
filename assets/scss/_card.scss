@@ -1,0 +1,61 @@
+.card{
+    .card-header{
+        padding: 1rem;
+        font-weight: 500;
+    }
+}
+.tools {
+    float: right;
+    margin-bottom: -0.25rem;
+    margin-top: -.25rem;
+    button {
+        &[fullscreen] {
+            i:last-child,
+            span:last-child {
+                display: none;
+            }
+        }
+    }
+}
+@each $color, $value in $theme-colors {
+    .card-head-#{$color}{
+        background-color: $value;
+        color: color-yiq($value);
+        .card-body {
+            color: $dark;
+            background-color: $white;
+        }
+    }
+}
+.tab-card{
+    .tab-btns{
+        margin-bottom: -0.5rem;
+        margin-top: -0.5rem;
+        margin-right: -0.5rem;
+    }
+}
+.card.fullscreen {
+    position: fixed;
+    z-index: 20000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 !important;
+    transition: height .3s;
+    button:not([fullscreen]) {
+        display: none;
+    }
+    button[fullscreen] {
+        i:first-child,
+        span:first-child {
+            display: none;
+        }
+        i:last-child,
+        span:last-child {
+            display: block;
+        }
+    }
+}

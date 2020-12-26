@@ -1,0 +1,25 @@
+
+.btn-animated{
+    position: relative;
+    overflow: hidden;
+    i {
+        font-size: 1.2em;
+        position: absolute;
+        margin-top: -50%;
+        line-height: 1.2;
+        left: 0;
+        width: 100%;
+    }
+    span {
+        position: relative;
+        top: 0;
+    }
+    &:hover {
+        i {
+            margin-top: 0;
+        }
+        span {
+            top: 50px;
+        }
+    }
+}

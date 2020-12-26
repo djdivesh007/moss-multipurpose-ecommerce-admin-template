@@ -1,0 +1,4 @@
+.btn-circle {
+    @extend .btn-square;
+    border-radius: 50%;
+}

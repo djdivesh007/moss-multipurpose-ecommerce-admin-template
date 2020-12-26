@@ -1,0 +1,19 @@
+
+/* Ripple effect */
+
+.btn-ripple {
+    background-position: center;
+    transition: background 0.8s;
+    
+    @each $color, $value in $theme-colors {
+        &.btn-#{$color}.btn-ripple:hover {
+            background: darken($value,10%) radial-gradient(circle, transparent 1%, $value 1%) center/15000%;
+        }
+        
+        &.btn-#{$color}.btn-ripple:active {
+            background-color: lighten($value, 20%);
+            background-size: 100%;
+            transition: background 0s;
+        }
+    }
+}
