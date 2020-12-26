@@ -1,5 +1,12 @@
+.main-wrapper.collapsed{
+    .right-area {
+        margin-left: 0 !important;
+    }
+}
 .right-area {
-    margin-left: 240px;
+    @include media-breakpoint-up(md) {
+        margin-left: 240px;
+    }
     transition: margin 0.15s;
     header {
         position: sticky;

@@ -1,5 +1,10 @@
-.main-wrapper{
-    .sidebar{
+.main-wrapper {
+    &.collapsed {
+        .sidebar {
+            margin-left: -$full-sidebar-width;
+        }
+    }
+    .sidebar {
         position: fixed;
         height: 100%;
         width: $full-sidebar-width;
@@ -11,7 +16,7 @@
             line-height: 54px;
             padding: 0;
             top: 0;
-
+            z-index: 15;
             .navbar-brand {
                 padding-top: 0;
                 padding-bottom: 0;
@@ -28,7 +33,11 @@
             overflow: auto;
             padding-bottom: $header-height;
             padding-top: 20px;
-            & > ul { // First Level
+            .navigation-arrow {
+                display: none;
+            }
+            & > ul {
+                // First Level
                 padding-left: 0px;
                 li {
                     list-style: none;
@@ -41,15 +50,15 @@
                             color: $primary;
                         }
                     }
-                    
-                    .active{
+
+                    .active {
                         background-color: transparentize($primary, 0.8);
                         color: $primary;
                         .caret {
                             color: #000;
                         }
                     }
-                    
+
                     a {
                         display: inline-block;
                         line-height: $individual-menu-height;
@@ -71,7 +80,7 @@
                             &.caret {
                                 margin-left: 3px;
                                 transition: transform 0.2s;
-                                +.icon {
+                                + .icon {
                                     margin-left: 0px;
                                 }
                             }
@@ -119,6 +128,19 @@
                     color: $gray-700;
                     white-space: nowrap;
                 }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .main-wrapper {
+        .sidebar {
+            margin-left: -$full-sidebar-width;
+        }
+        &.collapsed {
+            .sidebar {
+                margin-left: 0;
             }
         }
     }

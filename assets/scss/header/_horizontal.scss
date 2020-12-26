@@ -1,0 +1,9 @@
+@include media-breakpoint-down(md) {
+    .main-wrapper.horizontal {
+        .right-area {
+            header {
+                margin-left: 0;
+            }
+        }
+    }
+}

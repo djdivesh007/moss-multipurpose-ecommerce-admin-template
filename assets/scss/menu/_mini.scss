@@ -1,4 +1,9 @@
 .main-wrapper.mini{
+    &.collapsed{
+        .sidebar {
+            margin-left: 0-$mini-sidebar-width !important;
+        }
+    }
     .sidebar {
         width: $mini-sidebar-width;
         .navigation {
