@@ -1,4 +1,5 @@
 $(function () {
+    const r = document.querySelector(':root');
     $(".settings-btn").on("click", function () {
         $(".settings-panel").toggleClass("open");
     });
@@ -31,5 +32,8 @@ $(function () {
                 $(".right-area .main-content").removeClass("container").addClass("container-fluid");
                 break;
         }
+    });
+    $("input[type=color]").on('change', function () {
+        r.style.setProperty('--primary', this.value);
     });
 });

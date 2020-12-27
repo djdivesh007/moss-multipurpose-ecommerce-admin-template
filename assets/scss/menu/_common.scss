@@ -11,6 +11,10 @@
         z-index: 10;
         background-color: $sidemenu-bg;
         .navbar {
+            @include var-bg-color("primary");
+            a{
+                color: color-yiq($primary);
+            }
             position: relative;
             width: 100%;
             line-height: 54px;
@@ -42,7 +46,6 @@
                 li {
                     list-style: none;
 
-                    /* TODO: Move to specific */
                     &:hover {
                         & > a {
                             background-color: transparentize($primary, 0.9);
