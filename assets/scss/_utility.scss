@@ -25,3 +25,33 @@
       transform: rotate(359deg);
     }
 }
+.pulse {
+    position: relative;
+    &::after {
+        content: '';
+        @include var-bg-color('warning');
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 7.5px;
+        height: 7.5px;
+        border-radius: 50%;
+        animation: pulse 1s ease-in-out;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(.1,.1);
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1.2,1.2);
+        opacity: 0
+    }
+}

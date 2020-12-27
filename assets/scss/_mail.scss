@@ -225,6 +225,12 @@
     .mail-item~.active {
         background: grey;
     }
+    .mail-item.read{
+        background-color: $gray-300;
+        .mail-action p{
+            font-weight: 300;
+        }
+    }
     .mail-item:hover {
         box-shadow: 0 .5rem .6rem rgba(0, 0, 0, .15) !important;
         background-color: #4052b507;
