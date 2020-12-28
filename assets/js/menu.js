@@ -1,6 +1,6 @@
 $(function () {
   const mainWrapper = $(".main-wrapper");
-
+  const isRTL = $("html").hasClass("rtl");
   $(".navigation li").on('mouseenter', function () {
 
     if (mainWrapper.hasClass("mini")) {
@@ -19,7 +19,7 @@ $(function () {
       }
     } else {
       const currentPos = this.getBoundingClientRect().left;
-      $(this).find("ul").css("left", currentPos);
+      if(!isRTL) $(this).find("ul").css("left", currentPos);
     }
   }).on('mouseleave', function () {
     $(this).find("ul").removeClass("reversed").css("marginTop", "").css("height", "");

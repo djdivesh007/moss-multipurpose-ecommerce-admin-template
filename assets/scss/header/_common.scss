@@ -9,15 +9,18 @@
     }
     transition: margin 0.15s;
     header {
+        @include var-bg-color('primary');
         position: sticky;
         top:0;
         z-index: 12;
-        background-color: $primary;
+        /* background-color: $primary; */
         color: color-yiq($primary);
         height: $header-height;
         .navbar-nav {
             list-style: none;
             margin: 0;
+            padding-left: 0;
+            padding-right: 0;
             flex-direction: row;
             color: color-yiq($primary);
             li.nav-item {
@@ -71,7 +74,7 @@
                     &:active,
                     &:hover {
                         transition: background-color 0.2s;
-                        background-color: darken($primary, 5%);
+                        background-color: theme-color-level(primary, 5);
                     }
                 }
                 a.nav-link {

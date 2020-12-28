@@ -11,9 +11,9 @@
     border-bottom-left-radius: 15px;
     transition: 0.3s ease-in;
     .settings-btn{
-        padding: 10px;
-        background-color: $primary;
+        @include var-bg-color("primary");
         color: color-yiq($primary);
+        padding: 10px;
         position: absolute;
         top: 40%;
         left: -35px;
@@ -23,5 +23,19 @@
     }
     &.open{
         right: 0;
+    }
+}
+.rtl {
+    .settings-panel{
+        left: -280px;
+        right: auto;
+        &.open {
+            left: 0;
+        }
+        .settings-btn {
+            left: 0;
+            right: -35px;
+            border-radius: 0 50px 50px 0;
+        }
     }
 }

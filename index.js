@@ -11,7 +11,7 @@ async function generateJS() {
       colors[camelCase(key.substring(1))] = value;
     }
   }
-  const warningMessage = "/** Generated file: Please do not edit manually */\n\n";
+  const warningMessage = "/** File generated using gulp task: Please do not edit manually */\n\n";
   const variableName = "const themeColors = ";
   const json = JSON.stringify(colors, null, 2) + ";"
 
