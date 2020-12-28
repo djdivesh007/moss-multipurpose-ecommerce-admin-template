@@ -61,7 +61,10 @@ gulp.task('build-html', gulp.series(function () {
   return gulp.src('./src/pages/*.html')
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: '@file'
+      basepath: '@file',
+      context: {
+        active: ''
+      }
     }))
     .pipe(useref())
     .pipe(gulpif("*.css" && isProduction, cleanCSS({specialComments: true})))
