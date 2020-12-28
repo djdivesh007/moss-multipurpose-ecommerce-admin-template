@@ -3,7 +3,7 @@ $mini-sidebar-width: 60px;
 $header-height: 54px;
 $individual-menu-height: 40px;
 $individual-submenu-height: 30px;
-$sidemenu-bg: #fff;
+$sidemenu-bg: $white;
 
 @import 'menu/common';
 @import 'menu/mini';
@@ -14,6 +14,16 @@ $sidemenu-bg: #fff;
 @import 'header/mini';
 @import 'header/horizontal';
 
+// Notification Dropdown
+.notification-list {
+    width: 300px;
+    max-width: 100%;
+    height: 250px;
+    background-color: transparentize($primary, 0.8);
+    > .card {
+        cursor: pointer;
+    }
+}
 
 .overlay-mask.open {
     background-color: rgba(0, 0, 0, 0.4);
