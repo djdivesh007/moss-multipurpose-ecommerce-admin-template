@@ -64,11 +64,11 @@ gulp.task('build-html', gulp.series(function () {
       basepath: '@file'
     }))
     .pipe(useref())
-    .pipe(gulpif("*.css" && isProduction, cleanCSS({specialComments: true})))
+    /* .pipe(gulpif("*.css" && isProduction, cleanCSS({specialComments: true})))
     .pipe(gulpif(["assets/js/main.js","assets/js/demo/*.js"] && isProduction, babel({presets: ["@babel/preset-env"]})))
     .pipe(gulpif(["assets/js/main.js","assets/js/demo/*.js"] && isProduction, uglify()))
     .pipe(gulpif(/\.css|\.js$/, rev()))
-    .pipe(revReplace())
+    .pipe(revReplace()) */
     .pipe(gulp.dest(distPath));
 }));
 gulp.task('build', gulp.series('clean','build-css', 'generate-js-colors', 'copy-images', 'copy-fonts', 'build-html'));
