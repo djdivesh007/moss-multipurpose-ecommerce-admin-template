@@ -1,0 +1,43 @@
+@mixin var-bg-color($name) {
+    $use-custom-property: false;
+
+    @if not $use-custom-property {
+        $use-custom-property: map-has-key($theme-colors, $name);
+    }
+
+    @if $use-custom-property {
+        background-color: theme-color($name);
+        background-color: var(--#{$name});
+    }
+}
+
+@mixin var-color($name) {
+    $use-custom-property: false;
+
+    @if not $use-custom-property {
+        $use-custom-property: map-has-key($theme-colors, $name);
+    }
+
+    @if $use-custom-property {
+        color: theme-color($name);
+        color: var(--#{$name});
+    }
+}
+
+@mixin rtl-value($property, $ltr-value, $rtl-value) {
+    #{$property}: $ltr-value;
+  
+    [dir=rtl] & {
+      #{$property}: $rtl-value;
+    }
+}
+
+@mixin rtl-property($ltr-property, $rtl-property, $value) {
+    [dir=rtl] & {
+        #{$rtl-property}: $value;
+    }
+    [dir=ltr] & {
+        #{$ltr-property}: $value;
+    }
+}
+  

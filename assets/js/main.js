@@ -78,17 +78,4 @@ $(function() {
     $("#search-bar").find("input").on('blur',function(){
         $('#closeSearchBtn').trigger('click');
     });
-
-    $(window).on('resize', function () {
-        setTimeout(() => {
-            if(!xl) {
-                mainWrapper.removeClass().addClass("hidden-sidebar main-wrapper");
-            }
-        });
-    });
-    setTimeout(() => {
-        if(!xl) {
-            mainWrapper.removeClass().addClass("hidden-sidebar main-wrapper");
-        }
-    });
 });

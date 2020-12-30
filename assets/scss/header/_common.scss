@@ -1,16 +1,26 @@
+.main-wrapper.collapsed{
+    .right-area {
+        margin-left: 0 !important;
+    }
+}
 .right-area {
-    margin-left: 240px;
+    @include media-breakpoint-up(md) {
+        margin-left: 240px;
+    }
     transition: margin 0.15s;
     header {
+        @include var-bg-color('primary');
         position: sticky;
         top:0;
         z-index: 12;
-        background-color: $primary;
+        /* background-color: $primary; */
         color: color-yiq($primary);
         height: $header-height;
         .navbar-nav {
             list-style: none;
             margin: 0;
+            padding-left: 0;
+            padding-right: 0;
             flex-direction: row;
             color: color-yiq($primary);
             li.nav-item {
@@ -46,7 +56,7 @@
                         top: 0;
                     }
                 }
-                &.icon a,
+                &.icon > a,
                 &.icon button {
                     padding-left: 15px;
                     padding-right: 15px;
@@ -64,7 +74,7 @@
                     &:active,
                     &:hover {
                         transition: background-color 0.2s;
-                        background-color: darken($primary, 5%);
+                        background-color: theme-color-level(primary, 5);
                     }
                 }
                 a.nav-link {

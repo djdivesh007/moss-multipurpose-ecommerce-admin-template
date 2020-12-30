@@ -1,26 +1,28 @@
 <aside class="sidebar">
-    <nav class="navbar navbar-dark bg-primary">
+    <nav class="navbar">
         <a class="navbar-brand brand-title" href="#">
             <img src="assets/images/a-white.png" alt="" class="logo"> Moss
         </a>
     </nav>
     <nav class="navigation shadow-sm">
+        <div class="navigation-arrow">
+            <i class="material-icons">chevron_left</i>
+        </div>
         <ul>
-
             <li>
-                <a href="index.html" class="active">
+                <a href="index.html" class="@@if(active == 'eCommerce') {active}">
                     <span class="icon material-icons">shopping_basket</span>
                     <span class="text">eCommerce</span>
                 </a>
             </li>
             <li>
-                <a href="index-2.html">
+                <a href="index-2.html" class="@@if(active == 'health-care') {active}">
                     <span class="icon material-icons">local_convenience_store</span>
                     <span class="text">Health Care</span>
                 </a>
             </li>
             <li>
-                <a href="index-3.html">
+                <a href="index-3.html" class="@@if(active == 'crm') {active}">
                     <span class="icon material-icons">book_online</span>
                     <span class="text">CRM</span>
                 </a>
@@ -36,26 +38,26 @@
                 </a>
                 <ul class="collapse" id="collapseSubmenu1">
                     <li>
-                        <a href="mail-two.html" class="">
+                        <a href="mail-two.html" class="@@if(active == 'mailbox') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Mailbox</span>
-                            <span class="badge badge-danger">1</span>
+                            <span class="badge badge-transparent-danger">1</span>
                         </a>
                     </li>
                     <li>
-                        <a href="calendar.html" class="">
+                        <a href="calendar.html" class="@@if(active == 'calender') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Calender</span>
                         </a>
                     </li>
                     <li>
-                        <a href="kanban.html" class="">
+                        <a href="kanban.html" class="@@if(active == 'kanban') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Kanban</span>
                         </a>
                     </li>
                     <li>
-                        <a href="contacts.html" class="">
+                        <a href="contacts.html" class="@@if(active == 'contacts') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Contacts</span>
                         </a>
@@ -70,13 +72,13 @@
                 </a>
                 <ul class="collapse" id="authenticationPage">
                     <li>
-                        <a href="login.html" class="">
+                        <a href="login.html" class="@@if(active == 'login') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Login</span>
                         </a>
                     </li>
                     <li>
-                        <a href="register.html" class="">
+                        <a href="register.html" class="@@if(active == 'register') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Register</span>
                         </a>
@@ -88,7 +90,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="reset.html" class="">
+                        <a href="reset.html" class="@@if(active == 'forgot-password') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Forgot Password</span>
                         </a>
@@ -103,25 +105,25 @@
                 </a>
                 <ul class="collapse" id="errorPages">
                     <li>
-                        <a href="403.html" target="_blank" class="">
+                        <a href="403.html" target="_blank" class="@@if(active == '403-page') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">403 Page</span>
                         </a>
                     </li>
                     <li>
-                        <a href="404.html" target="_blank" class="">
+                        <a href="404.html" target="_blank" class="@@if(active == '404-page') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">404 Page</span>
                         </a>
                     </li>
                     <li>
-                        <a href="500.html" target="_blank" class="">
+                        <a href="500.html" target="_blank" class="@@if(active == '500-page') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">500 Page</span>
                         </a>
                     </li>
                     <li>
-                        <a href="503.html" target="_blank" class="">
+                        <a href="503.html" target="_blank" class="@@if(active == '503-page') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">503 Page</span>
                         </a>
@@ -141,32 +143,32 @@
                 </a>
                 <ul class="collapse" id="uiElements">
                     <li>
-                        <a href="accordians.html" class="">
+                        <a href="accordians.html" class="@@if(active == 'accordians') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Accordians</span>
                         </a>
                     </li>
                     <li>
-                        <a href="alerts.html" class="">
+                        <a href="alerts.html" class="@@if(active == 'alerts') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Alerts</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="basic.html" class="">
+                        <a href="badges.html" class="@@if(active == 'badges') {active}">
                             <span class="icon material-icons">remove</span>
-                            <span class="text">Basic Elements</span>
+                            <span class="text">Badges</span>
                         </a>
                     </li>
                     <li>
-                        <a href="buttons.html" class="">
+                        <a href="buttons.html" class="@@if(active == 'buttons') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Buttons</span>
                         </a>
                     </li>
                     <li>
-                        <a href="cards.html" class="">
+                        <a href="cards.html" class="@@if(active == 'cards') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Cards</span>
                         </a>
@@ -181,20 +183,20 @@
 
 
                     <li>
-                        <a href="icons.html" class="">
+                        <a href="icons.html" class="@@if(active == 'icons') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Icons</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="typography.html" class="">
+                        <a href="typography.html" class="@@if(active == 'typography') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Typography</span>
                         </a>
                     </li>
                     <li>
-                        <a href="flex-grid.html" class="">
+                        <a href="flex-grid.html" class="@@if(active == 'flex-grid') {active}">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Flexbox Grids</span>
                         </a>
@@ -248,6 +250,12 @@
                         <a href="tabs.html" class="">
                             <span class="icon material-icons">remove</span>
                             <span class="text">Tabs & Pills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="timeline.html" class="">
+                            <span class="icon material-icons">remove</span>
+                            <span class="text">Timeline</span>
                         </a>
                     </li>
                     <li>
@@ -320,12 +328,7 @@
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="timeline.html" class="">
-                    <span class="icon material-icons">timeline</span>
-                    <span class="text">Timeline</span>
-                </a>
-            </li>
+         
             <li>
                 <a href="#charts-menu" data-toggle="collapse">
                     <span class="caret material-icons">arrow_right</span>
@@ -376,5 +379,8 @@
                 </ul>
             </li>
         </ul>
+        <div class="navigation-arrow right">
+            <i class="material-icons">chevron_right</i>
+        </div>
     </nav>
 </aside>

@@ -1,7 +1,30 @@
 .main-wrapper.horizontal{
+    &.collapsed{
+        .sidebar{
+            margin-left: 0;
+            .navigation{
+                margin-top: -100%;
+                transition: margin-top 0.2s ease-in;
+            }
+        }
+        .right-area {
+            .main-content {
+                margin-top: 0;
+            }
+        }
+    }
     .sidebar {
         height: auto;
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: $full-sidebar-width;
+        }
         .navigation {
+            margin-top: $header-height;
+            transition: margin-top 0.2s ease-in;
+            margin-top: 0;
             position: fixed;
             padding: 0;
             top: $header-height;
@@ -22,7 +45,6 @@
                     display: inline-block;
                     a {
                         display: inline-block;
-                        padding: 5px;
                         padding-top: 8px;
                         border-right: 1px solid $gray-200;
                         box-sizing: border-box;
@@ -30,7 +52,7 @@
                         text-align: center;
                         line-height: 28px;
                         border-radius: 0;
-                        span{ margin: 0;}
+                        span{ margin: 0 !important;}
                         span.caret {
                             display: none !important;
                         }
@@ -108,13 +130,16 @@
     }
     .right-area{
         margin-left: 0;
+        .main-content {
+            margin-top: 60px;
+        }
     }
     @include media-breakpoint-down(md) {
         .sidebar {
             margin-left: 0;
             transition: none;
             .navigation {
-                margin-top: -100%;
+                margin-top: 0;
                 transition: margin-top 0.2s;
             }
         }
@@ -126,10 +151,43 @@
                 margin-top: 0;
             }
         }
-        &.sidemenu-open {
-            .sidebar {
-                .navigation {
-                    margin-top: 0;
+    }
+    @include media-breakpoint-up(md) {
+        .right-area {
+            header {
+                margin-left: $full-sidebar-width;
+            }
+        }
+    }
+    // scroll on desktop
+    @include media-breakpoint-up(md) {
+        .sidebar{
+            .navigation {
+                white-space: nowrap;
+                overflow: hidden;
+                .navigation-arrow {
+                    display: flex;
+                    cursor: pointer;
+                    position: absolute;
+                    height: 100%;
+                    width: 20px;
+                    justify-content: center;
+                    flex-direction: column;
+                    top: 0;
+                    font-size: 1.4em;
+                    &.right {
+                        right: 0;
+                    }
+                    &:hover{
+                        color: $primary;
+                        background-color: transparentize($primary, 0.9);
+                    }
+                }
+                & > ul {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    overflow-x: auto;
+                    white-space: nowrap;
                 }
             }
         }

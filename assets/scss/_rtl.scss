@@ -1,0 +1,97 @@
+html.rtl{
+    direction: rtl;
+    .right-area{
+        margin-left: 0;
+        margin-right: $full-sidebar-width;
+    }
+    .main-wrapper .sidebar .navigation > ul li a{
+        border-radius: #{$individual-menu-height / 2} 0 0 #{$individual-menu-height / 2};
+    }
+    .main-wrapper .sidebar .navigation > ul {
+        padding-right: 0;
+        ul {
+            padding-right: 12px;
+        }
+    }
+    .main-wrapper .sidebar .navigation > ul li a {
+        span {
+            margin-left: 0;
+            margin-right: 12px;
+            white-space: nowrap;
+            &.icon {
+                margin-left: 0;
+                margin-right: 20px;
+            }
+            &.caret {
+                margin-right: 3px;
+                margin-left: 0;
+                + .icon {
+                    margin-left: 0;
+                    margin-right: 0 !important;
+                }
+            }
+            &.badge {
+                margin-left: 10px;
+                margin-right: auto;
+            }
+        }
+    }
+    .main-wrapper.collapsed {
+        .sidebar {
+            margin-right: -$full-sidebar-width;
+            margin-left: 0;
+        }
+        .right-area {
+            margin-right: 0 !important;
+        }
+    }
+    .main-wrapper.mini .right-area{
+        margin-right: $mini-sidebar-width;
+        margin-left: 0;
+    }
+    .main-wrapper.mini .sidebar .navigation > ul > li:hover > a {
+        border-radius: #{$individual-menu-height / 2} 0 0 #{$individual-menu-height / 2};
+    }
+    .main-wrapper.mini .sidebar .navigation > ul > li:hover > a span.icon {
+        margin-right: 20px;
+    }
+    .main-wrapper.mini .sidebar .navigation > ul > li:hover ul {
+        margin-right: $mini-sidebar-width - 1;
+        padding-right: 0;
+    }
+    .main-wrapper.overlay-menu .right-area{
+        margin-right: 0;
+    }
+    @include media-breakpoint-up(md) {
+        .main-wrapper.overlay-menu .sidebar .navbar{
+            left: auto;
+            right: 0;
+        }
+        .main-wrapper.overlay-menu .right-area header{
+            margin-right: $full-sidebar-width !important;
+            margin-left: 0;
+        }
+    }
+    .main-wrapper.horizontal .right-area {
+        margin-right: 0;
+    }
+    .main-wrapper.horizontal .sidebar .navigation > ul > li a {
+        border-radius: 0;
+    }
+    .main-wrapper.horizontal .sidebar .navigation .navigation-arrow {
+        left: 0;
+    }
+    @include media-breakpoint-up(md) {
+        .main-wrapper.horizontal .right-area header {
+            margin-right: 240px;
+            margin-left: 0;
+        }
+    }
+    .main-wrapper.horizontal .sidebar .navbar{
+        left: auto;
+        right: 0;
+    }
+    .main-wrapper .sidebar .navigation > ul li ul {
+        padding-right: 0;
+    }
+}

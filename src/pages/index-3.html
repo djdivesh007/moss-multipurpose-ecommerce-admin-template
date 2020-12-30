@@ -2,299 +2,588 @@
 <html lang="en">
 
 <head>
-    @@include('../partials/head.html')
+  @@include('../partials/head.html')
 </head>
 
 <body>
-    <div class="overlay-mask"></div>
-    <div class="main-wrapper">
-        @@include('../partials/menu.html')
-        <div class="right-area">
-            @@include('../partials/header.html')
-            <div class="main-content container">
-                <div class="page-header">
-                    <span class="h2">CRM Dashboard</span>
-                    <small>Let's get started</small>
-                </div>
+  <div class="overlay-mask"></div>
+  <div class="main-wrapper">
+    @@include('../partials/menu.html', {
+        'active': 'crm'
+    })
+    <div class="right-area">
+      @@include('../partials/header.html')
+      <div class="main-content container">
+        <div class="page-header">
+          <span class="h2">CRM Dashboard</span>
+          <small>Let's get started</small>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card shadow">
+              <div class="card-body p-4">
                 <div class="row">
-                    <div class="col-6 col-sm-6 col-md-3">
-                        <div class="card shadow">
-                            <div class="card-body p-4">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Average Sales</h5><span
-                                            class="h1 font-weight-bold mb-0">50,897</span>
-                                    </div>
-                                    <div class="col-auto col">
-                                        <div class="text-dark">
-                                            <i class="material-icons f-38 text-primary">monetization_on</i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  <div class="col">
+                    <h5 class="text-uppercase text-muted mb-0 card-title">Average Sales</h5><span
+                      class="h1 font-weight-bold mb-0">50,897</span>
+                  </div>
+                  <div class="col-auto col">
+                    <div class="text-dark">
+                      <i class="material-icons f-38 text-primary">monetization_on</i>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-3">
-                        <div class="card shadow">
-                            <div class="card-body p-4">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Total Sales</h5><span
-                                            class="h1 font-weight-bold mb-0">124,907</span>
-                                    </div>
-                                    <div class="col-auto col">
-                                        <div class="text-dark">
-                                            <i class="material-icons f-38 text-primary">trending_up</i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card shadow">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="text-uppercase text-muted mb-0 card-title">Total Sales</h5><span
+                      class="h1 font-weight-bold mb-0">124,907</span>
+                  </div>
+                  <div class="col-auto col">
+                    <div class="text-dark">
+                      <i class="material-icons f-38 text-primary">trending_up</i>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-3">
-                        <div class="card shadow">
-                            <div class="card-body p-4">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Leads</h5><span
-                                            class="h1 font-weight-bold mb-0">346,077</span>
-                                    </div>
-                                    <div class="col-auto col">
-                                        <div class="text-dark">
-                                            <i class="material-icons f-38 text-primary">language</i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card shadow">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="text-uppercase text-muted mb-0 card-title">Leads</h5><span
+                      class="h1 font-weight-bold mb-0">346,077</span>
+                  </div>
+                  <div class="col-auto col">
+                    <div class="text-dark">
+                      <i class="material-icons f-38 text-primary">language</i>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-3">
-                        <div class="card shadow">
-                            <div class="card-body p-4">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Followups</h5><span
-                                            class="h1 font-weight-bold mb-0">555,077</span>
-                                    </div>
-                                    <div class="col-auto col">
-                                        <div class="text-dark">
-                                            <i class="material-icons f-38 text-primary">receipt</i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card shadow">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="text-uppercase text-muted mb-0 card-title">Followups</h5><span
+                      class="h1 font-weight-bold mb-0">555,077</span>
+                  </div>
+                  <div class="col-auto col">
+                    <div class="text-dark">
+                      <i class="material-icons f-38 text-primary">receipt</i>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-12">
-                        <div class="card shadow">
-                            <div class="card-header bg-white">
-                               Leads
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-borderless">
-                                        <thead class="thead-light rounded">
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Client Name</th>
-                                                <th>Comment</th>
-                                                <th>Last Call</th>
-                                                <th>Status</th>
-                                                <th>Attended By</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>22nd Dec 2020</td>
-                                                <td>Jim Corbett</td>
-                                                <td>Interested in buying product</td>
-                                                <td>6:30 PM</td>
-                                                <td>
-                                                    <span class="badge badge-primary p-2 font-weight-bold">New</span>
-                                                </td>
-                                                <td>Pete</td>
-                                                <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
-                                                    View
-                                                </button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2nd June 2020</td>
-                                                <td>Pete Bobby</td>
-                                                <td>No Reply</td>
-                                                <td>6:30 PM</td>
-                                                <td><span class="badge badge-warning p-2 font-weight-bold">Open</span>
-                                                </td>
-                                                <td>Pete</td>
-                                                <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
-                                                    View
-                                                </button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>3rd Aug 2020</td>
-                                                <td>Bob Patrik</td>
-                                                <td>Call Tomorrow</td>
-                                                <td>6:30 PM</td>
-                                                <td><span
-                                                        class="badge badge-danger p-2 font-weight-bold">Cancelled</span>
-                                                </td>
-                                                <td>Pete</td>
-                                                <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
-                                                    View
-                                                </button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>19th Dec 2020</td>
-                                                <td>John Doe</td>
-                                                <td>He will visit office</td>
-                                                <td>6:30 PM</td>
-                                                <td><span class="badge badge-success p-2 font-weight-bold">Sold</span>
-                                                </td>
-                                                <td>Pete</td>
-                                                <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
-                                                    View
-                                                </button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>21st Dec 2020</td>
-                                                <td>Gando Pado</td>
-                                                <td>Call today at 5:30 PM.</td>
-                                                <td>6:30 PM</td>
-                                                <td><span class="badge badge-info p-2 font-weight-bold">Pending</span>
-                                                </td>
-                                                <td>Pete</td>
-                                                <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
-                                                    View
-                                                </button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>22nd Nov 2020</td>
-                                                <td>Mandy Baily</td>
-                                                <td>Interested in Demo product</td>
-                                                <td>6:30 PM</td>
-                                                <td><span class="badge badge-warning p-2 font-weight-bold">Open</span>
-                                                </td>
-                                                <td>Pete</td>
-                                                <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
-                                                    View
-                                                </button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>14th Dec 2020</td>
-                                                <td>Jingo Tim</td>
-                                                <td>Deal Closed</td>
-                                                <td>6:30 PM</td>
-                                                <td><span class="badge badge-dark p-2 font-weight-bold">Closed</span>
-                                                </td>
-                                                <td>Pete</td>
-                                                <td><button type="button" class="btn btn-primary btn-rounded btn-sm">
-                                                    View
-                                                </button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>18th Dec 2020</td>
-                                                <td>Kondo Lee</td>
-                                                <td>Buying Today</td>
-                                                <td>6:30 PM</td>
-                                                <td><span class="badge badge-success p-2 font-weight-bold">Open</span>
-                                                </td>
-                                                <td>Pete</td>
-                                                <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
-                                                        View
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>26th Dec 2020</td>
-                                                <td>Lee Bret</td>
-                                                <td>Order to be delivered</td>
-                                                <td>6:30 PM</td>
-                                                <td><span
-                                                        class="badge badge-warning p-2 font-weight-bold">Pending</span>
-                                                </td>
-                                                <td>Pete</td>
-                                                <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
-                                                    View
-                                                </button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>31st Dec 2020</td>
-                                                <td>Tim Northy</td>
-                                                <td>Payment Pending</td>
-                                                <td>6:30 PM</td>
-                                                <td><span class="badge badge-danger p-2 font-weight-bold">Unpaid</span>
-                                                </td>
-                                                <td>Pete</td>
-                                                <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
-                                                    View
-                                                </button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-3">
-                        <div class="card shadow">
-                            <div class="card-header bg-light">
-                                Upcoming Events
-                            </div>
-                            <div class="card-body">
-                                <div class="timeline timeline-one-side" data-timeline-axis-style="dashed"
-                                    data-timeline-content="axis">
-                                    <div class="timeline-block">
-                                        <span class="timeline-step badge-primary">
-                                            <i class="material-icons f-12">today</i>
-                                        </span>
-                                        <div class="timeline-content">
-                                            <h5 class="mb-0 font-weight-bold">Meeting at NYOP City</h5>
-                                            <small class="text-muted ">10:30 AM</small>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-block"><span class="timeline-step badge-primary"><i
-                                                class="material-icons f-12">alarm</i></span>
-                                        <div class="timeline-content">
-                                            <h5 class="mb-0 font-weight-bold">Call Bob</h5>
-                                            <small class="text-muted ">14:30
-                                                AM</small>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-block">
-                                        <span class="timeline-step badge-primary"><i
-                                                class="material-icons f-12">thumb_up</i></span>
-                                        <div class="timeline-content">
-                                            <h5 class="mb-0 font-weight-bold">Deal Closing</h5>
-                                            <small class="text-muted">10:30
-                                                AM</small>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-block"><span class="timeline-step badge-primary"><i
-                                                class="material-icons f-12">bookmarks</i></span>
-                                        <div class="timeline-content">
-                                            <h5 class="mb-0 font-weight-bold">Book Appointment</h5>
-                                            <small class="text-muted">15:30
-                                                AM</small>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-block"><span class="timeline-step badge-primary"><i
-                                                class="material-icons f-12">grade</i></span>
-                                        <div class="timeline-content">
-                                            <h5 class="mb-0 font-weight-bold">Text Tim</h5>
-                                            <small class="text-muted">16:55
-                                                AM</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card shadow">
+              <div class="card-body">
+                <h3 class="card-title mb-4">Projects Statistics</h3>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab"
+                      aria-controls="pills-all" aria-selected="true">All Projects</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-personal-tab" data-toggle="pill" href="#pills-personal" role="tab"
+                      aria-controls="pills-personal" aria-selected="false">Personal</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-group-tab" data-toggle="pill" href="#pills-group" role="tab"
+                      aria-controls="pills-group" aria-selected="false">Group</a>
+                  </li>
+                </ul>
+                <div class="tab-content py-2" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                    <div class="d-flex pb-3">
+                      <a href="#" class="mr-3">
+                        <div class="avatar bg-primary">
+                          <span class="avatar-title  bg-primary rounded-circle">A</span>
                         </div>
 
+                      </a>
+                      <div class="w-75">
+                        <button class="btn btn-default text-left p-0">
+                          <small class="text-muted">22nd, Dec 2020</small>
+                          <h3>Angular 10 Template Development</h3>
+                        </button>
+                      </div>
+                      <div class="w-25 d-flex">
+                        <span class="badge badge-transparent-success m-auto">
+                          Completed
+                        </span>
+                      </div>
                     </div>
+
+                    <div class="d-flex pb-3">
+                      <a href="#" class="mr-3">
+                        <div class="avatar bg-primary">
+                          <span class="avatar-title  bg-warning rounded-circle">L</span>
+                        </div>
+                      </a>
+                      <div class="w-75">
+                          <button class="btn btn-default text-left p-0">
+                          <small class="text-muted">2nd, Nov 2020</small>
+                          <h3>Laravel 8 Bug Fix</h3>
+                     </button>
+                      </div>
+                      <div class="w-25 d-flex">
+                        <span class="badge badge-transparent-warning m-auto">
+                          Pending
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="d-flex pb-3">
+                      <a href="#" class="mr-3">
+                        <div class="avatar bg-primary">
+                          <span class="avatar-title  bg-info rounded-circle">V</span>
+                        </div>
+                      </a>
+                      <div class="w-75">
+                        <button class="btn btn-default text-left p-0">
+                          <small class="text-muted">1st, Jan 2021</small>
+                          <h3>Vue Deployment</h3>
+                        </button>
+                      </div>
+                      <div class="w-25 d-flex">
+                        <span class="badge badge-transparent-info m-auto">
+                          Running
+                        </span>
+                      </div>
+                    </div>
+
+
+                    <div class="d-flex pb-3">
+                      <a href="#" class="mr-3">
+                        <div class="avatar bg-primary">
+                          <span class="avatar-title rounded-circle">W</span>
+                        </div>
+                      </a>
+                      <div class="w-75">
+                        <button class="btn btn-default text-left p-0">
+                          <small class="text-muted">3rd, Jan 2021</small>
+                          <h3>Website Deployment</h3>
+                       </button>
+                      </div>
+                      <div class="w-25 d-flex">
+                        <span class="badge badge-transparent-primary m-auto">
+                          Received
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="d-flex pb-3">
+                      <a href="#" class="mr-3">
+                        <div class="avatar">
+                          <span class="avatar-title bg-danger rounded-circle">A</span>
+                        </div>
+                      </a>
+                      <div class="w-75">
+                          <button class="btn btn-default text-left p-0">
+                          <small class="text-muted">3rd, Feb 2021</small>
+                          <h3>App Deployment</h3>
+                       </button>
+                      </div>
+                      <div class="w-25 d-flex">
+                        <span class="badge badge-transparent-danger m-auto">
+                          Cancelled
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
+                    <div class="d-flex pb-3">
+                      <a href="#" class="mr-3">
+                        <div class="avatar bg-primary">
+                          <span class="avatar-title  bg-primary rounded-circle">A</span>
+                        </div>
+
+                      </a>
+                      <div class="w-75">
+                        <button class="btn btn-default text-left p-0">
+                          <small class="text-muted">22nd, Dec 2020</small>
+                          <h3>Angular 10 Template Development</h3>
+                       </button>
+                      </div>
+                      <div class="w-25 d-flex">
+                        <span class="badge badge-transparent-success m-auto">
+                          Completed
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="d-flex pb-3">
+                      <a href="#" class="mr-3">
+                        <div class="avatar bg-primary">
+                          <span class="avatar-title  bg-warning rounded-circle">L</span>
+                        </div>
+                      </a>
+                      <div class="w-75">
+                          <button class="btn btn-default text-left p-0">
+                          <small class="text-muted">2nd, Nov 2020</small>
+                          <h3>Laravel 8 Bug Fix</h3>
+                      </button>
+                      </div>
+                      <div class="w-25 d-flex">
+                        <span class="badge badge-transparent-warning m-auto">
+                          Pending
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="d-flex pb-3">
+                      <a href="#" class="mr-3">
+                        <div class="avatar bg-primary">
+                          <span class="avatar-title  bg-info rounded-circle">V</span>
+                        </div>
+                      </a>
+                      <div class="w-75">
+                          <button class="btn btn-default text-left p-0">
+                          <small class="text-muted">1st, Jan 2021</small>
+                          <h3>Vue Deployment</h3>
+                      </button>
+                      </div>
+                      <div class="w-25 d-flex">
+                        <span class="badge badge-transparent-info m-auto">
+                          Running
+                        </span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane fade" id="pills-group" role="tabpanel" aria-labelledby="pills-group-tab">
+                    <div class="d-flex pb-3">
+                      <a href="#" class="mr-3">
+                        <div class="avatar bg-primary">
+                          <span class="avatar-title rounded-circle">W</span>
+                        </div>
+                      </a>
+                      <div class="w-75">
+                          <button class="btn btn-default text-left p-0">
+                          <small class="text-muted">3rd, Jan 2021</small>
+                          <h3>Website Deployment</h3>
+                       </button>
+                      </div>
+                      <div class="w-25 d-flex">
+                        <span class="badge badge-transparent-primary m-auto">
+                          Received
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="d-flex pb-3">
+                      <a href="#" class="mr-3">
+                        <div class="avatar">
+                          <span class="avatar-title bg-danger rounded-circle">A</span>
+                        </div>
+                      </a>
+                      <div class="w-75">
+                        <button class="btn btn-default text-left p-0">
+                          <small class="text-muted">3rd, Feb 2021</small>
+                          <h3>App Deployment</h3>
+                      </button>
+                      </div>
+                      <div class="w-25 d-flex">
+                        <span class="badge badge-transparent-danger m-auto">
+                          Cancelled
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card shadow">
+              <div class="card-body">
+                <h3 class="card-title mb-4">
+                  Comments
+                </h3>
+                <ul class="list-unstyled">
+                  <li class="media">
+                    <img src="assets/images/avatar/team-1.jpg" class="avatar avatar-sm mr-3" alt="Tim Bob">
+                    <div class="media-body">
+                      <h4 class="mt-0 mb-0">Tim Bob</h4>
+
+                      <p class="card-text text-muted mb-0"> I have found a bug in Button</p>
+                      <div>
+                        <small class="float-right">20 mins ago</small>
+                        <a class="mr-2">
+                          Reply
+                        </a>
+
+                      </div>
+                      <div class="media mt-4">
+                        <a class="" href="#">
+                          <img src="assets/images/avatar/team-2.jpg" class="avatar avatar-sm mr-3" alt="Patrik Vin">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="mt-0 mb-0">Patrik Vin</h4>
+
+                          <p class="card-text text-muted mb-0"> I will fix it Asap. Please give me sometime.</p>
+                          <div>
+                            <small class="float-right">10 mins ago</small>
+                            <a class="mr-2">
+                              Reply
+                            </a>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="media mt-4">
+                    <img src="assets/images/avatar/team-3.jpg" class="avatar avatar-sm mr-3" alt="Jonny Pepp">
+                    <div class="media-body">
+                      <h4 class="mt-0 mb-0">Jonny Pepp</h4>
+
+                      <p class="card-text text-muted mb-0">I tried to fix it yesterday but have some power failures.</p>
+                      <div>
+                        <a class="mr-2">
+                          Reply
+                        </a>
+                        <small class="float-right">5 mins ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="media mt-4">
+                    <img src="assets/images/avatar/team-4.jpg" class="avatar avatar-sm mr-3" alt="Jonny Pepp">
+                    <div class="media-body">
+                      <h4 class="mt-0 mb-0">Marley Key</h4>
+                  
+                      <p class="card-text text-muted mb-0">I will check all the components. Please let me know if development is done.</p>
+                      <div>
+                        <a class="mr-2">
+                          Reply
+                        </a>
+                        <small class="float-right">5 mins ago</small>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12">
+            <div class="card shadow">
+              <div class="card-header bg-white">
+                Leads
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="thead-light rounded">
+                      <tr>
+                        <th>Date</th>
+                        <th>Client Name</th>
+                        <th>Comment</th>
+                        <th>Last Call</th>
+                        <th>Status</th>
+                        <th>Attended By</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>22nd Dec 2020</td>
+                        <td>Jim Corbett</td>
+                        <td>Interested in buying product</td>
+                        <td>6:30 PM</td>
+                        <td>
+                          <span class="badge badge-primary p-2 font-weight-bold">New</span>
+                        </td>
+                        <td>Pete</td>
+                        <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
+                            View
+                          </button></td>
+                      </tr>
+                      <tr>
+                        <td>2nd June 2020</td>
+                        <td>Pete Bobby</td>
+                        <td>No Reply</td>
+                        <td>6:30 PM</td>
+                        <td><span class="badge badge-warning p-2 font-weight-bold">Open</span>
+                        </td>
+                        <td>Pete</td>
+                        <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
+                            View
+                          </button></td>
+                      </tr>
+                      <tr>
+                        <td>3rd Aug 2020</td>
+                        <td>Bob Patrik</td>
+                        <td>Call Tomorrow</td>
+                        <td>6:30 PM</td>
+                        <td><span class="badge badge-danger p-2 font-weight-bold">Cancelled</span>
+                        </td>
+                        <td>Pete</td>
+                        <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
+                            View
+                          </button></td>
+                      </tr>
+                      <tr>
+                        <td>19th Dec 2020</td>
+                        <td>John Doe</td>
+                        <td>He will visit office</td>
+                        <td>6:30 PM</td>
+                        <td><span class="badge badge-success p-2 font-weight-bold">Sold</span>
+                        </td>
+                        <td>Pete</td>
+                        <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
+                            View
+                          </button></td>
+                      </tr>
+                      <tr>
+                        <td>21st Dec 2020</td>
+                        <td>Gando Pado</td>
+                        <td>Call today at 5:30 PM.</td>
+                        <td>6:30 PM</td>
+                        <td><span class="badge badge-info p-2 font-weight-bold">Pending</span>
+                        </td>
+                        <td>Pete</td>
+                        <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
+                            View
+                          </button></td>
+                      </tr>
+                      <tr>
+                        <td>22nd Nov 2020</td>
+                        <td>Mandy Baily</td>
+                        <td>Interested in Demo product</td>
+                        <td>6:30 PM</td>
+                        <td><span class="badge badge-warning p-2 font-weight-bold">Open</span>
+                        </td>
+                        <td>Pete</td>
+                        <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
+                            View
+                          </button></td>
+                      </tr>
+                      <tr>
+                        <td>14th Dec 2020</td>
+                        <td>Jingo Tim</td>
+                        <td>Deal Closed</td>
+                        <td>6:30 PM</td>
+                        <td><span class="badge badge-dark p-2 font-weight-bold">Closed</span>
+                        </td>
+                        <td>Pete</td>
+                        <td><button type="button" class="btn btn-primary btn-rounded btn-sm">
+                            View
+                          </button></td>
+                      </tr>
+                      <tr>
+                        <td>18th Dec 2020</td>
+                        <td>Kondo Lee</td>
+                        <td>Buying Today</td>
+                        <td>6:30 PM</td>
+                        <td><span class="badge badge-success p-2 font-weight-bold">Open</span>
+                        </td>
+                        <td>Pete</td>
+                        <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
+                            View
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>26th Dec 2020</td>
+                        <td>Lee Bret</td>
+                        <td>Order to be delivered</td>
+                        <td>6:30 PM</td>
+                        <td><span class="badge badge-warning p-2 font-weight-bold">Pending</span>
+                        </td>
+                        <td>Pete</td>
+                        <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
+                            View
+                          </button></td>
+                      </tr>
+                      <tr>
+                        <td>31st Dec 2020</td>
+                        <td>Tim Northy</td>
+                        <td>Payment Pending</td>
+                        <td>6:30 PM</td>
+                        <td><span class="badge badge-danger p-2 font-weight-bold">Unpaid</span>
+                        </td>
+                        <td>Pete</td>
+                        <td> <button type="button" class="btn btn-primary btn-rounded btn-sm">
+                            View
+                          </button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-3">
+            <div class="card shadow">
+              <div class="card-header bg-light">
+                Upcoming Events
+              </div>
+              <div class="card-body pt-4 ml-3">
+                <div class="timeline timeline-one-side" data-timeline-axis-style="dashed" data-timeline-content="axis">
+                  <div class="timeline-block">
+                    <span class="timeline-step badge-primary">
+                      <i class="material-icons f-12">today</i>
+                    </span>
+                    <div class="timeline-content">
+                      <h5 class="mb-0 font-weight-bold">Meeting at NYOP City</h5>
+                      <small class="text-muted ">10:30 AM</small>
+                    </div>
+                  </div>
+                  <div class="timeline-block"><span class="timeline-step badge-primary"><i
+                        class="material-icons f-12">alarm</i></span>
+                    <div class="timeline-content">
+                      <h5 class="mb-0 font-weight-bold">Call Bob</h5>
+                      <small class="text-muted ">14:30
+                        AM</small>
+                    </div>
+                  </div>
+                  <div class="timeline-block">
+                    <span class="timeline-step badge-primary"><i class="material-icons f-12">thumb_up</i></span>
+                    <div class="timeline-content">
+                      <h5 class="mb-0 font-weight-bold">Deal Closing</h5>
+                      <small class="text-muted">10:30
+                        AM</small>
+                    </div>
+                  </div>
+                  <div class="timeline-block"><span class="timeline-step badge-primary"><i
+                        class="material-icons f-12">bookmarks</i></span>
+                    <div class="timeline-content">
+                      <h5 class="mb-0 font-weight-bold">Book Appointment</h5>
+                      <small class="text-muted">15:30
+                        AM</small>
+                    </div>
+                  </div>
+                  <div class="timeline-block"><span class="timeline-step badge-primary"><i
+                        class="material-icons f-12">grade</i></span>
+                    <div class="timeline-content">
+                      <h5 class="mb-0 font-weight-bold">Text Tim</h5>
+                      <small class="text-muted">16:55
+                        AM</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
+      </div>
     </div>
-    @@include('../partials/js.html')
+  </div>
+  @@include('../partials/js.html')
 </body>
 
 </html>

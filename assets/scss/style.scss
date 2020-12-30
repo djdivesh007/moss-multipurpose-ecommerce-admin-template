@@ -9,6 +9,7 @@
 @import '../../node_modules/toastr/build/toastr';
 @import '../../node_modules/apexcharts/dist/apexcharts';
 @import '../../node_modules/fullcalendar/main';
+@import 'mixin';
 @import 'avatar';
 @import 'icons';
 @import 'table';
@@ -20,10 +21,14 @@
 @import 'card';
 @import 'loading-bar';
 @import 'pseudo';
-@import 'mail';
-@import 'demo/calendar';
-@import 'kanban';
 @import 'utility';
+@import 'rtl';
 @import 'main';
 
-@import 'demo/settings'; // Can remove
+
+@import 'apps-widgets/mail';
+@import 'apps-widgets/calendar';
+@import 'apps-widgets/kanban';
+@import 'apps-widgets/_timeline';
+
+@import 'demo/settings';

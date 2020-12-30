@@ -1,0 +1,71 @@
+
+
+/* Timeline Stylings */
+
+.timeline {
+    position: relative;
+}
+
+.timeline-one-side:before {
+    left: 1rem;
+}
+
+.timeline-one-side .timeline-step {
+    left: 1rem;
+}
+
+.timeline-block {
+    position: relative;
+    margin: 2em 0;
+}
+
+.timeline-block:first-child {
+    margin-top: 0;
+}
+
+@media (min-width: 992px) {
+    .timeline-step {
+        left: 50%;
+    }
+    .timeline:before {
+        left: 50%;
+        margin-left: -2px;
+    }
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    height: 100%;
+    border-right: 2px solid #e9ecef;
+}
+
+.timeline-step {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.timeline-content {
+    position: relative;
+    margin-left: 60px;
+    padding-top: .5rem;
+    position: relative;
+    top: -6px;
+}
+
+[data-timeline-axis-style="dotted"]:before {
+    border-right-style: dashed !important;
+}

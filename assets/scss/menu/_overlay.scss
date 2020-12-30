@@ -1,0 +1,29 @@
+.main-wrapper.overlay-menu {
+    &.collapsed{
+        .sidebar {
+            margin-left: -$full-sidebar-width;
+        }
+    }
+    .sidebar {
+        margin-left: 0;
+        @include media-breakpoint-up(md) {
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: $full-sidebar-width;
+            }
+            .navigation {
+                margin-top: $header-height;
+            }
+        }
+    }
+    .right-area {
+        margin-left: 0px;
+        @include media-breakpoint-up(md) {
+            header {
+                margin-left: $full-sidebar-width;
+            }
+        }
+    }
+}

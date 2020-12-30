@@ -1,4 +1,5 @@
 $(function () {
+    const r = document.querySelector(':root');
     $(".settings-btn").on("click", function () {
         $(".settings-panel").toggleClass("open");
     });
@@ -6,19 +7,19 @@ $(function () {
     $("input[type=radio][name=menu-switch]").on('change', function (){
         switch(this.value) {
             case 'default':
-                $(".main-wrapper").removeClass("mini hidden-sidebar open-sidemenu horizontal");
+                $(".main-wrapper").removeClass("mini overlay-menu horizontal collapsed");
                 break;
             case 'horizontal': 
-                $(".main-wrapper").removeClass("mini hidden-sidebar open-sidemenu without-icon").addClass("horizontal");
+                $(".main-wrapper").removeClass("mini overlay-menu without-icon collapsed").addClass("horizontal");
                 break;
             case 'horizontal-no-icon': 
-                $(".main-wrapper").removeClass("mini hidden-sidebar open-sidemenu").addClass("horizontal without-icon");
+                $(".main-wrapper").removeClass("mini overlay-menu without-icon collapsed").addClass("horizontal without-icon");
                 break;
             case 'mini':
-                $(".main-wrapper").removeClass("horizontal hidden-sidebar open-sidemenu").addClass("mini");
+                $(".main-wrapper").removeClass("horizontal overlay-menu without-icon collapsed").addClass("mini");
                 break;
-            case 'hidden':
-                $(".main-wrapper").removeClass("mini horizontal open-sidemenu").addClass("hidden-sidebar");
+            case 'overlay':
+                $(".main-wrapper").removeClass("mini horizontal").addClass("overlay-menu collapsed");
                 break;
         }
     });
@@ -31,5 +32,8 @@ $(function () {
                 $(".right-area .main-content").removeClass("container").addClass("container-fluid");
                 break;
         }
+    });
+    $("input[type=color]").on('change', function () {
+        r.style.setProperty('--primary', this.value);
     });
 });

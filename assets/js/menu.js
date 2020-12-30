@@ -1,6 +1,6 @@
 $(function () {
   const mainWrapper = $(".main-wrapper");
-
+  const isRTL = $("html").hasClass("rtl");
   $(".navigation li").on('mouseenter', function () {
 
     if (mainWrapper.hasClass("mini")) {
@@ -17,24 +17,39 @@ $(function () {
           $(this).find("ul").css("height", isSpaceAvailable.availableBottomPosition + "px");
         }
       }
+    } else {
+      const currentPos = this.getBoundingClientRect().left;
+      if(!isRTL) $(this).find("ul").css("left", currentPos);
     }
   }).on('mouseleave', function () {
     $(this).find("ul").removeClass("reversed").css("marginTop", "").css("height", "");
     $(this).find("ul").css("top", "");
+    $(this).find("ul").css("left", "");
+  });
+
+  $(".navigation-arrow").on("click", function() {
+    const ul = $(".navigation").find("ul").first().get(0);
+    if ($(this).hasClass("right")) {
+      newPos = ul.scrollLeft + 150;
+    } else {
+      newPos = ul.scrollLeft - 150;
+    }
+    ul.scrollTo({left: newPos, behavior: 'smooth' });
   });
 
   $("#hamburger-btn").on("click", function () {
-    if (mainWrapper.hasClass("horizontal") || (mainWrapper.hasClass("hidden-sidebar") && !mainWrapper.hasClass("mini-off"))) {
-      mainWrapper.toggleClass("sidemenu-open");
-      $(".overlay-mask").toggleClass("open");
-    }
-    else {
-      mainWrapper.toggleClass("mini");
-      mainWrapper.toggleClass("hidden-sidebar mini-off");
+    mainWrapper.toggleClass("collapsed");
+    if (mainWrapper.hasClass("overlay-menu")) {
+      if(mainWrapper.hasClass("collapsed")) {
+        $(".overlay-mask").removeClass("open");
+      } else {
+        $(".overlay-mask").addClass("open");
+      }
     }
   });
-  $(".overlay-mask").on("click", function () {
-    $("#hamburger-btn").trigger("click");
+  $(".overlay-mask").on('click', function () {
+    $("#hamburger-btn").trigger('click');
+    $(".overlay-mask").removeClass("open");
   });
 });
 
@@ -57,10 +72,4 @@ function checkSpaceAvaibility(currentPos, that) {
   }
   console.log(a);
   return a;
-}
-
-function onMenuHover() {
-  if (!mainWrapper.hasClass("mini")) {
-    return;
-  }
 }
