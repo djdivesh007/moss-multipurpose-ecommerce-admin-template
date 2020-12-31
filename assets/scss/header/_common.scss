@@ -54,6 +54,20 @@
                     }
                     &.open .big-search {
                         top: 0;
+                        .backdrop {
+                            display: block;
+                        }
+                    }
+                    
+                    .backdrop {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100vw;
+                        height: 100vh;
+                        background-color: transparentize($secondary, 0.8);
+                        z-index: -1;
                     }
                 }
                 &.icon > a,
