@@ -66,16 +66,22 @@ $(function() {
 
     $('#searchBtn, #closeSearchBtn').on('click',function(e){
         $('#search-bar').toggleClass('open');
-    });
-
-    $("#search-bar").find("input").on('keyup', function (e){
-        // https://github.com/jquery/jquery/issues/4755#issuecomment-664501730
-        if (e.which === 27)  {
-            $(this).trigger('blur');
+        if( $('#search-bar').hasClass('open')) {
+            setTimeout(() => {
+                $("#search-bar").find("input").trigger('focus');
+            })
         }
     });
 
-    $("#search-bar").find("input").on('blur',function(){
-        $('#closeSearchBtn').trigger('click');
+    $("#search-bar").find("input").on('keyup', function (e){
+        e.stopPropagation();
+        // https://github.com/jquery/jquery/issues/4755#issuecomment-664501730
+        if (e.which === 27)  { // ESC key
+            $('#search-bar').removeClass('open');
+        }
+    });
+
+    $("#search-bar").find(".backdrop").on('click',function(){
+        $('#search-bar').removeClass('open');
     });
 });
