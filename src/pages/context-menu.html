@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper">
+        @@include('../partials/menu.html', {
+            'active': 'context-menu'
+        })
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Context Menu</span>
+                    <small>More actions...</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Simple Context menu
+                            </div>
+                            <div class="card-body">
+                                <div class="dropdown-menu context-menu static" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Advanced
+                            </div>
+                            <div class="card-body">
+                                <div class="has-context-menu m-2 p-5 border text-center">
+                                    <p class="user-select-none">
+                                        Right click (Long Press for mobile) in this area to see context menu
+                                    </p>
+                                </div>
+                                <div class="dropdown-menu context-menu" aria-labelledby="dropdownMenuLink">
+                                    <h6 class="dropdown-header">Menu header</h6>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <h6 class="dropdown-header">Another Section</h6>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                With Icons
+                            </div>
+                            <div class="card-body">
+                                <div class="has-context-menu m-2 p-5 border text-center">
+                                    <p class="user-select-none">
+                                        Right click (Long Press for mobile) in this area to see context menu
+                                    </p>
+                                </div>
+                                <div class="dropdown-menu context-menu has-icons" aria-labelledby="dropdownMenuLink">
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Long Menu
+                            </div>
+                            <div class="card-body">
+                                <div class="has-context-menu m-2 p-5 border text-center">
+                                    <p class="user-select-none">
+                                        Right click (Long Press for mobile) in this area to see context menu
+                                    </p>
+                                </div>
+                                <div class="dropdown-menu context-menu has-icons" aria-labelledby="dropdownMenuLink">
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                    <h6 class="dropdown-header">Clipboard</h6>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_cut</i>Cut</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_copy</i>Copy</a>
+                                    <a class="dropdown-item" href="#"><i class="material-icons">content_paste</i>Paste</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+    <!-- build:js assets/js/context-menu.js -->
+    <script src="../../assets/js/context-menu.js"></script>
+    <!-- endbuild -->
+
+    <script>
+        $(function () {
+            $('.has-context-menu').on('contextmenu', function (e) {
+                e.preventDefault();
+                contextMenu = $(this).siblings('.dropdown-menu').first().get(0);
+                showContextMenu(e.clientX, e.clientY, contextMenu);
+            });
+            $('.has-context-menu').on('long-press', function (e) {
+                contextMenu = $(this).siblings('.dropdown-menu').first().get(0);
+                showContextMenu(e.detail.clientX, e.detail.clientY, contextMenu);
+            });
+        })
+    </script>
+</body>
+
+</html>

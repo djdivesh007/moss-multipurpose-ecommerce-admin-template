@@ -1,0 +1,25 @@
+.context-menu {
+    position: static;
+    // For long menu
+    max-height: 100vh;
+    overflow: auto;
+    white-space: nowrap;
+    // 
+    &.show {
+        position: fixed !important;
+    }
+    &.static {
+        display: block;
+    }
+    &.has-icons .dropdown-item {
+        .fa,
+        .fas,
+        .far,
+        .fal,
+        .fad,
+        .fab,
+        .material-icons {
+            margin-right: 10px;
+        }
+    }
+}
