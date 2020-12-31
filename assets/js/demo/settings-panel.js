@@ -36,4 +36,14 @@ $(function () {
     $("input[type=color]").on('change', function () {
         r.style.setProperty('--primary', this.value);
     });
+    $("input[type=radio][name=direction-switch]").on('change', function () {
+        switch(this.value) {
+            case 'ltr':
+                $('html').removeClass('rtl');
+                break;
+            case 'rtl':
+                $('html').addClass('rtl');
+                break;
+        }
+    });
 });
