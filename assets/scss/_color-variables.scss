@@ -20,15 +20,24 @@ Primary Color Variants
 *
 */
 
-$pastel-pink: #d81b60;
-$pastel-red: #f05454;
-$pastel-orange: #f9813a;
-$pastel-yellow: #f2d974;
-$pastel-ivory: #f8d49d;
-$pastel-green: #5aa469;
-$pastel-lightgreen: #16a596;
-$pastel-brown: #92817a;
-$pastel-coffee: #825959;
+$special-pink: #d81b60;
+$special-paradise-pink: #E5446D;
+$special-ruby: #8B2635;
+$special-eggplant: #4C2B36;
+$special-sienna: #3D0814;
+$special-jet: #353238;
+$special-dark: #2A2B2A;
+$special-cedar-chest: #BE5A38;
+$special-gunmetal: #143642;
+$special-blue: #0B3954;
+$special-red: #f05454;
+$special-orange: #f9813a;
+$special-yellow: #f2d974;
+$special-ivory: #f8d49d;
+$special-green: #4caf50;
+$special-lightgreen: #16a596;
+$special-brown: #92817a;
+$special-coffee: #8D6346;
 
 /*
 *
@@ -40,7 +49,7 @@ Brand Color Definitions
 
 $brand-primary: $indigo;
 $brand-success: $green;
-$brand-info: #19b5fe;
+$brand-info: #0b0c0c;
 $brand-warning: $yellow;
 $brand-danger: $red;
 
@@ -52,4 +61,4 @@ Current Primary Color
 *
 */
 
-$primary: $pastel-orange;
+$primary: $indigo;

@@ -16,11 +16,13 @@ body {
     background-color: #f8f8f8;
     color: $gray-700;
 }
+
 .right-area {
     .main-content {
         padding: 25px;
     }
 }
+
 h1,
 .h1 {
     font-size: 2rem;
@@ -82,41 +84,42 @@ h6,
 .f-36 {
     font-size: 36px;
 }
+
 .f-38 {
     font-size: 38px !important;
 }
 
 // Addon Colors 
 .bg-pastel-red {
-    background: $pastel-red;
+    background: $special-red;
 }
 
 .bg-pastel-orange {
-    background: $pastel-orange;
+    background: $special-orange;
 }
 
 .bg-pastel-yellow {
-    background: $pastel-yellow;
+    background: $special-yellow;
 }
 
 .bg-pastel-ivory {
-    background: $pastel-ivory;
+    background: $special-ivory;
 }
 
 .bg-pastel-green {
-    background: $pastel-green;
+    background: $special-green;
 }
 
 .bg-pastel-lightgreen {
-    background: $pastel-lightgreen;
+    background: $special-lightgreen;
 }
 
 .bg-pastel-brown {
-    background: $pastel-brown;
+    background: $special-brown;
 }
 
 .bg-pastel-coffee {
-    background: $pastel-coffee;
+    background: $special-coffee;
 }
 
 .main-wrapper {
@@ -126,7 +129,7 @@ h6,
         border: 1px solid $gray-200;
         padding: 0;
     }
-    .main-content{
+    .main-content {
         .card {
             margin-top: 25px;
         }
@@ -140,7 +143,6 @@ h6,
 .error-title {
     font-size: 12em;
 }
-
 
 code {
     color: darken($primary, 10%);
@@ -160,8 +162,6 @@ code {
     background: rgb(63, 81, 181);
     background: linear-gradient(266deg, rgba(63, 81, 181, 1) 0%, rgba(63, 152, 181, 1) 100%);
 }
-
-
 
 
 /*  Accordians  */
