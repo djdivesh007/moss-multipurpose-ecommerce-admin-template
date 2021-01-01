@@ -78,6 +78,9 @@
                         margin-left: -1px;
                         li {
                             border: 0;
+                            a {
+                                padding: 4px 0 4px 0;
+                            }
                         }
                     }
                     &:hover {

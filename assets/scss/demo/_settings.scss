@@ -10,6 +10,10 @@
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     transition: 0.3s ease-in;
+    .settings-options{
+        overflow: auto;
+        max-height: 100%;
+    }
     .settings-btn{
         @include var-bg-color("primary");
         color: color-yiq($primary);
@@ -24,11 +28,19 @@
     &.open{
         right: 0;
     }
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
 }
 .rtl {
     .settings-panel{
         left: -280px;
         right: auto;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        
         &.open {
             left: 0;
         }
