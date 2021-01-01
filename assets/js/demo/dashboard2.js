@@ -28,11 +28,11 @@ $(function() {
     // The Default colorPalette for this dashboard
     var colorPalette = ['#3f51b5', '#008FFB', '#FEB019', '#FF4560', '#775DD0']
 
- 
+
 
     var spark1 = {
         series: [{
-              name: 'Heart Beat',
+            name: 'Heart Beat',
             data: data.slice()
         }],
         chart: {
@@ -50,15 +50,15 @@ $(function() {
                     speed: 1000
                 }
             },
-             toolbar: {
-            show: false
-          },
-          zoom: {
-            enabled: false
-          }
+            toolbar: {
+                show: false
+            },
+            zoom: {
+                enabled: false
+            }
         },
- dataLabels: {
-          enabled: false
+        dataLabels: {
+            enabled: false
         },
         stroke: {
             curve: 'smooth'
@@ -66,46 +66,27 @@ $(function() {
         fill: {
             opacity: 1,
         },
-        // series: [{
-        //     name: 'Live',
-        //     data: randomizeArray(sparklineData)
-        // }],
-        // labels: [...Array(24).keys()].map(n => `2018-09-0${n+1}`),
+
         yaxis: {
             //min: 0,
             max: 100,
         },
-         legend: {
-          show: false
+        legend: {
+            show: false
         },
-         markers: {
-          size: 0
+        markers: {
+            size: 0
         },
 
         xaxis: {
             type: 'datetime',
-             range: XAXISRANGE,
+            range: XAXISRANGE,
         },
         colors: [themeColors.primary],
-        // title: {
-        //     text: 'Pulse Monitor',
-        //     offsetX: 20,
-        //     style: {
-        //         fontSize: '24px',
-        //         cssClass: 'apexcharts-yaxis-title'
-        //     }
-        // },
-        // subtitle: {
-        //     text: 'Critical',
-        //     offsetX: 20,
-        //     style: {
-        //         fontSize: '14px',
-        //         cssClass: 'apexcharts-yaxis-title'
-        //     }
-        // }
+
     }
 
-   sparkChart = new ApexCharts(document.querySelector("#spark1"), spark1);
+    sparkChart = new ApexCharts(document.querySelector("#spark1"), spark1);
     sparkChart.render();
 
 

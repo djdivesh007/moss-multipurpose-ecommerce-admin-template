@@ -11,7 +11,16 @@ $teal: #009688;
 $cyan: #00bcd4;
 $black: #011627;
 $white:#fff;
-// Addon Pastel Colors
+
+/*
+*
+*
+Primary Color Variants 
+*
+*
+*/
+
+$pastel-pink: #d81b60;
 $pastel-red: #f05454;
 $pastel-orange: #f9813a;
 $pastel-yellow: #f2d974;
@@ -20,10 +29,27 @@ $pastel-green: #5aa469;
 $pastel-lightgreen: #16a596;
 $pastel-brown: #92817a;
 $pastel-coffee: #825959;
+
+/*
+*
+*
+Brand Color Definitions 
+*
+*
+*/
+
 $brand-primary: $indigo;
 $brand-success: $green;
 $brand-info: #19b5fe;
 $brand-warning: $yellow;
 $brand-danger: $red;
 
-$primary: $indigo;
+/*
+*
+*
+Current Primary Color 
+*
+*
+*/
+
+$primary: $pastel-orange;
