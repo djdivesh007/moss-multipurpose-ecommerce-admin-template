@@ -10,7 +10,7 @@
 
 <body>
     <div class="overlay-mask"></div>
-    <div class="main-wrapper">
+    <div class="main-wrapper user-select-none">
         @@include('../partials/menu.html', {
             'active': 'context-menu'
         })
@@ -39,10 +39,38 @@
                     <div class="col-12 col-sm-6">
                         <div class="card shadow">
                             <div class="card-header bg-white">
+                                Simple Context menu
+                            </div>
+                            <div class="card-body">
+                                <div class="dropdown-menu context-menu static" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Simple Context menu
+                            </div>
+                            <div class="card-body">
+                                <div class="dropdown-menu context-menu static" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
                                 Advanced
                             </div>
                             <div class="card-body">
-                                <div class="has-context-menu m-2 p-5 border text-center">
+                                <div class="has-context-menu m-2 p-5 border text-center" data-long-press-delay='300'>
                                     <p class="user-select-none">
                                         Right click (Long Press for mobile) in this area to see context menu
                                     </p>
