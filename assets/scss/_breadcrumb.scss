@@ -1,0 +1,15 @@
+
+.breadcrumb {
+    margin-bottom: 0px;
+    a {
+        color: $gray-600;
+        text-decoration: none;
+        transition: color 0.3s;
+        &:hover {
+            color: $gray-700;
+        }
+    }
+    .active {
+        color: $gray-500;
+    }
+}

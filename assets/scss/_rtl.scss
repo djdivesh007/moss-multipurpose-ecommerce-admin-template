@@ -94,4 +94,7 @@ html.rtl{
     .main-wrapper .sidebar .navigation > ul li ul {
         padding-right: 0;
     }
+    #closeSearchBtn {
+        transform: rotate(180deg);
+    }
 }

@@ -1,13 +1,13 @@
 {
     "name": "admin",
     "version": "1.0.0",
-    "description": "Admin Panel",
+    "description": "Moss - Multipurpose Admin Panel",
     "main": "index.html",
     "scripts": {
         "exportScssColors": "node index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Kaushil Rakhasiya",
+    "author": "Civilta Themes",
     "license": "UNLICENCED",
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^23.1.0",
@@ -24,6 +24,7 @@
         "fullcalendar": "^5.4.0",
         "jquery": "^3.5.1",
         "jquery-mapael": "^2.2.0",
+        "long-press-event": "^2.4.2",
         "nanobar": "^0.4.2",
         "nprogress": "^0.2.0",
         "pickerjs": "^1.2.1",

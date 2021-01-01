@@ -23,10 +23,7 @@
                                 Google Maps
                             </div>
                             <div class="card-body">
-                                <div style="margin:0px;padding:0px;overflow:hidden">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160991881!2d72.74109908908066!3d19.082197838926515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9409a609d75%3A0xd0a71c45e7557bfa!2sBasilica%20Of%20Our%20Lady%20of%20The%20Mount!5e0!3m2!1sen!2sin!4v1607597877463!5m2!1sen!2sin"
-                                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                                </div>
+                                <div id="map" style="height:450px;width:100%"></div>
                             </div>
                         </div>
                     </div>
@@ -35,12 +32,21 @@
         </div>
     </div>
     @@include('../partials/js.html')
-    <style>
-        iframe {
-            width: 100%;
-            height: 400px;
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    <script>
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -34.397,
+                    lng: 150.644
+                },
+                zoom: 8
+            });
         }
-    </style>
+    </script>
+
 </body>
 
 </html>

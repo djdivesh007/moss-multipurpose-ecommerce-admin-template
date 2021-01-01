@@ -141,26 +141,6 @@ h6,
     font-size: 12em;
 }
 
-.breadcrumb {
-    background-color: transparent;
-    font-size: 14px;
-    padding-right: 1px;
-    a {
-        color: $gray-600;
-        text-decoration: none;
-        transition: color 0.3s;
-        .icon {
-            font-size: 18px;
-            line-height: 24px;
-        }
-        &:hover {
-            color: $gray-800;
-        }
-    }
-    .active {
-        color: $gray-800;
-    }
-}
 
 code {
     color: darken($primary, 10%);
