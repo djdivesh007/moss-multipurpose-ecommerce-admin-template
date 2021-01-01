@@ -10,7 +10,7 @@
 
 <body>
     <div class="overlay-mask"></div>
-    <div class="main-wrapper">
+    <div class="main-wrapper user-select-none">
         @@include('../partials/menu.html', {
             'active': 'context-menu'
         })
@@ -42,7 +42,7 @@
                                 Advanced
                             </div>
                             <div class="card-body">
-                                <div class="has-context-menu m-2 p-5 border text-center">
+                                <div class="has-context-menu m-2 p-5 border text-center" data-long-press-delay='300'>
                                     <p class="user-select-none">
                                         Right click (Long Press for mobile) in this area to see context menu
                                     </p>

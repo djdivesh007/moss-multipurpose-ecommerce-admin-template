@@ -1,7 +1,7 @@
 openMenu = null;
 function showContextMenu(x, y, contextMenu) {
     const newTempElement = document.createElement("div");
-    newTempElement.style.position = 'fixed';
+    newTempElement.style.position = 'absolute';
     newTempElement.style.top = y+'px';
     newTempElement.style.left = x+'px';
     document.body.appendChild(newTempElement);

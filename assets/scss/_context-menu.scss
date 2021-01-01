@@ -1,4 +1,5 @@
 .context-menu {
+    user-select: none !important;
     position: static;
     // For long menu
     max-height: 100vh;
