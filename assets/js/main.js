@@ -84,4 +84,12 @@ $(function() {
     $("#search-bar").find(".backdrop").on('click',function(){
         $('#search-bar').removeClass('open');
     });
+
+    $('.modal').on('shown.bs.modal', function() {
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"]').popover()
+    });
+
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover()
 });
