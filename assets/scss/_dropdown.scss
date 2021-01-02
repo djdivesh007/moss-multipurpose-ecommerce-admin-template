@@ -2,6 +2,11 @@
     @extend .dropdown-item:active;
 }
 
+.dropdown-menu{
+    @extend .shadow;
+    border: 0px !important;
+}
+
  .dropdown-menu:before {
      position: absolute;
      top: -.56em;
