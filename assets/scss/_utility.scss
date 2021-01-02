@@ -13,18 +13,20 @@
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
 }
 
-.spin{
+.spin {
     animation: spin-animation 1s infinite linear;
     display: inline-block;
 }
+
 @keyframes spin-animation {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(359deg);
+        transform: rotate(359deg);
     }
 }
+
 .pulse {
     position: relative;
     &::after {
@@ -43,15 +45,40 @@
 
 @keyframes pulse {
     0% {
-        -webkit-transform: scale(.1,.1);
+        -webkit-transform: scale(.1, .1);
         opacity: 0
     }
     50% {
         opacity: 1
     }
-
     100% {
-        -webkit-transform: scale(1.2,1.2);
+        -webkit-transform: scale(1.2, 1.2);
         opacity: 0
+    }
+}
+
+@-webkit-keyframes dropanimate {
+    from {
+        -webkit-transform: translate3d(0, 6px, 0);
+        transform: translate3d(0, 6px, 0);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes dropanimate {
+    from {
+        -webkit-transform: translate3d(0, 6px, 0);
+        transform: translate3d(0, 6px, 0);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1
     }
 }
