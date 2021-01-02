@@ -39,10 +39,17 @@
                     position: relative;
                     border-top: 1px solid $gray-200;
                     text-align: center;
+                    flex: 1;
+                    color: $gray-700;
+                    // font-size: 14px;
+                    text-decoration: none;
+                    transition: all, 0.3s;
+                    display: block;
                     @include media-breakpoint-down(lg) {
                         border-top: 0;
                     }
                 }
+                &.active,
                 &:hover {
                     color: $primary;
                     font-weight: 700;
@@ -51,40 +58,14 @@
         }
     }
 }
-/* 
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li svg {
-    margin-right: 0.625rem;
-    width: 1rem;
-    height: 1rem;
-    line-height: 1.5;
-}
- */
- /* 
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li a {
-    flex: 1;
-    color: #394044;
-    // font-size: 14px;
-    text-decoration: none;
-    transition: all, 0.3s;
-    display: block;
-}
 
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li.active a {
-    color: $primary;
-    font-weight: 600;
-}
-
-@media (max-width: 575px) {
-    .inbox-app .inbox-toolbars-wrapper,
-    .inbox-app .inbox-desc-wrapper {
-        // display: none;
-    }
+@include media-breakpoint-down (md) {
     .inbox-app .inbox-list-wrapper {
         width: 100%;
         margin: 0;
     }
 }
-
+/* 
 @media (min-width: 600px) and (max-width: 1024px) {
     .inbox-app .inbox-toolbars-wrapper {
         // display: none;
