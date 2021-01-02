@@ -7,11 +7,15 @@
         margin-right: 1rem;
         border-radius: 4px;
         min-width: 75px;
+        @include media-breakpoint-down(lg) {
+            margin-right: 0;
+        }
     }
     .toolbar-body 
     {
         position: sticky;
         top: $header-height + 10;
+
         .toolbar-title {
             color: $gray-700;
             padding: 0 1rem .5rem 1rem;
@@ -25,6 +29,7 @@
             flex-direction: column;
             @include media-breakpoint-down(lg) {
                 flex-direction: row;
+                overflow: auto;
             }
             li {
                 a {
@@ -46,7 +51,6 @@
         }
     }
 }
-
 /* 
 .inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li svg {
     margin-right: 0.625rem;
@@ -55,6 +59,7 @@
     line-height: 1.5;
 }
  */
+ /* 
 .inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li a {
     flex: 1;
     color: #394044;
@@ -64,79 +69,9 @@
     display: block;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li a {
-        transition: none;
-    }
-}
-
 .inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li.active a {
     color: $primary;
     font-weight: 600;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .toolbar-menu li.active svg {
-    color: $primary;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-header {
-    padding: 1rem;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-header .contact-left {
-    display: flex;
-    align-items: center;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-header .contact-left .title {
-    margin: 0 1rem 0 0;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-header .dropdown {
-    float: right;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-list {
-    padding: 0 1rem;
-    list-style-type: none;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-list .contact-list-item {
-    padding: .625rem 0;
-    display: block;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-list .contact-list-item:last-child {
-    border-bottom: 0;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-list .contact-list-item a {
-    text-decoration: none;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-list .contact-list-item a .user {
-    width: 100%;
-    padding: 5px 10px 0 15px;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-list .contact-list-item a .user .user-name {
-    margin: 0;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 1;
-    color: #394044;
-}
-
-.inbox-app .inbox-toolbars-wrapper .toolbar-body .contact-list .contact-list-item a .user .user-designation {
-    font-size: 12px;
-    color: #727686;
-    overflow: hidden;
-    max-width: 100%;
-    white-space: nowrap;
-    margin-bottom: 0;
 }
 
 @media (max-width: 575px) {
@@ -157,11 +92,7 @@
     .inbox-app .inbox-desc-wrapper {
         width: 60%;
     }
-}
-
-.mail-wrapper {
-    //margin-top:15px;
-}
+} */
 
 .mail-list-items {
     margin-top: 15px;
