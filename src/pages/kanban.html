@@ -19,7 +19,7 @@
                 <div class="row kb-board-app">
                     <div class="container-fluid kb-container">
                         <div class="row flex-row flex-sm-nowrap py-2">
-                            <div class="col col-md-auto kb-board-list">
+                            <div class="col col-md-4 kb-board-list">
                                 <div class="kb-list-body card shadow">
                                     <div class="kb-list-title">
                                         <h4 class="text-truncate p-2" contenteditable="true">To Do</h4>
@@ -29,18 +29,17 @@
                                         </button>
                                     </div>
                                     <div class="items">
-                                        <div class="card draggable shadow " id="item-1" draggable="true"
+                                        <div class="card draggable shadow" id="item-1" draggable="true"
                                             ondragstart="drag(event)">
-                                            <div class="card-body p-2 theme-success">
-                                                <span class="badge badge-pill badge-transparent-primary">On priority</span>
-                                                <div class="pb-2 pt-1 kb-item-content">This is a description of a item
-                                                    on the board.</div>
+                                            <div class="card-body p-3 theme-success">
+                                                <span class="badge badge-pill badge-transparent-primary">backlog</span>
+                                                <div class="pb-2 pt-1 kb-item-content">Please fix the sidebar by tomorrow if possible</div>
                                                 <div class="row mt-3">
                                                     <div class="col">
                                                         <div class="actions">
-                                                            <button class="btn btn-outline-default btn-xs btn-square"><i
+                                                            <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
                                                                     class="material-icons">reply</i></button>
-                                                            <button class="btn btn-outline-default btn-xs btn-square"><i
+                                                            <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
                                                                     class="material-icons">delete</i></button>
                                                         </div>
                                                     </div>
@@ -67,19 +66,61 @@
                                             ondragleave="clearDrop(event)"></div>
                                         <div class="card draggable shadow" id="item-2" draggable="true"
                                             ondragstart="drag(event)">
-                                            <div class="card-body p-2 theme-danger">
-                                                <span class="badge badge-pill badge-transparent-primary">Hold</span>
-                                                <div class="pb-2 pt-1 kb-item-content">One liner description</div>
+                                            <div class="card-body p-3 theme-danger">
+                                                <span class="badge badge-pill badge-transparent-primary">urgent</span>
+                                                <div class="pb-2 pt-1 kb-item-content">Production issue has arised. Need urgent meeting</div>
                                                 <div class="actions">
-                                                    <button class="btn btn-outline-default btn-xs btn-square"><i
+                                                    <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
                                                             class="material-icons">reply</i></button>
-                                                    <button class="btn btn-outline-default btn-xs btn-square"><i
+                                                    <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
                                                             class="material-icons">delete</i></button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)"
                                             ondragleave="clearDrop(event)"></div>
+                                            <div class="card draggable shadow " id="item-7" draggable="true" ondragstart="drag(event)">
+                                                <div class="card-body p-3 theme-success">
+                                                    <span class="badge badge-pill badge-transparent-primary">backlog</span>
+                                                    <div class="pb-2 pt-1 kb-item-content">This is a description of a item
+                                                        on the board.</div>
+                                                    <div class="row mt-3">
+                                                        <div class="col">
+                                                            <div class="actions">
+                                                                <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
+                                                                        class="material-icons">reply</i></button>
+                                                                <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
+                                                                        class="material-icons">delete</i></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col text-right">
+                                                            <div class="avatar-group">
+                                                                <div class="avatar avatar-xs bg-primary">
+                                                                    <img src="assets/images/avatar/team-1.jpg" class="avatar-img rounded-circle" alt="">
+                                                                </div>
+                                                                <div class="avatar avatar-xs bg-primary">
+                                                                    <img src="assets/images/avatar/team-2.jpg" class="avatar-img rounded-circle" alt="">
+                                                                </div>
+                                                                <div class="avatar avatar-xs avatar bg-primary">
+                                                                    <img src="assets/images/avatar/team-3.jpg" class="avatar-img rounded-circle" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"></div>
+                                            <div class="card draggable shadow" id="item-8" draggable="true" ondragstart="drag(event)">
+                                                <div class="card-body p-3 theme-danger">
+                                                    <span class="badge badge-pill badge-transparent-primary">backlog</span>
+                                                    <div class="pb-2 pt-1 kb-item-content">One liner description</div>
+                                                    <div class="actions">
+                                                        <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i class="material-icons">reply</i></button>
+                                                        <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i class="material-icons">delete</i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"></div>
                                     </div>
                                     <div class="text-center">
                                         <button class="btn btn-outline-light btn-block btn-animated btn-sm mt-3">
@@ -89,10 +130,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col col-md-auto kb-board-list">
+                            <div class="col col-md-4 kb-board-list">
                                 <div class="kb-list-body card shadow">
                                     <div class="kb-list-title">
-                                        <h4 class="text-truncate p-2" contenteditable="true">To Do</h4>
+                                        <h4 class="text-truncate p-2" contenteditable="true">Work in progress</h4>
                                         <span class="flex-fill"></span>
                                         <button class="btn btn-default btn-sm">
                                             <button class="btn btn-light btn-circle btn-sm btn-ripple btn-icon">
@@ -101,19 +142,18 @@
                                         </button>
                                     </div>
                                     <div class="items">
-                                        <div class="card draggable shadow " id="item-1" draggable="true"
+                                        <div class="card draggable shadow " id="item-3" draggable="true"
                                             ondragstart="drag(event)">
-                                            <div class="card-body p-2 theme-success">
-                                                <span class="badge badge-pill badge-transparent-primary">On priority</span>
-                                                <div class="pb-2 pt-1 kb-item-content">This is a description of a item
-                                                    on the board.</div>
+                                            <div class="card-body p-3 theme-success">
+                                                <span class="badge badge-pill badge-transparent-primary">hotfix</span>
+                                                <div class="pb-2 pt-1 kb-item-content">Users are not able to signin, register or login with social providers</div>
                                                 <div class="row mt-3">
                                                     <div class="col">
                                                         <div class="actions">
-                                                            <button class="btn btn-outline-default btn-xs btn-square">
+                                                            <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple">
                                                                 <i class="material-icons">reply</i>
                                                             </button>
-                                                            <button class="btn btn-outline-default btn-xs btn-square">
+                                                            <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple">
                                                                 <i class="material-icons">delete</i>
                                                             </button>
                                                         </div>
@@ -139,15 +179,15 @@
                                         </div>
                                         <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)"
                                             ondragleave="clearDrop(event)"></div>
-                                        <div class="card draggable shadow" id="item-2" draggable="true"
+                                        <div class="card draggable shadow" id="item-4" draggable="true"
                                             ondragstart="drag(event)">
-                                            <div class="card-body p-2 theme-danger">
+                                            <div class="card-body p-3 theme-danger">
                                                 <span class="badge badge-pill badge-transparent-primary">Hold</span>
-                                                <div class="pb-2 pt-1 kb-item-content">One liner description</div>
+                                                <div class="pb-2 pt-1 kb-item-content">Please upload latest build to server.</div>
                                                 <div class="actions">
-                                                    <button class="btn btn-outline-default btn-xs btn-square"><i
+                                                    <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
                                                             class="material-icons">reply</i></button>
-                                                    <button class="btn btn-outline-default btn-xs btn-square"><i
+                                                    <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
                                                             class="material-icons">delete</i></button>
                                                 </div>
                                             </div>
@@ -163,28 +203,27 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col col-md-auto kb-board-list">
+                            <div class="col col-md-4 kb-board-list">
                                 <div class="kb-list-body card shadow">
                                     <div class="kb-list-title">
-                                        <h4 class="text-truncate p-2" contenteditable="true">To Do</h4>
+                                        <h4 class="text-truncate p-2" contenteditable="true">Testing</h4>
                                         <span class="flex-fill"></span>
                                         <button class="btn btn-light btn-circle btn-sm btn-ripple btn-icon">
                                             <span class="material-icons">more_vert</span>
                                         </button>
                                     </div>
                                     <div class="items">
-                                        <div class="card draggable shadow " id="item-1" draggable="true"
+                                        <div class="card draggable shadow " id="item-5" draggable="true"
                                             ondragstart="drag(event)">
-                                            <div class="card-body p-2 theme-success">
+                                            <div class="card-body p-3 theme-success">
                                                 <span class="badge badge-pill badge-transparent-primary">On priority</span>
-                                                <div class="pb-2 pt-1 kb-item-content">This is a description of a item
-                                                    on the board.</div>
+                                                <div class="pb-2 pt-1 kb-item-content">Button press not working</div>
                                                 <div class="row mt-3">
                                                     <div class="col">
                                                         <div class="actions">
-                                                            <button class="btn btn-outline-default btn-xs btn-square"><i
+                                                            <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
                                                                     class="material-icons">reply</i></button>
-                                                            <button class="btn btn-outline-default btn-xs btn-square"><i
+                                                            <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
                                                                     class="material-icons">delete</i></button>
                                                         </div>
                                                     </div>
@@ -209,15 +248,15 @@
                                         </div>
                                         <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)"
                                             ondragleave="clearDrop(event)"></div>
-                                        <div class="card draggable shadow" id="item-2" draggable="true"
+                                        <div class="card draggable shadow" id="item-6" draggable="true"
                                             ondragstart="drag(event)">
-                                            <div class="card-body p-2 theme-danger">
+                                            <div class="card-body p-3 theme-danger">
                                                 <span class="badge badge-pill badge-transparent-primary">Hold</span>
                                                 <div class="pb-2 pt-1 kb-item-content">One liner description</div>
                                                 <div class="actions">
-                                                    <button class="btn btn-outline-default btn-xs btn-square"><i
+                                                    <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
                                                             class="material-icons">reply</i></button>
-                                                    <button class="btn btn-outline-default btn-xs btn-square"><i
+                                                    <button class="btn btn-transparent-primary btn-sm btn-circle btn-ripple"><i
                                                             class="material-icons">delete</i></button>
                                                 </div>
                                             </div>
@@ -233,65 +272,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col col-md-auto kb-board-list">
+                            <div class="col col-md-4 kb-board-list">
                                 <div class="kb-list-body card shadow">
                                     <div class="kb-list-title">
-                                        <h4 class="text-truncate p-2" contenteditable="true">To Do</h4>
+                                        <h4 class="text-truncate p-2" contenteditable="true">Completed</h4>
                                         <span class="flex-fill"></span>
                                         <button class="btn btn-light btn-circle btn-sm btn-ripple btn-icon">
                                             <span class="material-icons">more_vert</span>
                                         </button>
                                     </div>
                                     <div class="items">
-                                        <div class="card draggable shadow " id="item-1" draggable="true"
-                                            ondragstart="drag(event)">
-                                            <div class="card-body p-2 theme-success">
-                                                <span class="badge badge-pill badge-transparent-primary">On priority</span>
-                                                <div class="pb-2 pt-1 kb-item-content">This is a description of a item
-                                                    on the board.</div>
-                                                <div class="row mt-3">
-                                                    <div class="col">
-                                                        <div class="actions">
-                                                            <button class="btn btn-light btn-xs btn-circle btn-ripple"><i
-                                                                    class="material-icons">reply</i></button>
-                                                            <button class="btn btn-light btn-xs btn-circle btn-ripple"><i
-                                                                    class="material-icons">delete</i></button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col text-right">
-                                                        <div class="avatar-group">
-                                                            <div class="avatar avatar-xs bg-primary">
-                                                                <img src="assets/images/avatar/team-1.jpg"
-                                                                    class="avatar-img rounded-circle" alt="">
-                                                            </div>
-                                                            <div class="avatar avatar-xs bg-primary">
-                                                                <img src="assets/images/avatar/team-2.jpg"
-                                                                    class="avatar-img rounded-circle" alt="">
-                                                            </div>
-                                                            <div class="avatar avatar-xs avatar bg-primary">
-                                                                <img src="assets/images/avatar/team-3.jpg"
-                                                                    class="avatar-img rounded-circle" alt="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)"
-                                            ondragleave="clearDrop(event)"></div>
-                                        <div class="card draggable shadow" id="item-2" draggable="true"
-                                            ondragstart="drag(event)">
-                                            <div class="card-body p-2 theme-danger">
-                                                <span class="badge badge-pill badge-transparent-primary">Hold</span>
-                                                <div class="pb-2 pt-1 kb-item-content">One liner description</div>
-                                                <div class="actions">
-                                                    <button class="btn btn-outline-default btn-xs btn-square"><i
-                                                            class="material-icons">reply</i></button>
-                                                    <button class="btn btn-outline-default btn-xs btn-square"><i
-                                                            class="material-icons">delete</i></button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       
                                         <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)"
                                             ondragleave="clearDrop(event)"></div>
                                     </div>

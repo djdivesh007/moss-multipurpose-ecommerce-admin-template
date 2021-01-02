@@ -1,3 +1,26 @@
 .dropdown-item:hover {
     @extend .dropdown-item:active;
 }
+
+ .dropdown-menu:before {
+     position: absolute;
+     top: -.56em;
+     right: 1.5em;
+     border-left: solid 1px #ccc;
+     border-top: solid 1px #ccc;
+     width: 1em;
+     height: 1em;
+     transform: rotate(45deg);
+     background: inherit;
+     content: '';
+ }
+
+ .dropdown-menu:first-child:before {
+     transform: rotate(60deg) skewX(30deg) scaleY(.866);
+ }
+
+ .dropdown-menu:nth-child(3):before {
+     border-right: solid 1px #ccc;
+     border-left: none;
+     transform: rotate(-60deg) skewY(30deg) scaleX(.866);
+ }

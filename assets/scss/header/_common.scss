@@ -32,30 +32,8 @@
                 }
                 >.dropdown-menu {
                     height: auto;
-                    -webkit-animation: .6s cubic-bezier(.25, .8, .25, 1) 0s normal forwards 1 dropanimate;
-                    animation: .6s cubic-bezier(.25, .8, .25, 1) 0s normal forwards 1 dropanimate;
-                    border-radius: $border-radius;
                 }
-                .dropdown-menu:before {
-                    position: absolute;
-                    top: -.56em;
-                    right: 1em;
-                    border-left: solid 1px #ccc;
-                    border-top: solid 1px #ccc;
-                    width: 1em;
-                    height: 1em;
-                    transform: rotate(45deg);
-                    background: inherit;
-                    content: '';
-                }
-                .dropdown-menu:first-child:before {
-                    transform: rotate(60deg) skewX(30deg) scaleY(.866);
-                }
-                .dropdown-menu:nth-child(3):before {
-                    border-right: solid 1px #ccc;
-                    border-left: none;
-                    transform: rotate(-60deg) skewY(30deg) scaleX(.866);
-                }
+               
                 &.search-bar {
                     .big-search {
                         position: fixed;
