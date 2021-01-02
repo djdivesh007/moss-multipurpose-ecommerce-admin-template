@@ -23,102 +23,36 @@ body {
     }
 }
 
-h1,
-.h1 {
-    font-size: 2rem;
-}
-
-h2,
-.h2 {
-    font-size: 1.5rem;
-}
-
-h3,
-.h3 {
-    font-size: 1.17rem;
-}
-
-h4,
-.h4 {
-    font-size: 1.12rem;
-}
-
-h5,
-.h5 {
-    font-size: 0.83rem;
-}
-
-h6,
-.h6 {
-    font-size: 0.75rem;
-}
-
-.f-12 {
-    font-size: 12px;
-}
-
-.f-14 {
-    font-size: 14px;
-}
-
-.f-16 {
-    font-size: 16px;
-}
-
-.f-18 {
-    font-size: 18px;
-}
-
-.f-20 {
-    font-size: 20px;
-}
-
-.f-32 {
-    font-size: 32px;
-}
-
-.f-34 {
-    font-size: 34px;
-}
-
-.f-36 {
-    font-size: 36px;
-}
-
-.f-38 {
-    font-size: 38px !important;
-}
-
 // Addon Colors 
-.bg-pastel-red {
+.bg-special-red {
     background: $special-red;
 }
 
-.bg-pastel-orange {
+.bg-special-orange {
     background: $special-orange;
 }
 
-.bg-pastel-yellow {
+.bg-special-yellow {
     background: $special-yellow;
 }
 
-.bg-pastel-ivory {
+.bg-special-ivory {
     background: $special-ivory;
 }
 
-.bg-pastel-green {
+.bg-special-green {
     background: $special-green;
 }
 
-.bg-pastel-lightgreen {
+.bg-special-lightgreen {
     background: $special-lightgreen;
 }
 
-.bg-pastel-brown {
+.bg-special-brown {
     background: $special-brown;
 }
 
-.bg-pastel-coffee {
+.bg-special-coffee {
     background: $special-coffee;
 }
 
@@ -157,56 +91,6 @@ code {
         margin-right: 10px;
     }
 }
-
-.primary-gradient {
-    background: rgb(63, 81, 181);
-    background: linear-gradient(266deg, rgba(63, 81, 181, 1) 0%, rgba(63, 152, 181, 1) 100%);
-}
-
-
-/*  Accordians  */
-
-.accordion .card {
-    border-radius: 0px;
-}
-
-.accordion .card-header.active[aria-expanded=false]:after {
-    content: "\f078";
-}
-
-.accordion .card-header[aria-expanded=true]:after {
-    transform: translateY(-50%) rotate(180deg);
-}
-
-.accordion .card-header:after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f078";
-    font-weight: bold;
-    position: absolute;
-    top: 2rem;
-    right: 1.5rem;
-    transition: all .15s cubic-bezier(.68, -.55, .265, 1.55);
-    transform: translateY(-50%);
-    color: $white;
-}
-
-.accordion .card-header .btn {
-    border: none;
-}
-
-
-/* Cards */
-
-.card {
-    border: none;
-}
-
-.card:hover {
-    // box-shadow: 0 .2rem .6rem rgba(0, 0, 0, .15)!important;
-    // box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
-}
-
 
 /* Tabs */
 

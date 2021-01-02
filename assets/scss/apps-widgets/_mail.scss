@@ -109,12 +109,12 @@
         display: none;
     }
     .mail-body-preview {
-        max-width: 450px;
+         max-width: 650px;
         p {
             color: $gray-600;
-            white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            
         }
     }
     span.mail-time {

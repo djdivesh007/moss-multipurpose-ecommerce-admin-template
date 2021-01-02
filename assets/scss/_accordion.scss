@@ -1,0 +1,29 @@
+
+
+.accordion .card {
+    border-radius: 0px;
+}
+
+.accordion .card-header.active[aria-expanded=false]:after {
+    content: "\f078";
+}
+
+.accordion .card-header[aria-expanded=true]:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion .card-header:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
+    font-weight: bold;
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+    transition: all .15s cubic-bezier(.68, -.55, .265, 1.55);
+    transform: translateY(-50%);
+    color: $white;
+}
+
+.accordion .card-header .btn {
+    border: none;
+}
