@@ -137,7 +137,7 @@
     }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     .main-wrapper {
         .sidebar {
             margin-left: -$full-sidebar-width;
