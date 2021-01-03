@@ -62,7 +62,7 @@ $(function (){
 
     let i = 0;
 
-    $('#tryMe').click(function () {
+    $(document).on('click','#tryMe', function () {
         $('#tryMe').prop('disabled', true);
         delayToasts();
     });

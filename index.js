@@ -4,7 +4,7 @@ const argv = process.argv.slice(2);
 const fs = require('fs');
 
 async function generateJS() {
-    const vars = await sassVarsToJSON('./assets/scss/_color-variables.scss');
+    const vars = await sassVarsToJSON('./src/assets/scss/_color-variables.scss');
     
     if (!vars) {
         console.log('SCSS variables not generated');
@@ -18,7 +18,7 @@ async function generateJS() {
     const variableName = 'const themeColors = ';
     const json = JSON.stringify(colors, null, 4) + ';';
 
-    const destinationPath = (argv[0]) ? argv[0] : './assets/js/theme-colors.js';
+    const destinationPath = (argv[0]) ? argv[0] : './src/assets/js/theme-colors.js';
 
     fs.writeFile(destinationPath, `${warningMessage} ${variableName} ${json}`, function (err) {
         if (err) throw err;

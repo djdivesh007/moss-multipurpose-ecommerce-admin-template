@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'fonts';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../node_modules/toastr/build/toastr';
+@import 'mixin';
+@import 'utility';
+@import 'avatar';
+@import 'accordion';
+@import 'spinner';
+@import 'breadcrumb';
+@import 'dropdown';
+@import 'context-menu';
+@import 'icons';
+@import 'table';
+@import 'switch';
+@import 'toast';
+@import 'sidebar-header';
+@import 'modal';
+@import 'button';
+@import 'badge';
+@import 'card';
+@import 'loading-bar';
+@import 'pseudo';
+@import 'rtl';
+@import 'main';
+@import 'typography';
+@import 'apps-widgets/mail';
+@import 'apps-widgets/calendar';
+@import 'apps-widgets/kanban';
+@import 'apps-widgets/_timeline';
+@import 'demo/settings';
+
+/* 
+Include via CDN
+@import '../../../node_modules/summernote/dist/summernote-bs4';
+@import '../../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4';
+@import '../../../node_modules/dropify/dist/css/dropify';
+@import '../../../node_modules/pickerjs/dist/picker';
+@import '../../../node_modules/@sweetalert2/theme-bootstrap-4/_bootstrap-4';
+@import '../../../node_modules/apexcharts/dist/apexcharts';
+@import '../../../node_modules/fullcalendar/main';
+ */

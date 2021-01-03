@@ -37,6 +37,9 @@
         "themeColors": "readonly",
         "Nanobar": "readonly",
         "Popper": "readonly",
-        "Chart": "readonly"
+        "Chart": "readonly",
+        "Swal": "readonly",
+        "toastr": "readonly",
+        "Picker": "readonly"
     }
 }

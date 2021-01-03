@@ -1,62 +1,54 @@
-const isProduction = ((process.env.NODE_ENV || 'development').trim().toLowerCase() === 'production');
+const gulp = require('gulp');
+const gulpIf = require('gulp-if');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const htmlmin = require('gulp-htmlmin');
+const cssmin = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const fileinclude = require('gulp-file-include');
+// const babel = require('gulp-babel');
 
-const gulp = require('gulp'),
-    webserver = require('gulp-webserver'),
-    sass = require('gulp-sass'),
-    useref = require('gulp-useref'),
-    gulpif = require('gulp-if'),
-    uglify = require('gulp-uglify'),
-    fileinclude = require('gulp-file-include'),
-    cleanCSS = require('gulp-clean-css'),
-    babel = require('gulp-babel'),
-    rev = require('gulp-rev'),
-    revReplace = require('gulp-rev-replace'),
-    del = require('del'),
-    run = require('gulp-run');
+const imagemin = require('gulp-imagemin');
+// const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+const htmlPartial = require('gulp-html-partial');
+const clean = require('gulp-clean');
+// const googleWebFonts = require( 'gulp-google-webfonts' );
+const cssbeautify = require('gulp-cssbeautify');
+const htmlbeautify = require('gulp-html-beautify');
+const isProd = true; // process.env.NODE_ENV === 'prod';
+const useref = require('gulp-useref');
+const babel = require('gulp-babel');
+const cache = require('gulp-cached');
+const rev = require('gulp-rev');
+const revReplace = require('gulp-rev-replace');
 
-
-
-
-const imgSrcFiles = ['assets/images/**/*'],
-    fontSrcFiles = ['node_modules/@fortawesome/fontawesome-free/webfonts/*'],
-    distPath = 'dist';
-
-
-const sassConfig = {
-    inputDirectory: 'assets/scss/**/*.scss',
-    outputDirectory: 'assets/css',
-    options: {
-        outputStyle: 'expanded'
-    }
+const htmlFile = [
+    'src/pages/*.html'
+];
+const isHTMLFile = function (file) {
+    return /(?:\.([^.]+))?$/.exec(file.path)[0] === '.html';
 };
-gulp.task('clean', function () {
-    return del(distPath + '/**', { force: true });
-});
-gulp.task('copy-images', gulp.series(function () {
-    return gulp.src(imgSrcFiles, {
-        base: '.'
-    }).pipe(gulp.dest(distPath));
-}));
 
-gulp.task('copy-fonts', gulp.series(function () {
-    return gulp.src(fontSrcFiles, {
-        base: './node_modules/@fortawesome/fontawesome-free/'
-    }).pipe(gulp.dest(distPath + '/assets'));
-}));
+const isJSFile = function (file) {
+    return /(?:\.([^.]+))?$/.exec(file.path)[0] === '.js';
+};
 
-gulp.task('build-css', function () {
-    return gulp
-        .src(sassConfig.inputDirectory)
-        .pipe(sass(sassConfig.options).on('error', sass.logError))
-        .pipe(gulp.dest(sassConfig.outputDirectory));
-});
+const isCSSFile = function (file) {
+    return /(?:\.([^.]+))?$/.exec(file.path)[0] === '.css';
+};
 
-gulp.task('generate-js-colors', function () {
-    return run('npm run exportScssColors').exec('assets/js/theme-colors.js');
-});
+const isJSorCSS = function (file) {
+    return isJSFile(file) || isCSSFile(file);
+};
 
-gulp.task('build-html', gulp.series(function () {
-    return gulp.src('./src/pages/*.html')
+const isNotVendorJS = function (file) {
+    return isJSFile(file) && !file.path.includes('vendor.bundle.js');
+};
+
+function html() {
+    return gulp.src(htmlFile)
+        .pipe(cache('html'))
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file',
@@ -64,47 +56,97 @@ gulp.task('build-html', gulp.series(function () {
                 active: ''
             }
         }))
+        .pipe(htmlbeautify())
         .pipe(useref())
-        .pipe(gulpif('*.css' && isProduction, cleanCSS({ specialComments: true })))
-        .pipe(gulpif(['assets/js/main.js', 'assets/js/demo/*.js'] && isProduction, babel({ presets: ['@babel/preset-env'] })))
-        .pipe(gulpif(['assets/js/main.js', 'assets/js/demo/*.js'] && isProduction, uglify()))
-        .pipe(gulpif(/\.css|\.js$/, rev()))
+        .pipe(gulpIf(isNotVendorJS, babel({
+            compact: false,
+            presets: [['@babel/preset-env', {modules: false, 'targets': {
+                'chrome': '58',
+                'ie': '11'
+            }}]]
+        })))
+        .pipe(gulpIf(isNotVendorJS, uglify()))
+        .pipe(gulpIf(isHTMLFile, htmlmin({
+            collapseWhitespace: true
+        })))
+        .pipe(gulpIf(isJSorCSS, rev())) 
         .pipe(revReplace())
-        .pipe(gulp.dest(distPath));
-}));
-gulp.task('build', gulp.series('clean', 'build-css', 'generate-js-colors', 'copy-images', 'copy-fonts', 'build-html'));
+        .pipe(gulp.dest('dist'));
+}
 
-gulp.task('watch', gulp.series(function () {
-    gulp.watch('assets/scss/**/*.scss', gulp.series('build-css', 'build-html'));
-    gulp.watch('src/**/*.html', gulp.series('build-html'));
-    gulp.watch('assets/js/**/*.js', gulp.series('build-html'));
-}));
+function css() {
+    return gulp.src('./src/assets/scss/**/*.scss')
+        .pipe(gulpIf(!isProd, sourcemaps.init()))
+        .pipe(sass({
+            includePaths: ['node_modules']
+        }).on('error', sass.logError))
+        .pipe(cssbeautify({
+            indent: '    ',
+            openbrace: 'separate-line',
+            autosemicolon: true
+        }))
+        .pipe(gulpIf(!isProd, sourcemaps.write()))
+        .pipe(gulpIf(isProd, cssmin()))
+        .pipe(gulp.dest('dist/assets/css/'));
+}
+
+function img() {
+    return gulp.src('src/assets/images/**/*')
+        /* .pipe(gulpIf(isProd, imagemin())) */
+        .pipe(gulp.dest('dist/assets/images/'));
+}
+
+function fonts() {
+    return gulp.src('src/assets/fonts/*.{eot,svg,ttf,woff,woff2}')
+        .pipe(gulp.dest('dist/assets/fonts/'));
+}
+
+function fontAwesome() {
+    return gulp.src('./node_modules/@fortawesome/**/*')
+        .pipe(gulp.dest('dist/assets/vendor/'));
+}
 
 
-gulp.task('serve', gulp.parallel(
-    'watch',
-    gulp.series(
-        'build',
-        function () {
-            gulp.src('./dist')
-                .pipe(webserver({
-                    livereload: {
-                        enable: true,
-                        filter: function (fileName) {
-                            // exclude all scss from livereload
-                            if (fileName.match(/.scss$/)) { 
-                                return false;
-                            } else {
-                                return true;
-                            }
-                        }
-                    },
-                    host: '127.0.0.1',
-                    port: 5151,
-                    directoryListing: false,
-                    open: true
-                }));
+function serve() {
+    browserSync.init({
+        open: true,
+        notify: true,
+        server: './dist'
+    });
+}
 
-        }
-    )
-));
+function browserSyncReload(done) {
+    browserSync.reload();
+    done();
+}
+
+
+function watchFiles() {
+    gulp.watch('src/pages/**/*.html', gulp.series(html, browserSyncReload));
+    gulp.watch('src/partials/**/*.html', gulp.series(html, browserSyncReload));
+    gulp.watch('src/assets/**/*.scss', gulp.series(css, browserSyncReload));
+    gulp.watch('src/assets/**/*.js', gulp.series(html, browserSyncReload));
+    gulp.watch('src/assets/images/**/*', gulp.series(img));
+    gulp.watch('src/assets/**/*.{eot,svg,ttf,woff,woff2}', gulp.series(fonts));
+    gulp.watch('src/assets/vendor/**/*.*', gulp.series(fontAwesome));
+
+    return;
+}
+
+function del() {
+    return gulp.src('dist/*', {read: false})
+        .pipe(clean());
+}
+
+exports.css = css;
+exports.html = html;
+exports.fonts = fonts;
+exports.fontAwesome = fontAwesome;
+exports.img = img;
+exports.del = del;
+exports.serve = gulp.series(
+    gulp.parallel(html, css, img, fonts, fontAwesome), 
+    gulp.parallel(serve, watchFiles)
+);
+exports.default = gulp.series(del, html, css, fonts, img, fontAwesome);
+exports.build = gulp.parallel(html, css, fonts, img);

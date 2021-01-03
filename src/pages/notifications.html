@@ -2,57 +2,60 @@
 <html lang="en">
 
 <head>
-  @@include('../partials/head.html')
+    @@include('../partials/head.html')
 </head>
 
 <body>
-  <div class="overlay-mask"></div>
-  <div class="main-wrapper">
-    @@include('../partials/menu.html',{
-    'active': 'notifications'
-    })
-    <div class="right-area">
-      @@include('../partials/header.html')
-      <div class="main-content container">
-        <div class="page-header">
-          <span class="h2">Notifications</span>
-          <small>Let's stay updated everytime...!</small>
-        </div>
-        <div class="row">
-          <div class="col-6 col-sm-6">
-            <div class="card shadow">
-              <div class="card-header bg-white">
-                Notifications
-              </div>
-              <div class="card-body">
-                <button class="btn btn-primary m-1 demo-basic-notification">Basic</button>
-                <button class="btn btn-warning m-1 demo-warning-notification">Warning</button>
-                <button class="btn btn-success m-1 demo-success-notification">Success</button>
-                <button class="btn btn-danger m-1 demo-error-notification">Error</button>
-              </div>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper">
+        @@include('../partials/menu.html',{
+        'active': 'notifications'
+        })
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Notifications</span>
+                    <small>Let's stay updated everytime...!</small>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Notifications
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-primary m-1 demo-basic-notification">Basic</button>
+                                <button class="btn btn-warning m-1 demo-warning-notification">Warning</button>
+                                <button class="btn btn-success m-1 demo-success-notification">Success</button>
+                                <button class="btn btn-danger m-1 demo-error-notification">Error</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Buttons and Icons
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-primary m-1 demo-close-notification">Close Button</button>
+                                <button class="btn btn-primary m-1 demo-permanent-notification">Permanent
+                                    Toastr</button>
+                                <button class="btn btn-primary m-1 demo-progress-notification">Progress Bar</button>
+                                <button class="btn btn-primary m-1 demo-multiple-notification" type="button"
+                                    id="tryMe">Multiple
+                                    Toastr</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-6 col-sm-6">
-            <div class="card shadow">
-              <div class="card-header bg-white">
-                Buttons and Icons
-              </div>
-              <div class="card-body">
-                <button class="btn btn-primary m-1 demo-close-notification">Close Button</button>
-                <button class="btn btn-primary m-1 demo-permanent-notification">Permanent Toastr</button>
-                <button class="btn btn-primary m-1 demo-progress-notification">Progress Bar</button>
-                <button class="btn btn-primary m-1 demo-multiple-notification" type="button" id="tryMe">Multiple Toastr</button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  @@include('../partials/js.html')
-  <!-- build:js assets/js/demo/notification.bundle.js -->
-  <script src="../../assets/js/demo/notifications.js"></script>
-  <!-- endbuild -->
+    @@include('../partials/js.html')
+    <!-- build:js assets/js/demo/notifications.js -->
+    <script src="../assets/js/demo/notifications.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
