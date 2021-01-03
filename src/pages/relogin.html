@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper">
+        <div class="main-content container-fluid h-100 bg-primary text-center text-light">
+            <div class="row h-100">
+                <div class="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-3 m-auto px-3 pt-5 pb-4 m-3">
+                        <div class="avatar avatar-xl bg-primary mx-auto mb-4">
+                            <img src="assets/images/avatar/team-5.jpg" class="avatar-img rounded-circle  mx-auto " alt="Avatar">
+                        </div>
+                        <h2 class="text-center">Tim Jain</h2>
+                        <form class="p-3" method="post">
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <span class="float-left">Enter password or Fingerprint</span>
+                        <button class="btn btn-dark btn-circle btn-lg float-right">
+                           <i class="material-icons">chevron_right</i>
+                        </button>
+                        <a href="reset.html" class="d-block text-center text-light">cancel</a>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('../partials/js.html')
+
+</body>
+
+</html>
