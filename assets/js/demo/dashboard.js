@@ -36,75 +36,35 @@ $(function() {
 
     /* Line, Column & Area */
     var option4 = {
-        series: [{
-            name: 'Sales',
-            type: 'column',
-            data: [23, 11, 22, 27, 13, 22, 37, 21]
+          series: [{
+          name: 'Profit',
+          data: [31, 40, 28, 51, 42, 109, 100]
         }, {
-            name: 'Purchases',
-            type: 'area',
-            data: [44, 55, 41, 67, 22, 43, 21, 41]
-        }, {
-            name: 'Profit',
-            type: 'line',
-            data: [30, 25, 36, 30, 45, 35, 64, 52]
+          name: 'Sales',
+          data: [11, 32, 45, 32, 34, 52, 41]
         }],
-        chart: {
-            height: 280,
-            type: 'line',
-            stacked: false,
+          chart: {
+          height: 290,
+          type: 'area'
         },
-        colors: colorPalette,
+          colors: [themeColors.primary,themeColors.pink],
+        dataLabels: {
+          enabled: false
+        },
         stroke: {
-            width: [0, 2, 5],
-            curve: 'smooth'
-        },
-        plotOptions: {
-            bar: {
-                columnWidth: '50%'
-            }
-        },
-
-        fill: {
-            opacity: [0.85, 0.25, 1],
-            gradient: {
-                inverseColors: false,
-                shade: 'light',
-                type: "vertical",
-                opacityFrom: 0.85,
-                opacityTo: 0.55,
-                stops: [0, 100, 100, 100]
-            }
-        },
-        labels: ['01/01/2003', '02/01/2003', '03/01/2003', '04/01/2003', '05/01/2003', '06/01/2003', '07/01/2003',
-            '08/01/2003'
-        ],
-        markers: {
-            size: 0
+          curve: 'smooth'
         },
         xaxis: {
-            type: 'datetime'
-        },
-        yaxis: {
-            title: {
-                text: 'Points',
-            },
-            min: 0
+          type: 'datetime',
+          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
         },
         tooltip: {
-            shared: true,
-            intersect: false,
-            y: {
-                formatter: function(y) {
-                    if (typeof y !== "undefined") {
-                        return y.toFixed(0) + " points";
-                    }
-                    return y;
+          x: {
+            format: 'dd/MM/yy HH:mm'
+          },
+        },
+        };
 
-                }
-            }
-        }
-    };
 
     var chart4 = new ApexCharts(document.querySelector("#line-column-area-chart"), option4);
     chart4.render();
@@ -113,7 +73,7 @@ $(function() {
     var optionsBar = {
         chart: {
             type: 'bar',
-            height: 280,
+            height: 230,
             width: '100%',
             stacked: true,
         },
@@ -167,7 +127,7 @@ $(function() {
         chart: {
             height: 330,
             type: 'radialBar',
-            redrawOnParentResize: false
+            redrawOnParentResize: true
         },
         plotOptions: {
             radialBar: {
@@ -226,11 +186,15 @@ $(function() {
             ]
         },
         options: {
-            responsive: true,
+            responsive: false,
             legend: {
                 boxWidth: 10,
                 position: 'bottom',
+                offsetX: 100,
+                offsetY: 30,
+                 
             },
+
 
             animation: {
                 animateScale: true,
@@ -251,6 +215,8 @@ $(function() {
     window.onload = function() {
         var ctx = document.getElementById('chart-area').getContext('2d');
         window.myDoughnut = new Chart(ctx, config);
+        ctx.canvas.parentNode.style.height = '280px';
+
     };
 
 });
