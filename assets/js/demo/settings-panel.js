@@ -33,8 +33,9 @@ $(function () {
                 break;
         }
     });
-    $("input[type=color]").on('change', function () {
-        r.style.setProperty('--primary', this.value);
+    $(".color-pellate .btn").on('click', function () {
+        console.log(this);
+           document.getElementsByTagName('head')[0].getElementsByTagName('link')[0].href = '../../assets/css/style copy.css';
     });
     $("input[type=radio][name=direction-switch]").on('change', function () {
         switch(this.value) {
