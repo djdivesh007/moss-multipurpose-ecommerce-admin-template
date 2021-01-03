@@ -73,7 +73,7 @@ $(function() {
     var optionsBar = {
         chart: {
             type: 'bar',
-            height: 230,
+            height: 280,
             width: '100%',
             stacked: true,
         },
@@ -215,7 +215,7 @@ $(function() {
     window.onload = function() {
         var ctx = document.getElementById('chart-area').getContext('2d');
         window.myDoughnut = new Chart(ctx, config);
-        ctx.canvas.parentNode.style.height = '280px';
+        ctx.canvas.parentNode.style.height = '330px';
 
     };
 
