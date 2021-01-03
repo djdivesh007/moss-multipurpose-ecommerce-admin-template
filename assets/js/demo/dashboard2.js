@@ -123,7 +123,7 @@ $(function() {
 
     // Calendar Scripts
     let calendar;
-    document.addEventListener('DOMContentLoaded', function() {
+    
         let calendarEl = document.getElementById('calendar');
         calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
@@ -140,6 +140,6 @@ $(function() {
             },
         });
         calendar.render();
-    });
+    
 
 });

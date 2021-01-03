@@ -81,7 +81,7 @@ gulp.task('watch', gulp.series(function () {
 }));
 
 
-gulp.task('serve', gulp.series(
+gulp.task('serve', gulp.parallel(
     'watch',
     gulp.series(
         'build',
