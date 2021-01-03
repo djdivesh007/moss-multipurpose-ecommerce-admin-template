@@ -18,7 +18,7 @@
             }
             position: relative;
             width: 100%;
-            line-height: 54px;
+            line-height: $header-height;
             padding: 0;
             top: 0;
             z-index: 15;
@@ -79,13 +79,13 @@
                             margin-left: 12px;
                             white-space: nowrap;
                             &.icon {
-                                margin-left: 20px;
+                                margin-left: 30px;
                             }
                             &.caret {
-                                margin-left: 3px;
+                                margin-left: 8px;
                                 transition: transform 0.2s;
                                 + .icon {
-                                    margin-left: 0px;
+                                    margin-left: 5px;
                                 }
                             }
                             &.badge {
@@ -105,9 +105,9 @@
                         li {
                             a {
                                 span {
-                                    margin-left: 8px;
+                                    margin-left: 11px;
                                 }
-                                padding-left: 15px;
+                                padding-left: 0;
                                 line-height: $individual-submenu-height;
                             }
                         }

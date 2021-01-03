@@ -2,6 +2,7 @@
     &.collapsed{
         .sidebar {
             margin-left: 0-$mini-sidebar-width !important;
+            
         }
     }
     .sidebar {
@@ -18,6 +19,13 @@
                             opacity: 0;
                             &.icon {
                                 opacity: 1;
+                                margin-left: 20px;
+                            }
+                            &.caret {
+                                margin-left: 3px;
+                                + .icon {
+                                    margin-left: 0px;
+                                }
                             }
                         }
                     }
