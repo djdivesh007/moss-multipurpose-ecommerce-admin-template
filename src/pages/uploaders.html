@@ -8,7 +8,9 @@
 <body>
     <div class="overlay-mask"></div>
     <div class="main-wrapper">
-        @@include('../partials/menu.html')
+        @@include('../partials/menu.html',{
+        'active': 'uploaders'
+        })
         <div class="right-area">
             @@include('../partials/header.html')
             <div class="main-content container">
@@ -66,21 +68,9 @@
         </div>
     </div>
     @@include('../partials/js.html')
-    <script>
-        $(function () {
-            $('.dropify').dropify({
-                messages: {
-                    'default': 'Drag and drop a file here or click',
-                    'replace': 'Drag and drop or click to replace',
-                    'remove': 'Remove',
-                    'error': 'Ooops, something wrong happended.'
-                },
-                tpl: {
-                    clearButton: '<button type="button" class="dropify-clear btn-primary">{{ remove }}</button>',
-                }
-            });
-        });
-    </script>
+    <!-- build:js assets/js/demo/uploaders.bundle.js -->
+    <script src="../../assets/js/demo/uploaders.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>

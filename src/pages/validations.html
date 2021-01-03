@@ -8,7 +8,9 @@
 <body>
   <div class="overlay-mask"></div>
   <div class="main-wrapper">
-    @@include('../partials/menu.html')
+    @@include('../partials/menu.html',{
+    'active': 'validations'
+    })
     <div class="right-area">
       @@include('../partials/header.html')
       <div class="main-content container">

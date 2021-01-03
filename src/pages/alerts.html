@@ -8,7 +8,9 @@
 <body>
     <div class="overlay-mask"></div>
     <div class="main-wrapper">
-        @@include('../partials/menu.html')
+        @@include('../partials/menu.html',{
+        'active': 'alerts'
+        })
         <div class="right-area">
             @@include('../partials/header.html')
             <div class="main-content container">
@@ -170,10 +172,9 @@
                         <div class="card shadow">
                             <div class="card-header bg-white">Sweet Alerts</div>
                             <div class="card-body">
-
-                                <button class="btn btn-primary" onclick="basic()">Basic</button>
-                                <button class="btn btn-primary" onclick="successSwal()">Success Alert</button>
-                                <button class="btn btn-primary" onclick="toast()">Success Toast Alert</button>
+                                <button class="btn btn-primary basic-alert">Basic</button>
+                                <button class="btn btn-primary success-alert">Success Alert</button>
+                                <button class="btn btn-primary success-toast-alert">Success Toast Alert</button>
                             </div>
                         </div>
                     </div>
@@ -184,42 +185,9 @@
         </div>
     </div>
     @@include('../partials/js.html')
-    <script>
-        $('.alert').alert();
-
-
-
-        function basic() {
-            Swal.fire('Hello world!');
-        }
-
-        function successSwal() {
-            Swal.fire(
-                'Good job!',
-                'You clicked the button!',
-                'success'
-            )
-        }
-
-        function toast() {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            })
-
-            Toast.fire({
-                icon: 'success',
-                title: 'Signed in successfully'
-            })
-        }
-    </script>
+    <!-- build:js assets/js/demo/alert.bundle.js -->
+    <script src="../../assets/js/demo/alerts.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>

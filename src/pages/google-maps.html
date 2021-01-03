@@ -8,7 +8,9 @@
 <body>
     <div class="overlay-mask"></div>
     <div class="main-wrapper">
-        @@include('../partials/menu.html')
+        @@include('../partials/menu.html',{
+        'active': 'google-maps'
+        })
         <div class="right-area">
             @@include('../partials/header.html')
             <div class="main-content container">
@@ -35,7 +37,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
     <script>
         var map;
-
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 center: {

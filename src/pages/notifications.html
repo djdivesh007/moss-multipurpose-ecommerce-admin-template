@@ -8,7 +8,9 @@
 <body>
   <div class="overlay-mask"></div>
   <div class="main-wrapper">
-    @@include('../partials/menu.html')
+    @@include('../partials/menu.html',{
+    'active': 'notifications'
+    })
     <div class="right-area">
       @@include('../partials/header.html')
       <div class="main-content container">
@@ -23,10 +25,10 @@
                 Notifications
               </div>
               <div class="card-body">
-                <button class="btn btn-primary m-1" onclick="basic()">Basic</button>
-                <button class="btn btn-warning m-1" onclick="warning()">Warning</button>
-                <button class="btn btn-success m-1" onclick="success()">Success</button>
-                <button class="btn btn-danger m-1" onclick="error()">Error</button>
+                <button class="btn btn-primary m-1 demo-basic-notification">Basic</button>
+                <button class="btn btn-warning m-1 demo-warning-notification">Warning</button>
+                <button class="btn btn-success m-1 demo-success-notification">Success</button>
+                <button class="btn btn-danger m-1 demo-error-notification">Error</button>
               </div>
             </div>
           </div>
@@ -36,10 +38,10 @@
                 Buttons and Icons
               </div>
               <div class="card-body">
-                <button class="btn btn-primary m-1" onclick="closeButton()">Close Button</button>
-                <button class="btn btn-primary m-1" onclick="permanentToastr()">Permanent Toastr</button>
-                <button class="btn btn-primary m-1" onclick="progress()">Progress Bar</button>
-                <button class="btn btn-primary m-1" type="button" id="tryMe">Multiple Toastr</button>
+                <button class="btn btn-primary m-1 demo-close-notification">Close Button</button>
+                <button class="btn btn-primary m-1 demo-permanent-notification">Permanent Toastr</button>
+                <button class="btn btn-primary m-1 demo-progress-notification">Progress Bar</button>
+                <button class="btn btn-primary m-1 demo-multiple-notification" type="button" id="tryMe">Multiple Toastr</button>
               </div>
             </div>
           </div>
@@ -48,105 +50,9 @@
     </div>
   </div>
   @@include('../partials/js.html')
-  <script>
-    function basic() {
-      toastr.info('Are you the 6 fingered man?')
-    }
-
-    function warning() {
-      toastr.warning('My name is Inigo Montoya. You killed my father, prepare to die!')
-    }
-
-    function success() {
-      toastr.success('We do have the Kapua suite available.', 'Turtle Bay Resort', {
-        timeOut: 5000
-      })
-    }
-
-    function error() {
-      toastr.error('We do have the Kapua suite available.', 'Turtle Bay Resort')
-    }
-
-    function closeButton() {
-      toastr.options.closeButton = true;
-
-      toastr.success('We do have the Kapua suite available.', 'Turtle Bay Resort', {
-        timeOut: 5000
-      })
-    }
-
-    function permanentToastr() {
-      toastr.options.timeOut = 0;
-      toastr.options.extendedTimeOut = 0;
-
-      toastr.success('Toast Wont Close', 'Turtle Bay Resort');
-    }
-
-    function progress() {
-      toastr.options.progressBar = true;
-
-      toastr.info('Toast with Progress bar', 'Turtle Bay Resort');
-    }
-
-    $(function () {
-
-      function Toast(type, css, msg) {
-        this.type = type;
-        this.css = css;
-        this.msg = 'This is positioned in the ' + msg + '. You can also style the icon any way you like.';
-      }
-
-      var toasts = [
-        new Toast('error', 'toast-bottom-full-width',
-          'This is positioned in the bottom full width. You can also style the icon any way you like.'),
-        new Toast('info', 'toast-top-full-width', 'top full width'),
-        new Toast('warning', 'toast-top-left',
-          'This is positioned in the top left. You can also style the icon any way you like.'),
-        new Toast('success', 'toast-top-right', 'top right'),
-        new Toast('warning', 'toast-bottom-right', 'bottom right'),
-        new Toast('error', 'toast-bottom-left', 'bottom left')
-      ];
-
-
-      toastr.options.extendedTimeOut = 0; //1000;
-      toastr.options.timeOut = 1000;
-      toastr.options.fadeOut = 250;
-      toastr.options.fadeIn = 250;
-
-      var i = 0;
-
-      $('#tryMe').click(function () {
-        $('#tryMe').prop('disabled', true);
-        delayToasts();
-      });
-
-      function delayToasts() {
-        if (i === toasts.length) {
-          return;
-        }
-        var delay = i === 0 ? 0 : 2100;
-        window.setTimeout(function () {
-          showToast();
-        }, delay);
-
-        // re-enable the button
-        if (i === toasts.length - 1) {
-          window.setTimeout(function () {
-            $('#tryMe').prop('disabled', false);
-            i = 0;
-          }, delay + 1000);
-        }
-      }
-
-      function showToast() {
-        var t = toasts[i];
-        toastr.options.positionClass = t.css;
-        toastr[t.type](t.msg);
-        i++;
-        delayToasts();
-      }
-    });
-  </script>
+  <!-- build:js assets/js/demo/notification.bundle.js -->
+  <script src="../../assets/js/demo/notifications.js"></script>
+  <!-- endbuild -->
 </body>
 
 </html>

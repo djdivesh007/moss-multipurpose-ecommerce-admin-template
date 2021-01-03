@@ -155,19 +155,6 @@
     <script src="../../assets/js/context-menu.js"></script>
     <!-- endbuild -->
 
-    <script>
-        $(function () {
-            $('.has-context-menu').on('contextmenu', function (e) {
-                e.preventDefault();
-                contextMenu = $(this).siblings('.dropdown-menu').first().get(0);
-                showContextMenu(e.clientX, e.clientY, contextMenu);
-            });
-            $('.has-context-menu').on('long-press', function (e) {
-                contextMenu = $(this).siblings('.dropdown-menu').first().get(0);
-                showContextMenu(e.detail.clientX, e.detail.clientY, contextMenu);
-            });
-        })
-    </script>
 </body>
 
 </html>
