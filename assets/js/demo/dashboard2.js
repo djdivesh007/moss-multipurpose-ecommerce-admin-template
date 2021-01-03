@@ -1,15 +1,15 @@
-var sparkChart;
+let sparkChart;
 
 $(function() {
 
     'use strict';
 
-    var sparklineData = [47, 45, 54, 38, 56, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46];
+    let sparklineData = [47, 45, 54, 38, 56, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46];
 
 
-    var randomizeArray = function(arg) {
-        var array = arg.slice();
-        var currentIndex = array.length,
+    let randomizeArray = function(arg) {
+        let array = arg.slice();
+        let currentIndex = array.length,
             temporaryValue, randomIndex;
 
         while (0 !== currentIndex) {
@@ -23,14 +23,14 @@ $(function() {
         }
 
         return array;
-    }
+    };
 
     // The Default colorPalette for this dashboard
-    var colorPalette = ['#3f51b5', '#008FFB', '#FEB019', '#FF4560', '#775DD0']
+    // let colorPalette = ['#3f51b5', '#008FFB', '#FEB019', '#FF4560', '#775DD0'];
 
 
 
-    var spark1 = {
+    let spark1 = {
         series: [{
             name: 'Heart Beat',
             data: data.slice()
@@ -84,9 +84,9 @@ $(function() {
         },
         colors: [themeColors.primary],
 
-    }
+    };
 
-    sparkChart = new ApexCharts(document.querySelector("#spark1"), spark1);
+    sparkChart = new ApexCharts(document.querySelector('#spark1'), spark1);
     sparkChart.render();
 
 

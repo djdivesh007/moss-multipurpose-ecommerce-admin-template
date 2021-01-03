@@ -3,9 +3,9 @@ $(function() {
     'use strict';
 
     // The Default colorPalette for this dashboard
-    var colorPalette = [themeColors.primary, '#008FFB', '#FEB019', '#FF4560', '#775DD0'];
+    let colorPalette = [themeColors.primary, '#008FFB', '#FEB019', '#FF4560', '#775DD0'];
 
-    var options = {
+    let options = {
         chart: {
             type: 'line',
             height: 280,
@@ -29,48 +29,48 @@ $(function() {
             },
         }
 
-    }
+    };
 
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    let chart = new ApexCharts(document.querySelector('#chart'), options);
     chart.render();
 
     /* Line, Column & Area */
-    var option4 = {
-          series: [{
-          name: 'Profit',
-          data: [31, 40, 28, 51, 42, 109, 100]
+    let option4 = {
+        series: [{
+            name: 'Profit',
+            data: [31, 40, 28, 51, 42, 109, 100]
         }, {
-          name: 'Sales',
-          data: [11, 32, 45, 32, 34, 52, 41]
+            name: 'Sales',
+            data: [11, 32, 45, 32, 34, 52, 41]
         }],
-          chart: {
-          height: 290,
-          type: 'area'
+        chart: {
+            height: 290,
+            type: 'area'
         },
-          colors: [themeColors.primary,themeColors.pink],
+        colors: [themeColors.primary,themeColors.pink],
         dataLabels: {
-          enabled: false
+            enabled: false
         },
         stroke: {
-          curve: 'smooth'
+            curve: 'smooth'
         },
         xaxis: {
-          type: 'datetime',
-          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+            type: 'datetime',
+            categories: ['2018-09-19T00:00:00.000Z', '2018-09-19T01:30:00.000Z', '2018-09-19T02:30:00.000Z', '2018-09-19T03:30:00.000Z', '2018-09-19T04:30:00.000Z', '2018-09-19T05:30:00.000Z', '2018-09-19T06:30:00.000Z']
         },
         tooltip: {
-          x: {
-            format: 'dd/MM/yy HH:mm'
-          },
+            x: {
+                format: 'dd/MM/yy HH:mm'
+            },
         },
-        };
+    };
 
 
-    var chart4 = new ApexCharts(document.querySelector("#line-column-area-chart"), option4);
+    let chart4 = new ApexCharts(document.querySelector('#line-column-area-chart'), option4);
     chart4.render();
 
     // Bar Chart
-    var optionsBar = {
+    let optionsBar = {
         chart: {
             type: 'bar',
             height: 280,
@@ -84,10 +84,10 @@ $(function() {
         },
         colors: colorPalette,
         series: [{
-            name: "Clothing",
+            name: 'Clothing',
             data: [42, 52, 16, 55, 51, 45],
         }, {
-            name: "Food Products",
+            name: 'Food Products',
             data: [6, 12, 4, 7, 3, 6],
         }],
         labels: [10, 11, 12, 13, 15, 16],
@@ -116,13 +116,13 @@ $(function() {
             }
         },
 
-    }
+    };
 
-    var chartBar = new ApexCharts(document.querySelector('#bar-chart'), optionsBar);
+    let chartBar = new ApexCharts(document.querySelector('#bar-chart'), optionsBar);
     chartBar.render();
 
 
-    var optionDonut = {
+    let optionDonut = {
         series: [44, 55, 67, 83],
         chart: {
             height: 330,
@@ -143,7 +143,7 @@ $(function() {
                         label: 'Total',
                         formatter: function(w) {
                             // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                            return 249
+                            return 249;
                         }
                     }
                 }
@@ -152,18 +152,18 @@ $(function() {
         labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
     };
 
-    var donut = new ApexCharts(
-        document.querySelector("#chart-donut"),
+    let donut = new ApexCharts(
+        document.querySelector('#chart-donut'),
         optionDonut
-    )
+    );
     donut.render();
 
 
-    var randomScalingFactor = function() {
+    let randomScalingFactor = function() {
         return Math.round(Math.random() * 100);
     };
 
-    var config = {
+    let config = {
         type: 'doughnut',
         data: {
             datasets: [{
@@ -213,10 +213,9 @@ $(function() {
     };
 
     window.onload = function() {
-        var ctx = document.getElementById('chart-area').getContext('2d');
+        let ctx = document.getElementById('chart-area').getContext('2d');
         window.myDoughnut = new Chart(ctx, config);
         ctx.canvas.parentNode.style.height = '330px';
-
     };
 
 });

@@ -1,0 +1,45 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jquery": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-var": "warn",
+        "no-undef": "warn",
+        "no-unused-vars": "warn",
+        "keyword-spacing": "warn"
+    },
+    "globals": {
+        "Apex": "readonly",
+        "ApexCharts": "readonly",
+        "progressBar": "readonly",
+        "screenfull": "readonly",
+        "FullCalendar": "readonly",
+        "themeColors": "readonly",
+        "Nanobar": "readonly",
+        "Popper": "readonly",
+        "Chart": "readonly"
+    }
+}
