@@ -1,11 +1,11 @@
-openMenu = null;
+let openMenu = null;
 function showContextMenu(x, y, contextMenu) {
-    const newTempElement = document.createElement("div");
+    const newTempElement = document.createElement('div');
     newTempElement.style.position = 'absolute';
     newTempElement.style.top = y+'px';
     newTempElement.style.left = x+'px';
     document.body.appendChild(newTempElement);
-    if(openMenu) hideContextMenu(openMenu);
+    if (openMenu) hideContextMenu(openMenu);
     openMenu = new Popper(newTempElement, contextMenu, {
         strategy: 'fixed',
         placement: 'bottom-start'
@@ -20,11 +20,11 @@ function hideContextMenu(popperMenu) {
 
 $(document).on('click', function () {
     try {
-        if(openMenu) {
+        if (openMenu) {
             hideContextMenu(openMenu);
             openMenu = null;
         }
     } catch (e) {
         // Something might have gone wrong. Let click event bubble
     }
-})
+});
