@@ -8,7 +8,7 @@ $(function() {
     let options = {
         chart: {
             type: 'area',
-            height: 340,
+            height: 300,
             sparkline: {
                 enabled: true,
             },
@@ -48,7 +48,7 @@ $(function() {
 
     let option2 = {
         chart: {
-            height: 330,
+            height: 300,
             type: 'area',
             sparkline: {
                 enabled: false,
