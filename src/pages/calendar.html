@@ -22,9 +22,6 @@
 
                     <div class="col-12 col-sm-12">
                         <div class="card shadow">
-                            <!-- <div class="card-header bg-white">
-                                Full Calendar
-                            </div> -->
                             <div class="card-body">
                                 <div id='calendar'></div>
                             </div>
@@ -63,111 +60,9 @@
         </div>
     </div>
     @@include('../partials/js.html')
-    <script>
-        var basic_input = document.getElementById('basic_input');
-        var basic_picker = new Picker(basic_input, {
-            format: 'YYYY-MM-DD',
-        });
-        basic_picker.getDate(true);
-
-        function addEvent(dateStr) {
-            if (typeof dateStr !== 'undefined')
-                $('#basic_input').val(dateStr);
-            $('#eventModal').modal('show');
-        }
-
-        function saveEvent() {
-            console.log($('#event-name').val());
-            console.log($('#basic_input').val());
-            dateStr = $('#basic_input').val();
-            var date = new Date(dateStr + 'T00:00:00'); // will be in local time
-
-            if (!isNaN(date.valueOf())) { // valid?
-                calendar.addEvent({
-                    title: $('#event-name').val(),
-                    start: date,
-                    allDay: true
-                });
-                console.info('Great. Now, update your database...');
-                $('#eventModal').modal('hide');
-            } else {
-                console.log('Invalid date.');
-            }
-        }
-    </script>
-    <script>
-        var calendar;
-        document.addEventListener('DOMContentLoaded', function() {
-
-
-            var containerEl = document.getElementById('external-events');
-            var calendarEl = document.getElementById('calendar');
-            var checkbox = document.getElementById('drop-remove');
-
-            calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                initialDate: '2020-12-07',
-                themeSystem: 'bootstrap',
-                selectable: true,
-                editable: true,
-                droppable: true,
-                businessHours: true,
-                nowIndicator: true,
-                eventColor: '#3f51b5',
-
-                headerToolbar: {
-                    left: 'prev,next today addEventButton',
-                    center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
-                },
-                customButtons: {
-                    addEventButton: {
-                        text: 'add event',
-                        icon: 'fa-plus',
-                        click: function() {
-                            addEvent('');
-                        }
-                    }
-                },
-
-                dateClick: function(info) {
-                    console.log(info);
-                    addEvent(info.dateStr);
-                },
-                drop: function(info) {
-                    // is the "remove after drop" checkbox checked?
-                    if (checkbox.checked) {
-                        // if so, remove the element from the "Draggable Events" list
-                        info.draggedEl.parentNode.removeChild(info.draggedEl);
-                    }
-                },
-                events: [{
-                    title: 'Lunch',
-                    start: '2020-12-12T12:00:00'
-                }, {
-                    title: 'Meeting',
-                    start: '2020-12-12T14:30:00'
-                }, {
-                    title: 'Click for Google',
-                    url: 'http://google.com/',
-                    start: '2020-12-28'
-                }]
-            });
-
-            calendar.render();
-
-            var Draggable = FullCalendar.Draggable;
-
-            new Draggable(containerEl, {
-                itemSelector: '.fc-event',
-                eventData: function(eventEl) {
-                    return {
-                        title: eventEl.innerText
-                    };
-                }
-            });
-        });
-    </script>
+    <!-- build:js assets/js/demo/calendar.bundle.js -->
+    <script src="../../assets/js/demo/calendar.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
