@@ -5,7 +5,7 @@
 }
 
 .right-area {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         margin-left: 240px;
     }
     transition: margin 0.15s;
@@ -14,7 +14,6 @@
         position: sticky;
         top: 0;
         z-index: 12;
-        /* background-color: $primary; */
         color: color-yiq($primary);
         height: $header-height;
         .navbar-nav {

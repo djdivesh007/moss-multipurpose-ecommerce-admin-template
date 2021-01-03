@@ -5,12 +5,14 @@ const fs = require('fs');
 
 async function generateJS() {
     const vars = await sassVarsToJSON('./assets/scss/_color-variables.scss');
-    let colors = {};
-    if (vars) {
-        for (const [key, value] of Object.entries(vars)) {
-            colors[camelCase(key.substring(1))] = value;
-        }
+    
+    if (!vars) {
+        console.log('SCSS variables not generated');
+        return;
     }
+    const colors = convertKeysToCamelCase(vars);
+
+    
 
     const warningMessage = '/* eslint-disable */\n\r/** File generated using gulp task: Please do not edit manually */\n\n';
     const variableName = 'const themeColors = ';
@@ -23,6 +25,19 @@ async function generateJS() {
         console.log('Generated new colors file !');
     });
   
+}
+
+function convertKeysToCamelCase(vars) {
+    const newVar = {};
+    for (let [key, value] of Object.entries(vars)) {
+        if (typeof value === 'object') {
+            value = convertKeysToCamelCase(value);
+        }
+        if (key[0] == '$') 
+            key = key.substring(1);
+        newVar[camelCase(key)] = value;
+    }
+    return newVar;
 }
 
 async function init () {
