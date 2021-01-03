@@ -1,10 +1,9 @@
 $(function() {
-    const r = document.querySelector(':root');
-    $('.settings-btn').on('click', function() {
+    $(document).on('click', '.settings-btn', function() {
         $('.settings-panel').toggleClass('open');
     });
 
-    $('input[type=radio][name=menu-switch]').on('change', function() {
+    $(document).on('change', 'input[type=radio][name=menu-switch]', function() {
         switch (this.value) {
         case 'default':
             $('.main-wrapper').removeClass('mini overlay-menu horizontal collapsed');
@@ -23,7 +22,7 @@ $(function() {
             break;
         }
     });
-    $('input[type=radio][name=layout-switch]').on('change', function() {
+    $(document).on('change', 'input[type=radio][name=layout-switch]', function() {
         switch (this.value) {
         case 'box':
             $('.right-area .main-content').removeClass('container-fluid').addClass('container');
@@ -33,10 +32,10 @@ $(function() {
             break;
         }
     });
-    $('input[type=color]').on('change', function() {
-        r.style.setProperty('--primary', this.value);
+    $(document).on('click', '.color-pellate .btn', function () {
+        document.getElementsByTagName('head')[0].getElementsByTagName('link')[0].href = '../../assets/css/style copy.css';
     });
-    $('input[type=radio][name=direction-switch]').on('change', function() {
+    $(document).on('change', 'input[type=radio][name=direction-switch]', function() {
         switch (this.value) {
         case 'ltr':
             $('html').removeClass('rtl');

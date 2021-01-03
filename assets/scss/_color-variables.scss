@@ -39,6 +39,28 @@ $special-lightgreen: #16a596;
 $special-brown: #92817a;
 $special-coffee: #8D6346;
 
+
+$theme-colors: (
+    "special-pink": $special-pink,
+    'special-paradise-pink': $special-paradise-pink,
+    'special-ruby': $special-ruby,
+    'special-eggplant': $special-eggplant,
+    'special-sienna': $special-sienna,
+    'special-jet': $special-jet,
+    'special-dark': $special-dark,
+    'special-cedar-chest': $special-cedar-chest,
+    'special-gunmetal': $special-gunmetal,
+    'special-blue': $special-blue,
+    'special-red': $special-red,
+    'special-orange': $special-orange,
+    'special-yellow': $special-yellow,
+    'special-ivory': $special-ivory,
+    'special-green': $special-green,
+    'special-lightgreen': $special-lightgreen,
+    'special-brown': $special-brown,
+    'special-coffee': $special-coffee
+);
+
 /*
 *
 *
@@ -61,4 +83,4 @@ Current Primary Color
 *
 */
 
-$primary: $special-gunmetal;
+$primary: $indigo;
