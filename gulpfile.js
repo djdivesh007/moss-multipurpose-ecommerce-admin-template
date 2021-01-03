@@ -76,13 +76,12 @@ gulp.task('build', gulp.series('clean', 'build-css', 'generate-js-colors', 'copy
 
 gulp.task('watch', gulp.series(function () {
     gulp.watch('assets/scss/**/*.scss', gulp.series('build-css', 'build-html'));
-    gulp.watch('assets/scss/_color-variables.scss', gulp.series('generate-js-colors', 'build-html'));
     gulp.watch('src/**/*.html', gulp.series('build-html'));
     gulp.watch('assets/js/**/*.js', gulp.series('build-html'));
 }));
 
 
-gulp.task('serve', gulp.parallel(
+gulp.task('serve', gulp.series(
     'watch',
     gulp.series(
         'build',
@@ -92,7 +91,8 @@ gulp.task('serve', gulp.parallel(
                     livereload: {
                         enable: true,
                         filter: function (fileName) {
-                            if (fileName.match(/.scss$/)) { // exclude all scss from livereload
+                            // exclude all scss from livereload
+                            if (fileName.match(/.scss$/)) { 
                                 return false;
                             } else {
                                 return true;
