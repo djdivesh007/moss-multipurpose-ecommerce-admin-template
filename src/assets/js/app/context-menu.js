@@ -1,7 +1,7 @@
 $(function (){
     'use strict';
     let openMenu = null;
-    function showContextMenu(x, y, contextMenu) {
+    window.showContextMenu = function (x, y, contextMenu) {
         const newTempElement = document.createElement('div');
         newTempElement.style.position = 'absolute';
         newTempElement.style.top = y+'px';
@@ -13,17 +13,17 @@ $(function (){
             placement: 'bottom-start'
         });
         $(contextMenu).addClass('show');
-    }
+    };
 
-    function hideContextMenu(popperMenu) {
+    window.hideContextMenu = function(popperMenu) {
         $(popperMenu.popper).removeClass('show');
         popperMenu.reference.remove();
-    }
+    };
     
     $(document).on('click', function () {
         try {
             if (openMenu) {
-                hideContextMenu(openMenu);
+                this.hideContextMenu(openMenu);
                 openMenu = null;
             }
         } catch (e) {

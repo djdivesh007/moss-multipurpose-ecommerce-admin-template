@@ -8,11 +8,7 @@ $(function(){
     });
     basic_picker.getDate(true);
 
-    function addEvent(dateStr) {
-        if (typeof dateStr !== 'undefined')
-            $('#basic_input').val(dateStr);
-        $('#eventModal').modal('show');
-    }
+
 
     let calendar;
     let calendarEl = document.getElementById('calendar');
@@ -59,6 +55,32 @@ $(function(){
     });
 
     calendar.render();
+
+    
+    function addEvent(dateStr) {
+        if (typeof dateStr !== 'undefined')
+            $('#basic_input').val(dateStr);
+        $('#eventModal').modal('show');
+    }
+
+    function saveEvent() {
+        console.log($('#event-name').val());
+        console.log($('#basic_input').val());
+        let dateStr = $('#basic_input').val();
+        let date = new Date(dateStr + 'T00:00:00'); // will be in local time
+
+        if (!isNaN(date.valueOf())) { // valid?
+            calendar.addEvent({
+                title: $('#event-name').val(),
+                start: date,
+                allDay: true
+            });
+            console.info('Great. Now, update your database...');
+            $('#eventModal').modal('hide');
+        } else {
+            console.log('Invalid date.');
+        }
+    }
 
     
 });

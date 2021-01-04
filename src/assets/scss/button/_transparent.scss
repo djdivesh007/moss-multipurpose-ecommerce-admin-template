@@ -4,7 +4,7 @@
         font-weight: 500;
         background-color: transparentize(if($color != 'light', $value, $gray-500), 0.85);
         color: if($color != 'light', $value, $gray-500);
-        border: 1px solid transparentize(if($color != 'light', $value, $gray-500), 0.7);
+        //border: 1px solid transparentize(if($color != 'light', $value, $gray-500), 0.7);
         &:hover {
             color: darken(if($color != 'light', $value, $gray-500), 20%);
             background-color: transparentize(darken(if($color != 'light', $value, $gray-500), 20%), 0.85);

@@ -18,7 +18,7 @@ async function generateJS() {
     const variableName = 'const themeColors = ';
     const json = JSON.stringify(colors, null, 4) + ';';
 
-    const destinationPath = (argv[0]) ? argv[0] : './src/assets/js/theme-colors.js';
+    const destinationPath = (argv[0]) ? argv[0] : './src/assets/js/app/theme-colors.js';
 
     fs.writeFile(destinationPath, `${warningMessage} ${variableName} ${json}`, function (err) {
         if (err) throw err;

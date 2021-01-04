@@ -18,7 +18,7 @@ $(function() {
             id: 'realtime',
 
             type: 'area',
-            height: 160,
+            height: 150,
             sparkline: {
                 enabled: true
             },
@@ -113,7 +113,7 @@ $(function() {
         if (!data) return;
         getNewSeries(lastDate, {
             min: 10,
-            max: 90
+            max: 70
         });
         sparkChart.updateSeries([{
             data: data,
@@ -124,22 +124,22 @@ $(function() {
     // Calendar Scripts
     let calendar;
     
-        let calendarEl = document.getElementById('calendar');
-        calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            initialDate: '2020-12-07',
-            themeSystem: 'bootstrap',
-            eventColor: '#3f51b5',
-            headerToolbar: {
-                left: 'prev,next',
-                center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay'
-            },
-            dateClick: function(info) {
-                console.log(info);
-            },
-        });
-        calendar.render();
+    let calendarEl = document.getElementById('calendar');
+    calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        initialDate: '2020-12-07',
+        themeSystem: 'bootstrap',
+        eventColor: '#3f51b5',
+        headerToolbar: {
+            left: 'prev,next',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        dateClick: function(info) {
+            console.log(info);
+        },
+    });
+    calendar.render();
     
 
 });
