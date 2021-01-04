@@ -55,7 +55,7 @@ function html() {
             context: {
                 active: '',
                 preferCDN: false,
-                menuVariant: 'mini' // Valid Options : '' | 'mini' | 'overlay' | 'horizontal' | 'horizontal with-icon'
+                menuVariant: '' // Valid Options : '' | 'mini' | 'overlay-menu collapsed' | 'horizontal' | 'horizontal with-icon'
             }
         }))
         .pipe(htmlbeautify())
