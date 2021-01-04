@@ -12,6 +12,9 @@ $(function() {
             sparkline: {
                 enabled: true,
             },
+            toolbar: {
+                show: false,
+            }
         },
         fill: {
             type: 'gradient',

@@ -1,7 +1,9 @@
 
 
 /* Checkboxes & Switches */
-
+.custom-radio .custom-control-label::after, .custom-checkbox .custom-control-label::after{
+    left: -1.55rem;
+}
 
 /* for sm */
 

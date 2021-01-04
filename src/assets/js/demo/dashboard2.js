@@ -16,7 +16,6 @@ $(function() {
         }],
         chart: {
             id: 'realtime',
-
             type: 'area',
             height: 150,
             sparkline: {

@@ -8,7 +8,15 @@ $(function() {
     let options = {
         chart: {
             type: 'line',
-            height: 280,
+            height: 300,
+            toolbar: {
+                show: false,
+            }
+        },
+        legend:{
+            itemMargin: {
+                vertical: 20
+            },
         },
         colors: colorPalette,
         series: [{
@@ -19,7 +27,6 @@ $(function() {
             title: {
                 text: 'Year',
             },
-
             categories: [2015, 2016, 2017, 2018, 2019, 2020]
         },
         yaxis: {
@@ -44,7 +51,15 @@ $(function() {
         }],
         chart: {
             height: 290,
-            type: 'area'
+            type: 'area',
+            toolbar: {
+                show: false,
+            }
+        },
+        legend:{
+            itemMargin: {
+                vertical: 20
+            },
         },
         colors: [themeColors.primary,themeColors.pink],
         dataLabels: {
@@ -72,9 +87,12 @@ $(function() {
     let optionsBar = {
         chart: {
             type: 'bar',
-            height: 280,
+            height: 295,
             width: '100%',
             stacked: true,
+            toolbar: {
+                show: false,
+            }
         },
         dataLabels: {
             enabled: false
@@ -87,10 +105,10 @@ $(function() {
         colors: colorPalette,
         series: [{
             name: 'Clothing',
-            data: [42, 52, 16, 55, 51, 45],
+            data: [42, 52, 16, 55, 51, 45, 20, 10],
         }, {
             name: 'Food Products',
-            data: [10, 14, 25, 16, 9, 20],
+            data: [10, 14, 25, 16, 9, 20, 80, 40],
         }],
         labels: [10, 11, 12, 13, 15, 16],
         xaxis: {
@@ -117,6 +135,11 @@ $(function() {
                 }
             }
         },
+        legend:{
+            itemMargin: {
+                vertical: 20
+            },
+        }
 
     };
 
@@ -157,10 +180,10 @@ $(function() {
                 position: 'bottom',
                 offsetX: 100,
                 offsetY: 30,
-                 
+                itemMargin: {
+                    vertical: 20
+                },
             },
-
-
             animation: {
                 animateScale: true,
                 animateRotate: true
