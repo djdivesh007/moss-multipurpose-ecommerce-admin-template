@@ -9,7 +9,6 @@ $(function() {
         chart: {
             type: 'line',
             height: 280,
-
         },
         colors: colorPalette,
         series: [{
@@ -77,9 +76,12 @@ $(function() {
             width: '100%',
             stacked: true,
         },
+        dataLabels: {
+            enabled: false
+        },
         plotOptions: {
             bar: {
-                columnWidth: '45%',
+                columnWidth: '10%',
             }
         },
         colors: colorPalette,
@@ -88,7 +90,7 @@ $(function() {
             data: [42, 52, 16, 55, 51, 45],
         }, {
             name: 'Food Products',
-            data: [6, 12, 4, 7, 3, 6],
+            data: [10, 14, 25, 16, 9, 20],
         }],
         labels: [10, 11, 12, 13, 15, 16],
         xaxis: {
