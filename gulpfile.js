@@ -54,7 +54,8 @@ function html() {
             basepath: '@file',
             context: {
                 active: '',
-                preferCDN: false
+                preferCDN: false,
+                menuVariant: 'mini'
             }
         }))
         .pipe(htmlbeautify())
