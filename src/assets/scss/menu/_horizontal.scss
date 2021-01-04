@@ -138,21 +138,35 @@
         }
     }
     @include media-breakpoint-down(md) {
-        .sidebar {
+        .sidebar{
             margin-left: 0;
-            transition: none;
-            .navigation {
-                margin-top: 0;
-                transition: margin-top 0.2s;
+            .navigation{
+                margin-top: -100%;
+                transition: margin-top 0.2s ease-in;
             }
         }
         .right-area {
-            header {
-                margin-left: unset;
-            }
             .main-content {
                 margin-top: 0;
             }
+        }
+        &.collapsed {
+            .sidebar {
+                margin-left: 0;
+                transition: none;
+                .navigation {
+                    margin-top: 0;
+                    transition: margin-top 0.2s;
+                }
+            }
+            .right-area {
+                header {
+                    margin-left: unset;
+                }
+                .main-content {
+                    margin-top: 0;
+                }
+            } 
         }
     }
     @include media-breakpoint-up(md) {

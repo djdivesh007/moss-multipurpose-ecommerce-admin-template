@@ -1,5 +1,4 @@
 $(function() {
-
     'use strict';
 
     // The Default colorPalette for this dashboard

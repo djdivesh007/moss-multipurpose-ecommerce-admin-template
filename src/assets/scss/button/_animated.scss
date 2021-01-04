@@ -9,10 +9,12 @@
         line-height: 1.2;
         left: 0;
         width: 100%;
+        transition: margin-top 0.2s ease-in;
     }
     span {
         position: relative;
         top: 0;
+        transition: top 0.2s ease-in;
     }
     &:hover {
         i {

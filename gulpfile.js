@@ -6,20 +6,14 @@ const htmlmin = require('gulp-htmlmin');
 const cssmin = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const fileinclude = require('gulp-file-include');
-// const babel = require('gulp-babel');
 
 const imagemin = require('gulp-imagemin');
-// const concat = require('gulp-concat');
-const sourcemaps = require('gulp-sourcemaps');
-const htmlPartial = require('gulp-html-partial');
 const clean = require('gulp-clean');
-// const googleWebFonts = require( 'gulp-google-webfonts' );
 const cssbeautify = require('gulp-cssbeautify');
 const htmlbeautify = require('gulp-html-beautify');
 const isProd = process.env.NODE_ENV === 'prod';
 const useref = require('gulp-useref');
 const babel = require('gulp-babel');
-const cache = require('gulp-cached');
 const rev = require('gulp-rev');
 const revReplace = require('gulp-rev-replace');
 
@@ -27,7 +21,7 @@ const htmlFile = [
     'src/pages/*.html'
 ];
 const isHTMLFile = function (file) {
-    return /(?:\.([^.]+))?$/.exec(file.path)[0] === '.html';
+    return isProd && /(?:\.([^.]+))?$/.exec(file.path)[0] === '.html';
 };
 
 const isJSFile = function (file) {
@@ -39,23 +33,22 @@ const isCSSFile = function (file) {
 };
 
 const isJSorCSS = function (file) {
-    return isJSFile(file) || isCSSFile(file);
+    return isProd && (isJSFile(file) || isCSSFile(file));
 };
 
 const isNotVendorJS = function (file) {
-    return isJSFile(file) && !file.path.includes('vendor.bundle.js');
+    return isProd && isJSFile(file) && !file.path.includes('vendor.bundle.js');
 };
 
 function html() {
     return gulp.src(htmlFile)
-        .pipe(cache('html'))
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file',
             context: {
                 active: '',
                 preferCDN: false,
-                menuVariant: 'mini' // Valid Options : '' | 'mini' | 'overlay' | 'horizontal' | 'horizontal with-icon'
+                menuVariant: 'horizontal' // Valid Options : '' | 'mini' | 'overlay' | 'horizontal' | 'horizontal with-icon'
             }
         }))
         .pipe(htmlbeautify())
@@ -92,7 +85,7 @@ function css() {
 
 function img() {
     return gulp.src('src/assets/images/**/*')
-        /* .pipe(gulpIf(isProd, imagemin())) */
+        .pipe(gulpIf(isProd, imagemin()))
         .pipe(gulp.dest('dist/assets/images/'));
 }
 
@@ -100,8 +93,6 @@ function fonts() {
     return gulp.src('src/assets/fonts/*.{eot,svg,ttf,woff,woff2}')
         .pipe(gulp.dest('dist/assets/fonts/'));
 }
-
-
 
 function serve() {
     browserSync.init({
