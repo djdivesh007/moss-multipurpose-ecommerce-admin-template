@@ -33,6 +33,8 @@ $(function() {
         }
     });
     $(document).on('click', '.color-pellate .btn', function () {
+        debugger;
+        console.log(this);
         document.getElementsByTagName('head')[0].getElementsByTagName('link')[0].href = $(this).data('href');
     });
     $(document).on('change', 'input[type=radio][name=direction-switch]', function() {

@@ -12,13 +12,7 @@ $cyan: #00bcd4;
 $black: #011627;
 $white:#fff;
 
-/*
-*
-*
-Primary Color Variants 
-*
-*
-*/
+// Primary Color Variants 
 
 $special-pink: #d81b60;
 $special-paradise-pink: #E5446D;
@@ -32,8 +26,6 @@ $special-gunmetal: #143642;
 $special-blue: #0B3954;
 $special-red: #f05454;
 $special-orange: #f9813a;
-$special-yellow: #f2d974;
-$special-ivory: #f8d49d;
 $special-green: #4caf50;
 $special-lightgreen: #16a596;
 $special-brown: #92817a;
@@ -53,34 +45,11 @@ $theme-colors: (
     'special-blue': $special-blue,
     'special-red': $special-red,
     'special-orange': $special-orange,
-    'special-yellow': $special-yellow,
-    'special-ivory': $special-ivory,
     'special-green': $special-green,
     'special-lightgreen': $special-lightgreen,
     'special-brown': $special-brown,
     'special-coffee': $special-coffee
 );
 
-/*
-*
-*
-Brand Color Definitions 
-*
-*
-*/
-
-$brand-primary: $indigo;
-$brand-success: $green;
-$brand-info: #0b0c0c;
-$brand-warning: $yellow;
-$brand-danger: $red;
-
-/*
-*
-*
-Current Primary Color 
-*
-*
-*/
-
+// Current Primary Color 
 $primary: $indigo;
