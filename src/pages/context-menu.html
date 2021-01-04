@@ -3,9 +3,6 @@
 
 <head>
     @@include('../partials/head.html')
-    <style>
-        
-    </style>
 </head>
 
 <body>
@@ -151,6 +148,15 @@
         </div>
     </div>
     @@include('../partials/js.html')
+    @@if(preferCDN){
+    <script src="https://cdn.jsdelivr.net/npm/long-press-event@2.4.2/dist/long-press-event.min.js"></script>
+    }
+
+    @@if(!preferCDN){
+    <!-- build:js assets/js/vendor/context-menu-bundle.js -->
+    <script src="../../node_modules/long-press-event/dist/long-press-event.min.js"></script>
+    <!-- endbuild -->
+    }
     <!-- build:js assets/js/demo/context-menu.js -->
     <script src="../assets/js/demo/context-menu.js"></script>
     <!-- endbuild -->

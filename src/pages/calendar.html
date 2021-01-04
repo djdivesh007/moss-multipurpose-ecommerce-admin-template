@@ -3,6 +3,15 @@
 
 <head>
     @@include('../partials/head.html')
+    @@if(preferCDN) {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css">
+    }
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/calendar.bundle.css -->
+    <link rel="stylesheet" src="../../node_modules/fullcalendar/main.min.css">
+    <link rel="stylesheet" src="../../node_modules/pickerjs/dist/picker.min.css">
+    <!-- endbuild -->
+    }
 </head>
 
 <body>
@@ -60,9 +69,16 @@
         </div>
     </div>
     @@include('../partials/js.html')
+    @@if(preferCDN){
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pickerjs@1.2.1/dist/picker.min.js"></script>
-
+    }
+    @@if(!preferCDN){
+    <!-- build:js assets/js/vendor/full-calendar.js -->
+    <script src="../../node_modules/fullcalendar/main.js"></script>
+    <script src="../../node_modules/pickerjs/dist/picker.min.js"></script>
+    <!-- endbuild -->
+    }
     <!-- build:js assets/js/demo/calendar.js -->
     <script src="../assets/js/demo/calendar.js"></script>
     <!-- endbuild -->

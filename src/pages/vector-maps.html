@@ -59,9 +59,17 @@
     </div>
 
     @@include('../partials/js.html')
+    @@if(preferCDN) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mapael/2.2.0/js/jquery.mapael.min.js"></script>
+    }
 
+    @@if(!preferCDN) {
+    <!-- build:js assets/js/vendor/vector.js -->
+    <script src="../../node_modules/raphael/raphael.js"></script>
+    <script src="../../node_modules/jquery-mapael/js/jquery.mapael.js"></script>
+    <!-- endbuild -->
+    }
     <!-- build:js assets/js/demo/vector.js -->
     <script src="../assets/js/demo/usa_states.js"></script>
     <script src="../assets/js/demo/vector-maps.js"></script>

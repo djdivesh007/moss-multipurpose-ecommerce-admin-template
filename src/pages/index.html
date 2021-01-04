@@ -3,13 +3,24 @@
 
 <head>
     @@include('../partials/head.html')
+  
+    @@if(preferCDN) {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.23.1/apexcharts.min.css">
+    }
+
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/dashboard.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/apexcharts/dist/apexcharts.css">
+    <link rel="stylesheet" href="../../node_modules/chart.js/dist/Chart.min.css">
+    <!-- endbuild -->
+    }
 </head>
 
 <body>
     <div class="overlay-mask"></div>
     <div class="main-wrapper">
         @@include('../partials/menu.html', {
-            'active': 'ecommerce'
+        'active': 'ecommerce'
         })
         <div class="right-area">
             @@include('../partials/header.html')
@@ -26,13 +37,14 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Average Sales</h5><span class="h1 font-weight-bold mb-0">50,897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">Average Sales</h5><span
+                                            class="h1 font-weight-bold mb-0">50,897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div>
-<button class="btn btn-transparent-primary btn-lg btn-circle">
+                                            <button class="btn btn-transparent-primary btn-lg btn-circle">
 
-                                            <i class="material-icons">monetization_on</i>
+                                                <i class="material-icons">monetization_on</i>
                                             </button>
 
                                         </div>
@@ -52,13 +64,14 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Total Sales</h5><span class="h1 font-weight-bold mb-0">550,897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">Total Sales</h5><span
+                                            class="h1 font-weight-bold mb-0">550,897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div>
-<button class="btn btn-transparent-primary btn-lg btn-circle">
+                                            <button class="btn btn-transparent-primary btn-lg btn-circle">
 
-                                            <i class="material-icons">trending_up</i>
+                                                <i class="material-icons">trending_up</i>
                                             </button>
                                         </div>
                                     </div>
@@ -78,12 +91,13 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">INQUIRIES</h5><span class="h1 font-weight-bold mb-0">750,897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">INQUIRIES</h5><span
+                                            class="h1 font-weight-bold mb-0">750,897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div>
-<button class="btn btn-transparent-primary btn-lg btn-circle">
-                                            <i class="material-icons">language</i>
+                                            <button class="btn btn-transparent-primary btn-lg btn-circle">
+                                                <i class="material-icons">language</i>
                                             </button>
                                         </div>
                                     </div>
@@ -101,12 +115,13 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <h5 class="text-uppercase text-muted mb-0 card-title">Invoices</h5><span class="h1 font-weight-bold mb-0">897</span>
+                                        <h5 class="text-uppercase text-muted mb-0 card-title">Invoices</h5><span
+                                            class="h1 font-weight-bold mb-0">897</span>
                                     </div>
                                     <div class="col-auto col">
                                         <div>
                                             <button class="btn btn-transparent-primary btn-lg btn-circle">
-                                            <i class="material-icons">receipt</i>
+                                                <i class="material-icons">receipt</i>
 
                                             </button>
                                         </div>
@@ -183,7 +198,8 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <img src="assets/images/product/a.png" class="avatar avatar-sm mr-2" alt="Samsung Galaxy S20"> Samsung Galaxy S20
+                                                    <img src="assets/images/product/a.png" class="avatar avatar-sm mr-2"
+                                                        alt="Samsung Galaxy S20"> Samsung Galaxy S20
 
                                                 </td>
 
@@ -191,7 +207,8 @@
                                                 <td class="align-middle">24</td>
                                                 <td class="align-middle">
                                                     <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitch1" checked>
                                                         <label class="custom-control-label" for="customSwitch1">
                                                         </label>
                                                     </div>
@@ -201,14 +218,16 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <img src="assets/images/product/b.png" class="avatar avatar-sm mr-2" alt=""> iPhone 12 Pro
+                                                    <img src="assets/images/product/b.png" class="avatar avatar-sm mr-2"
+                                                        alt="iPhone 12 Pro"> iPhone 12 Pro
                                                 </td>
 
                                                 <td class="align-middle">$52</td>
                                                 <td class="align-middle">58</td>
                                                 <td class="align-middle">
                                                     <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitch2">
                                                         <label class="custom-control-label" for="customSwitch2">
                                                         </label>
                                                     </div>
@@ -218,14 +237,16 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <img src="assets/images/product/c.png" class="avatar avatar-sm mr-2" alt=""> OnePlus 8
+                                                    <img src="assets/images/product/c.png" class="avatar avatar-sm mr-2"
+                                                        alt="OnePlus 8"> OnePlus 8
                                                 </td>
 
                                                 <td class="align-middle">$79</td>
                                                 <td class="align-middle">5</td>
                                                 <td class="align-middle">
                                                     <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitch3" checked>
                                                         <label class="custom-control-label" for="customSwitch3">
                                                         </label>
                                                     </div>
@@ -235,14 +256,16 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <img src="assets/images/product/d.png" class="avatar avatar-sm mr-2" alt=""> Vivo F17 Pro
+                                                    <img src="assets/images/product/d.png" class="avatar avatar-sm mr-2"
+                                                        alt="Vivo F17 Pro"> Vivo F17 Pro
                                                 </td>
 
                                                 <td class="align-middle">$52</td>
                                                 <td class="align-middle">58</td>
                                                 <td class="align-middle">
                                                     <div class="custom-control custom-switch">
-                                                        <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitch4">
                                                         <label class="custom-control-label" for="customSwitch4">
                                                         </label>
                                                     </div>
@@ -277,7 +300,9 @@
                                                 </td>
                                                 <td>
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-primary" role="progressbar"
+                                                            style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
                                                     </div>
                                                 </td>
 
@@ -288,7 +313,9 @@
                                                 </td>
                                                 <td>
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-danger" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
                                                     </div>
                                                 </td>
 
@@ -299,7 +326,9 @@
                                                 </td>
                                                 <td>
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-success" role="progressbar"
+                                                            style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
                                                     </div>
                                                 </td>
 
@@ -310,7 +339,9 @@
                                                 </td>
                                                 <td>
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-warning" role="progressbar"
+                                                            style="width: 57%" aria-valuenow="57" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
                                                     </div>
                                                 </td>
 
@@ -321,7 +352,9 @@
                                                 </td>
                                                 <td>
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
                                                     </div>
                                                 </td>
 
@@ -340,7 +373,8 @@
                                 Track Order
                             </div>
                             <div class="card-body p-4 ml-3">
-                                <div class="timeline timeline-one-side" data-timeline-axis-style="dashed" data-timeline-content="axis">
+                                <div class="timeline timeline-one-side" data-timeline-axis-style="dashed"
+                                    data-timeline-content="axis">
                                     <div class="timeline-block">
                                         <span class="timeline-step badge-success">
                                             <i class="material-icons f-12">today</i>
@@ -367,7 +401,8 @@
                                         </div>
                                     </div>
                                     <div class="timeline-block">
-                                        <span class="timeline-step badge-info"><i class="material-icons f-12">thumb_up</i></span>
+                                        <span class="timeline-step badge-info"><i
+                                                class="material-icons f-12">thumb_up</i></span>
                                         <div class="timeline-content">
                                             <h5 class="mb-0 font-weight-bold">Order received at nearest hub</h5>
                                             <small class="text-muted">10:30
@@ -418,8 +453,9 @@
                             </div>
                             <div class="card-body">
                                 <div class="m-0 p-0 overflow-hidden">
-                                    <iframe class="border-none" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160991881!2d72.74109908908066!3d19.082197838926515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9409a609d75%3A0xd0a71c45e7557bfa!2sBasilica%20Of%20Our%20Lady%20of%20The%20Mount!5e0!3m2!1sen!2sin!4v1607597877463!5m2!1sen!2sin"
-                                        frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                    <iframe class="border-none"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160991881!2d72.74109908908066!3d19.082197838926515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9409a609d75%3A0xd0a71c45e7557bfa!2sBasilica%20Of%20Our%20Lady%20of%20The%20Mount!5e0!3m2!1sen!2sin!4v1607597877463!5m2!1sen!2sin"
+                                        frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -434,8 +470,10 @@
                                             <tr>
                                                 <th style="width: 20px;">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                        <label class="custom-control-label" for="customCheck1">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck1">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck1">&nbsp;</label>
                                                     </div>
                                                 </th>
                                                 <th>Order ID</th>
@@ -451,11 +489,14 @@
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                        <label class="custom-control-label" for="customCheck2">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck2">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck2">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225510</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225510</a> </td>
                                                 <td>Harsh Pete</td>
                                                 <td>
                                                     10 Oct, 2019
@@ -479,11 +520,14 @@
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                                        <label class="custom-control-label" for="customCheck3">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck3">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck3">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225511</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225511</a> </td>
                                                 <td>Meet Cook</td>
                                                 <td>
                                                     11 Oct, 2019
@@ -508,11 +552,14 @@
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                        <label class="custom-control-label" for="customCheck4">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck4">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck4">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225512</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225512</a> </td>
                                                 <td>Jam Mitche</td>
                                                 <td>
                                                     12 Oct, 2019
@@ -535,11 +582,14 @@
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                                        <label class="custom-control-label" for="customCheck5">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck5">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck5">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225513</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225513</a> </td>
                                                 <td>Brain Dick</td>
                                                 <td>
                                                     13 Oct, 2019
@@ -562,11 +612,14 @@
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                                        <label class="custom-control-label" for="customCheck6">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck6">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck6">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225514</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225514</a> </td>
                                                 <td>Ronaldo teen</td>
                                                 <td>
                                                     14 Oct, 2019
@@ -589,11 +642,14 @@
                                             <tr>
                                                 <td>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                                        <label class="custom-control-label" for="customCheck7">&nbsp;</label>
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customCheck7">
+                                                        <label class="custom-control-label"
+                                                            for="customCheck7">&nbsp;</label>
                                                     </div>
                                                 </td>
-                                                <td><a href="javascript: void(0);" class="text-body font-weight-bold">#FO225515</a> </td>
+                                                <td><a href="javascript: void(0);"
+                                                        class="text-body font-weight-bold">#FO225515</a> </td>
                                                 <td>Jac Brusli</td>
                                                 <td>
                                                     15 Oct, 2019
@@ -605,7 +661,7 @@
                                                     <span class="badge badge-transparent-dark p-2">Cancelled</span>
                                                 </td>
                                                 <td>
-                                                   <span class="badge badge-success">Delivered</span>
+                                                    <span class="badge badge-success">Delivered</span>
                                                 </td>
                                                 <td>
                                                     <button type="button" class="btn btn-primary btn-sm">
@@ -626,9 +682,18 @@
         </div>
     </div>
     @@include('../partials/js.html')
+
+    @@if(preferCDN){
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    }
 
+    @@if(!preferCDN){
+    <!-- build:js assets/js/vendor/chart-bundle.js -->
+    <script src="../../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="../../node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <!-- endbuild -->
+    }
     <!-- build:js assets/js/demo/dashboard.bundle.js -->
     <script src="../assets/js/demo/dashboard.js"></script>
     <!-- endbuild -->

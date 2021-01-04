@@ -3,6 +3,14 @@
 
 <head>
     @@include('../partials/head.html')
+    @@if(preferCDN) {
+    <link href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    }
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/data-tables.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <!-- endbuild -->
+    }
 </head>
 
 <body>
@@ -514,11 +522,21 @@
         </div>
     </div>
     @@include('../partials/js.html')
+    @@if(preferCDN){
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    }
 
+    @@if(!preferCDN){
+    <!-- build:js assets/js/vendor/data-table.js -->
+    <script src="../../node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- endbuild -->
+    }
     <script>
-        $("#data-table").DataTable();
+        $(function () {
+            $("#data-table").DataTable();
+        });
     </script>
 </body>
 

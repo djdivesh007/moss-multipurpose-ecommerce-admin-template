@@ -3,6 +3,16 @@
 
 <head>
     @@include('../partials/head.html')
+
+    @@if(preferCDN) {
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" rel="stylesheet">
+    }
+
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/uploaders.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/dropify/dist/css/dropify.min.css">
+    <!-- endbuild -->
+    }
 </head>
 
 <body>
@@ -68,7 +78,17 @@
         </div>
     </div>
     @@include('../partials/js.html')
+
+    @@if(preferCDN) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"></script>
+    }
+
+    @@if(!preferCDN) {
+    <!-- build:js assets/js/vendor/dropify.js -->
+    <script src="../../node_modules/dropify/dist/js/dropify.min.js"></script>
+    <!-- endbuild -->
+    }
+
     <!-- build:js assets/js/demo/uploaders.js -->
     <script src="../assets/js/demo/uploaders.js"></script>
     <!-- endbuild -->

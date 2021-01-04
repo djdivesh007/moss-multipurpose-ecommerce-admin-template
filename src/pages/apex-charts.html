@@ -3,6 +3,14 @@
 
 <head>
     @@include('../partials/head.html')
+    @@if(preferCDN) {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.23.1/apexcharts.min.css">
+    }
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/apex-charts.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/apexcharts/dist/apexcharts.css">
+    <!-- endbuild -->
+    }
 </head>
 
 <body>
@@ -99,7 +107,16 @@
         </div>
     </div>
     @@include('../partials/js.html')
+    @@if(preferCDN){
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    }
+
+    @@if(!preferCDN){
+    <!-- build:js assets/js/vendor/apex-chart-bundle.js -->
+    <script src="../../node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <!-- endbuild -->
+    }
+
     <!-- build:js assets/js/demo/apexcharts.js -->
     <script src="../assets/js/demo/apexcharts-demo.js"></script>
     <!-- endbuild -->

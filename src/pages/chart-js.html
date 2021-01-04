@@ -3,6 +3,16 @@
 
 <head>
     @@include('../partials/head.html')
+
+    @@if(preferCDN) {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.23.1/apexcharts.min.css">
+    }
+    
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/chartjs.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/chart.js/dist/Chart.min.css">
+    <!-- endbuild -->
+    }
 </head>
 
 <body>
@@ -64,14 +74,22 @@
         </div>
     </div>
     @@include('../partials/js.html')
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
+    @@if(preferCDN){
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    }
+
+    @@if(!preferCDN){
+    <!-- build:js assets/js/vendor/chart-js-bundle.js -->
+    <script src="../../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+    <!-- endbuild -->
+    }
     <!-- build:js assets/js/demo/chartjs.js -->
     <script src="../assets/js/demo/chartjs-utils.js"></script>
     <script src="../assets/js/demo/chartjs.js"></script>
     <!-- endbuild -->
     <script>
-       
+
     </script>
 </body>
 

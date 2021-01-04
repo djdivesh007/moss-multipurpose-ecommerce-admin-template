@@ -3,6 +3,16 @@
 
 <head>
     @@include('../partials/head.html')
+
+    @@if(preferCDN) {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    }
+    
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/notifications.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/toastr/build/toastr.min.css">
+    <!-- endbuild -->
+    }
 </head>
 
 <body>

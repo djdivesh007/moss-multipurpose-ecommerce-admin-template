@@ -3,6 +3,16 @@
 
 <head>
     @@include('../partials/head.html')
+
+    @@if(preferCDN) {
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+    }
+
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/wysiwyg.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/summernote/dist/summernote-bs4.min.css">
+    <!-- endbuild -->
+    }
     <style>
         .ck-editor__editable {
             min-height: 400px;
@@ -60,15 +70,13 @@
     @@if(preferCDN) {
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>    
         <script src="https://cdn.ckeditor.com/ckeditor5/24.0.0/classic/ckeditor.js"></script>
-
     }
     @@if(!preferCDN) {
-        <!-- build:js assets/js/demo/wysiwyg.bundle.js -->
+        <!-- build:js assets/js/vendor/wysiwyg.bundle.js -->
         <script src="../../node_modules/summernote/dist/summernote-bs4.min.js"></script>
         <script src="../../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
         <!-- endbuild -->
     }
-    
 
     <script>
         $("#summernote").summernote({

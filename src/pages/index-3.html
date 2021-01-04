@@ -3,6 +3,16 @@
 
 <head>
   @@include('../partials/head.html')
+  
+  @@if(preferCDN) {
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.23.1/apexcharts.min.css">
+  }
+
+  @@if(!preferCDN) {
+  <!-- build:css assets/css/vendor/dashboard3.bundle.css -->
+  <link rel="stylesheet" src="../../node_modules/apexcharts/dist/apexcharts.css">
+  <!-- endbuild -->
+  }
 </head>
 
 <body>
@@ -146,7 +156,7 @@
               </div>
             </div>
           </div>
-         
+
           <div class="col-12 col-md-12 col-lg-6">
             <div class="shadow mt-4">
 
@@ -457,7 +467,8 @@
               <div class="card-body pt-4">
                 <h3 class="card-title mb-1">Upcoming Events</h3>
                 <p class="subtitle f-12 mb-4">Today</p>
-                <div class="timeline timeline-one-side ml-2" data-timeline-axis-style="dashed" data-timeline-content="axis">
+                <div class="timeline timeline-one-side ml-2" data-timeline-axis-style="dashed"
+                  data-timeline-content="axis">
                   <div class="timeline-block">
                     <span class="timeline-step badge-primary">
                       <i class="material-icons f-12">today</i>
@@ -517,7 +528,7 @@
                         <th>Comment</th>
                         <th>Last Call</th>
                         <th>Status</th>
-                       
+
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -578,7 +589,7 @@
                             View
                           </button></td>
                       </tr>
-                     
+
                     </tbody>
                   </table>
                 </div>
@@ -591,7 +602,17 @@
     </div>
   </div>
   @@include('../partials/js.html')
+
+
+  @@if(preferCDN){
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  }
+
+  @@if(!preferCDN){
+  <!-- build:js assets/js/vendor/chart-bundle3.js -->
+  <script src="../../node_modules/apexcharts/dist/apexcharts.min.js"></script>
+  <!-- endbuild -->
+  }
 
   <!-- build:js assets/js/demo/dashboard3.js -->
   <script src="../assets/js/demo/dashboard3.js"></script>
