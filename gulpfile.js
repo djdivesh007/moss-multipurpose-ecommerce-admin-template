@@ -54,7 +54,7 @@ function html() {
             basepath: '@file',
             context: {
                 active: '',
-                
+                preferCDN: false
             }
         }))
         .pipe(htmlbeautify())
