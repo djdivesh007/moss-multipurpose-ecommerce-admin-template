@@ -48,7 +48,7 @@ function html() {
             context: {
                 active: '',
                 preferCDN: false,
-                menuVariant: 'horizontal' // Valid Options : '' | 'mini' | 'overlay' | 'horizontal' | 'horizontal with-icon'
+                menuVariant: '' // Valid Options : '' | 'mini' | 'overlay-menu collapsed' | 'horizontal' | 'horizontal without-icon'
             }
         }))
         .pipe(htmlbeautify())
