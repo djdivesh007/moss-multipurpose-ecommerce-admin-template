@@ -10,6 +10,7 @@ pages:
   - npm i sass -g
   - npm install
   - npm rebuild node-sass
+  - npm run exportScssColors
   - gulp build
   - mv dist public
   artifacts:
