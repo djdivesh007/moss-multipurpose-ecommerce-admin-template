@@ -1,16 +1,16 @@
 'use strict';
 $(function() {
-    $(document).on('click', '.card [fullscreen]', function(e) {
+    $(document).on('click', '.card .toggle-fullscreen', function(e) {
         e.preventDefault();
         $(this).parents('.card').toggleClass('fullscreen');
     });
 
-    $(document).on('click', '.card [close]', function(e) {
+    $(document).on('click', '.card .close', function(e) {
         e.preventDefault();
         $(this).parents('.card').remove();
     });
 
-    $(document).on('click', '.card [reload]', function(e) {
+    $(document).on('click', '.card .reload', function(e) {
         e.preventDefault();
         const card = $(this).parents('.card').get();
         const nanobar = new progressBar({
@@ -20,7 +20,9 @@ $(function() {
         });
         nanobar.go(30);
         // Simulate Loading
-        if (typeof $(this).attr('simulate') !== 'undefined' && $(this).attr('simulate') !== false) {
+       
+        if ($(this).hasClass('simulate')) {
+            console.log('simulate');
             setTimeout(nanobar.done, 5000);
         }
     });

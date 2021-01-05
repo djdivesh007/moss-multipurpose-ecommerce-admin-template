@@ -15,7 +15,7 @@
     margin-bottom: -0.25rem;
     margin-top: -.25rem;
     button {
-        &[fullscreen] {
+        &.toggle-fullscreen {
             i:last-child,
             span:last-child {
                 display: none;
@@ -51,10 +51,10 @@
     right: 0;
     margin: 0 !important;
     transition: height .3s;
-    button:not([fullscreen]) {
+    button:not(.toggle-fullscreen) {
         display: none;
     }
-    button[fullscreen] {
+    button.toggle-fullscreen {
         i:first-child,
         span:first-child {
             display: none;

@@ -15,7 +15,7 @@ $(function (){
         $(contextMenu).addClass('show');
     };
 
-    window.hideContextMenu = function(popperMenu) {
+    function hideContextMenu(popperMenu) {
         $(popperMenu.popper).removeClass('show');
         popperMenu.reference.remove();
     };
