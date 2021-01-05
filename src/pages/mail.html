@@ -2,579 +2,493 @@
 <html lang="en">
 
 <head>
-    @@include('../partials/head.html')
+  @@include('../partials/head.html')
 </head>
 
 <body>
-    <div class="overlay-mask"></div>
-    <div class="main-wrapper @@menuVariant">
-        @@include('../partials/menu.html',{
-        'active': 'mail'
-        })
-        <div class="right-area">
-            @@include('../partials/header.html')
-            <div class="main-content container">
-                <div class="page-header">
-                    <span class="h2">Mail Inbox</span>
-                    <small>Let's get started</small>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 col-sm-12">
-                        <!-- Content Place Here -->
-                        <div class="inbox-app mt-4">
-                            <div class="inbox-toolbars-wrapper">
-                                <div class="toolbar-body bg-white shadow">
-                                    <ul class="toolbar-menu">
-                                        <li class="d-flex px-3 py-lg-3">
-                                            <button type="button" class="btn btn-primary btn-sm btn-circle btn-block m-auto">
-                                                <i class="material-icons align-middle">add</i>
-                                            </button>
-                                        </li>
-                                        <li class="active">
-                                            <a href="javascript:void()">
-                                                <i class="material-icons mx-auto my-2">mail_outline</i>
-                                                <span class="text d-md-block d-none">Inbox</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <i class="material-icons mx-auto my-2">drafts</i>
-                                                <span class="text d-md-block d-none">Drafts</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <i class="material-icons mx-auto my-2">send</i>
-                                                <span class="text d-md-block d-none">Sent</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <i class="material-icons mx-auto my-2">error_outline</i>
-                                                <span class="text d-md-block d-none">Spam</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <i class="material-icons mx-auto my-2">delete</i>
-                                                <span class="text d-md-block d-none">Trash</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void()">
-                                                <i class="material-icons mx-auto my-2">star_outline</i>
-                                                <span class="text d-md-block d-none">Starred</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-
-                            <div class="mail-wrapper w-100">
-                                <div class="bg-white d-flex px-3 py-2">
-                                    <div class="custom-control custom-checkbox d-inline-block my-2">
-                                        <input type="checkbox" class="custom-control-input" id="customCheckAll">
-                                        <label class="custom-control-label " for="customCheckAll">
-                                            <span> All</span>
-                                        </label>
-                                    </div>
-                                    <button class="btn btn-default dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Labels
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Social</a>
-                                        <a class="dropdown-item" href="#">Friends</a>
-                                        <a class="dropdown-item" href="#">Important</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Personal</a>
-                                    </div>
-                                    <button class="btn btn-light btn-circle">
-                                        <i class="material-icons">sync</i>
-                                    </button>
-                                    <div class="flex-fill"></div>
-                                    <div class="">
-                                        <span class="d-none d-md-inline"> 1-100 of 40,019</span>
-                                        <button class="btn btn-light btn-circle">
-                                            <i class="material-icons">chevron_left</i>
-                                        </button>
-                                        <button class="btn btn-light btn-circle">
-                                            <i class="material-icons">chevron_right</i>
-                                        </button>
-
-                                    </div>
-                                </div>
-
-                                <div class="mail-list-items">
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                    <label class="custom-control-label " for="customCheck1">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div>
-
-                                                <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Angular
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">We need to release version 11 for our next project. Can we do it as soon as possible ? Please revert back asap.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">5:56 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item read shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                    <label class="custom-control-label " for="customCheck2">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Santa Clause
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">What gift do you want on this christmas eve my son ? Please let me know i will bring it for you.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">5:45 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item read shadow px-3 py-3 border-bottom">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                                    <label class="custom-control-label " for="customCheck3">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Tim Cook
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">We have released iPhone 11 Pro Max.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">4:32 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item read shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                    <label class="custom-control-label " for="customCheck4">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Xavier
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">Good boy. I have received your email, thanks for the work done.
-                                                </p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">4:25 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                                    <label class="custom-control-label " for="customCheck5">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Nikki Master
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">Can u attend my class tomorrow. I will teach you physics Chapter I.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">4:18 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item active shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                                    <label class="custom-control-label " for="customCheck6">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Ace Technology
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">If you are going to use a passage of my house, you need to clean it.</p>
-                                            </div>
-
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">3:56 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                                    <label class="custom-control-label " for="customCheck7">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14">  Consulting Officer
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">Here is your invoice for the consultancy I gave you last week.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">3:43 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck8">
-                                                    <label class="custom-control-label " for="customCheck8">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Oli Cabs
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">You ride has been booked. It will arrive by 4 P.M. Please keep your OTP ready</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">2:25 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck9">
-                                                    <label class="custom-control-label " for="customCheck9">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Bata India
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">But I must explain to you how to check size of your shoes.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">2:14 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck10">
-                                                    <label class="custom-control-label " for="customCheck10">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div>
-                                                <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Jason Films
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">Jason Films has released new video on youtube. Donot forget to check it.
-                                                </p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">1:30 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck11">
-                                                    <label class="custom-control-label " for="customCheck11">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Inspector Asthana
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">You case has been registered, please be present at next hearing. We are almost close to victory.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">1:15 PM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck12">
-                                                    <label class="custom-control-label " for="customCheck12">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Glenn Maxwell
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">We have new track released. Check it out on Spotify, Apple Music, Amazon Music.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">12:45 AM</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck13">
-                                                    <label class="custom-control-label " for="customCheck13">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Cricket India
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">India lost by 3 Wickets. Hats off to Zimbabwe Bowlers...</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">Oct 25</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck14">
-                                                    <label class="custom-control-label " for="customCheck14">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Start Sports Australia
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">Indian lost to zimbabwe. Poor batting by Indians. Never expected so by Indians.
-                                                </p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">Oct 22</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck15">
-                                                    <label class="custom-control-label " for="customCheck15">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Sofia Dating
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">I love you. Can we meet on a date. I can order some pizzas for you. I know you love cheese pizzas.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">Oct 18</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck16">
-                                                    <label class="custom-control-label " for="customCheck16">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Royal Enfield Himalayan
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">New himalayan 400 Launched with BS6 engines. Configure your's now. First 50 customers to get 1 Hayabusa free.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">Oct 10</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck17">
-                                                    <label class="custom-control-label " for="customCheck17">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14"> Space Team
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">We have found new astroid. Check out the images We have attached in this email.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">Sep 28</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
-                                            <div class="d-flex align-items-center mail-action">
-
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck18">
-                                                    <label class="custom-control-label " for="customCheck18">
-                                                        <span class="sr-only"> All</span>
-                                                    </label>
-                                                </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
-                                                <p class="mb-0 f-14">  Jobs Portal
-                                                </p>
-                                            </div>
-                                            <div class="mail-body-preview">
-                                                <p class="mb-0 f-14">Get your first job fast as possible with Jobs Portal.</p>
-                                            </div>
-                                            <div class="ml-auto justify-content-between d-flex">
-                                                <span class="align-items-center mail-buttons">
-                                                    <i class="material-icons f-18 mr-2 text-dark">archive</i>
-                                                    <i class="material-icons f-18 mr-2 text-dark">delete</i>
-                                                </span>
-                                                <span class="mail-time">Sep 22</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                   
-
-                                </div>
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="overlay-mask"></div>
+  <div class="main-wrapper @@menuVariant">
+    @@include('../partials/menu.html',{
+    'active': 'mail'
+    })
+    <div class="right-area">
+      @@include('../partials/header.html')
+      <div class="main-content container">
+        <div class="page-header">
+          <span class="h2">Mail Inbox</span>
+          <small>Let's get started</small>
         </div>
+
+        <div class="row">
+          <div class="col-12 col-sm-12">
+            <!-- Content Place Here -->
+            <div class="inbox-app mt-4">
+              <div class="inbox-toolbars-wrapper">
+                <div class="toolbar-body bg-white shadow">
+                  <ul class="toolbar-menu">
+                    <li class="d-flex px-3 py-lg-3">
+                      <button type="button" class="btn btn-primary btn-sm btn-circle btn-block m-auto">
+                        <i class="material-icons align-middle">add</i>
+                      </button>
+                    </li>
+                    <li class="active">
+                      <a href="javascript:void()">
+                        <i class="material-icons mx-auto my-2">mail_outline</i>
+                        <span class="text d-md-block d-none">Inbox</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void()">
+                        <i class="material-icons mx-auto my-2">drafts</i>
+                        <span class="text d-md-block d-none">Drafts</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void()">
+                        <i class="material-icons mx-auto my-2">send</i>
+                        <span class="text d-md-block d-none">Sent</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void()">
+                        <i class="material-icons mx-auto my-2">error_outline</i>
+                        <span class="text d-md-block d-none">Spam</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void()">
+                        <i class="material-icons mx-auto my-2">delete</i>
+                        <span class="text d-md-block d-none">Trash</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void()">
+                        <i class="material-icons mx-auto my-2">star_outline</i>
+                        <span class="text d-md-block d-none">Starred</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <div class="mail-wrapper w-100">
+                <div class="bg-white d-flex px-3 py-2">
+                  <div class="custom-control custom-checkbox d-inline-block my-2">
+                    <input type="checkbox" class="custom-control-input" id="customCheckAll">
+                    <label class="custom-control-label " for="customCheckAll">
+                      <span> All</span>
+                    </label>
+                  </div>
+                  <button class="btn btn-default dropdown" href="#" id="labelDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Labels
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="labelDropdown">
+                    <a class="dropdown-item" href="#">Social</a>
+                    <a class="dropdown-item" href="#">Friends</a>
+                    <a class="dropdown-item" href="#">Important</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Personal</a>
+                  </div>
+                  <button class="btn btn-light btn-circle">
+                    <i class="material-icons">sync</i>
+                  </button>
+                  <div class="flex-fill"></div>
+                  <div class="">
+                    <span class="d-none d-md-inline"> 1-100 of 40,019</span>
+                    <button class="btn btn-light btn-circle">
+                      <i class="material-icons">chevron_left</i>
+                    </button>
+                    <button class="btn btn-light btn-circle">
+                      <i class="material-icons">chevron_right</i>
+                    </button>
+
+                  </div>
+                </div>
+
+                <div class="mail-list-items">
+
+                  <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
+                    <div class="d-flex align-items-center mail-action">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label " for="customCheck1">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div>
+
+                      <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Angular</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                        <p class="mb-0 f-14">We need to release version 11 for our next project. Can we do it as soon as
+                          possible ? Please revert back asap.</p>
+                      </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">5:56 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item read shadow px-3 py-3">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label " for="customCheck2">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Santa Clause</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">What gift do you want on this christmas eve my son ? Please let
+                          me know i will bring it for you. </p>
+                          </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">5:45 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item read shadow px-3 py-3 border-bottom">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label " for="customCheck3">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Tim Cook</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">We have released iPhone 11 Pro Max.</p>
+                      </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">4:32 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item read shadow px-3 py-3">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label " for="customCheck4">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Xavier</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">Good boy. I have received your email, thanks for the work done.
+                      </p>
+                      </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">4:25 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                        <label class="custom-control-label " for="customCheck5">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Nikki Master</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">Can u attend my class tomorrow. I will teach you physics Chapter I.</p>
+                      </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">4:18 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item  shadow px-3 py-3">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                        <label class="custom-control-label " for="customCheck6">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Ace Technology</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">If you are going to use a passage of my house, you need to clean it.</p>
+                      </a>
+                    </div>
+
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">3:56 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck7">
+                        <label class="custom-control-label " for="customCheck7">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Consulting Officer</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">Here is your invoice for the consultancy I gave you last week.</p>
+                      </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">3:43 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck8">
+                        <label class="custom-control-label " for="customCheck8">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Oli Cabs</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">You ride has been booked. It will arrive by 4 P.M. Please keep your OTP
+                        ready</p>
+                        </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">2:25 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck9">
+                        <label class="custom-control-label " for="customCheck9">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Bata India</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">But I must explain to you how to check size of your shoes.</p>
+                      </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">2:14 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck10">
+                        <label class="custom-control-label " for="customCheck10">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div>
+                      <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Jason Films</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">Jason Films has released new video on youtube. Donot forget to check it.
+                      </p>
+                      </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">1:30 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck11">
+                        <label class="custom-control-label " for="customCheck11">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Inspector Asthana</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                      <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">You case has been registered, please be present at next hearing. We are
+                        almost close to victory.</p>
+                        </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">1:15 PM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item shadow px-3 py-3 border-bottom">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck12">
+                        <label class="custom-control-label " for="customCheck12">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Glenn Maxwell</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                       <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">We have new track released. Check it out on Spotify, Apple Music, Amazon
+                        Music.</p>
+                      </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">12:45 AM</span>
+                    </div>
+                  </div>
+
+                  <div class="d-md-flex align-items-center mail-item shadow px-3 py-3">
+                    <div class="d-flex align-items-center mail-action">
+
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck13">
+                        <label class="custom-control-label " for="customCheck13">
+                          <span class="sr-only"> Checkbox</span>
+                        </label>
+                      </div> <i class="far fa-star f-16 mx-2 mail-fav"></i>
+                      <p class="mb-0 f-14"> <a href="#" class="text-dark">Cricket India</a>
+                      </p>
+                    </div>
+                    <div class="mail-body-preview">
+                       <a href="#" class="text-dark">
+                      <p class="mb-0 f-14">India lost by 3 Wickets. Hats off to Zimbabwe Bowlers...</p>
+                    </a>
+                    </div>
+                    <div class="ml-auto justify-content-between d-flex">
+                      <span class="align-items-center mail-buttons">
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"><i
+                            class="material-icons">archive</i></button>
+                        <button class="btn btn-transparent-dark btn-sm btn-circle btn-icon ml-2"> <i
+                            class="material-icons">delete</i></button>
+                      </span>
+                      <span class="mail-time">Oct 25</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     @@include('../partials/js.html')
