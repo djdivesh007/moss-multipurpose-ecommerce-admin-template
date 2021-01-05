@@ -1,22 +1,22 @@
 $(function (){
 
     'use strict';
-    const drag = (event) => {
+    window.drag = function(event) {
         event.dataTransfer.setData('text/plain', event.target.id);
     };
 
-    const allowDrop = (ev) => {
+    window.allowDrop = function(ev)  {
         ev.preventDefault();
         if (hasClass(ev.target, 'dropzone')) {
             addClass(ev.target, 'droppable');
         }
     };
 
-    const clearDrop = (ev) => {
+    window.clearDrop = function(ev) {
         removeClass(ev.target, 'droppable');
     };
 
-    const drop = (event) => {
+    window.drop = function(event) {
         event.preventDefault();
         const data = event.dataTransfer.getData('text/plain');
         const element = document.querySelector(`#${data}`);

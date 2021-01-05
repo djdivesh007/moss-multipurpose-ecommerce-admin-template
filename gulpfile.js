@@ -47,7 +47,7 @@ function html() {
             basepath: '@file',
             context: {
                 active: '',
-                preferCDN: false,
+                preferCDN: true,
                 menuVariant: '' // Valid Options : '' | 'mini' | 'overlay-menu collapsed' | 'horizontal' | 'horizontal without-icon'
             }
         }))

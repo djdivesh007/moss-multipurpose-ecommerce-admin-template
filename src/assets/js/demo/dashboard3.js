@@ -51,11 +51,14 @@ $(function() {
 
     let option2 = {
         chart: {
-            height: 300,
+            height: 270,
             type: 'area',
             sparkline: {
                 enabled: false,
             },
+            toolbar: {
+                show: false,
+            }
         },
         dataLabels: {
             enabled: false
