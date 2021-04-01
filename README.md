@@ -6,6 +6,8 @@ You can also use it for many more different software types.
 
 We hope you would like to buy me and my team a coffee.
 
+Demo Link https://htmlthemes.gitlab.io/admin/
+
 To get installation & support just contact us on fiveonedigital@gmail.com
 
 <a href="https://www.buymeacoffee.com/djdivesh007">Buy me a Coffee</a>
